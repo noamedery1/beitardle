@@ -346,7 +346,7 @@ const SHUFFLE_SEED = 20260825;
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
    "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
               נשברים בווינדוס ישן ובאנדרואיד עתיק. */
-const BUILD = "b8";
+const BUILD = "b9";
 const SHARE_STYLE = "safe";
 
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
@@ -467,6 +467,7 @@ const PLAYERS_RAW = [
 {he:"אבי פרץ",pos:"GK",nat:"IL",born:1971,spells:[[2004,2004]],seasons:1,titles:0,target:false},
 {he:"אבירם ברוכיאן",pos:"MF",nat:"IL",born:1985,spells:[[2004,2011],[2014,2014]],seasons:9,titles:4,target:true},
 {he:"אנדרה קלדיירה",pos:"MF",nat:"BR",born:1980,spells:[[2004,2005]],seasons:2,titles:0,target:false},
+{he:"ברק יצחקי",pos:"FW",nat:"IL",born:1984,spells:[[2004,2007],[2009,2010]],seasons:6,titles:2,target:true},
 {he:"חנן פדידה",pos:"FW",nat:"IL",born:1981,spells:[[2004,2004]],seasons:1,titles:0,target:false},
 {he:"עידן מליחי",pos:"MF",nat:"IL",born:1979,spells:[[2004,2006]],seasons:3,titles:0,target:true},
 {he:"עמיר תורג'מן",pos:"FW",nat:"IL",born:1972,spells:[[2004,2004]],seasons:1,titles:0,target:false},
@@ -479,7 +480,6 @@ const PLAYERS_RAW = [
 {he:"אליאב יוני",pos:"MF",nat:"IL",born:1985,spells:[[2005,2006]],seasons:2,titles:0,target:false},
 {he:"אלירן דנין",pos:"DF",nat:"IL",born:1984,spells:[[2005,2007],[2009,2010]],seasons:5,titles:2,target:true},
 {he:"אלירן חודדה",pos:"DF",nat:"IL",born:1981,spells:[[2005,2005]],seasons:1,titles:0,target:false},
-{he:"ברק יצחקי",pos:"FW",nat:"IL",born:1984,spells:[[2005,2007],[2009,2010]],seasons:5,titles:2,target:true},
 {he:"גיא סולומון",pos:"GK",nat:"IL",born:1977,spells:[[2005,2006]],seasons:2,titles:0,target:false},
 {he:"דניאל שמשיאלשווילי",pos:"DF",nat:"IL",born:1986,spells:[[2005,2006]],seasons:2,titles:0,target:false},
 {he:"טל בנין",pos:"MF",nat:"IL",born:1971,spells:[[2005,2005]],seasons:1,titles:0,target:false},
@@ -842,7 +842,10 @@ function normalize(p){
     to:   Math.max(...spells.map(s=>s[1]))
   };
 }
-const eraLabel = p => p.spells.map(([a,b]) => a+"–"+b).join(" / ");
+/* המאגר שומר שנת סיום עונה. שחקן שהגיע בקיץ 2004 רשום כ-2005,
+   אז מציגים תמיד שנה אחת אחורה — כך שמופיעה שנת ההגעה בפועל. */
+const arrival = p => p.from - 1;
+const eraLabel = p => p.spells.map(([a,b]) => (a-1)+"–"+b).join(" / ");
 
 /* ============================================================
    5. מצב המשחק
@@ -862,7 +865,7 @@ function compare(g, a){
             s: g.nat===a.nat ? "hit" : (REGION[g.nat]&&REGION[g.nat]===REGION[a.nat] ? "near" : "miss")});
 
   const gd = a.from - g.from;
-  out.push({k:"הגיע", v:g.from, ar: gd===0 ? "" : (gd>0?"↑":"↓"),
+  out.push({k:"הגיע", v:arrival(g), ar: gd===0 ? "" : (gd>0?"↑":"↓"),
             s: gd===0 ? "hit" : (Math.abs(gd)<=3 ? "near" : "miss")});
 
   const d = a.titles - g.titles;
