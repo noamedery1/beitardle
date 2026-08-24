@@ -594,16 +594,38 @@ function shareText(){
   const M = EMOJI[SHARE_STYLE] || EMOJI.safe;
   const grid = guesses.map(g => compare(g,answer).map(c=>M[c.s]).join("")).join("\n");
   const won = guesses[guesses.length-1].name === answer.name;
-  const score = won ? guesses.length+"/"+MAX : "X/"+MAX;
-  return `ביתרדל #${puzzleNo} — ${score}\n\n${grid}\n\n${SITE_URL}`;
+  const head = won
+    ? `ביתרדל #${puzzleNo} · פיצחתי ב-${guesses.length} ${guesses.length===1?"ניחוש":"ניחושים"} מתוך ${MAX}`
+    : `ביתרדל #${puzzleNo} · לא פיצחתי (${MAX}/${MAX})`;
+  const key = `${M.hit} מדויק  ${M.near} קרוב  ${M.miss} רחוק`;
+  return `${head}\n\n${grid}\n\n${key}\n${SITE_URL}`;
 }
-$("#share").addEventListener("click", async ()=>{
-  const btn = $("#share"), txt = shareText();
+async function copyText(txt){
+  // הדרך המודרנית — דורשת HTTPS
   try{
-    if (navigator.share) { await navigator.share({text:txt}); return; }
-    await navigator.clipboard.writeText(txt);
-    btn.textContent = "הועתק ✓";
-  }catch(e){ btn.textContent = "ההעתקה נחסמה — סמנו והעתיקו ידנית"; }
+    if (navigator.clipboard && window.isSecureContext){
+      await navigator.clipboard.writeText(txt);
+      return true;
+    }
+  }catch(e){}
+  // גיבוי לדפדפנים ישנים
+  try{
+    const ta = document.createElement("textarea");
+    ta.value = txt;
+    ta.setAttribute("readonly","");
+    ta.style.cssText = "position:fixed;top:-9999px;opacity:0";
+    document.body.appendChild(ta);
+    ta.select(); ta.setSelectionRange(0, ta.value.length);
+    const ok = document.execCommand("copy");
+    document.body.removeChild(ta);
+    return ok;
+  }catch(e){ return false; }
+}
+
+$("#share").addEventListener("click", async ()=>{
+  const btn = $("#share");
+  const ok = await copyText(shareText());
+  btn.textContent = ok ? "הועתק ✓" : "לא הצלחנו להעתיק — סמנו ידנית";
   setTimeout(()=> btn.textContent = "העתקת התוצאה", 2200);
 });
 
