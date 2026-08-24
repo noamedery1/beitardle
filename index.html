@@ -206,8 +206,8 @@ input.rc{width:100%;background:var(--ink);border:1.5px solid var(--line);border-
   padding:11px 13px;color:var(--text);font-family:inherit;font-size:15px;outline:none;margin-top:4px}
 input.rc:focus{border-color:var(--yellow)}
 .rlab{font-size:12px;color:var(--dim);margin-top:14px;display:block}
-#rstat{margin-top:10px;font-size:13px;min-height:18px}
-#rstat.ok{color:var(--yellow)} #rstat.bad{color:#E8B77A}
+#repStat{margin-top:10px;font-size:13px;min-height:18px}
+#repStat.ok{color:var(--yellow)} #repStat.bad{color:#E8B77A}
 #report{margin-top:11px;font-size:11.5px}
 #report a{color:#5F5F69;text-decoration:none;border-bottom:1px dotted #3A3A44}
 #report a:hover{color:var(--yellow);border-color:var(--yellow)}
@@ -262,7 +262,7 @@ input.rc:focus{border-color:var(--yellow)}
 
   <footer>
     <div class="who">
-      ביתרדל · פרויקט אוהדים · לא רשמי<br>
+      ביתרדל · פרויקט אוהדים · לא רשמי <span id="bld" style="opacity:.45"></span><br>
       <a href="mailto:techbynoam@gmail.com">techbynoam@gmail.com</a>
     </div>
     <a class="credit" href="https://techbynoam.up.railway.app/" target="_blank" rel="noopener">
@@ -320,14 +320,14 @@ input.rc:focus{border-color:var(--yellow)}
     <p>שם שכתוב לא נכון, שנים שגויות, תארים שלא מסתדרים — כל דבר.
        הדיווח מגיע ישירות אליי ואני מתקן.</p>
 
-    <label class="rlab" for="rtext">מה לא נכון?</label>
-    <textarea class="rt" id="rtext" placeholder="לדוגמה: השם נכתב &quot;אמיל שמש&quot;, וצריך להיות &quot;עמית שמש&quot;."></textarea>
+    <label class="rlab" for="repMsg">מה לא נכון?</label>
+    <textarea class="rt" id="repMsg" placeholder="לדוגמה: השם נכתב &quot;אמיל שמש&quot;, וצריך להיות &quot;עמית שמש&quot;."></textarea>
 
-    <label class="rlab" for="rcontact">איך לחזור אליכם? (לא חובה)</label>
-    <input class="rc" id="rcontact" placeholder="שם או מייל">
+    <label class="rlab" for="repFrom">איך לחזור אליכם? (לא חובה)</label>
+    <input class="rc" id="repFrom" placeholder="שם או מייל">
 
-    <div id="rstat"></div>
-    <button class="act" id="rsend">שליחה</button>
+    <div id="repStat"></div>
+    <button class="act" id="repSend">שליחה</button>
   </div>
 </div>
 
@@ -346,6 +346,7 @@ const SHUFFLE_SEED = 20260825;
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
    "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
               נשברים בווינדוס ישן ובאנדרואיד עתיק. */
+const BUILD = "b8";
 const SHARE_STYLE = "safe";
 
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
@@ -1142,18 +1143,19 @@ function renderStats(highlight){
 const rep = $("#rep");
 function openRep(){
   closeHelp();
-  $("#rstat").textContent = ""; $("#rstat").className = "";
-  $("#rsend").textContent = "שליחה"; $("#rsend").disabled = false;
+  $("#repStat").textContent = ""; $("#repStat").className = "";
+  $("#repSend").textContent = "שליחה"; $("#repSend").disabled = false;
   rep.classList.add("on");
-  setTimeout(()=> $("#rtext").focus(), 60);
+  setTimeout(()=> $("#repMsg").focus(), 60);
 }
 function closeRep(){ rep.classList.remove("on"); }
 $("#closeRep").addEventListener("click", closeRep);
 rep.addEventListener("click", e => { if (e.target === rep) closeRep(); });
 
-$("#rsend").addEventListener("click", async ()=>{
-  const txt = $("#rtext").value.trim();
-  const st  = $("#rstat"), btn = $("#rsend");
+$("#repSend").addEventListener("click", async ()=>{
+ const st = $("#repStat"), btn = $("#repSend");
+ try{
+  const txt = $("#repMsg").value.trim();
   if (txt.length < 5){
     st.textContent = "כתבו קצת יותר כדי שאבין מה לתקן."; st.className = "bad"; return;
   }
@@ -1165,18 +1167,24 @@ $("#rsend").addEventListener("click", async ()=>{
   const body = JSON.stringify({
     type: "report", puzzle: puzzleNo,
     player: answer ? answer.name : "",
-    text: txt, contact: $("#rcontact").value.trim()
+    text: txt, contact: $("#repFrom").value.trim()
   });
   try{
-    await fetch(ANALYTICS_URL, {method:"POST", mode:"no-cors", body});
+    let sent = false;
+    try{ sent = !!(navigator.sendBeacon && navigator.sendBeacon(ANALYTICS_URL, body)); }catch(e){}
+    if (!sent) await fetch(ANALYTICS_URL, {method:"POST", mode:"no-cors", body});
     st.textContent = "תודה, הדיווח נשלח."; st.className = "ok";
-    $("#rtext").value = ""; $("#rcontact").value = "";
+    $("#repMsg").value = ""; $("#repFrom").value = "";
     btn.textContent = "נשלח ✓";
     setTimeout(closeRep, 1400);
   }catch(e){
     st.textContent = "השליחה נכשלה. אפשר לכתוב ל-techbynoam@gmail.com";
     st.className = "bad"; btn.disabled = false; btn.textContent = "שליחה";
   }
+ }catch(err){
+  st.textContent = "שגיאה: " + (err && err.message ? err.message : err);
+  st.className = "bad"; btn.disabled = false; btn.textContent = "שליחה";
+ }
 });
 
 /* ---------- חלונית עזרה ---------- */
@@ -1204,6 +1212,7 @@ addEventListener("keydown", e => { if (e.key === "Escape"){ closeHelp(); closeRe
   input.disabled = false;
   input.placeholder = 'הקלידו שם של שחקן בית"ר…';
   showStreak(); tickCountdown(); renderStats();
+  $("#bld").textContent = BUILD;
 
   track("view");
   if (!store.get("beitardle:seen")) openHelp();
