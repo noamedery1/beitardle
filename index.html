@@ -173,16 +173,18 @@ h1 a{color:inherit;text-decoration:none}
 .ex .k{font-size:9.5px;opacity:.75} .ex .v{font-size:12.5px;font-weight:700;unicode-bidi:isolate}
 
 /* פוטר / קרדיט */
-footer{margin-top:22px;text-align:center;font-size:11.5px;color:#55555E;line-height:1.7}
-.credit{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;margin-bottom:10px;
-  background:var(--ink-2);border:1px solid var(--line);border-radius:22px;
-  text-decoration:none;color:var(--text);font-size:12.5px;font-weight:700}
-.credit:hover{border-color:var(--yellow)}
-.credit img{width:19px;height:19px;border-radius:4px;display:block}
-.credit span{color:var(--dim);font-weight:500}
-.links{display:flex;gap:14px;justify-content:center;margin-top:4px}
-.links a{color:var(--dim);text-decoration:none;font-size:12px}
-.links a:hover{color:var(--yellow)}
+footer{margin-top:26px;padding-top:14px;border-top:1px solid rgba(46,46,54,.55);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  font-size:11px;color:#55555E;line-height:1.5}
+.credit{display:inline-flex;align-items:center;gap:6px;text-decoration:none;
+  color:var(--dim);font-size:11.5px;font-weight:500;white-space:nowrap}
+.credit img{width:14px;height:14px;border-radius:3px;display:block;opacity:.85}
+.credit b{color:#7A7A84;font-weight:700}
+.credit:hover{color:var(--yellow)} .credit:hover img{opacity:1}
+.credit:hover b{color:var(--yellow)}
+footer .who{text-align:start}
+footer .who a{color:#55555E;text-decoration:none}
+footer .who a:hover{color:var(--dim)}
 #warn{display:none;margin:14px 0 0;padding:10px 13px;border-radius:var(--r);
   background:rgba(217,131,43,.14);border:1px solid rgba(217,131,43,.45);
   color:#E8B77A;font-size:12px;line-height:1.6}
@@ -253,14 +255,14 @@ button.wa{background:#1FA855;color:#fff}
   </div>
 
   <footer>
-    <a class="credit" href="https://techbynoam.up.railway.app/" target="_blank" rel="noopener">
-      <img src="https://techbynoam.up.railway.app/logo-mark.png" alt="" loading="lazy">
-      TechByNoam <span>· נבנה על ידי</span>
-    </a>
-    <div class="links">
-      <a href="mailto:techbynoam@gmail.com">✉️ techbynoam@gmail.com</a>
+    <div class="who">
+      ביתרדל · פרויקט אוהדים · לא רשמי<br>
+      <a href="mailto:techbynoam@gmail.com">techbynoam@gmail.com</a>
     </div>
-    ביתרדל · פרויקט אוהדים · לא רשמי
+    <a class="credit" href="https://techbynoam.up.railway.app/" target="_blank" rel="noopener">
+      <img src="logo-mark.png" alt="" loading="lazy" width="14" height="14">
+      <b>TechByNoam</b>
+    </a>
   </footer>
 </div>
 
@@ -274,7 +276,7 @@ button.wa{background:#1FA855;color:#fff}
        וכל אחד נצבע לפי הקרבה לתשובה.</p>
 
     <h4>הצבעים</h4>
-    <p>🟨 מדויק · 🟫 קרוב · ⬛ רחוק<br>
+    <p><span id="lgnd">🌟 מדויק · ⭐ קרוב · ⬛ רחוק</span><br>
        ↑ הערך האמיתי גבוה או מאוחר יותר · ↓ נמוך או מוקדם יותר</p>
 
     <h4>דוגמה</h4>
@@ -311,6 +313,13 @@ const SITE_URL  = "https://beitardle.up.railway.app";  // בלי / בסוף
 const START     = [2026, 8, 24];              // [שנה, חודש 1-12, יום] של חידה #1
 const MAX       = 8;
 const SHUFFLE_SEED = 20260825;
+/* סט האמוג'ים לשיתוף.
+   "safe"   — כוכבים צהובים על שחור. יוניקוד 6.0 (2010) ומטה,
+              עובד בכל מכשיר שקיים.
+   "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
+              נשברים בווינדוס ישן ובאנדרואיד עתיק. */
+const SHARE_STYLE = "safe";
+
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
 const ANALYTICS_URL = "https://script.google.com/macros/s/AKfycbygFuR_uD1IaX1_SeQlUjZmZ2l6tSyt4ME1Nw32UPTocLWdZL5nct0REdnzghAjrxUf/exec";                // שינוי הערך מערבב מחדש את סדר החידות
 
@@ -577,8 +586,12 @@ function finish(won){
 }
 
 /* ---------- שיתוף — עם קישור ---------- */
+const EMOJI = {
+  safe:   {hit:"🌟", near:"⭐", miss:"⬛"},   // כוכב זוהר / כוכב / שחור
+  square: {hit:"🟨", near:"🟫", miss:"⬛"}
+};
 function shareText(){
-  const M = {hit:"🟨", near:"🟫", miss:"⬛"};
+  const M = EMOJI[SHARE_STYLE] || EMOJI.safe;
   const grid = guesses.map(g => compare(g,answer).map(c=>M[c.s]).join("")).join("\n");
   const won = guesses[guesses.length-1].name === answer.name;
   const score = won ? guesses.length+"/"+MAX : "X/"+MAX;
@@ -696,6 +709,13 @@ function renderStats(highlight){
      </div>
      <div class="bars">${bars}</div>`;
 }
+
+/* המקרא בחלונית מתיישר עם סט האמוג'ים שנבחר */
+(() => {
+  const M = EMOJI[SHARE_STYLE] || EMOJI.safe;
+  const el = document.getElementById("lgnd");
+  if (el) el.textContent = `${M.hit} מדויק · ${M.near} קרוב · ${M.miss} רחוק`;
+})();
 
 /* ---------- חלונית עזרה ---------- */
 const help = $("#help");
