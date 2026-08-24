@@ -10,8 +10,8 @@
 <meta property="og:type"        content="website">
 <meta property="og:title"       content="ביתרדל · חידת השחקן היומית">
 <meta property="og:description" content="שחקן בית&quot;ר אחד. שמונה ניסיונות. כמה ייקח לכם?">
-<meta property="og:url"         content="https://noamedery1.github.io/beitardle/">
-<meta property="og:image"       content="https://noamedery1.github.io/beitardle/og-beitardle.png">
+<meta property="og:url"         content="https://beitardle.up.railway.app/">
+<meta property="og:image"       content="https://beitardle.up.railway.app/og-beitardle.png">
 <meta property="og:image:width"  content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card"       content="summary_large_image">
@@ -77,7 +77,7 @@ h1{font-family:'Suez One',Georgia,serif;font-size:clamp(34px,10vw,46px);line-hei
   opacity:0;transform:rotateX(-90deg);animation:flip .42s cubic-bezier(.2,.7,.3,1) forwards}
 @keyframes flip{to{opacity:1;transform:rotateX(0)}}
 .tile .k{font-size:9.5px;opacity:.72;font-weight:500}
-.tile .v{font-size:12.5px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.15}
+.tile .v{font-size:12.5px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.15;unicode-bidi:isolate;white-space:nowrap}
 .tile.hit{background:var(--yellow);color:var(--ink)}
 .tile.near{background:var(--olive);color:#fff}
 .tile .ar{font-size:11px;font-weight:900;opacity:.9}
@@ -130,7 +130,7 @@ footer{margin-top:18px;text-align:center;font-size:11.5px;color:#55555E;line-hei
     <span><i class="dot y"></i> מדויק</span>
     <span><i class="dot o"></i> קרוב</span>
     <span><i class="dot s"></i> רחוק</span>
-    <span>↑ יותר · ↓ פחות</span>
+    <span>↑ מאוחר/גבוה יותר · ↓ מוקדם/נמוך יותר</span>
   </div>
 
   <div id="board"></div>
@@ -162,7 +162,7 @@ footer{margin-top:18px;text-align:center;font-size:11.5px;color:#55555E;line-hei
 /* ============================================================
    1. הגדרות — כאן אתה עורך
    ============================================================ */
-const SITE_URL  = "https://noamedery1.github.io/beitardle";  // בלי / בסוף
+const SITE_URL  = "https://beitardle.up.railway.app";  // בלי / בסוף
 const START     = [2026, 8, 25];              // [שנה, חודש 1-12, יום] של חידה #1
 const MAX       = 8;
 const SHUFFLE_SEED = 20260825;                // שינוי הערך מערבב מחדש את סדר החידות
@@ -305,14 +305,9 @@ function compare(g, a){
   out.push({k:"לאום", v:NAT_HE[g.nat]||g.nat,
             s: g.nat===a.nat ? "hit" : (REGION[g.nat]&&REGION[g.nat]===REGION[a.nat] ? "near" : "miss")});
 
-  let best = -999;
-  g.spells.forEach(([g1,g2]) => a.spells.forEach(([a1,a2]) => {
-    best = Math.max(best, Math.min(g2,a2) - Math.max(g1,a1));
-  }));
-  const gap = best >= 0 ? 0 : -best;
-  const gMid = (g.from+g.to)/2, aMid = (a.from+a.to)/2;
-  out.push({k:"תקופה", v:eraLabel(g), ar: gap>0 ? (aMid>gMid?"↑":"↓") : "",
-            s: best >= 2 ? "hit" : (gap <= 5 ? "near" : "miss")});
+  const gd = a.from - g.from;
+  out.push({k:"הגיע", v:g.from, ar: gd===0 ? "" : (gd>0?"↑":"↓"),
+            s: gd===0 ? "hit" : (Math.abs(gd)<=3 ? "near" : "miss")});
 
   const d = a.titles - g.titles;
   out.push({k:"תארים", v:g.titles, ar: d===0 ? "" : (d>0?"↑":"↓"),
@@ -394,8 +389,8 @@ function finish(won){
   over = true; input.disabled = true;
   $("#rtitle").textContent = won ? "פיצחתם!" : "נגמרו הניסיונות";
   $("#rtext").innerHTML = won
-    ? `<b>${answer.name}</b> · ${guesses.length} מתוך ${MAX}`
-    : `השחקן היה <b>${answer.name}</b> · ${eraLabel(answer)} · ${answer.titles} תארים`;
+    ? `<b>${answer.name}</b> · <span dir="ltr">${eraLabel(answer)}</span> · ${guesses.length} מתוך ${MAX}`
+    : `השחקן היה <b>${answer.name}</b> · <span dir="ltr">${eraLabel(answer)}</span> · ${answer.titles} תארים`;
 
   const mini = $("#mini"); mini.innerHTML = "";
   guesses.forEach(g=>{
