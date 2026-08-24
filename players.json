@@ -629,7 +629,7 @@
  },
  {
   "he": "א. ואזנה",
-  "name": "A. Ouazana",
+  "name": "Ofer Digmi",
   "pos": "MF",
   "nat": "IL",
   "born": null,
@@ -713,7 +713,7 @@
  },
  {
   "he": "דמיטרי גורמן",
-  "name": "Dmitriy Gurman",
+  "name": "Ofer Digmi",
   "pos": "MF",
   "nat": "IL",
   "born": null,
@@ -997,7 +997,7 @@
  },
  {
   "he": "אלון חרזי",
-  "name": "Alon Harazi",
+  "name": "David Peretz",
   "pos": "DF",
   "nat": "IL",
   "born": 1971,
@@ -1356,7 +1356,7 @@
   "target": false
  },
  {
-  "he": "אלון שגיר",
+  "he": "אלון סגיר",
   "name": "Alon Sagir",
   "pos": "FW",
   "nat": "IL",
@@ -1524,7 +1524,7 @@
   "target": true
  },
  {
-  "he": "גולן מלול",
+  "he": "גולן חרמון",
   "name": "Golan Malul",
   "pos": "GK",
   "nat": "IL",
@@ -1541,7 +1541,7 @@
  },
  {
   "he": "דמיטרו מיכאילנקו",
-  "name": "Dmitro Mikhaylenko",
+  "name": "Corneliu Papură",
   "pos": "MF",
   "nat": "UA",
   "born": 1973,
@@ -1556,7 +1556,7 @@
   "target": false
  },
  {
-  "he": "מאור מלכסון",
+  "he": "מאור מליקסון",
   "name": "Maor Melikson",
   "pos": "MF",
   "nat": "IL",
@@ -1652,7 +1652,7 @@
   "target": false
  },
  {
-  "he": "דמיטרי אוליאנוב",
+  "he": "דימטרי אוליאנוב",
   "name": "Dmitriy Ulyanov",
   "pos": "MF",
   "nat": "RU",
@@ -1752,22 +1752,6 @@
   "target": true
  },
  {
-  "he": "אמיר תורג'מן",
-  "name": "Amir Turgeman",
-  "pos": "FW",
-  "nat": "IL",
-  "born": 1972,
-  "spells": [
-   [
-    2004,
-    2004
-   ]
-  ],
-  "seasons": 1,
-  "titles": 0,
-  "target": false
- },
- {
   "he": "אנדרה קלדיירה",
   "name": "André Caldeira",
   "pos": "MF",
@@ -1814,6 +1798,22 @@
   "seasons": 3,
   "titles": 0,
   "target": true
+ },
+ {
+  "he": "עמיר תורג'מן",
+  "name": "Amir Turgeman",
+  "pos": "FW",
+  "nat": "IL",
+  "born": 1972,
+  "spells": [
+   [
+    2004,
+    2004
+   ]
+  ],
+  "seasons": 1,
+  "titles": 0,
+  "target": false
  },
  {
   "he": "קפונה",
@@ -1917,7 +1917,7 @@
  },
  {
   "he": "אליאב יוני",
-  "name": "Eliav Yoni",
+  "name": "Mor Efraim",
   "pos": "MF",
   "nat": "IL",
   "born": 1985,
@@ -1968,22 +1968,6 @@
   "target": false
  },
  {
-  "he": "אמיל שמש",
-  "name": "Amil Shemesh",
-  "pos": "GK",
-  "nat": "IL",
-  "born": 1987,
-  "spells": [
-   [
-    2005,
-    2007
-   ]
-  ],
-  "seasons": 3,
-  "titles": 1,
-  "target": true
- },
- {
   "he": "ברק יצחקי",
   "name": "Barak Itzhaki",
   "pos": "FW",
@@ -2021,7 +2005,7 @@
  },
  {
   "he": "דניאל שמשיאלשווילי",
-  "name": "Daniel Shemsheelshvili",
+  "name": "Roy Loyan",
   "pos": "DF",
   "nat": "IL",
   "born": 1986,
@@ -2053,7 +2037,7 @@
  },
  {
   "he": "יוני קים",
-  "name": "Yoni Kim",
+  "name": "Roy Loyan",
   "pos": "DF",
   "nat": "IL",
   "born": 1986,
@@ -2129,6 +2113,22 @@
   ],
   "seasons": 9,
   "titles": 4,
+  "target": true
+ },
+ {
+  "he": "עמית שמש",
+  "name": "Amil Shemesh",
+  "pos": "GK",
+  "nat": "IL",
+  "born": 1987,
+  "spells": [
+   [
+    2005,
+    2007
+   ]
+  ],
+  "seasons": 3,
+  "titles": 1,
   "target": true
  },
  {
@@ -2504,8 +2504,8 @@
   "target": true
  },
  {
-  "he": "מילובן מירושביץ'",
-  "name": "Milovan Mirosevic",
+  "he": "מילובאן מירוסביץ'",
+  "name": "Ramalho",
   "pos": "MF",
   "nat": "CL",
   "born": 1980,
@@ -2708,8 +2708,8 @@
   "target": false
  },
  {
-  "he": "יונתן זדה",
-  "name": "Yonathan Zada",
+  "he": "יהונתן זדה",
+  "name": "Yosi Zana",
   "pos": "FW",
   "nat": "IL",
   "born": null,
@@ -2740,7 +2740,7 @@
   "target": false
  },
  {
-  "he": "כריסטיאן אלוורס",
+  "he": "כריסטיאן אלווארז",
   "name": "Cristián Álvarez",
   "pos": "DF",
   "nat": "CL",
@@ -2756,7 +2756,7 @@
   "target": false
  },
  {
-  "he": "מתן ברשי",
+  "he": "מתן בראשי",
   "name": "Matan Barashi",
   "pos": "DF",
   "nat": "IL",
@@ -2820,7 +2820,7 @@
   "target": false
  },
  {
-  "he": "אוהד סעידוף",
+  "he": "אוהד סיידוף",
   "name": "Ohad Saidof",
   "pos": "GK",
   "nat": "IL",
@@ -2852,26 +2852,6 @@
   "target": false
  },
  {
-  "he": "דאריו פרננדס",
-  "name": "Darío Fernández",
-  "pos": "MF",
-  "nat": "AR",
-  "born": 1978,
-  "spells": [
-   [
-    2009,
-    2009
-   ],
-   [
-    2012,
-    2013
-   ]
-  ],
-  "seasons": 3,
-  "titles": 1,
-  "target": true
- },
- {
   "he": "דן איינבינדר",
   "name": "Dan Einbinder",
   "pos": "MF",
@@ -2892,6 +2872,26 @@
    ]
   ],
   "seasons": 8,
+  "titles": 1,
+  "target": true
+ },
+ {
+  "he": "דריו פרננדז",
+  "name": "Darío Fernández",
+  "pos": "MF",
+  "nat": "AR",
+  "born": 1978,
+  "spells": [
+   [
+    2009,
+    2009
+   ],
+   [
+    2012,
+    2013
+   ]
+  ],
+  "seasons": 3,
   "titles": 1,
   "target": true
  },
@@ -3017,7 +3017,7 @@
  },
  {
   "he": "יחזקאל פנחס",
-  "name": "Yehezkel Pinhas",
+  "name": "Liad Oved",
   "pos": "MF",
   "nat": "IL",
   "born": 1990,
@@ -3080,7 +3080,7 @@
   "target": true
  },
  {
-  "he": "פאולו דה לה חסה",
+  "he": "פאולו האסה",
   "name": "Paolo De La Haza",
   "pos": "DF",
   "nat": "PE",
@@ -3148,7 +3148,7 @@
   "target": true
  },
  {
-  "he": "כריסטיאן גונסלס",
+  "he": "כריסטיאן גונזלס",
   "name": "Christian González",
   "pos": "DF",
   "nat": "UY",
@@ -3196,7 +3196,7 @@
   "target": false
  },
  {
-  "he": "משה מישאלוב",
+  "he": "משה משאלוף",
   "name": "Moshe Mishaelov",
   "pos": "MF",
   "nat": "IL",
@@ -3292,7 +3292,7 @@
   "target": false
  },
  {
-  "he": "אנדרי פיליבסקי",
+  "he": "אנדריי פילבסקי",
   "name": "Andriy Pilyavsky",
   "pos": "DF",
   "nat": "UA",
@@ -3452,7 +3452,7 @@
   "target": false
  },
  {
-  "he": "שי נישים",
+  "he": "שי נסים",
   "name": "Shai Nishim",
   "pos": "MF",
   "nat": "IL",
@@ -3524,7 +3524,7 @@
   "target": false
  },
  {
-  "he": "דומיניק גלאווינה",
+  "he": "דומיניק גלאבינה",
   "name": "Dominik Glavina",
   "pos": "FW",
   "nat": "HR",
@@ -3540,7 +3540,7 @@
   "target": false
  },
  {
-  "he": "דינו שקבורץ",
+  "he": "דינו סקוורץ",
   "name": "Dino Škvorc",
   "pos": "DF",
   "nat": "HR",
@@ -3556,7 +3556,7 @@
   "target": false
  },
  {
-  "he": "זאור סדייב",
+  "he": "זאור סאדייב",
   "name": "Zaur Sadaev",
   "pos": "FW",
   "nat": "RU",
@@ -3608,7 +3608,7 @@
   "target": false
  },
  {
-  "he": "ג'ונתן וילה",
+  "he": "ג'ונתן פריירה",
   "name": "Jonathan Vila",
   "pos": "DF",
   "nat": "ES",
@@ -3640,7 +3640,7 @@
   "target": false
  },
  {
-  "he": "דושאן מאטוביץ'",
+  "he": "דושאן מטוביץ'",
   "name": "Dušan Matović",
   "pos": "DF",
   "nat": "RS",
@@ -3724,7 +3724,7 @@
   "target": false
  },
  {
-  "he": "סינטאיהו סללליץ'",
+  "he": "סינטאיהו סלליך",
   "name": "Sintayehu Sallalich",
   "pos": "FW",
   "nat": "IL",
@@ -3816,7 +3816,7 @@
   "target": false
  },
  {
-  "he": "אור ווקנין",
+  "he": "אור ואקנין",
   "name": "Or Vaknin",
   "pos": "MF",
   "nat": "IL",
@@ -3868,7 +3868,7 @@
   "target": false
  },
  {
-  "he": "דוד קלטיינס",
+  "he": "דוד קלטינס",
   "name": "David Keltjens",
   "pos": "DF",
   "nat": "IL",
@@ -4033,7 +4033,7 @@
  },
  {
   "he": "אוגוסטין קוום",
-  "name": "Augustine Kwem",
+  "name": "Ofek Marom",
   "pos": "FW",
   "nat": "NG",
   "born": 1997,
@@ -4116,7 +4116,7 @@
   "target": false
  },
  {
-  "he": "ארסניו ולפורט",
+  "he": "ארסניו ואלפורט",
   "name": "Arsenio Valpoort",
   "pos": "FW",
   "nat": "NL",
@@ -4133,7 +4133,7 @@
  },
  {
   "he": "דובב גבאי",
-  "name": "Dovev Gabay",
+  "name": "Nikita Rukavytsya",
   "pos": "FW",
   "nat": "IL",
   "born": 1987,
@@ -4164,22 +4164,6 @@
   "target": false
  },
  {
-  "he": "דניאל אסקלינג",
-  "name": "Daniel Askling",
-  "pos": "DF",
-  "nat": "SE",
-  "born": 1990,
-  "spells": [
-   [
-    2016,
-    2016
-   ]
-  ],
-  "seasons": 1,
-  "titles": 0,
-  "target": false
- },
- {
   "he": "חסוס רואדה",
   "name": "Jesús Rueda",
   "pos": "DF",
@@ -4192,6 +4176,22 @@
    ]
   ],
   "seasons": 2,
+  "titles": 0,
+  "target": false
+ },
+ {
+  "he": "יואכים אסקלינג",
+  "name": "Daniel Askling",
+  "pos": "DF",
+  "nat": "SE",
+  "born": 1990,
+  "spells": [
+   [
+    2016,
+    2016
+   ]
+  ],
+  "seasons": 1,
   "titles": 0,
   "target": false
  },
@@ -4212,7 +4212,7 @@
   "target": true
  },
  {
-  "he": "לירוי זהירי",
+  "he": "לירוי צעירי",
   "name": "Liroy Zhairi",
   "pos": "MF",
   "nat": "IL",
@@ -4248,7 +4248,7 @@
   "target": false
  },
  {
-  "he": "ניקיטה רוקביציה",
+  "he": "ניקיטה רוקאביציה",
   "name": "Nikita Rukavytsya",
   "pos": "FW",
   "nat": "AU",
@@ -4312,7 +4312,7 @@
   "target": false
  },
  {
-  "he": "שניר מישן",
+  "he": "שניר משען",
   "name": "Snir Mishan",
   "pos": "DF",
   "nat": "IL",
@@ -4408,7 +4408,7 @@
   "target": false
  },
  {
-  "he": "ג'ורג'יניו",
+  "he": "ג'ורג' פאולינו",
   "name": "Georginho",
   "pos": "MF",
   "nat": "BR",
@@ -4424,7 +4424,7 @@
   "target": true
  },
  {
-  "he": "גאטן וארן",
+  "he": "גטן וורן",
   "name": "Gaëtan Varenne",
   "pos": "FW",
   "nat": "IL",
@@ -4552,7 +4552,7 @@
   "target": false
  },
  {
-  "he": "עדן אזורי",
+  "he": "עדן עזורי",
   "name": "Eden Azuri",
   "pos": "FW",
   "nat": "IL",
@@ -4572,7 +4572,7 @@
   "target": false
  },
  {
-  "he": "עוז רלי",
+  "he": "עוז ראלי",
   "name": "Oz Rali",
   "pos": "MF",
   "nat": "IL",
@@ -4592,7 +4592,7 @@
   "target": false
  },
  {
-  "he": "שלומי אביסידריס",
+  "he": "שלומי אביסדריס",
   "name": "Shlomi Avisidris",
   "pos": "FW",
   "nat": "IL",
@@ -4625,7 +4625,7 @@
  },
  {
   "he": "אוהד אלבז",
-  "name": "Ohad Elbaz",
+  "name": "Oz Siton",
   "pos": "MF",
   "nat": "IL",
   "born": 1998,
@@ -4656,11 +4656,11 @@
   "target": false
  },
  {
-  "he": "דוד בויסן",
-  "name": "David Boysen",
+  "he": "ג'ייקוב סילבסטר",
+  "name": "Jakub Sylvestr",
   "pos": "FW",
-  "nat": "DK",
-  "born": 1991,
+  "nat": "SK",
+  "born": 1989,
   "spells": [
    [
     2018,
@@ -4692,11 +4692,11 @@
   "target": false
  },
  {
-  "he": "יאקוב סילבסטר",
-  "name": "Jakub Sylvestr",
+  "he": "דיוויד כץ",
+  "name": "David Boysen",
   "pos": "FW",
-  "nat": "SK",
-  "born": 1989,
+  "nat": "DK",
+  "born": 1991,
   "spells": [
    [
     2018,
@@ -4709,7 +4709,7 @@
  },
  {
   "he": "יום טוב עופר",
-  "name": "Yom-Tov Ofer",
+  "name": "Ofer Verta",
   "pos": "DF",
   "nat": "IL",
   "born": 1990,
@@ -4744,7 +4744,7 @@
   "target": false
  },
  {
-  "he": "עוז סיתון",
+  "he": "עוז סיטון",
   "name": "Oz Siton",
   "pos": "MF",
   "nat": "IL",
@@ -4848,23 +4848,7 @@
   "target": true
  },
  {
-  "he": "אור ענברום",
-  "name": "Or Inbrum",
-  "pos": "MF",
-  "nat": "IL",
-  "born": 1996,
-  "spells": [
-   [
-    2019,
-    2019
-   ]
-  ],
-  "seasons": 1,
-  "titles": 0,
-  "target": false
- },
- {
-  "he": "איתמר ניזן",
+  "he": "איתמר ניצן",
   "name": "Itamar Nizan",
   "pos": "GK",
   "nat": "IL",
@@ -4976,6 +4960,22 @@
   "target": true
  },
  {
+  "he": "ליאור אינברום",
+  "name": "Or Inbrum",
+  "pos": "MF",
+  "nat": "IL",
+  "born": 1996,
+  "spells": [
+   [
+    2019,
+    2019
+   ]
+  ],
+  "seasons": 1,
+  "titles": 0,
+  "target": false
+ },
+ {
   "he": "מאור בוזגלו",
   "name": "Maor Buzaglo",
   "pos": "FW",
@@ -4992,7 +4992,7 @@
   "target": false
  },
  {
-  "he": "מיהאי וודוץ",
+  "he": "מיחאי וודוט",
   "name": "Mihai Voduţ",
   "pos": "FW",
   "nat": "RO",
@@ -5056,22 +5056,6 @@
   "target": true
  },
  {
-  "he": "סמואל שיימן",
-  "name": "Samuel Scheimann",
-  "pos": "DF",
-  "nat": "IL",
-  "born": 1987,
-  "spells": [
-   [
-    2019,
-    2019
-   ]
-  ],
-  "seasons": 1,
-  "titles": 0,
-  "target": false
- },
- {
   "he": "עוזיאל פרדו",
   "name": "Uziel Pardo",
   "pos": "FW",
@@ -5112,6 +5096,22 @@
    ]
   ],
   "seasons": 2,
+  "titles": 0,
+  "target": false
+ },
+ {
+  "he": "שמואל שיימן",
+  "name": "Samuel Scheimann",
+  "pos": "DF",
+  "nat": "IL",
+  "born": 1987,
+  "spells": [
+   [
+    2019,
+    2019
+   ]
+  ],
+  "seasons": 1,
   "titles": 0,
   "target": false
  },
@@ -5164,8 +5164,8 @@
   "target": true
  },
  {
-  "he": "דיוגו ורדסקה",
-  "name": "Diogo Verdasca",
+  "he": "דיאוגו ורדסקה",
+  "name": "Shay Konstantini",
   "pos": "DF",
   "nat": "PT",
   "born": 1996,
@@ -5196,7 +5196,7 @@
   "target": false
  },
  {
-  "he": "לוי גרסיה",
+  "he": "לוי גארסיה",
   "name": "Levi García",
   "pos": "FW",
   "nat": "TT",
@@ -5304,7 +5304,7 @@
   "target": false
  },
  {
-  "he": "רועי דוגה",
+  "he": "רוי דוגה",
   "name": "Roy Doga",
   "pos": "FW",
   "nat": "IL",
@@ -5320,7 +5320,7 @@
   "target": true
  },
  {
-  "he": "רועי ששון",
+  "he": "רוי ששון",
   "name": "Roy Sason",
   "pos": "GK",
   "nat": "IL",
@@ -5484,7 +5484,7 @@
   "target": true
  },
  {
-  "he": "מרקו יאנקוביץ'",
+  "he": "מרקו ינקוביץ'",
   "name": "Marko Janković",
   "pos": "FW",
   "nat": "ME",
@@ -5516,7 +5516,7 @@
   "target": false
  },
  {
-  "he": "ניקו אולסק",
+  "he": "ניקולס אולסק",
   "name": "Nico Olsak",
   "pos": "MF",
   "nat": "IL",
@@ -5533,7 +5533,7 @@
  },
  {
   "he": "סנטיאגו אוקמפוס",
-  "name": "Santiago Ocampos",
+  "name": "Raz Baruchian",
   "pos": "DF",
   "nat": "PY",
   "born": 2002,
@@ -5548,7 +5548,7 @@
   "target": false
  },
  {
-  "he": "קים זיוות",
+  "he": "קים זיבת",
   "name": "Kim Zivat",
   "pos": "GK",
   "nat": "IL",
@@ -5600,23 +5600,7 @@
   "target": false
  },
  {
-  "he": "דן עזריה",
-  "name": "Dan Azaria",
-  "pos": "MF",
-  "nat": "IL",
-  "born": 1995,
-  "spells": [
-   [
-    2022,
-    2024
-   ]
-  ],
-  "seasons": 3,
-  "titles": 1,
-  "target": true
- },
- {
-  "he": "חוסואה מחיאס",
+  "he": "ג'וסואה מחייאס",
   "name": "Josua Mejías",
   "pos": "DF",
   "nat": "VE",
@@ -5632,7 +5616,7 @@
   "target": false
  },
  {
-  "he": "חלפילו פלאטר",
+  "he": "גלאופילו וליגטר",
   "name": "Halafilo Plater",
   "pos": "MF",
   "nat": "IL",
@@ -5646,6 +5630,22 @@
   "seasons": 1,
   "titles": 0,
   "target": false
+ },
+ {
+  "he": "דן עזריה",
+  "name": "Dan Azaria",
+  "pos": "MF",
+  "nat": "IL",
+  "born": 1995,
+  "spells": [
+   [
+    2022,
+    2024
+   ]
+  ],
+  "seasons": 3,
+  "titles": 1,
+  "target": true
  },
  {
   "he": "ליאל דרעי",
@@ -5748,7 +5748,7 @@
   "target": false
  },
  {
-  "he": "קמסו מארה",
+  "he": "קאמסו מארה",
   "name": "Kamso Mara",
   "pos": "MF",
   "nat": "GN",
@@ -5780,7 +5780,7 @@
   "target": false
  },
  {
-  "he": "ריצ'מונד בואקיה",
+  "he": "ריצ'מונד בואצ'י",
   "name": "Richmond Boakye",
   "pos": "FW",
   "nat": "GH",
@@ -5860,7 +5860,7 @@
   "target": true
  },
  {
-  "he": "דנילו אספריה",
+  "he": "דנילו אספרייה",
   "name": "Danilo Asprilla",
   "pos": "FW",
   "nat": "CO",
@@ -5924,7 +5924,7 @@
   "target": true
  },
  {
-  "he": "סרגיי בורודין",
+  "he": "סרג'י בורודין",
   "name": "Sergey Borodin",
   "pos": "DF",
   "nat": "RU",
@@ -5956,7 +5956,7 @@
   "target": false
  },
  {
-  "he": "פרד פריידי",
+  "he": "פרד פריידיי",
   "name": "Fred Friday",
   "pos": "FW",
   "nat": "NG",
@@ -5969,6 +5969,22 @@
   ],
   "seasons": 2,
   "titles": 1,
+  "target": false
+ },
+ {
+  "he": "אדי גוטליב",
+  "name": "Adi Gotlieb",
+  "pos": "DF",
+  "nat": "IL",
+  "born": 1992,
+  "spells": [
+   [
+    2024,
+    2024
+   ]
+  ],
+  "seasons": 1,
+  "titles": 0,
   "target": false
  },
  {
@@ -6068,7 +6084,7 @@
   "target": false
  },
  {
-  "he": "טימותי מוזי",
+  "he": "טימוטי מוזי",
   "name": "Timothy Muzie",
   "pos": "MF",
   "nat": "IL",
@@ -6153,22 +6169,6 @@
   "pos": "MF",
   "nat": "GE",
   "born": 2001,
-  "spells": [
-   [
-    2024,
-    2024
-   ]
-  ],
-  "seasons": 1,
-  "titles": 0,
-  "target": false
- },
- {
-  "he": "עדי גוטליב",
-  "name": "Adi Gotlieb",
-  "pos": "DF",
-  "nat": "IL",
-  "born": 1992,
   "spells": [
    [
     2024,
@@ -6420,7 +6420,7 @@
   "target": false
  },
  {
-  "he": "איילסון טאוארס",
+  "he": "איילסון טאברס",
   "name": "Aílson Tavares",
   "pos": "MF",
   "nat": "CV",
@@ -6453,7 +6453,7 @@
  },
  {
   "he": "איתי סניור",
-  "name": "Itay Senior",
+  "name": "Adi Isaschar",
   "pos": "GK",
   "nat": "IL",
   "born": 2006,
@@ -6468,8 +6468,8 @@
   "target": false
  },
  {
-  "he": "אלכסנדר סוצקוב",
-  "name": "Alexander Sotskov",
+  "he": "אלכסנדר סוטסקוב",
+  "name": "Shahar Visagie",
   "pos": "MF",
   "nat": "IL",
   "born": 2006,
@@ -6484,23 +6484,7 @@
   "target": false
  },
  {
-  "he": "אפממז'אסונד גונסלס",
-  "name": "Efmamjjasond González",
-  "pos": "FW",
-  "nat": "CO",
-  "born": 1999,
-  "spells": [
-   [
-    2026,
-    2026
-   ]
-  ],
-  "seasons": 1,
-  "titles": 0,
-  "target": false
- },
- {
-  "he": "בוריס אנאו",
+  "he": "בוריס אינו",
   "name": "Boris Enow",
   "pos": "MF",
   "nat": "CM",
@@ -6516,7 +6500,7 @@
   "target": false
  },
  {
-  "he": "בראיאן קרבאלי",
+  "he": "בריאן קרבאלי",
   "name": "Brayan Carabalí",
   "pos": "DF",
   "nat": "CO",
@@ -6580,6 +6564,22 @@
   "target": false
  },
  {
+  "he": "חאסונד גונסאלס",
+  "name": "Efmamjjasond González",
+  "pos": "FW",
+  "nat": "CO",
+  "born": 1999,
+  "spells": [
+   [
+    2026,
+    2026
+   ]
+  ],
+  "seasons": 1,
+  "titles": 0,
+  "target": false
+ },
+ {
   "he": "יאן שיקוט",
   "name": "Yan Shikut",
   "pos": "FW",
@@ -6613,7 +6613,7 @@
  },
  {
   "he": "ירדן כהן",
-  "name": "Yarden Cohen",
+  "name": "Luka Gadrani",
   "pos": "DF",
   "nat": "IL",
   "born": 1997,
@@ -6628,7 +6628,7 @@
   "target": false
  },
  {
-  "he": "לוקה גדרני",
+  "he": "לוקה גדראני",
   "name": "Luka Gadrani",
   "pos": "DF",
   "nat": "GE",
@@ -6644,7 +6644,7 @@
   "target": false
  },
  {
-  "he": "נאנה אנטווי",
+  "he": "נאנא אנטווי",
   "name": "Nana Antwi",
   "pos": "DF",
   "nat": "GH",
@@ -6708,7 +6708,7 @@
   "target": false
  },
  {
-  "he": "שחר ויסאגי",
+  "he": "שחר ויסגי",
   "name": "Shahar Visagie",
   "pos": "MF",
   "nat": "IL",
