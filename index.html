@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ביתרדל · חידת השחקן היומית</title>
+<meta name="description" content="שחקן בית&quot;ר אחד מסתורי. שמונה ניסיונות. חידה חדשה כל יום.">
+
+<!-- ===== תצוגה מקדימה בוואטסאפ — החלף את הדומיין ===== -->
+<meta property="og:type"        content="website">
+<meta property="og:title"       content="ביתרדל · חידת השחקן היומית">
+<meta property="og:description" content="שחקן בית&quot;ר אחד. שמונה ניסיונות. כמה ייקח לכם?">
+<meta property="og:url"         content="https://beitardle.co.il/">
+<meta property="og:image"       content="https://beitardle.co.il/og-beitardle.png">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card"       content="summary_large_image">
+<meta name="theme-color" content="#0C0C0E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0C0C0E; --ink-2:#141418; --ink-3:#1C1C22; --line:#2E2E36;
+  --yellow:#FFC72C; --olive:#8A6A1C; --slate:#24242A;
+  --text:#F2F2F0; --dim:#8C8C94; --r:10px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{background:var(--ink);color:var(--text);font-family:'Heebo',system-ui,sans-serif;
+  font-size:16px;line-height:1.5;min-height:100dvh;padding-bottom:env(safe-area-inset-bottom)}
+.wrap{max-width:520px;margin:0 auto;padding:0 14px 48px}
+.scarf{height:14px;background:repeating-linear-gradient(115deg,var(--yellow) 0 16px,var(--ink) 16px 32px)}
+.scarf.bottom{margin-top:32px}
+
+header{padding:20px 0 16px;text-align:center;position:relative}
+h1{font-family:'Suez One',Georgia,serif;font-size:clamp(34px,10vw,46px);line-height:1;margin:0;
+  color:var(--yellow);letter-spacing:-.5px}
+.sub{margin:8px 0 0;font-size:13px;color:var(--dim);font-weight:500}
+.sub b{color:var(--text);font-weight:700}
+#streak{position:absolute;top:22px;inset-inline-start:0;font-size:12px;color:var(--dim);
+  background:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:4px 11px;display:none}
+#streak.on{display:block}
+#streak b{color:var(--yellow);font-weight:900}
+
+.searchbox{position:relative}
+#guess{width:100%;padding:14px 16px;font-family:inherit;font-size:17px;font-weight:500;
+  color:var(--text);background:var(--ink-2);border:1.5px solid var(--line);border-radius:var(--r);outline:none}
+#guess::placeholder{color:#5C5C66}
+#guess:focus{border-color:var(--yellow);box-shadow:0 0 0 3px rgba(255,199,44,.15)}
+#guess:disabled{opacity:.4}
+#sugg{position:absolute;top:calc(100% + 6px);inset-inline:0;background:var(--ink-3);
+  border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden auto;max-height:240px;
+  z-index:30;display:none;box-shadow:0 12px 32px rgba(0,0,0,.6)}
+#sugg.on{display:block}
+#sugg button{display:block;width:100%;text-align:start;padding:11px 16px;background:none;border:0;
+  border-bottom:1px solid var(--line);color:var(--text);font-family:inherit;font-size:16px;cursor:pointer}
+#sugg button:last-child{border-bottom:0}
+#sugg button:hover,#sugg button.sel{background:var(--yellow);color:var(--ink);font-weight:700}
+
+.legend{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:16px 0 4px;
+  font-size:11.5px;color:var(--dim)}
+.legend span{display:flex;align-items:center;gap:5px}
+.dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+.dot.y{background:var(--yellow)} .dot.o{background:var(--olive)}
+.dot.s{background:var(--slate);border:1px solid var(--line)}
+
+#board{margin-top:18px;display:flex;flex-direction:column;gap:12px}
+.row{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);padding:9px 10px 10px}
+.row .who{font-size:15px;font-weight:700;margin:0 0 8px;display:flex;justify-content:space-between;
+  align-items:baseline;gap:8px}
+.row .who i{font-style:normal;font-size:11px;color:var(--dim);font-weight:500}
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.tile{border-radius:7px;padding:8px 3px 7px;text-align:center;background:var(--slate);color:var(--text);
+  min-height:54px;display:flex;flex-direction:column;justify-content:center;gap:3px;
+  opacity:0;transform:rotateX(-90deg);animation:flip .42s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes flip{to{opacity:1;transform:rotateX(0)}}
+.tile .k{font-size:9.5px;opacity:.72;font-weight:500}
+.tile .v{font-size:12.5px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.15}
+.tile.hit{background:var(--yellow);color:var(--ink)}
+.tile.near{background:var(--olive);color:#fff}
+.tile .ar{font-size:11px;font-weight:900;opacity:.9}
+@media (prefers-reduced-motion:reduce){.tile{animation:none;opacity:1;transform:none}}
+
+#result{margin-top:22px;display:none}
+#result.on{display:block}
+.card{border:1.5px solid var(--yellow);border-radius:14px;padding:18px 16px;text-align:center;
+  background:linear-gradient(180deg,rgba(255,199,44,.09),transparent)}
+.card h2{font-family:'Suez One',serif;font-size:26px;margin:0;color:var(--yellow)}
+.card p{margin:8px 0 0;font-size:14.5px;color:var(--dim)}
+.card p b{color:var(--text)}
+.mini{display:inline-flex;flex-direction:column;gap:3px;margin:16px auto 0;padding:10px;
+  background:var(--ink);border-radius:8px}
+.mini .r{display:flex;gap:3px}
+.mini i{width:14px;height:14px;border-radius:3px;display:block}
+.mini i.hit{background:var(--yellow)} .mini i.near{background:var(--olive)} .mini i.miss{background:var(--slate)}
+#next{margin-top:16px;font-size:12.5px;color:var(--dim)}
+#next b{color:var(--text);font-variant-numeric:tabular-nums;font-weight:700}
+button.act{margin-top:14px;width:100%;padding:14px;border:0;border-radius:var(--r);
+  background:var(--yellow);color:var(--ink);font-family:inherit;font-size:16px;font-weight:900;cursor:pointer}
+button.act:active{transform:translateY(1px)}
+button.ghost{background:none;color:var(--dim);border:1.5px solid var(--line);margin-top:9px;
+  font-weight:700;font-size:14px}
+.note{margin-top:20px;padding:12px 14px;background:var(--ink-2);border:1px solid var(--line);
+  border-radius:var(--r);font-size:11.5px;color:var(--dim);line-height:1.7}
+.note b{color:var(--text)}
+footer{margin-top:18px;text-align:center;font-size:11.5px;color:#55555E;line-height:1.7}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<div class="scarf"></div>
+
+<div class="wrap">
+  <header>
+    <div id="streak">רצף <b id="streakn">0</b></div>
+    <h1>ביתרדל</h1>
+    <p class="sub">חידה <b id="pnum">#1</b> · <b id="left">8</b> ניסיונות נותרו</p>
+  </header>
+
+  <div class="searchbox">
+    <input id="guess" type="text" autocomplete="off" autocapitalize="off" spellcheck="false"
+           placeholder="טוען…" aria-label="ניחוש שחקן" disabled>
+    <div id="sugg" role="listbox"></div>
+  </div>
+
+  <div class="legend">
+    <span><i class="dot y"></i> מדויק</span>
+    <span><i class="dot o"></i> קרוב</span>
+    <span><i class="dot s"></i> רחוק</span>
+    <span>↑ יותר · ↓ פחות</span>
+  </div>
+
+  <div id="board"></div>
+
+  <div id="result">
+    <div class="card">
+      <h2 id="rtitle"></h2>
+      <p id="rtext"></p>
+      <div class="mini" id="mini"></div>
+      <div id="next">החידה הבאה בעוד <b id="cd">--:--:--</b></div>
+      <button class="act" id="share">העתקת התוצאה</button>
+      <button class="act ghost" id="again">משחק אימון (שחקן אקראי)</button>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>איך נספרים התארים:</b> אליפויות וגביעי מדינה שבית"ר זכתה בהם בזמן שהשחקן היה בסגל.
+    גביע הטוטו ואלוף האלופים לא נספרים.<br>
+    התשובה תמיד שחקן עם שלוש עונות ומעלה — אבל אפשר לנחש כל שחקן במאגר.<br>
+    אליפויות: 1987, 1993, 1997, 1998, 2007, 2008 · גביעי מדינה: 1976, 1979, 1985, 1986, 1989, 2008, 2009, 2023
+  </div>
+
+  <footer>ביתרדל · פרויקט אוהדים · לא רשמי<br>נבנה על ידי TechByNoam</footer>
+</div>
+
+<div class="scarf bottom"></div>
+
+<script>
+/* ============================================================
+   1. הגדרות — כאן אתה עורך
+   ============================================================ */
+const SITE_URL  = "https://beitardle.co.il";  // בלי / בסוף
+const START     = [2026, 8, 25];              // [שנה, חודש 1-12, יום] של חידה #1
+const MAX       = 8;
+const SHUFFLE_SEED = 20260825;                // שינוי הערך מערבב מחדש את סדר החידות
+
+const LEAGUE_TITLES = [1987,1993,1997,1998,2007,2008];
+const STATE_CUPS    = [1976,1979,1985,1986,1989,2008,2009,2023];
+
+/* ============================================================
+   2. מאגר גיבוי — 34 שחקנים.
+      אם קיים players.json לצד הקובץ, הוא גובר על זה.
+      כל רשומה ב-players.json צריכה: he (שם בעברית), pos, nat, spells
+   ============================================================ */
+const FALLBACK = [
+  {he:"אלי אוחנה",          pos:"FW", nat:"IL", spells:[[1980,1987],[1991,1999]]},
+  {he:"אורי מלמיליאן",      pos:"MF", nat:"IL", spells:[[1972,1987]]},
+  {he:"יוסי מזרחי",         pos:"GK", nat:"IL", spells:[[1974,1988]]},
+  {he:"חנן אזולאי",         pos:"DF", nat:"IL", spells:[[1974,1989]]},
+  {he:"יעקב שוורץ",         pos:"MF", nat:"IL", spells:[[1982,1994]]},
+  {he:"אבי כהן (הירושלמי)", pos:"DF", nat:"IL", spells:[[1985,1990]]},
+  {he:"אופיר שמואלי",       pos:"MF", nat:"IL", spells:[[1986,1990]]},
+  {he:"סרגיי טרטיאק",       pos:"DF", nat:"UA", spells:[[1992,2000]]},
+  {he:"רונן חרזי",          pos:"FW", nat:"IL", spells:[[1992,1997]]},
+  {he:"איציק קורנפיין",     pos:"GK", nat:"IL", spells:[[1993,2007]]},
+  {he:"שמוליק לוי",         pos:"MF", nat:"IL", spells:[[1991,1999]]},
+  {he:"איציק זוהר",         pos:"MF", nat:"IL", spells:[[1991,1998]]},
+  {he:"ז'אן טלסניקוב",      pos:"MF", nat:"IL", spells:[[1992,1997]]},
+  {he:"יוסי אבוקסיס",       pos:"MF", nat:"IL", spells:[[1994,2004]]},
+  {he:"אלון חרזי",          pos:"DF", nat:"IL", spells:[[1997,1998]]},
+  {he:"סטפן שאלוי",         pos:"MF", nat:"HU", spells:[[1996,1999]]},
+  {he:"אישטוון פישונט",     pos:"FW", nat:"HU", spells:[[1996,1999]]},
+  {he:"דוד אמסלם",          pos:"DF", nat:"IL", spells:[[1996,1999],[2005,2009]]},
+  {he:"אריאל הרוש",         pos:"GK", nat:"IL", spells:[[2005,2011]]},
+  {he:"אריק בנאדו",         pos:"DF", nat:"IL", spells:[[2007,2010]]},
+  {he:"שמעון גרשון",        pos:"DF", nat:"IL", spells:[[2008,2010]]},
+  {he:"יואב זיו",           pos:"DF", nat:"IL", spells:[[2008,2010]]},
+  {he:"אבירם ברוכיאן",      pos:"MF", nat:"IL", spells:[[2006,2012]]},
+  {he:"עמית בן שושן",       pos:"MF", nat:"IL", spells:[[2004,2011]]},
+  {he:"ברק יצחקי",          pos:"FW", nat:"IL", spells:[[2003,2009]]},
+  {he:"דרק בואטנג",         pos:"MF", nat:"GH", spells:[[2006,2009]]},
+  {he:"עידן טל",            pos:"MF", nat:"IL", spells:[[2007,2010]]},
+  {he:"מיכאל זנדברג",       pos:"MF", nat:"IL", spells:[[2008,2010]]},
+  {he:"טוטו תמוז",          pos:"FW", nat:"IL", spells:[[2008,2012]]},
+  {he:"דרקו טאשבסקי",       pos:"MF", nat:"MK", spells:[[2009,2015]]},
+  {he:"אופיר קריאף",        pos:"MF", nat:"IL", spells:[[2010,2016]]},
+  {he:"יוסי בניון",         pos:"MF", nat:"IL", spells:[[2013,2014]]},
+  {he:"עומר אצילי",         pos:"FW", nat:"IL", spells:[[2013,2017]]},
+  {he:"מיגל ויטור",         pos:"DF", nat:"PT", spells:[[2015,2019]]}
+];
+
+/* ============================================================
+   3. טבלאות תרגום
+   ============================================================ */
+const POS_HE = {GK:"שוער", DF:"מגן", MF:"קשר", FW:"חלוץ"};
+const POS_ORDER = ["GK","DF","MF","FW"];
+const NAT_HE = {
+  IL:"ישראל", UA:"אוקראינה", HU:"הונגריה", GH:"גאנה", MK:"מקדוניה", PT:"פורטוגל",
+  BR:"ברזיל", AR:"ארגנטינה", ES:"ספרד", FR:"צרפת", NG:"ניגריה", GE:"גאורגיה",
+  CO:"קולומביה", RU:"רוסיה", CM:"קמרון", RO:"רומניה", UY:"אורוגוואי", CL:"צ'ילה"
+};
+/* מיפוי משמות המדינות שהסקריפט מחזיר באנגלית */
+const NAT_FROM_EN = {
+  "Israel":"IL","Ukraine":"UA","Hungary":"HU","Ghana":"GH","North Macedonia":"MK",
+  "Portugal":"PT","Brazil":"BR","Argentina":"AR","Spain":"ES","France":"FR",
+  "Nigeria":"NG","Georgia":"GE","Colombia":"CO","Russia":"RU","Cameroon":"CM",
+  "Romania":"RO","Uruguay":"UY","Chile":"CL"
+};
+const REGION = {IL:"ME", UA:"EU", HU:"EU", MK:"EU", PT:"EU", ES:"EU", FR:"EU",
+                GE:"EU", RU:"EU", RO:"EU", GH:"AF", NG:"AF", CM:"AF",
+                BR:"SA", AR:"SA", CO:"SA", UY:"SA", CL:"SA"};
+
+/* ============================================================
+   4. עזרים
+   ============================================================ */
+const $ = s => document.querySelector(s);
+const store = {
+  get(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } },
+  set(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+};
+
+/* ערבוב דטרמיניסטי — אותו seed, אותו סדר, בכל מכשיר */
+function mulberry32(a){
+  return function(){
+    a |= 0; a = a + 0x6D2B79F5 | 0;
+    let t = Math.imul(a ^ a>>>15, 1 | a);
+    t = t + Math.imul(t ^ t>>>7, 61 | t) ^ t;
+    return ((t ^ t>>>14) >>> 0) / 4294967296;
+  };
+}
+function seededShuffle(arr, seed){
+  const rnd = mulberry32(seed), a = [...arr];
+  for (let i=a.length-1; i>0; i--){
+    const j = Math.floor(rnd()*(i+1));
+    [a[i],a[j]] = [a[j],a[i]];
+  }
+  return a;
+}
+
+/* מספר החידה של היום — לפי תאריך מקומי */
+function dayIndex(){
+  const s = Date.UTC(START[0], START[1]-1, START[2]);
+  const n = new Date();
+  const today = Date.UTC(n.getFullYear(), n.getMonth(), n.getDate());
+  return Math.max(0, Math.floor((today - s)/86400000));
+}
+
+function countTitles(spells){
+  return [...LEAGUE_TITLES, ...STATE_CUPS]
+    .filter(y => spells.some(([a,b]) => y > a && y <= b)).length;
+}
+function normalize(p){
+  const spells = p.spells;
+  return {
+    name: p.he || p.name,
+    pos:  p.pos,
+    nat:  NAT_FROM_EN[p.nat] || p.nat,
+    spells,
+    born: p.born || null,
+    target: p.target !== false,
+    titles: typeof p.titles === "number" ? p.titles : countTitles(spells),
+    from: Math.min(...spells.map(s=>s[0])),
+    to:   Math.max(...spells.map(s=>s[1]))
+  };
+}
+const eraLabel = p => p.spells.map(([a,b]) => a+"–"+b).join(" / ");
+
+/* ============================================================
+   5. מצב המשחק
+   ============================================================ */
+let PLAYERS = [], answer = null, puzzleNo = 1;
+let practice = false, guesses = [], over = false;
+const board = $("#board"), input = $("#guess"), sugg = $("#sugg");
+
+function compare(g, a){
+  const out = [];
+
+  const gi = POS_ORDER.indexOf(g.pos), ai = POS_ORDER.indexOf(a.pos);
+  out.push({k:"עמדה", v:POS_HE[g.pos]||g.pos,
+            s: g.pos===a.pos ? "hit" : (Math.abs(gi-ai)===1 ? "near" : "miss")});
+
+  out.push({k:"לאום", v:NAT_HE[g.nat]||g.nat,
+            s: g.nat===a.nat ? "hit" : (REGION[g.nat]&&REGION[g.nat]===REGION[a.nat] ? "near" : "miss")});
+
+  let best = -999;
+  g.spells.forEach(([g1,g2]) => a.spells.forEach(([a1,a2]) => {
+    best = Math.max(best, Math.min(g2,a2) - Math.max(g1,a1));
+  }));
+  const gap = best >= 0 ? 0 : -best;
+  const gMid = (g.from+g.to)/2, aMid = (a.from+a.to)/2;
+  out.push({k:"תקופה", v:eraLabel(g), ar: gap>0 ? (aMid>gMid?"↑":"↓") : "",
+            s: best >= 2 ? "hit" : (gap <= 5 ? "near" : "miss")});
+
+  const d = a.titles - g.titles;
+  out.push({k:"תארים", v:g.titles, ar: d===0 ? "" : (d>0?"↑":"↓"),
+            s: d===0 ? "hit" : (Math.abs(d)<=1 ? "near" : "miss")});
+
+  if (a.born && g.born){
+    const b = a.born - g.born;
+    out.push({k:"נולד", v:g.born, ar: b===0 ? "" : (b>0?"↑":"↓"),
+              s: b===0 ? "hit" : (Math.abs(b)<=3 ? "near" : "miss")});
+  } else {
+    out.push({k:"נולד", v:g.born || "?", s:"miss"});
+  }
+
+  return out;
+}
+
+function render(g){
+  const cells = compare(g, answer);
+  const row = document.createElement("div");
+  row.className = "row";
+  row.innerHTML =
+    `<p class="who">${g.name}<i>ניחוש ${guesses.length}</i></p><div class="tiles">` +
+    cells.map((c,i)=>
+      `<div class="tile ${c.s}" style="animation-delay:${i*90}ms">
+         <span class="k">${c.k}</span>
+         <span class="v">${c.v}${c.ar?` <span class="ar">${c.ar}</span>`:""}</span>
+       </div>`).join("") + `</div>`;
+  board.appendChild(row);
+  $("#left").textContent = MAX - guesses.length;
+}
+
+function flash(msg){
+  input.value = ""; input.placeholder = msg;
+  setTimeout(()=> input.placeholder = 'הקלידו שם של שחקן בית"ר…', 1800);
+}
+
+function submit(name){
+  if (over) return;
+  const p = PLAYERS.find(x => x.name === name);
+  if (!p) return;
+  if (guesses.some(x => x.name === name)) { flash("כבר ניחשתם את השחקן הזה"); return; }
+  guesses.push(p); render(p);
+  input.value = ""; closeSugg();
+  if (p.name === answer.name) finish(true);
+  else if (guesses.length >= MAX) finish(false);
+}
+
+/* ---------- רצף ---------- */
+function bumpStreak(won){
+  let st = {last:null, n:0};
+  try{ st = JSON.parse(store.get("beitardle:streak")) || st; }catch(e){}
+  if (st.last === puzzleNo) return st.n;          // כבר נספר היום
+  st.n = won ? (st.last === puzzleNo-1 ? st.n+1 : 1) : 0;
+  st.last = puzzleNo;
+  store.set("beitardle:streak", JSON.stringify(st));
+  return st.n;
+}
+function showStreak(){
+  let st = {n:0, last:null};
+  try{ st = JSON.parse(store.get("beitardle:streak")) || st; }catch(e){}
+  const live = st.n > 0 && (st.last === puzzleNo || st.last === puzzleNo-1);
+  $("#streakn").textContent = st.n;
+  $("#streak").classList.toggle("on", live);
+}
+
+/* ---------- ספירה לאחור ---------- */
+function tickCountdown(){
+  const n = new Date();
+  const mid = new Date(n.getFullYear(), n.getMonth(), n.getDate()+1, 0,0,0);
+  let s = Math.max(0, Math.floor((mid - n)/1000));
+  const h = String(Math.floor(s/3600)).padStart(2,"0");
+  const m = String(Math.floor(s%3600/60)).padStart(2,"0");
+  const ss= String(s%60).padStart(2,"0");
+  const el = $("#cd"); if (el) el.textContent = `${h}:${m}:${ss}`;
+}
+setInterval(tickCountdown, 1000);
+
+function finish(won){
+  over = true; input.disabled = true;
+  $("#rtitle").textContent = won ? "פיצחתם!" : "נגמרו הניסיונות";
+  $("#rtext").innerHTML = won
+    ? `<b>${answer.name}</b> · ${guesses.length} מתוך ${MAX}`
+    : `השחקן היה <b>${answer.name}</b> · ${eraLabel(answer)} · ${answer.titles} תארים`;
+
+  const mini = $("#mini"); mini.innerHTML = "";
+  guesses.forEach(g=>{
+    const r = document.createElement("div"); r.className = "r";
+    compare(g, answer).forEach(c=>{
+      const i = document.createElement("i"); i.className = c.s; r.appendChild(i);
+    });
+    mini.appendChild(r);
+  });
+
+  if (!practice){
+    store.set("beitardle:"+puzzleNo, JSON.stringify({won, n:guesses.length}));
+    bumpStreak(won); showStreak();
+    $("#next").style.display = "";
+  } else {
+    $("#next").style.display = "none";
+  }
+  tickCountdown();
+  $("#result").classList.add("on");
+  $("#result").scrollIntoView({behavior:"smooth", block:"nearest"});
+}
+
+/* ---------- שיתוף — עם קישור ---------- */
+function shareText(){
+  const M = {hit:"🟨", near:"🟫", miss:"⬛"};
+  const grid = guesses.map(g => compare(g,answer).map(c=>M[c.s]).join("")).join("\n");
+  const won = guesses[guesses.length-1].name === answer.name;
+  const score = won ? guesses.length+"/"+MAX : "X/"+MAX;
+  return `ביתרדל #${puzzleNo} — ${score}\n\n${grid}\n\n${SITE_URL}`;
+}
+$("#share").addEventListener("click", async ()=>{
+  const btn = $("#share"), txt = shareText();
+  try{
+    if (navigator.share) { await navigator.share({text:txt}); return; }
+    await navigator.clipboard.writeText(txt);
+    btn.textContent = "הועתק ✓";
+  }catch(e){ btn.textContent = "ההעתקה נחסמה — סמנו והעתיקו ידנית"; }
+  setTimeout(()=> btn.textContent = "העתקת התוצאה", 2200);
+});
+
+$("#again").addEventListener("click", ()=>{
+  practice = true; over = false; guesses = [];
+  const tp = PLAYERS.filter(p => p.target);
+  answer = tp[Math.floor(Math.random()*tp.length)];
+  board.innerHTML = ""; $("#result").classList.remove("on");
+  input.disabled = false; input.value = ""; $("#left").textContent = MAX;
+  $("#pnum").textContent = "אימון"; input.focus();
+});
+
+/* ---------- השלמה אוטומטית ---------- */
+let selIdx = -1;
+function openSugg(list){
+  sugg.innerHTML = list.map(p => `<button type="button" data-name="${p.name}" role="option">${p.name}</button>`).join("");
+  sugg.classList.add("on"); selIdx = -1;
+}
+function closeSugg(){ sugg.classList.remove("on"); sugg.innerHTML = ""; selIdx = -1; }
+
+input.addEventListener("input", ()=>{
+  const q = input.value.trim();
+  if (!q) return closeSugg();
+  const hits = PLAYERS.filter(p => p.name.includes(q) && !guesses.some(g=>g.name===p.name)).slice(0,7);
+  hits.length ? openSugg(hits) : closeSugg();
+});
+sugg.addEventListener("click", e=>{
+  const b = e.target.closest("button"); if (b) submit(b.dataset.name);
+});
+input.addEventListener("keydown", e=>{
+  const opts = [...sugg.querySelectorAll("button")];
+  if (e.key === "ArrowDown" || e.key === "ArrowUp"){
+    if (!opts.length) return;
+    e.preventDefault();
+    selIdx = e.key === "ArrowDown" ? (selIdx+1)%opts.length : (selIdx-1+opts.length)%opts.length;
+    opts.forEach((o,i)=> o.classList.toggle("sel", i===selIdx));
+    opts[selIdx].scrollIntoView({block:"nearest"});
+  } else if (e.key === "Enter"){
+    e.preventDefault();
+    if (selIdx >= 0 && opts[selIdx]) submit(opts[selIdx].dataset.name);
+    else if (opts.length) submit(opts[0].dataset.name);
+  } else if (e.key === "Escape") closeSugg();
+});
+document.addEventListener("click", e=>{ if (!e.target.closest(".searchbox")) closeSugg(); });
+
+/* ============================================================
+   6. אתחול
+   ============================================================ */
+async function loadPlayers(){
+  try{
+    const r = await fetch("players.json", {cache:"no-cache"});
+    if (r.ok){
+      const j = await r.json();
+      if (Array.isArray(j) && j.length >= 20) return j.map(normalize);
+    }
+  }catch(e){ /* אין קובץ — נופלים למאגר המוטמע */ }
+  return FALLBACK.map(normalize);
+}
+
+(async function init(){
+  PLAYERS  = await loadPlayers();
+  const idx = dayIndex();
+  puzzleNo  = idx + 1;
+  const pool = PLAYERS.filter(p => p.target);
+  answer     = seededShuffle(pool, SHUFFLE_SEED)[idx % pool.length];
+
+  $("#pnum").textContent = "#" + puzzleNo;
+  input.disabled = false;
+  input.placeholder = 'הקלידו שם של שחקן בית"ר…';
+  showStreak(); tickCountdown();
+
+  const prev = store.get("beitardle:"+puzzleNo);
+  if (prev){
+    try{
+      const d = JSON.parse(prev);
+      over = true; input.disabled = true;
+      $("#rtitle").textContent = d.won ? "כבר פיצחתם היום" : "כבר שיחקתם היום";
+      $("#rtext").innerHTML = d.won
+        ? `<b>${answer.name}</b> · ${d.n} מתוך ${MAX}`
+        : `השחקן היה <b>${answer.name}</b>`;
+      $("#share").style.display = "none";
+      $("#result").classList.add("on");
+    }catch(e){}
+  }
+})();
+</script>
+</body>
+</html>
