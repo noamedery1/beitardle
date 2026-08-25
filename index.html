@@ -331,19 +331,22 @@ input.rc:focus{border-color:var(--yellow)}
     <button class="x" id="closeHelp" aria-label="סגירה">✕</button>
     <h3>איך משחקים</h3>
     <p>יש שחקן בית"ר אחד מסתורי, ויש לכם <b>8 ניסיונות</b> לגלות אותו.
-       כל שם שתקלידו מחזיר חמישה רמזים — <b>עמדה, לאום, שנת הגעה, תארים ושנת לידה</b> —
-       וכל אחד נצבע לפי הקרבה לתשובה.</p>
+       כל שם שתקלידו מחזיר חמישה רמזים — <b>עמדה, לאום, עונה ראשונה, תארים ושנת לידה</b> —
+       וכל אחד נצבע לפי הקרבה לתשובה.<br>
+       <b>עונה 1</b> היא העונה הראשונה של השחקן במועדון — למשל 13/14 —
+       ולא שנה קלנדרית, כי שחקנים מגיעים גם בחלון החורף.</p>
 
     <h4>הצבעים</h4>
     <p><span id="lgnd">● מדויק · ◐ קרוב · ○ רחוק</span><br>
        ↑ הערך האמיתי גבוה או מאוחר יותר · ↓ נמוך או מוקדם יותר</p>
 
     <h4>דוגמה</h4>
-    <p>ניחשתם חלוץ ישראלי שהגיע ב־2003 עם 4 תארים, והתשובה היא קשר שהגיע ב־1996 עם 2 תארים:</p>
+    <p>ניחשתם חלוץ ישראלי שעונתו הראשונה 03/04 ויש לו 4 תארים,
+       והתשובה היא קשר שהתחיל ב-96/97 עם 2 תארים:</p>
     <div class="ex">
       <div><span class="k">עמדה</span><span class="v">חלוץ</span></div>
       <div class="hit"><span class="k">לאום</span><span class="v">ישראל</span></div>
-      <div><span class="k">הגיע</span><span class="v">2003 ↓</span></div>
+      <div><span class="k">עונה 1</span><span class="v">03/04 ↓</span></div>
       <div class="near"><span class="k">תארים</span><span class="v">4 ↓</span></div>
     </div>
     <p>העמדה שגויה, הלאום נכון, השחקן המבוקש הגיע מוקדם יותר ויש לו פחות תארים.
@@ -411,7 +414,7 @@ const SHUFFLE_SEED = 20260825;
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
    "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
               נשברים בווינדוס ישן ובאנדרואיד עתיק. */
-const BUILD = "b16";
+const BUILD = "b17";
 const SHARE_STYLE = "safe";
 
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
@@ -959,10 +962,13 @@ function normalize(p){
     to:   Math.max(...spells.map(s=>s[1]))
   };
 }
-/* המאגר שומר שנת סיום עונה. שחקן שהגיע בקיץ 2004 רשום כ-2005,
-   אז מציגים תמיד שנה אחת אחורה — כך שמופיעה שנת ההגעה בפועל. */
-const arrival = p => p.from - 1;
-const eraLabel = p => p.spells.map(([a,b]) => (a-1)+"–"+b).join(" / ");
+/* המאגר שומר שנת סיום עונה. שחקן שנרשם כ-2014 שיחק בעונת 2013/14 —
+   בין אם הגיע בקיץ 2013 ובין אם בחלון החורף של 2014.
+   לכן מציגים עונה ולא שנה: זה נכון בשני המקרים. */
+const season  = y => `${String(y-1).slice(-2)}/${String(y).slice(-2)}`;
+const arrival = p => p.from - 1;                 // לשימוש ברמז בלבד
+const eraLabel = p => p.spells.map(([a,b]) =>
+  a === b ? season(a) : season(a)+"–"+season(b)).join(" / ");
 
 /* ============================================================
    5. מצב המשחק
@@ -984,7 +990,7 @@ function compare(g, a){
             s: g.nat===a.nat ? "hit" : (REGION[g.nat]&&REGION[g.nat]===REGION[a.nat] ? "near" : "miss")});
 
   const gd = a.from - g.from;
-  out.push({k:"הגיע", v:arrival(g), ar: gd===0 ? "" : (gd>0?"↑":"↓"),
+  out.push({k:"עונה 1", v:season(g.from), ar: gd===0 ? "" : (gd>0?"↑":"↓"),
             s: gd===0 ? "hit" : (Math.abs(gd)<=3 ? "near" : "miss")});
 
   const d = a.titles - g.titles;
@@ -1246,7 +1252,7 @@ function decadeHe(y){
   return `שנות ה-${String(d).slice(-2)}`;   // שנות ה-80
 }
 function hintText(){
-  return `השם מתחיל באות ${answer.name.trim()[0]} · הגיע ב${decadeHe(arrival(answer))}`;
+  return `השם מתחיל באות ${answer.name.trim()[0]} · הגיע ב${decadeHe(answer.from - 1)}`;
 }
 function maybeHint(){
   $("#hintRow").classList.toggle("on", !over && guesses.length >= 5);
