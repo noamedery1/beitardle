@@ -15,6 +15,9 @@
 <meta property="og:image:width"  content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card"       content="summary_large_image">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta name="theme-color" content="#0C0C0E">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
@@ -414,7 +417,7 @@ const SHUFFLE_SEED = 20260825;
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
    "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
               נשברים בווינדוס ישן ובאנדרואיד עתיק. */
-const BUILD = "b18";
+const BUILD = "b21";
 const SHARE_STYLE = "safe";
 
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
@@ -476,7 +479,7 @@ const PLAYERS_RAW = [
 {he:"מיקי דהן",pos:"GK",nat:"IL",born:null,spells:[[1995,1996]],seasons:2,titles:0,target:false},
 {he:"סהר סעדו",pos:"MF",nat:"IL",born:null,spells:[[1995,1996]],seasons:2,titles:0,target:false},
 {he:"עופר דגמי",pos:"MF",nat:"IL",born:null,spells:[[1995,1995]],seasons:1,titles:0,target:false},
-{he:"איציק קורנפיין",pos:"GK",nat:"IL",born:1971,spells:[[1996,2006]],seasons:11,titles:2,target:true},
+{he:"איציק קורנפיין",pos:"GK",nat:"IL",born:1971,spells:[[1996,2007]],seasons:12,titles:3,target:true},
 {he:"אישטוון פישונט",pos:"MF",nat:"HU",born:1970,spells:[[1996,1998]],seasons:3,titles:2,target:true},
 {he:"דוד אמסלם",pos:"DF",nat:"IL",born:1971,spells:[[1996,1998],[2001,2009]],seasons:12,titles:6,target:true},
 {he:"יוסי אבוקסיס",pos:"MF",nat:"IL",born:1970,spells:[[1996,2001]],seasons:6,titles:2,target:true},
@@ -1336,8 +1339,12 @@ $("#repSend").addEventListener("click", async ()=>{
     st.className = "bad"; return;
   }
   btn.disabled = true; btn.textContent = "שולח…";
+  // המצב נדחס לתוך שדה החידה, כדי שלא יידרש שינוי בצד השרת
+  const tag = practice ? `אימון · היום #${todayNo}`
+            : puzzleNo === todayNo ? `#${puzzleNo} · יומית`
+            : `#${puzzleNo} · ארכיון`;
   const body = JSON.stringify({
-    type: "report", puzzle: puzzleNo,
+    type: "report", puzzle: tag,
     player: answer ? answer.name : "",
     text: txt, contact: $("#repFrom").value.trim()
   });
