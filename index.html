@@ -414,7 +414,7 @@ const SHUFFLE_SEED = 20260825;
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
    "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
               נשברים בווינדוס ישן ובאנדרואיד עתיק. */
-const BUILD = "b17";
+const BUILD = "b18";
 const SHARE_STYLE = "safe";
 
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
@@ -429,7 +429,7 @@ const STATE_CUPS    = [1976,1979,1985,1986,1989,2008,2009,2023];
    ============================================================ */
 const PLAYERS_RAW = [
 {he:"חיים לוין",pos:"GK",nat:"IL",born:1937,spells:[[1970,1971]],seasons:2,titles:0,target:false},
-{he:"ארצי בן-יעקב",pos:"FW",nat:"IL",born:null,spells:[[1971,1971]],seasons:1,titles:0,target:false},
+{he:"ארצי בן יעקב",pos:"FW",nat:"IL",born:null,spells:[[1971,1971]],seasons:1,titles:0,target:false},
 {he:"דני נוימן",pos:"MF",nat:"IL",born:1955,spells:[[1972,1980],[1983,1984]],seasons:11,titles:2,target:true},
 {he:"יוסף סורינוב",pos:"GK",nat:"IL",born:1946,spells:[[1972,1975]],seasons:4,titles:0,target:true},
 {he:"אורי מלמיליאן",pos:"MF",nat:"IL",born:1957,spells:[[1974,1990]],seasons:17,titles:6,target:true},
@@ -576,6 +576,7 @@ const PLAYERS_RAW = [
 {he:"לבן סילגדזה",pos:"DF",nat:"GE",born:1976,spells:[[2006,2006]],seasons:1,titles:0,target:false},
 {he:"נסומבו מזואה",pos:"MF",nat:"CD",born:1982,spells:[[2006,2006]],seasons:1,titles:0,target:false},
 {he:"פבריס פרננדס",pos:"MF",nat:"FR",born:1979,spells:[[2006,2006]],seasons:1,titles:0,target:false},
+{he:"תומר בן יוסף",pos:"DF",nat:"IL",born:1979,spells:[[2006,2012]],seasons:7,titles:4,target:true},
 {he:"תומר חליבה",pos:"DF",nat:"IL",born:1979,spells:[[2006,2006]],seasons:1,titles:0,target:false},
 {he:"אבי איבגי",pos:"GK",nat:"IL",born:1978,spells:[[2007,2007]],seasons:1,titles:1,target:false},
 {he:"דרק בואטנג",pos:"MF",nat:"GH",born:1983,spells:[[2007,2008]],seasons:2,titles:3,target:false},
@@ -589,7 +590,6 @@ const PLAYERS_RAW = [
 {he:"רמאליו",pos:"MF",nat:"BR",born:1980,spells:[[2007,2007]],seasons:1,titles:1,target:false},
 {he:"שוונק",pos:"FW",nat:"BR",born:1979,spells:[[2007,2007]],seasons:1,titles:1,target:false},
 {he:"שמעון גרשון",pos:"DF",nat:"IL",born:1977,spells:[[2007,2011]],seasons:5,titles:4,target:true},
-{he:"תומר בן-יוסף",pos:"DF",nat:"IL",born:1979,spells:[[2007,2012]],seasons:6,titles:4,target:true},
 {he:"אריאל הרוש",pos:"GK",nat:"IL",born:1988,spells:[[2008,2014]],seasons:7,titles:3,target:true},
 {he:"ג'וניור ויסה",pos:"MF",nat:"PE",born:1985,spells:[[2008,2008],[2010,2010]],seasons:2,titles:2,target:false},
 {he:"דן אביאנדר",pos:"MF",nat:"IL",born:null,spells:[[2008,2008]],seasons:1,titles:2,target:false},
@@ -724,12 +724,12 @@ const PLAYERS_RAW = [
 {he:"אור אינברום",pos:"MF",nat:"IL",born:1996,spells:[[2019,2019]],seasons:1,titles:0,target:false},
 {he:"אור זהבי",pos:"DF",nat:"IL",born:1996,spells:[[2019,2021],[2023,2023]],seasons:4,titles:1,target:true},
 {he:"איתמר ניצן",pos:"GK",nat:"IL",born:1987,spells:[[2019,2022]],seasons:4,titles:0,target:true},
-{he:"אנז'-פרדי פלומה",pos:"FW",nat:"GP",born:1995,spells:[[2019,2020]],seasons:2,titles:0,target:false},
+{he:"אנז' פרדי פלומה",pos:"FW",nat:"GP",born:1995,spells:[[2019,2020]],seasons:2,titles:0,target:false},
 {he:"אנתוני אנאן",pos:"MF",nat:"GH",born:1986,spells:[[2019,2019]],seasons:1,titles:0,target:false},
 {he:"אפונסו טיירה",pos:"MF",nat:"PT",born:1992,spells:[[2019,2019]],seasons:1,titles:0,target:false},
 {he:"גדי קינדה",pos:"MF",nat:"IL",born:1994,spells:[[2019,2019]],seasons:1,titles:0,target:false},
 {he:"דודו גורש",pos:"GK",nat:"IL",born:1980,spells:[[2019,2019]],seasons:1,titles:0,target:false},
-{he:"טל בן-חיים",pos:"DF",nat:"IL",born:1982,spells:[[2019,2021]],seasons:3,titles:0,target:true},
+{he:"טל בן חיים",pos:"DF",nat:"IL",born:1982,spells:[[2019,2021]],seasons:3,titles:0,target:true},
 {he:"מאור בוזגלו",pos:"FW",nat:"IL",born:1988,spells:[[2019,2019]],seasons:1,titles:0,target:false},
 {he:"מיכאי וודוץ",pos:"FW",nat:"RO",born:1994,spells:[[2019,2019]],seasons:1,titles:0,target:false},
 {he:"מתן פלג",pos:"DF",nat:"GT",born:1993,spells:[[2019,2019]],seasons:1,titles:0,target:false},
@@ -851,11 +851,11 @@ const SCHEDULE = [
   "עומר נחמני", "תמאש שנדור", "אישטוון האמר",
   "גריגורי מורוזוב", "יעקב בריהון", "אופיר קריאף",
   "ליאל דרעי", "מיכאל זנדברג", "אלי דסה",
-  "אישטוון פישונט", "ישראל כהן", "טל בן-חיים",
+  "אישטוון פישונט", "ישראל כהן", "טל בן חיים",
   "אור ואקנין", "סתיו שושן", "אבישי כהן",
   "מירון טל", "טל אלמשעלי", "אביאל זרגרי",
   "איתמר ניצן", "עידן טל", "דוד אמסלם",
-  "שלמה שירזי", "אוהד סיידוף", "תומר בן-יוסף",
+  "שלמה שירזי", "אוהד סיידוף", "תומר בן יוסף",
   "דושאן מאטוביץ'", "חלאופילו פלייטר", "גל אלברמן",
   "גיא גריף", "אלירן דנין", "שמואל לוי",
   "קובי מויאל", "איציק קורנפיין", "אהוד כחילה",
@@ -1189,7 +1189,10 @@ function closeSugg(){ sugg.classList.remove("on"); sugg.innerHTML = ""; selIdx =
 input.addEventListener("input", ()=>{
   const q = input.value.trim();
   if (!q) return closeSugg();
-  const hits = PLAYERS.filter(p => p.name.includes(q) && !guesses.some(g=>g.name===p.name)).slice(0,7);
+  const norm = t => t.replace(/[-־]/g, " ").replace(/['"״׳]/g, "").replace(/\s+/g, " ").trim();
+  const nq = norm(q);
+  const hits = PLAYERS.filter(p => norm(p.name).includes(nq)
+                              && !guesses.some(g=>g.name===p.name)).slice(0,7);
   hits.length ? openSugg(hits) : closeSugg();
 });
 sugg.addEventListener("click", e=>{

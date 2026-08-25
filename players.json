@@ -16,7 +16,7 @@
   "target": false
  },
  {
-  "he": "ארצי בן-יעקב",
+  "he": "ארצי בן יעקב",
   "name": "Arzi Ben-Yaacov",
   "pos": "FW",
   "nat": "IL",
@@ -2456,6 +2456,22 @@
   "target": false
  },
  {
+  "he": "תומר בן יוסף",
+  "name": "Tomer Ben Yousef",
+  "pos": "DF",
+  "nat": "IL",
+  "born": 1979,
+  "spells": [
+   [
+    2006,
+    2012
+   ]
+  ],
+  "seasons": 7,
+  "titles": 4,
+  "target": true
+ },
+ {
   "he": "תומר חליבה",
   "name": "Tomer Haliva",
   "pos": "DF",
@@ -2668,22 +2684,6 @@
    ]
   ],
   "seasons": 5,
-  "titles": 4,
-  "target": true
- },
- {
-  "he": "תומר בן-יוסף",
-  "name": "Tomer Ben Yousef",
-  "pos": "DF",
-  "nat": "IL",
-  "born": 1979,
-  "spells": [
-   [
-    2007,
-    2012
-   ]
-  ],
-  "seasons": 6,
   "titles": 4,
   "target": true
  },
@@ -4928,7 +4928,7 @@
   "target": true
  },
  {
-  "he": "אנז'-פרדי פלומה",
+  "he": "אנז' פרדי פלומה",
   "name": "Ange-Freddy Plumain",
   "pos": "FW",
   "nat": "GP",
@@ -5008,7 +5008,7 @@
   "target": false
  },
  {
-  "he": "טל בן-חיים",
+  "he": "טל בן חיים",
   "name": "Tal Ben Haim",
   "pos": "DF",
   "nat": "IL",
