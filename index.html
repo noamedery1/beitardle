@@ -208,6 +208,49 @@ input.rc:focus{border-color:var(--yellow)}
 .rlab{font-size:12px;color:var(--dim);margin-top:14px;display:block}
 #repStat{margin-top:10px;font-size:13px;min-height:18px}
 #repStat.ok{color:var(--yellow)} #repStat.bad{color:#E8B77A}
+
+/* ---------- אתמול ---------- */
+#yday{margin:16px 0 0;padding:9px 12px;border-radius:var(--r);background:var(--ink-2);
+  border:1px solid var(--line);font-size:12.5px;color:var(--dim);display:none;
+  align-items:center;justify-content:space-between;gap:10px;line-height:1.4}
+#yday.on{display:flex}
+#yday b{color:var(--text);font-weight:700}
+#yday button{background:none;border:1px solid var(--line);border-radius:14px;padding:4px 12px;
+  color:var(--dim);font-family:inherit;font-size:11.5px;font-weight:700;cursor:pointer;
+  margin:0;width:auto;white-space:nowrap;flex:0 0 auto}
+#yday button:hover{color:var(--yellow);border-color:var(--yellow)}
+
+/* ---------- רמז ---------- */
+#hintRow{margin-top:14px;text-align:center;display:none}
+#hintRow.on{display:block}
+#hintBtn{background:none;border:1.5px dashed var(--line);border-radius:var(--r);
+  padding:9px 16px;color:var(--dim);font-family:inherit;font-size:13px;font-weight:700;
+  cursor:pointer;margin:0;width:auto}
+#hintBtn:hover{color:var(--yellow);border-color:var(--yellow)}
+#hintOut{font-size:13px;color:var(--yellow);font-weight:700;line-height:1.5;
+  background:rgba(255,199,44,.07);border:1px solid rgba(255,199,44,.28);
+  border-radius:var(--r);padding:9px 12px}
+#hintOut:empty{display:none}
+#hintBtn + #hintOut{margin-top:9px}
+
+/* ---------- ארכיון ---------- */
+#archBtn{position:absolute;top:22px;inset-inline-end:38px;width:30px;height:30px;
+  border-radius:50%;background:var(--ink-2);border:1px solid var(--line);color:var(--dim);
+  font-family:inherit;font-size:13px;font-weight:900;cursor:pointer;line-height:1;padding:0}
+#archBtn:hover{color:var(--yellow);border-color:var(--yellow)}
+.arch{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.arch button{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;
+  background:var(--ink);border:1px solid var(--line);border-radius:9px;padding:11px 13px;
+  color:var(--text);font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;margin:0}
+.arch button:hover{border-color:#4A4A56}
+.arch button.done{color:var(--dim)}
+.arch button i{font-style:normal;font-size:12px;font-weight:500;color:#5A5A64}
+.arch button i.win{color:var(--yellow)} .arch button i.lose{color:var(--olive)}
+.arch button.cur{border-color:var(--yellow)}
+@media (min-width:640px){
+  #archBtn{top:30px;inset-inline-end:43px;width:33px;height:33px;font-size:14px}
+}
+
 #report{margin-top:11px;font-size:11.5px}
 #report a{color:#5F5F69;text-decoration:none;border-bottom:1px dotted #3A3A44}
 #report a:hover{color:var(--yellow);border-color:var(--yellow)}
@@ -368,7 +411,7 @@ const SHUFFLE_SEED = 20260825;
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
    "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
               נשברים בווינדוס ישן ובאנדרואיד עתיק. */
-const BUILD = "b15";
+const BUILD = "b16";
 const SHARE_STYLE = "safe";
 
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
@@ -1197,10 +1240,13 @@ function track(type, extra){
 }
 
 /* ---------- רמז ---------- */
+function decadeHe(y){
+  const d = Math.floor(y / 10) * 10;
+  if (d >= 2000) return `שנות ה-${d}`;      // שנות ה-2010
+  return `שנות ה-${String(d).slice(-2)}`;   // שנות ה-80
+}
 function hintText(){
-  const first = answer.name.trim()[0];
-  const dec = Math.floor(arrival(answer) / 10) * 10;
-  return `השם מתחיל באות ${first} · הגיע בשנות ה-${String(dec).slice(-2)}`;
+  return `השם מתחיל באות ${answer.name.trim()[0]} · הגיע ב${decadeHe(arrival(answer))}`;
 }
 function maybeHint(){
   $("#hintRow").classList.toggle("on", !over && guesses.length >= 5);
