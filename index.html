@@ -225,6 +225,7 @@ input.rc:focus{border-color:var(--yellow)}
   <header>
     <div id="streak">רצף <b id="streakn">0</b></div>
     <button id="helpBtn" aria-label="איך משחקים">?</button>
+    <button id="archBtn" aria-label="ארכיון חידות">⌛</button>
     <h1><a href="./" aria-label="ביתרדל">ביתרדל</a></h1>
     <p class="sub">חידה <b id="pnum">#1</b> · <b id="left">8</b> ניסיונות נותרו</p>
   </header>
@@ -240,6 +241,16 @@ input.rc:focus{border-color:var(--yellow)}
     <span><i class="dot o"></i> קרוב</span>
     <span><i class="dot s"></i> רחוק</span>
     <span>↑ מאוחר/גבוה יותר · ↓ מוקדם/נמוך יותר</span>
+  </div>
+
+  <div id="yday">
+    <span id="ydayTxt"></span>
+    <button id="ydayShow">גילוי</button>
+  </div>
+
+  <div id="hintRow">
+    <button id="hintBtn">תקועים? קבלו רמז</button>
+    <div id="hintOut"></div>
   </div>
 
   <div id="board"></div>
@@ -331,6 +342,17 @@ input.rc:focus{border-color:var(--yellow)}
   </div>
 </div>
 
+
+<div class="modal" id="arch">
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="ארכיון חידות">
+    <button class="x" id="closeArch" aria-label="סגירה">✕</button>
+    <h3>ארכיון החידות</h3>
+    <p>כל החידות שהיו עד היום. אפשר לשחק כל אחת מהן — התוצאה נשמרת בנפרד,
+       אבל רק החידה של היום נספרת ברצף ובסטטיסטיקה.</p>
+    <div class="arch" id="archList"></div>
+  </div>
+</div>
+
 <div class="scarf bottom"></div>
 
 <script>
@@ -346,7 +368,7 @@ const SHUFFLE_SEED = 20260825;
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
    "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
               נשברים בווינדוס ישן ובאנדרואיד עתיק. */
-const BUILD = "b12";
+const BUILD = "b15";
 const SHARE_STYLE = "safe";
 
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
@@ -773,6 +795,54 @@ const PLAYERS_RAW = [
 ];
 
 /* ============================================================
+   2b. לוח החידות — סדר קבוע.
+       אסור לערבב מחדש: מי ששיחק חידה מסוימת חייב לראות
+       את אותה תשובה גם בארכיון. שחקנים חדשים נוספים בסוף.
+   ============================================================ */
+const SCHEDULE = [
+  "דני נוימן", "דני פרדה", "מאור מליקסון",
+  "אנטואן קונט", "אלי ששון", "תומר אזולאי",
+  "עומר נחמני", "תמאש שנדור", "אישטוון האמר",
+  "גריגורי מורוזוב", "יעקב בריהון", "אופיר קריאף",
+  "ליאל דרעי", "מיכאל זנדברג", "אלי דסה",
+  "אישטוון פישונט", "ישראל כהן", "טל בן-חיים",
+  "אור ואקנין", "סתיו שושן", "אבישי כהן",
+  "מירון טל", "טל אלמשעלי", "אביאל זרגרי",
+  "איתמר ניצן", "עידן טל", "דוד אמסלם",
+  "שלמה שירזי", "אוהד סיידוף", "תומר בן-יוסף",
+  "דושאן מאטוביץ'", "חלאופילו פלייטר", "גל אלברמן",
+  "גיא גריף", "אלירן דנין", "שמואל לוי",
+  "קובי מויאל", "איציק קורנפיין", "אהוד כחילה",
+  "ברק משה", "אלון מזרחי", "עמית שמש",
+  "סטיבן כהן", "בוריס קליימן", "ניר סביליה",
+  "חן עזריאל", "מיכאל אוחנה", "שמואל קוז'וקין",
+  "מיגל סילבה", "אורי מגבו", "אריאל הרוש",
+  "נהוראי דבוש", "אורי דהן", "רונן חרזי",
+  "רוי דוגה", "ירדן שועה", "ז'אן טלסניקוב",
+  "נתנאל דלויה", "אריק בנדו", "אבירם ברוכיאן",
+  "שי חדד", "קלאודמיר", "מקסים גרצ'קין",
+  "רענן דרעי", "דן איינבינדר", "יוסי אבוקסיס",
+  "ג'ורג' פאולינו", "עידן ורד", "פליקס חלפון",
+  "אור זהבי", "אורי מלמיליאן", "יוסף סורינוב",
+  "מתן בראשי", "אלי אוחנה", "עופר טלקר",
+  "תומר ירוחם", "זהי אליהן", "שמעון גרשון",
+  "ברק יצחקי", "איתן מזרחי", "לי און מזרחי",
+  "עוזיאל פרדו", "סרגיי טרטיאק", "אישטוון שאלוי",
+  "משה ביטון", "דוד קלטינס", "אסי דומב",
+  "אביתר ברוכיאן", "יוסי מזרחי", "יצחק כהן",
+  "יואב זיו", "גאטאן וארן", "טוטו תמוז",
+  "עידן מליחי", "אלון סגיר", "דוד דגו",
+  "עדן נחמני", "מיכאל סירושטיין", "עומר אצילי",
+  "דור מיכה", "אוראל דגני", "טימוטי מוזי",
+  "תמיר עדי", "עדי יונה", "יעקב שוורץ",
+  "אופיר שמואלי", "אלעד יעקובי", "איתי שכטר",
+  "דן עזריה", "ניר רייכמן", "שלומי משה",
+  "איתן טיבי", "יוסי אברהמי", "אבי ריקן",
+  "טל כחילה", "אבי כהן", "דריו פרננדס",
+  "עמית בן שושן", "רוי ששון"
+];
+
+/* ============================================================
    3. טבלאות תרגום
    ============================================================ */
 const POS_HE = {GK:"שוער", DF:"מגן", MF:"קשר", FW:"חלוץ"};
@@ -854,8 +924,10 @@ const eraLabel = p => p.spells.map(([a,b]) => (a-1)+"–"+b).join(" / ");
 /* ============================================================
    5. מצב המשחק
    ============================================================ */
-let PLAYERS = [], answer = null, puzzleNo = 1;
-let practice = false, guesses = [], over = false;
+let PLAYERS = [], POOL = [], answer = null;
+let todayNo = 1, puzzleNo = 1;          // puzzleNo = החידה המשוחקת כרגע
+let practice = false, guesses = [], over = false, hinted = false;
+const isToday = () => !practice && puzzleNo === todayNo;
 const board = $("#board"), input = $("#guess"), sugg = $("#sugg");
 
 function compare(g, a){
@@ -890,7 +962,7 @@ function compare(g, a){
 const SKEY = "beitardle:v2:";
 function saveState(){
   if (practice) return;
-  store.set(SKEY + puzzleNo, JSON.stringify({ g: guesses.map(x => x.name), over }));
+  store.set(SKEY + puzzleNo, JSON.stringify({ g: guesses.map(x => x.name), over, h: hinted }));
 }
 
 function render(g, instant){
@@ -923,7 +995,7 @@ function submit(name){
   input.value = ""; closeSugg();
   if (p.name === answer.name) finish(true);
   else if (guesses.length >= MAX) finish(false);
-  else saveState();
+  else { saveState(); maybeHint(); }
 }
 
 /* ---------- רצף ---------- */
@@ -974,15 +1046,17 @@ function finish(won){
     mini.appendChild(r);
   });
 
-  if (!practice){
+  $("#hintRow").classList.remove("on");
+  if (isToday()){
     saveState();
     bumpStreak(won); showStreak();
     addStat(won, guesses.length);
     renderStats(won ? guesses.length : 0);
-    track("done", {guesses: guesses.length, won});
+    track("done", {guesses: guesses.length, won, hint: hinted});
     $("#next").style.display = "";
   } else {
-    $("#next").style.display = "none";
+    if (!practice) saveState();
+    $("#next").style.display = practice ? "none" : "";
     $("#stats").innerHTML = "";
   }
   tickCountdown();
@@ -1001,9 +1075,10 @@ function shareText(){
   const M = EMOJI[SHARE_STYLE] || EMOJI.safe;
   const grid = guesses.map(g => compare(g,answer).map(c=>M[c.s]).join("")).join("\n");
   const won = guesses[guesses.length-1].name === answer.name;
+  const hs = hinted ? " (עם רמז)" : "";
   const head = won
-    ? `ביתרדל #${puzzleNo} · פיצחתי ב-${guesses.length} ${guesses.length===1?"ניחוש":"ניחושים"} מתוך ${MAX}`
-    : `ביתרדל #${puzzleNo} · לא פיצחתי (${MAX}/${MAX})`;
+    ? `ביתרדל #${puzzleNo} · פיצחתי ב-${guesses.length} ${guesses.length===1?"ניחוש":"ניחושים"} מתוך ${MAX}${hs}`
+    : `ביתרדל #${puzzleNo} · לא פיצחתי (${MAX}/${MAX})${hs}`;
   const key = `${M.hit} מדויק  ${M.near} קרוב  ${M.miss} רחוק`;
   return `${head}\n\n${grid}\n\n${key}\n${SITE_URL}`;
 }
@@ -1041,10 +1116,12 @@ $("#wa").addEventListener("click", ()=>{
 });
 
 $("#again").addEventListener("click", ()=>{
-  practice = true; over = false; guesses = [];
+  practice = true; over = false; guesses = []; hinted = false;
   $("#share").style.display = "none";
-  const tp = PLAYERS.filter(p => p.target);
-  answer = tp[Math.floor(Math.random()*tp.length)];
+  $("#yday").classList.remove("on");
+  $("#hintRow").classList.remove("on"); $("#hintOut").textContent = "";
+  $("#hintBtn").style.display = "";
+  answer = POOL[Math.floor(Math.random()*POOL.length)];
   board.innerHTML = ""; $("#result").classList.remove("on");
   input.disabled = false; input.value = ""; $("#left").textContent = MAX;
   $("#pnum").textContent = "אימון";
@@ -1092,6 +1169,23 @@ input.addEventListener("focus", ()=>{
 });
 
 
+/* ---------- טעינת חידה ---------- */
+function answerFor(n){ return POOL[(n - 1) % POOL.length]; }
+
+function loadPuzzle(n){
+  practice = false; puzzleNo = n; answer = answerFor(n);
+  guesses = []; over = false; hinted = false;
+  board.innerHTML = "";
+  $("#result").classList.remove("on");
+  $("#hintOut").textContent = ""; $("#hintRow").classList.remove("on");
+  input.disabled = false; input.value = "";
+  $("#left").textContent = MAX;
+  $("#pnum").textContent = "#" + n + (n === todayNo ? "" : " · ארכיון");
+  $("#yday").classList.toggle("on", n === todayNo && todayNo > 1);
+  restore();
+  scrollTo({top:0, behavior:"smooth"});
+}
+
 /* ---------- דיווח אנונימי: מספר חידה ותוצאה בלבד ---------- */
 function track(type, extra){
   if (!ANALYTICS_URL || practice) return;
@@ -1101,6 +1195,22 @@ function track(type, extra){
     else fetch(ANALYTICS_URL, {method:"POST", mode:"no-cors", body});
   }catch(e){}
 }
+
+/* ---------- רמז ---------- */
+function hintText(){
+  const first = answer.name.trim()[0];
+  const dec = Math.floor(arrival(answer) / 10) * 10;
+  return `השם מתחיל באות ${first} · הגיע בשנות ה-${String(dec).slice(-2)}`;
+}
+function maybeHint(){
+  $("#hintRow").classList.toggle("on", !over && guesses.length >= 5);
+}
+$("#hintBtn").addEventListener("click", ()=>{
+  hinted = true;
+  $("#hintOut").textContent = hintText();
+  $("#hintBtn").style.display = "none";
+  saveState();
+});
 
 /* ---------- סטטיסטיקה אישית ---------- */
 function loadStats(){
@@ -1194,6 +1304,64 @@ $("#repSend").addEventListener("click", async ()=>{
  }
 });
 
+/* ---------- אתמול ---------- */
+$("#ydayShow").addEventListener("click", ()=>{
+  const y = answerFor(todayNo - 1);
+  $("#ydayTxt").innerHTML = `אתמול (#${todayNo-1}) היה <b>${y.name}</b>`;
+  $("#ydayShow").style.display = "none";
+  store.set("beitardle:yshown", String(todayNo));
+});
+
+/* ---------- ארכיון ---------- */
+const arch = $("#arch");
+function stateOf(n){
+  try{ return JSON.parse(store.get(SKEY + n) || "null"); }catch(e){ return null; }
+}
+function openArch(){
+  const list = $("#archList");
+  let html = "";
+  for (let n = todayNo; n >= 1; n--){
+    const st = stateOf(n);
+    let tag = '<i>טרם שוחקה</i>';
+    if (st && st.over){
+      const won = st.g.length && st.g[st.g.length-1] === answerFor(n).name;
+      tag = won ? `<i class="win">פוצחה ב-${st.g.length}</i>` : '<i class="lose">לא פוצחה</i>';
+    } else if (st && st.g && st.g.length){
+      tag = `<i>באמצע · ${st.g.length}/${MAX}</i>`;
+    }
+    html += `<button data-n="${n}" class="${st&&st.over?"done":""} ${n===puzzleNo?"cur":""}">
+      <span>חידה #${n}${n===todayNo?" · היום":""}</span>${tag}</button>`;
+  }
+  list.innerHTML = html;
+  list.querySelectorAll("button").forEach(b => b.onclick = ()=>{
+    closeArch(); loadPuzzle(+b.dataset.n);
+  });
+  arch.classList.add("on");
+}
+function closeArch(){ arch.classList.remove("on"); }
+$("#archBtn").addEventListener("click", openArch);
+$("#closeArch").addEventListener("click", closeArch);
+arch.addEventListener("click", e => { if (e.target === arch) closeArch(); });
+
+/* ---------- שחזור מהלך ---------- */
+function restore(){
+  try{
+    const st = stateOf(puzzleNo);
+    if (!st || !Array.isArray(st.g) || !st.g.length) return;
+    hinted = !!st.h;
+    st.g.forEach(n => {
+      const pl = PLAYERS.find(x => x.name === n);
+      if (pl){ guesses.push(pl); render(pl, true); }
+    });
+    if (hinted){ $("#hintOut").textContent = hintText(); $("#hintBtn").style.display = "none"; }
+    else $("#hintBtn").style.display = "";
+    const last = guesses[guesses.length - 1];
+    if (st.over || last.name === answer.name || guesses.length >= MAX)
+      finish(last.name === answer.name);
+    else maybeHint();
+  }catch(e){}
+}
+
 /* ---------- חלונית עזרה ---------- */
 const help = $("#help");
 function openHelp(){ help.classList.add("on"); store.set("beitardle:seen","1"); }
@@ -1210,40 +1378,36 @@ addEventListener("keydown", e => { if (e.key === "Escape"){ closeHelp(); closeRe
    ============================================================ */
 (function init(){
   PLAYERS = PLAYERS_RAW.map(normalize);
-  const idx = dayIndex();
-  puzzleNo  = idx + 1;
-  const pool = PLAYERS.filter(p => p.target);
-  answer     = seededShuffle(pool, SHUFFLE_SEED)[idx % pool.length];
+  const byName = new Map(PLAYERS.map(p => [p.name, p]));
+  POOL = SCHEDULE.map(n => byName.get(n)).filter(Boolean);
+  PLAYERS.filter(p => p.target && !SCHEDULE.includes(p.name)).forEach(p => POOL.push(p));
+  todayNo = dayIndex() + 1;
 
-  $("#pnum").textContent = "#" + puzzleNo;
   input.disabled = false;
   input.placeholder = 'הקלידו שם של שחקן בית"ר…';
   showStreak(); tickCountdown(); renderStats();
   $("#bld").textContent = BUILD;
 
+  // "אתמול" — מוסתר עד לחיצה, כדי לא לקלקל את הארכיון
+  if (todayNo > 1){
+    if (store.get("beitardle:yshown") === String(todayNo)){
+      const y = answerFor(todayNo - 1);
+      $("#ydayTxt").innerHTML = `אתמול (#${todayNo-1}) היה <b>${y.name}</b>`;
+      $("#ydayShow").style.display = "none";
+    } else {
+      $("#ydayTxt").textContent = `רוצים לדעת מי היה אתמול?`;
+    }
+  }
+
+  loadPuzzle(todayNo);
   track("view");
   if (!store.get("beitardle:seen")) openHelp();
 
-  // שחזור מהלך שנקטע — ריענון, סגירת טאב, חזרה מאוחר יותר
-  try{
-    const st = JSON.parse(store.get(SKEY + puzzleNo) || "null");
-    if (st && Array.isArray(st.g) && st.g.length){
-      st.g.forEach(n => {
-        const pl = PLAYERS.find(x => x.name === n);
-        if (pl){ guesses.push(pl); render(pl, true); }
-      });
-      const last = guesses[guesses.length - 1];
-      if (st.over || last.name === answer.name || guesses.length >= MAX)
-        finish(last.name === answer.name);
-    }
-  }catch(e){}
-
-  // ניקוי מפתחות של חידות ישנות
+  // ניקוי מפתחות בפורמט הישן
   try{
     for (let i = localStorage.length - 1; i >= 0; i--){
       const k = localStorage.key(i);
-      if (k && k.startsWith(SKEY) && k !== SKEY + puzzleNo) localStorage.removeItem(k);
-      if (k && /^beitardle:\d+$/.test(k)) localStorage.removeItem(k);   // פורמט ישן
+      if (k && /^beitardle:\d+$/.test(k)) localStorage.removeItem(k);
     }
   }catch(e){}
 })();
