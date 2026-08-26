@@ -249,11 +249,15 @@ input.rc:focus{border-color:var(--brand)}
 
 /* ---------- ארכיון ---------- */
 /* ---------- בורר מועדון ---------- */
-#clubBtn{position:absolute;top:22px;inset-inline-end:76px;width:30px;height:30px;
-  border-radius:50%;background:var(--ink-2);border:1px solid var(--line);color:var(--dim);
-  font-family:inherit;font-size:14px;font-weight:900;cursor:pointer;line-height:1;padding:0}
-#clubBtn:hover{color:var(--brand);border-color:var(--brand)}
-@media (min-width:640px){ #clubBtn{top:30px;inset-inline-end:86px;width:33px;height:33px} }
+#clubBtn{display:inline-flex;align-items:center;gap:8px;margin:10px auto 0;width:auto;
+  padding:7px 13px 7px 10px;border-radius:22px;background:var(--ink-2);
+  border:1px solid var(--line);color:var(--dim);font-family:inherit;font-size:12.5px;
+  font-weight:500;cursor:pointer;line-height:1}
+#clubBtn i{font-style:normal;font-size:14px;color:var(--brand)}
+#clubBtn b{color:var(--text);font-weight:700}
+#clubBtn em{font-style:normal;color:var(--brand);font-weight:700;
+  border-inline-start:1px solid var(--line);padding-inline-start:9px}
+#clubBtn:hover{border-color:var(--brand)}
 
 #picker{position:fixed;inset:0;z-index:80;background:var(--ink);display:none;
   overflow:auto;padding:calc(28px + env(safe-area-inset-top)) 16px 40px}
@@ -546,9 +550,11 @@ input.rc:focus{border-color:var(--brand)}
     <div id="streak">רצף <b id="streakn">0</b></div>
     <button id="helpBtn" aria-label="איך משחקים">?</button>
     <button id="archBtn" aria-label="ארכיון חידות">⌛</button>
-    <button id="clubBtn" aria-label="החלפת מועדון">⇄</button>
     <h1><a href="./" id="gameName" aria-label="ספורטדל">ספורטדל</a></h1>
     <p class="sub">חידה <b id="pnum">#1</b> · <b id="left">8</b> ניסיונות נותרו</p>
+    <button id="clubBtn" type="button">
+      <i>⇄</i><span>מועדון: <b id="clubNow">—</b></span><em>החלפה</em>
+    </button>
   </header>
 
   <nav class="nav">
@@ -1539,6 +1545,7 @@ function bootClub(slug){
   document.title = `${club.game} · חידת השחקן היומית`;
   $("#gameName").textContent = club.game;
   $("#gameName").setAttribute("aria-label", club.game);
+  $("#clubNow").textContent = club.game;
   $("#footName").textContent = club.game;
   document.querySelectorAll(".clubShort").forEach(el => el.textContent = club.short);
   $("#hLeague").textContent = club.titles.league.join(", ") || "—";

@@ -8,11 +8,11 @@
   try{
     var host = String(location.hostname).toLowerCase();
     var path = String(location.pathname);
-    /* sportdle.up.railway.app ו-beitardle.up.railway.app הם אותו שירות
-       אבל origins שונים, ו-localStorage לא עובר ביניהם. מפנים לאותו
-       origin שבו כבר יושבים הנתונים של השחקנים הקיימים. */
+    /* מי שנכנס דרך sportdle.* מגיע ל-SportDle ומתחיל מאפס — origin
+       נפרד, אין לו את הרצף מ-beitardle.*. מי שממשיך בכתובת הישנה
+       ממשיך כרגיל. החלטה מודעת. */
     if (host.indexOf("sportdle.") === 0 && path.indexOf("/sportdle/") === -1)
-      location.replace("https://beitardle.up.railway.app/sportdle/" + location.search + location.hash);
+      location.replace("./sportdle/" + location.search + location.hash);
   }catch(e){}
 })();
 </script>
@@ -403,12 +403,14 @@ input.rc:focus{border-color:var(--yellow)}
 
 /* ---------- ארכיון ---------- */
 /* ===== נוסף עבור SportDle ===== */
-#clubsBtn{position:absolute;top:22px;inset-inline-end:76px;width:30px;height:30px;
-  border-radius:50%;background:var(--ink-2);border:1px solid var(--line);color:var(--dim);
-  font-family:inherit;font-size:14px;font-weight:900;cursor:pointer;line-height:1;padding:0;
-  display:flex;align-items:center;justify-content:center;text-decoration:none}
-#clubsBtn:hover{color:var(--yellow);border-color:var(--yellow)}
-@media (min-width:640px){ #clubsBtn{top:30px;inset-inline-end:86px;width:33px;height:33px} }
+#toSportdle{display:flex;align-items:center;justify-content:center;gap:9px;
+  margin:12px auto 0;max-width:440px;padding:11px 14px;border-radius:var(--r);
+  background:var(--ink-2);border:1px solid var(--line);color:var(--dim);
+  font-family:inherit;font-size:13px;font-weight:500;text-decoration:none;
+  line-height:1.4;text-align:start}
+#toSportdle b{color:var(--yellow);font-weight:900}
+#toSportdle i{font-style:normal;font-size:17px;color:var(--yellow);flex:0 0 auto}
+#toSportdle:hover{border-color:var(--yellow);color:var(--text)}
 #archBtn{position:absolute;top:22px;inset-inline-end:38px;width:30px;height:30px;
   border-radius:50%;background:var(--ink-2);border:1px solid var(--line);color:var(--dim);
   font-family:inherit;font-size:13px;font-weight:900;cursor:pointer;line-height:1;padding:0}
@@ -444,7 +446,6 @@ input.rc:focus{border-color:var(--yellow)}
     <div id="streak">רצף <b id="streakn">0</b></div>
     <button id="helpBtn" aria-label="איך משחקים">?</button>
     <button id="archBtn" aria-label="ארכיון חידות">⌛</button>
-    <a id="clubsBtn" href="./sportdle/" aria-label="עוד מועדונים — SportDle" title="עוד מועדונים">⇄</a>
     <h1><a href="./" aria-label="ביתרdle">ביתרdle</a></h1>
     <p class="tag">חידת השחקן היומית של בית"ר</p>
     <p class="sub">חידה <b id="pnum">#1</b> · <b id="left">8</b> ניסיונות נותרו</p>
@@ -454,6 +455,11 @@ input.rc:focus{border-color:var(--yellow)}
     <button type="button" class="on" data-tab="daily">חידה יומית</button>
     <button type="button" data-tab="versus">קרב חברים</button>
   </nav>
+
+  <!-- ===== נוסף עבור SportDle ===== -->
+  <a id="toSportdle" href="./sportdle/">
+    <i>⇄</i><span>יש גם <b>מכבי ת"א, הפועל ת"א, מכבי חיפה והפועל ב"ש</b> — עברו ל-SportDle</span>
+  </a>
 
   <div id="dailyView">
   <div class="searchbox">
