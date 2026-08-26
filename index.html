@@ -664,7 +664,7 @@ const SHUFFLE_SEED = 20260825;
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
    "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
               נשברים בווינדוס ישן ובאנדרואיד עתיק. */
-const BUILD = "b30";
+const BUILD = "b32";
 const SHARE_STYLE = "safe";
 
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
@@ -1159,9 +1159,15 @@ const REGION = {IL:"ME", UA:"EU", HU:"EU", MK:"EU", PT:"EU", ES:"EU", FR:"EU",
                 GE:"EU", RU:"EU", RO:"EU", GH:"AF", NG:"AF", CM:"AF",
                 BR:"SA", AR:"SA", CO:"SA", UY:"SA", CL:"SA"};
 
+/* הקרב רץ במודול נפרד, ו-const ברמת סקריפט אינו נגיש משם.
+   חושפים במפורש את מה שהוא צריך. */
+window.PLAYERS_RAW   = PLAYERS_RAW;
+window.ANALYTICS_URL = ANALYTICS_URL;
+
 /* ============================================================
    4. עזרים
    ============================================================ */
+
 const $ = s => document.querySelector(s);
 const store = {
   get(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } },
@@ -1781,6 +1787,20 @@ addEventListener("keydown", e => { if (e.key === "Escape"){ closeHelp(); closeRe
 
 <script type="module">
 /* ============================================================
+   FIREBASE — הגדרות הפרויקט
+   ============================================================ */
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyAPslfQe12H5yZYthGbQhEcL433xR2LMQk",
+  authDomain: "beitardle.firebaseapp.com",
+  databaseURL: "https://beitardle-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "beitardle",
+  storageBucket: "beitardle.firebasestorage.app",
+  messagingSenderId: "53875390040",
+  appId: "1:53875390040:web:99d92bde86e3c00abf7c2d"
+};
+
+
+/* ============================================================
    קרב חברים — נטען רק כשנכנסים ללשונית.
    פיירבייס לא יורד בכלל למי שמשחק רק את החידה היומית.
    ============================================================ */
@@ -1792,16 +1812,28 @@ let vReady = false, initVersus = null;
    "נכנסו" = חדרים שנפתחו · "סיימו" = משחקים שהסתיימו · "ממוצע" = ממוצע משתתפים */
 function vTrack(type, extra){
   try{
-    if (typeof ANALYTICS_URL !== "string" || !ANALYTICS_URL) return;
+    const URL_ = window.ANALYTICS_URL;
+    if (typeof URL_ !== "string" || !URL_) return;
     const body = JSON.stringify({ type, puzzle: "קרב", ...extra });
-    if (navigator.sendBeacon) navigator.sendBeacon(ANALYTICS_URL, body);
-    else fetch(ANALYTICS_URL, { method:"POST", mode:"no-cors", body });
+    if (navigator.sendBeacon) navigator.sendBeacon(URL_, body);
+    else fetch(URL_, { method:"POST", mode:"no-cors", body });
   }catch(e){}
 }
 
 async function bootVersus(){
   if (vReady) return;
   vReady = true;
+  try{ await startVersus(); }
+  catch(err){
+    vReady = false;
+    console.error("קרב חברים:", err);
+    const box = document.querySelector("#scHome .card");
+    if (box) box.insertAdjacentHTML("beforeend",
+      `<div class="err">לא הצלחנו לטעון את הקרב. נסו לרענן.<br><span style="opacity:.6">${err.message}</span></div>`);
+  }
+}
+
+async function startVersus(){
   const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
   const { getDatabase, ref, set, get, update, onValue, onDisconnect,
           runTransaction, serverTimestamp, off }
@@ -1810,18 +1842,6 @@ async function bootVersus(){
   const app = initializeApp(FIREBASE_CONFIG);
   const db  = getDatabase(app);
 
-  /* ============================================================
-     1. FIREBASE — הדבק כאן את ההגדרות מהקונסולה
-     ============================================================ */
-  const FIREBASE_CONFIG = {
-    apiKey: "AIzaSyAPslfQe12H5yZYthGbQhEcL433xR2LMQk",
-    authDomain: "beitardle.firebaseapp.com",
-    databaseURL: "https://beitardle-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "beitardle",
-    storageBucket: "beitardle.firebasestorage.app",
-    messagingSenderId: "53875390040",
-    appId: "1:53875390040:web:99d92bde86e3c00abf7c2d"
-  };
   
   
   
@@ -1832,8 +1852,9 @@ async function bootVersus(){
      CORE  = 3+ עונות. אלה שגם בחידה היומית, מוכרים היטב.
      WIDE  = 2+ עונות. מרחיב את המגוון כדי שמשחקים לא יחזרו על עצמם.
      רוב הסיבובים נלקחים מ-CORE, כדי שלא יהיו יותר מדי סיבובים מתים. */
-  const CORE = PLAYERS_RAW.filter(p => p.target);
-  const WIDE = PLAYERS_RAW.filter(p => p.born && p.seasons >= 2 && !p.target);
+  const RAW  = window.PLAYERS_RAW || [];
+  const CORE = RAW.filter(p => p.target);
+  const WIDE = RAW.filter(p => p.born && p.seasons >= 2 && !p.target);
   const POOL = CORE.concat(WIDE);
   
   const V_POS={GK:"שוער",DF:"מגן",MF:"קשר",FW:"חלוץ"};
