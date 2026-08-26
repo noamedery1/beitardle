@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ביתרדל · חידת השחקן היומית</title>
+<title>ביתרdle · חידת השחקן היומית</title>
 <meta name="description" content="שחקן בית&quot;ר אחד מסתורי. שמונה ניסיונות. חידה חדשה כל יום.">
 
 <!-- ===== תצוגה מקדימה בוואטסאפ — החלף את הדומיין ===== -->
 <meta property="og:type"        content="website">
-<meta property="og:title"       content="ביתרדל · חידת השחקן היומית">
+<meta property="og:title"       content="ביתרdle · חידת השחקן היומית">
 <meta property="og:description" content="שחקן בית&quot;ר אחד. שמונה ניסיונות. כמה ייקח לכם?">
 <meta property="og:url"         content="https://beitardle.up.railway.app/">
 <meta property="og:image"       content="https://beitardle.up.railway.app/og-beitardle.png">
@@ -23,7 +23,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="manifest" href="manifest.json">
-<meta name="apple-mobile-web-app-title" content="ביתרדל">
+<meta name="apple-mobile-web-app-title" content="ביתרdle">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -75,9 +75,11 @@ body{background:var(--ink);color:var(--text);font-family:'Heebo',system-ui,sans-
 .scarf.bottom{margin-top:32px}
 
 header{padding:20px 0 16px;text-align:center;position:relative}
-h1{font-family:'Suez One',Georgia,serif;font-size:clamp(34px,10vw,46px);line-height:1;margin:0;
+h1{unicode-bidi:isolate;font-family:'Suez One',Georgia,serif;font-size:clamp(34px,10vw,46px);line-height:1;margin:0;
   color:var(--yellow);letter-spacing:-.5px}
-.sub{margin:8px 0 0;font-size:13px;color:var(--dim);font-weight:500}
+.tag{margin:7px 0 0;font-size:12.5px;color:var(--dim);font-weight:500;letter-spacing:.01em}
+.sub{margin:6px 0 0;font-size:13px;color:var(--dim);font-weight:500}
+@media (min-width:640px){.tag{font-size:13.5px;margin-top:9px}}
 .sub b{color:var(--text);font-weight:700}
 #streak{position:absolute;top:22px;inset-inline-start:0;font-size:12px;color:var(--dim);
   background:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:4px 11px;display:none}
@@ -420,7 +422,8 @@ input.rc:focus{border-color:var(--yellow)}
     <div id="streak">רצף <b id="streakn">0</b></div>
     <button id="helpBtn" aria-label="איך משחקים">?</button>
     <button id="archBtn" aria-label="ארכיון חידות">⌛</button>
-    <h1><a href="./" aria-label="ביתרדל">ביתרדל</a></h1>
+    <h1><a href="./" aria-label="ביתרdle">ביתרdle</a></h1>
+    <p class="tag">חידת השחקן היומית של בית"ר</p>
     <p class="sub">חידה <b id="pnum">#1</b> · <b id="left">8</b> ניסיונות נותרו</p>
   </header>
 
@@ -568,7 +571,7 @@ input.rc:focus{border-color:var(--yellow)}
 
   <footer>
     <div class="who">
-      ביתרדל · פרויקט אוהדים · לא רשמי <span id="bld" style="opacity:.45"></span><br>
+      ביתרdle · פרויקט אוהדים · לא רשמי <span id="bld" style="opacity:.45"></span><br>
       <a href="mailto:techbynoam@gmail.com">techbynoam@gmail.com</a>
     </div>
     <a class="credit" href="https://techbynoam.up.railway.app/" target="_blank" rel="noopener">
@@ -696,7 +699,7 @@ const SHUFFLE_SEED = 20260825;
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
    "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
               נשברים בווינדוס ישן ובאנדרואיד עתיק. */
-const BUILD = "b36";
+const BUILD = "b38";
 const SHARE_STYLE = "safe";
 
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
@@ -889,7 +892,7 @@ const PLAYERS_RAW = [
 {he:"דריו פרננדס",pos:"MF",nat:"AR",born:1978,spells:[[2009,2009],[2012,2013]],seasons:3,titles:1,target:true},
 {he:"טל אלמשעלי",pos:"FW",nat:"IL",born:1989,spells:[[2009,2009],[2011,2012]],seasons:3,titles:1,target:true},
 {he:"משה אוחיון",pos:"MF",nat:"IL",born:1983,spells:[[2009,2009]],seasons:1,titles:1,target:false},
-{he:"עידן ורד",pos:"FW",nat:"IL",born:1989,spells:[[2009,2010],[2017,2021]],seasons:7,titles:1,target:true},
+{he:"עידן ורד",pos:"MF",nat:"IL",born:1989,spells:[[2009,2010],[2017,2021]],seasons:7,titles:1,target:true},
 {he:"אבי ריקן",pos:"MF",nat:"IL",born:1988,spells:[[2010,2013]],seasons:4,titles:0,target:true},
 {he:"אביתר ברוכיאן",pos:"MF",nat:"IL",born:1989,spells:[[2010,2013]],seasons:4,titles:0,target:true},
 {he:"ברק משה",pos:"MF",nat:"IL",born:1991,spells:[[2010,2013]],seasons:4,titles:0,target:true},
@@ -959,7 +962,7 @@ const PLAYERS_RAW = [
 {he:"אופק מרום",pos:"FW",nat:"IL",born:1997,spells:[[2016,2016]],seasons:1,titles:0,target:false},
 {he:"אורי מגבו",pos:"DF",nat:"IL",born:1987,spells:[[2016,2016],[2020,2021]],seasons:3,titles:0,target:true},
 {he:"איתי שכטר",pos:"FW",nat:"IL",born:1987,spells:[[2016,2018]],seasons:3,titles:0,target:true},
-{he:"אלעד גבאי",pos:"MF",nat:"IL",born:1985,spells:[[2016,2016]],seasons:1,titles:0,target:false},
+{he:"אלעד גבאי",pos:"DF",nat:"IL",born:1985,spells:[[2016,2016]],seasons:1,titles:0,target:false},
 {he:"ארסניו ולפורט",pos:"FW",nat:"NL",born:1992,spells:[[2016,2016]],seasons:1,titles:0,target:false},
 {he:"דובב גבאי",pos:"FW",nat:"IL",born:1987,spells:[[2016,2016]],seasons:1,titles:0,target:false},
 {he:"דן מורי",pos:"DF",nat:"IL",born:1988,spells:[[2016,2017]],seasons:2,titles:0,target:false},
@@ -1420,8 +1423,8 @@ function shareText(){
   const won = guesses[guesses.length-1].name === answer.name;
   const hs = hinted ? " (עם רמז)" : "";
   const head = won
-    ? `ביתרדל #${puzzleNo} · פיצחתי ב-${guesses.length} ${guesses.length===1?"ניחוש":"ניחושים"} מתוך ${MAX}${hs}`
-    : `ביתרדל #${puzzleNo} · לא פיצחתי (${MAX}/${MAX})${hs}`;
+    ? `ביתרdle #${puzzleNo} · פיצחתי ב-${guesses.length} ${guesses.length===1?"ניחוש":"ניחושים"} מתוך ${MAX}${hs}`
+    : `ביתרdle #${puzzleNo} · לא פיצחתי (${MAX}/${MAX})${hs}`;
   const key = `${M.hit} מדויק  ${M.near} קרוב  ${M.miss} רחוק`;
   return `${head}\n\n${grid}\n\n${key}\n${SITE_URL}`;
 }
@@ -2057,7 +2060,7 @@ async function startVersus(){
   $("#btnShare").addEventListener("click", async () => {
     const link = `${location.origin}${location.pathname}?room=${room}`;
     const txt =
-`⚫🟡 בואו לדו־קרב בביתרדל
+`⚫🟡 בואו לדו־קרב בביתרdle
 
 מי מזהה את שחקן בית"ר הכי מהר?
 הרמזים נחשפים לכולם יחד — והראשון שפוגע לוקח את הסיבוב.

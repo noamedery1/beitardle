@@ -2374,7 +2374,7 @@
  {
   "he": "חן עזריאל",
   "name": "Chen Azriel",
-  "pos": "MF",
+  "pos": "FW",
   "nat": "IL",
   "born": 1988,
   "spells": [
@@ -2982,7 +2982,7 @@
  {
   "he": "עידן ורד",
   "name": "Idan Vered",
-  "pos": "FW",
+  "pos": "MF",
   "nat": "IL",
   "born": 1989,
   "spells": [
@@ -3180,22 +3180,6 @@
   "target": true
  },
  {
-  "he": "זהי אליהן",
-  "name": "Zhahi Elihen",
-  "pos": "MF",
-  "nat": "IL",
-  "born": 1991,
-  "spells": [
-   [
-    2011,
-    2014
-   ]
-  ],
-  "seasons": 4,
-  "titles": 0,
-  "target": true
- },
- {
   "he": "כריסטיאן גונזאלס",
   "name": "Christian González",
   "pos": "DF",
@@ -3306,6 +3290,22 @@
   "seasons": 2,
   "titles": 0,
   "target": false
+ },
+ {
+  "he": "צחי אליחן",
+  "name": "Zhahi Elihen",
+  "pos": "MF",
+  "nat": "IL",
+  "born": 1991,
+  "spells": [
+   [
+    2011,
+    2014
+   ]
+  ],
+  "seasons": 4,
+  "titles": 0,
+  "target": true
  },
  {
   "he": "אבירם זיאת",
@@ -4114,7 +4114,7 @@
  {
   "he": "אורי מגבו",
   "name": "Uri Magbo",
-  "pos": "MF",
+  "pos": "DF",
   "nat": "IL",
   "born": 1987,
   "spells": [
@@ -4150,7 +4150,7 @@
  {
   "he": "אלעד גבאי",
   "name": "Elad Gabay",
-  "pos": "MF",
+  "pos": "DF",
   "nat": "IL",
   "born": 1985,
   "spells": [
