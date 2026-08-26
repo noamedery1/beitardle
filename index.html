@@ -248,7 +248,9 @@ html{scrollbar-gutter:stable}
   border-bottom:1px solid var(--line);color:var(--text);font-size:15px;font-weight:500;border-radius:0}
 #vSugg button:hover{background:var(--yellow);color:var(--ink);font-weight:700}
 .answerbox{position:relative;margin-top:16px}
-.feed{margin-top:10px;font-size:13px;min-height:20px}
+.feed{margin-top:10px;font-size:13.5px;min-height:20px}
+.feed b{font-size:16px;font-weight:900}
+.feed .cd{opacity:.55;font-variant-numeric:tabular-nums}
 .feed.good{color:var(--yellow);font-weight:700}.feed.bad{color:var(--olive)}
 
 /* טבלה */
@@ -664,8 +666,12 @@ input.rc:focus{border-color:var(--yellow)}
     <h4>הניקוד</h4>
     <p>מי שמזהה מוקדם מקבל יותר. אחרי רמז אחד — <b>6 נקודות</b>, אחרי שניים <b>5</b>,
        וכך עד <b>1</b> כשכל הרמזים כבר על המסך.<br>
-       הראשון שפוגע סוגר את הסיבוב לכולם. טעות נועלת אתכם לשלוש שניות,
-       אז עדיף לחשוב לפני שיורים.</p>
+       הראשון שפוגע סוגר את הסיבוב לכולם.</p>
+
+    <h4>ניחוש שגוי</h4>
+    <p>לא מקבלים כלום סתם — כתוב לכם <b>כמה מתוך שישה רמזים תואמים</b> לשחקן
+       שניחשתם. לא אילו, רק כמה. "4/6 · חם מאוד" אומר שאתם קרובים מאוד.<br>
+       אחרי טעות יש נעילה של שלוש שניות, אז עדיף לחשוב לפני שיורים.</p>
 
     <h4>כמה כללים</h4>
     <p>המאגר הוא שחקנים שהיו לפחות שלוש עונות במועדון, ורובם מהוותיקים
@@ -690,7 +696,7 @@ const SHUFFLE_SEED = 20260825;
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
    "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
               נשברים בווינדוס ישן ובאנדרואיד עתיק. */
-const BUILD = "b35";
+const BUILD = "b36";
 const SHARE_STYLE = "safe";
 
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
@@ -1913,7 +1919,22 @@ async function startVersus(){
     ];
   }
   const CLUES = 6;
-  const POINTS = [6,5,4,3,2,1];        // לפי כמה רמזים היו חשופים
+  const POINTS = [6,5,4,3,2,1];
+
+  /* "חם או קר": כמה מהרמזים של הניחוש תואמים לתשובה.
+     מחזיר מספר בלבד — בלי לגלות אילו, כדי שאי אפשר יהיה
+     לצמצם שיטתית ולהפוך את זה למרוץ הקלדה. */
+  function matchCount(g, a){
+    let n = 0;
+    if (g.pos === a.pos) n++;
+    if (g.nat === a.nat) n++;
+    if (g.spells[0][0] === a.spells[0][0]) n++;
+    if (g.titles === a.titles) n++;
+    if (Math.abs(g.born - a.born) <= 2) n++;          // דור, לא שנה מדויקת
+    if (g.he.trim()[0] === a.he.trim()[0]) n++;
+    return n;
+  }
+  const HEAT = ["קר לגמרי","קר","פושר","חם","חם מאוד","בוער","כמעט"];        // לפי כמה רמזים היו חשופים
   
   /* ============================================================
      3. עזרים
@@ -2310,7 +2331,9 @@ ${link}
     const answer = POOL[rounds[idx]];
     const guess  = vNorm(inp.value);
     if (!guess) return;
+    const p = POOL.find(x => vNorm(x.he) === guess);
     inp.value = ""; closeSugg();
+    if (!p) return;
   
     if (guess === vNorm(answer.he)){
       answered = true;
@@ -2323,12 +2346,17 @@ ${link}
       closeRound(idx, uid, pts);
     } else {
       locked = now() + 3000;
-      $("#feed").textContent = "לא נכון · שלוש שניות המתנה";
-      $("#feed").className = "feed bad";
+      const hit = matchCount(p, answer);
+      const word = HEAT[hit] || HEAT[0];
+      const fb = $("#feed");
+      fb.className = "feed bad";
+      fb.innerHTML = `<b>${hit}/${CLUES}</b> מתאימים · ${word}` +
+                     `<span class="cd"> · 3</span>`;
       let n = 3;
       const c = setInterval(() => {
-        if (--n <= 0){ clearInterval(c); $("#feed").textContent = ""; }
-        else $("#feed").textContent = `לא נכון · ${n}`;
+        const s = fb.querySelector(".cd");
+        if (--n <= 0){ clearInterval(c); if (s) s.remove(); }
+        else if (s) s.textContent = ` · ${n}`;
       }, 1000);
     }
   }
