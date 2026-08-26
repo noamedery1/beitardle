@@ -417,7 +417,7 @@ const SHUFFLE_SEED = 20260825;
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
    "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
               נשברים בווינדוס ישן ובאנדרואיד עתיק. */
-const BUILD = "b21";
+const BUILD = "b22";
 const SHARE_STYLE = "safe";
 
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
@@ -525,7 +525,6 @@ const PLAYERS_RAW = [
 {he:"פליקס חלפון",pos:"DF",nat:"IL",born:1972,spells:[[2001,2001],[2005,2006]],seasons:3,titles:0,target:true},
 {he:"גולן חרמון",pos:"GK",nat:"IL",born:1969,spells:[[2002,2003]],seasons:2,titles:0,target:false},
 {he:"דמיטרו מיכאילנקו",pos:"MF",nat:"UA",born:1973,spells:[[2002,2002]],seasons:1,titles:0,target:false},
-{he:"מאור מליקסון",pos:"MF",nat:"IL",born:1984,spells:[[2002,2006]],seasons:5,titles:0,target:true},
 {he:"מנור חסן",pos:"MF",nat:"IL",born:1979,spells:[[2002,2002]],seasons:1,titles:0,target:false},
 {he:"סרגיי קונובלוב",pos:"FW",nat:"UA",born:1972,spells:[[2002,2002]],seasons:1,titles:0,target:false},
 {he:"עופר טלקר",pos:"DF",nat:"IL",born:1973,spells:[[2002,2005]],seasons:4,titles:0,target:true},
@@ -533,6 +532,7 @@ const PLAYERS_RAW = [
 {he:"אנדז'יי קוביקה",pos:"FW",nat:"PL",born:1972,spells:[[2003,2003]],seasons:1,titles:0,target:false},
 {he:"דמיטרי אוליאנוב",pos:"MF",nat:"RU",born:1970,spells:[[2003,2003]],seasons:1,titles:0,target:false},
 {he:"כפיר אדרי",pos:"MF",nat:"IL",born:1976,spells:[[2003,2003]],seasons:1,titles:0,target:false},
+{he:"מאור מליקסון",pos:"MF",nat:"IL",born:1984,spells:[[2003,2006]],seasons:4,titles:0,target:true},
 {he:"משה ביטון",pos:"FW",nat:"IL",born:1982,spells:[[2003,2005]],seasons:3,titles:0,target:true},
 {he:"צ'וקוודי נוורגו",pos:"FW",nat:"NG",born:1981,spells:[[2003,2003]],seasons:1,titles:0,target:false},
 {he:"אבי נמני",pos:"MF",nat:"IL",born:1972,spells:[[2004,2005]],seasons:2,titles:0,target:false},
@@ -1340,9 +1340,9 @@ $("#repSend").addEventListener("click", async ()=>{
   }
   btn.disabled = true; btn.textContent = "שולח…";
   // המצב נדחס לתוך שדה החידה, כדי שלא יידרש שינוי בצד השרת
-  const tag = practice ? `אימון · היום #${todayNo}`
-            : puzzleNo === todayNo ? `#${puzzleNo} · יומית`
-            : `#${puzzleNo} · ארכיון`;
+  const tag = practice            ? `${todayNo} · אימון`
+            : puzzleNo === todayNo  ? `${puzzleNo} · יומית`
+            :                         `${puzzleNo} · ארכיון`;
   const body = JSON.stringify({
     type: "report", puzzle: tag,
     player: answer ? answer.name : "",

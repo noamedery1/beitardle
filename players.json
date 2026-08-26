@@ -1556,22 +1556,6 @@
   "target": false
  },
  {
-  "he": "מאור מליקסון",
-  "name": "Maor Melikson",
-  "pos": "MF",
-  "nat": "IL",
-  "born": 1984,
-  "spells": [
-   [
-    2002,
-    2006
-   ]
-  ],
-  "seasons": 5,
-  "titles": 0,
-  "target": true
- },
- {
   "he": "מנור חסן",
   "name": "Manor Hassan",
   "pos": "MF",
@@ -1682,6 +1666,22 @@
   "seasons": 1,
   "titles": 0,
   "target": false
+ },
+ {
+  "he": "מאור מליקסון",
+  "name": "Maor Melikson",
+  "pos": "MF",
+  "nat": "IL",
+  "born": 1984,
+  "spells": [
+   [
+    2003,
+    2006
+   ]
+  ],
+  "seasons": 4,
+  "titles": 0,
+  "target": true
  },
  {
   "he": "משה ביטון",
