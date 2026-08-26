@@ -2,6 +2,21 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
+<script>
+/* ===== נוסף עבור SportDle ===== */
+(function(){
+  try{
+    var host = String(location.hostname).toLowerCase();
+    var path = String(location.pathname);
+    /* sportdle.up.railway.app ו-beitardle.up.railway.app הם אותו שירות
+       אבל origins שונים, ו-localStorage לא עובר ביניהם. מפנים לאותו
+       origin שבו כבר יושבים הנתונים של השחקנים הקיימים. */
+    if (host.indexOf("sportdle.") === 0 && path.indexOf("/sportdle/") === -1)
+      location.replace("https://beitardle.up.railway.app/sportdle/" + location.search + location.hash);
+  }catch(e){}
+})();
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ביתרdle · חידת השחקן היומית</title>
 <meta name="description" content="שחקן בית&quot;ר אחד מסתורי. שמונה ניסיונות. חידה חדשה כל יום.">
@@ -387,6 +402,13 @@ input.rc:focus{border-color:var(--yellow)}
 #hintBtn + #hintOut{margin-top:9px}
 
 /* ---------- ארכיון ---------- */
+/* ===== נוסף עבור SportDle ===== */
+#clubsBtn{position:absolute;top:22px;inset-inline-end:76px;width:30px;height:30px;
+  border-radius:50%;background:var(--ink-2);border:1px solid var(--line);color:var(--dim);
+  font-family:inherit;font-size:14px;font-weight:900;cursor:pointer;line-height:1;padding:0;
+  display:flex;align-items:center;justify-content:center;text-decoration:none}
+#clubsBtn:hover{color:var(--yellow);border-color:var(--yellow)}
+@media (min-width:640px){ #clubsBtn{top:30px;inset-inline-end:86px;width:33px;height:33px} }
 #archBtn{position:absolute;top:22px;inset-inline-end:38px;width:30px;height:30px;
   border-radius:50%;background:var(--ink-2);border:1px solid var(--line);color:var(--dim);
   font-family:inherit;font-size:13px;font-weight:900;cursor:pointer;line-height:1;padding:0}
@@ -422,6 +444,7 @@ input.rc:focus{border-color:var(--yellow)}
     <div id="streak">רצף <b id="streakn">0</b></div>
     <button id="helpBtn" aria-label="איך משחקים">?</button>
     <button id="archBtn" aria-label="ארכיון חידות">⌛</button>
+    <a id="clubsBtn" href="./sportdle/" aria-label="עוד מועדונים — SportDle" title="עוד מועדונים">⇄</a>
     <h1><a href="./" aria-label="ביתרdle">ביתרdle</a></h1>
     <p class="tag">חידת השחקן היומית של בית"ר</p>
     <p class="sub">חידה <b id="pnum">#1</b> · <b id="left">8</b> ניסיונות נותרו</p>
