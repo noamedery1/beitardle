@@ -10,8 +10,8 @@
 <meta property="og:type"        content="website">
 <meta property="og:title"       content="SportDle · חידת השחקן היומית">
 <meta property="og:description" content="שחקן אחד. שמונה ניסיונות. כמה ייקח לכם?">
-<meta property="og:url"         content="https://beitardle.up.railway.app/sportdle/">
-<meta property="og:image"       content="https://beitardle.up.railway.app/sportdle/og.png">
+<meta property="og:url"         content="https://sportdle.up.railway.app/sportdle/">
+<meta property="og:image"       content="https://sportdle.up.railway.app/sportdle/og.png">
 <meta property="og:image:width"  content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card"       content="summary_large_image">
@@ -66,7 +66,7 @@ body{background:var(--ink);color:var(--text);font-family:'Heebo',system-ui,sans-
   .card{padding:24px 22px}
   .card h2{font-size:30px}
   .mini i{width:17px;height:17px}
-  #helpBtn{top:30px;width:33px;height:33px;font-size:16px}
+  #helpBtn,#archBtn{top:30px;width:33px;height:33px;font-size:15px}
   #streak{top:32px;font-size:13px}
 }
 @media (min-width:1024px){ .wrap{max-width:600px} }
@@ -145,10 +145,6 @@ button.ghost{background:none;color:var(--dim);border:1.5px solid var(--line);mar
   border-radius:var(--r);font-size:11.5px;color:var(--dim);line-height:1.7}
 .note b{color:var(--text)}
 /* כפתור עזרה */
-#helpBtn{position:absolute;top:22px;inset-inline-end:0;width:30px;height:30px;border-radius:50%;
-  background:var(--ink-2);border:1px solid var(--line);color:var(--dim);font-family:inherit;
-  font-size:15px;font-weight:900;cursor:pointer;line-height:1;padding:0}
-#helpBtn:hover{color:var(--brand);border-color:var(--brand)}
 h1 a{color:inherit;text-decoration:none}
 
 /* חלונית */
@@ -249,15 +245,12 @@ input.rc:focus{border-color:var(--brand)}
 
 /* ---------- ארכיון ---------- */
 /* ---------- בורר מועדון ---------- */
-#clubBtn{display:inline-flex;align-items:center;gap:8px;margin:10px auto 0;width:auto;
-  padding:7px 13px 7px 10px;border-radius:22px;background:var(--ink-2);
-  border:1px solid var(--line);color:var(--dim);font-family:inherit;font-size:12.5px;
-  font-weight:500;cursor:pointer;line-height:1}
-#clubBtn i{font-style:normal;font-size:14px;color:var(--brand)}
-#clubBtn b{color:var(--text);font-weight:700}
-#clubBtn em{font-style:normal;color:var(--brand);font-weight:700;
-  border-inline-start:1px solid var(--line);padding-inline-start:9px}
-#clubBtn:hover{border-color:var(--brand)}
+#clubBtn{display:inline-flex;align-items:center;gap:7px;margin:11px auto 0;width:auto;
+  padding:8px 16px;border-radius:22px;background:none;color:var(--brand);
+  border:1.5px solid var(--brand);font-family:inherit;font-size:13px;
+  font-weight:700;cursor:pointer;line-height:1}
+#clubBtn i{font-style:normal;font-size:15px}
+#clubBtn:hover{background:var(--brand);color:var(--ink)}
 
 #picker{position:fixed;inset:0;z-index:80;background:var(--ink);display:none;
   overflow:auto;padding:calc(28px + env(safe-area-inset-top)) 16px 40px}
@@ -280,10 +273,15 @@ input.rc:focus{border-color:var(--brand)}
 #picker .foot{margin-top:24px;text-align:center;font-size:11.5px;color:#55555E;line-height:1.7}
 #picker .foot a{color:#6A6A74;text-decoration:none}
 
-#archBtn{position:absolute;top:22px;inset-inline-end:38px;width:30px;height:30px;
-  border-radius:50%;background:var(--ink-2);border:1px solid var(--line);color:var(--dim);
-  font-family:inherit;font-size:13px;font-weight:900;cursor:pointer;line-height:1;padding:0}
-#archBtn:hover{color:var(--brand);border-color:var(--brand)}
+/* שני כפתורי הכותרת חייבים אותו גודל ואותה מרכוז — בלי flex
+   הגליף יושב על קו הבסיס, וכל אחד יושב אחרת. */
+#helpBtn,#archBtn{position:absolute;top:22px;width:30px;height:30px;border-radius:50%;
+  background:var(--ink-2);border:1px solid var(--line);color:var(--dim);
+  font-family:inherit;font-size:14px;font-weight:900;cursor:pointer;padding:0;line-height:1;
+  display:flex;align-items:center;justify-content:center}
+#helpBtn{inset-inline-end:0}
+#archBtn{inset-inline-end:38px}
+#helpBtn:hover,#archBtn:hover{color:var(--brand);border-color:var(--brand)}
 .arch{display:flex;flex-direction:column;gap:6px;margin-top:8px}
 .arch button{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;
   background:var(--ink);border:1px solid var(--line);border-radius:9px;padding:11px 13px;
@@ -294,7 +292,7 @@ input.rc:focus{border-color:var(--brand)}
 .arch button i.win{color:var(--brand)} .arch button i.lose{color:var(--near)}
 .arch button.cur{border-color:var(--brand)}
 @media (min-width:640px){
-  #archBtn{top:30px;inset-inline-end:43px;width:33px;height:33px;font-size:14px}
+  #archBtn{inset-inline-end:43px}
 }
 
 #report{margin-top:11px;font-size:11.5px}
@@ -514,10 +512,6 @@ input.rc:focus{border-color:var(--brand)}
 #hintBtn + #hintOut{margin-top:9px}
 
 /* ---------- ארכיון ---------- */
-#archBtn{position:absolute;top:22px;inset-inline-end:38px;width:30px;height:30px;
-  border-radius:50%;background:var(--ink-2);border:1px solid var(--line);color:var(--dim);
-  font-family:inherit;font-size:13px;font-weight:900;cursor:pointer;line-height:1;padding:0}
-#archBtn:hover{color:var(--brand);border-color:var(--brand)}
 .arch{display:flex;flex-direction:column;gap:6px;margin-top:8px}
 .arch button{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;
   background:var(--ink);border:1px solid var(--line);border-radius:9px;padding:11px 13px;
@@ -548,13 +542,11 @@ input.rc:focus{border-color:var(--brand)}
 <div class="wrap">
   <header>
     <div id="streak">רצף <b id="streakn">0</b></div>
-    <button id="helpBtn" aria-label="איך משחקים">?</button>
-    <button id="archBtn" aria-label="ארכיון חידות">⌛</button>
+    <button id="helpBtn" aria-label="איך משחקים" title="איך משחקים">?</button>
+    <button id="archBtn" aria-label="ארכיון חידות" title="ארכיון">☰</button>
     <h1><a href="./" id="gameName" aria-label="ספורטדל">ספורטדל</a></h1>
     <p class="sub">חידה <b id="pnum">#1</b> · <b id="left">8</b> ניסיונות נותרו</p>
-    <button id="clubBtn" type="button">
-      <i>⇄</i><span>מועדון: <b id="clubNow">—</b></span><em>החלפה</em>
-    </button>
+    <button id="clubBtn" type="button"><i>⇄</i>החלפת מועדון</button>
   </header>
 
   <nav class="nav">
@@ -835,10 +827,10 @@ input.rc:focus{border-color:var(--brand)}
 /* ============================================================
    1. הגדרות — נכתבות על ידי scripts/build.mjs
    ============================================================ */
-const SITE_URL      = "https://beitardle.up.railway.app/sportdle";   // בלי / בסוף
+const SITE_URL      = "https://sportdle.up.railway.app/sportdle";   // בלי / בסוף
 const START         = [2026,8,24];        // [שנה, חודש 1-12, יום] של חידה #1
 const MAX           = 8;
-const BUILD         = "s2";
+const BUILD         = "s3";
 /* סט האמוג'ים לשיתוף.
    "safe"   — עיגולים גיאומטריים (יוניקוד 1.1, 1993). שני בתים,
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
@@ -1093,9 +1085,16 @@ const EMOJI = {
   safe:   {hit:"●", near:"◐", miss:"○"},   // מלא / חצי / ריק
   square: {hit:"🟨", near:"🟫", miss:"⬛"}
 };
+/* שורת הסמלים היא כולה תווים ניטרליים — אין בה אף תו חזק, ולכן
+   הכיוון שלה נקבע לפי הלקוח. בוואטסאפ ווב בהקשר LTR היא מתהפכת,
+   והרמז הימני ביותר על המסך מופיע שמאלי בשיתוף.
+   בידוד RTL מפורש (U+2067…U+2069) מקבע את הכיוון — נמדד ואומת
+   בשני ההקשרים. שני התווים במישור הבסיסי, אז בדיקת הבנייה עוברת. */
+const RLI = "⁧", PDI = "⁩";
+
 function shareText(){
   const M = EMOJI[SHARE_STYLE] || EMOJI.safe;
-  const grid = guesses.map(g => compare(g,answer).map(c=>M[c.s]).join("")).join("\n");
+  const grid = guesses.map(g => RLI + compare(g,answer).map(c=>M[c.s]).join("") + PDI).join("\n");
   const won = guesses[guesses.length-1].name === answer.name;
   const hs = hinted ? " (עם רמז)" : "";
   /* חייבת להיות מילה עברית בין שם המשחק למספר החידה.
@@ -1545,7 +1544,6 @@ function bootClub(slug){
   document.title = `${club.game} · חידת השחקן היומית`;
   $("#gameName").textContent = club.game;
   $("#gameName").setAttribute("aria-label", club.game);
-  $("#clubNow").textContent = club.game;
   $("#footName").textContent = club.game;
   document.querySelectorAll(".clubShort").forEach(el => el.textContent = club.short);
   $("#hLeague").textContent = club.titles.league.join(", ") || "—";
