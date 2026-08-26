@@ -176,6 +176,125 @@ h1 a{color:inherit;text-decoration:none}
 .ex .k{font-size:9.5px;opacity:.75} .ex .v{font-size:12.5px;font-weight:700;unicode-bidi:isolate}
 
 /* פוטר / קרדיט */
+
+.nav{display:flex;gap:6px;background:var(--ink-2);border:1px solid var(--line);
+  border-radius:24px;padding:4px;max-width:300px;margin:14px auto 0}
+.nav button{flex:1;margin:0;width:auto;padding:8px 10px;border-radius:20px;border:0;cursor:pointer;
+  background:none;color:var(--dim);font-family:inherit;font-size:13.5px;font-weight:700;
+  transition:background .15s,color .15s}
+.nav button.on{background:var(--yellow);color:var(--ink);font-weight:900}
+.nav button:not(.on):hover{color:var(--text)}
+
+/* ===== קרב חברים ===== */
+html{scrollbar-gutter:stable}
+#dailyView,#versusView{min-height:44vh}
+.vtop{text-align:center;margin-top:12px}
+.vtop button{width:auto;margin:0;padding:7px 16px;border-radius:18px;background:none;
+  border:1px solid var(--line);color:var(--dim);font-family:inherit;font-size:12.5px;
+  font-weight:700;cursor:pointer;min-height:0}
+.vtop button:hover{color:var(--yellow);border-color:var(--yellow)}
+.orsep{display:flex;align-items:center;gap:10px;margin:18px 0 4px;color:#55555E;font-size:11.5px}
+.orsep::before,.orsep::after{content:"";flex:1;height:1px;background:var(--line)}
+.joinrow{display:flex;gap:9px;align-items:stretch}
+.joinrow #joinCode{flex:1;font-size:24px;letter-spacing:.2em;padding:12px}
+.joinrow #btnJoin{width:auto;flex:0 0 92px;margin-top:0}
+#versusView .card{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;
+  padding:18px 16px;margin-top:14px}
+#versusView .card h2{font-family:'Suez One',serif;font-size:20px;color:var(--yellow);margin-bottom:8px}
+#versusView .card p{font-size:13.5px;color:var(--dim);line-height:1.65}
+#versusView label{display:block;font-size:12px;color:var(--dim);margin:14px 0 5px}
+#versusView input,#versusView select{width:100%;padding:13px 15px;background:var(--ink);
+  border:1.5px solid var(--line);border-radius:var(--r);color:var(--text);
+  font-family:inherit;font-size:16px;outline:none}
+#versusView input:focus,#versusView select:focus{border-color:var(--yellow)}
+#versusView input.code{text-align:center;font-size:30px;font-weight:900;letter-spacing:.28em;
+  font-family:'Suez One',serif;text-transform:uppercase;direction:ltr}
+#versusView button{width:100%;padding:14px;margin-top:12px;border:0;border-radius:var(--r);
+  background:var(--yellow);color:var(--ink);font-family:inherit;font-size:16px;font-weight:900;cursor:pointer}
+#versusView button:disabled{opacity:.4;cursor:default}
+#versusView button.ghost{background:none;color:var(--dim);border:1.5px solid var(--line);
+  font-weight:700;font-size:14px}
+.hide{display:none!important}
+.err{color:#E8B77A;font-size:13px;margin-top:10px;min-height:18px}
+/* לובי */
+.roomcode{font-family:'Suez One',serif;font-size:46px;color:var(--yellow);text-align:center;
+  letter-spacing:.14em;direction:ltr;margin:6px 0}
+.plist{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.plist div{display:flex;justify-content:space-between;align-items:center;background:var(--ink);
+  border:1px solid var(--line);border-radius:9px;padding:10px 13px;font-size:14.5px;font-weight:700}
+.plist div i{font-style:normal;font-size:11px;color:var(--dim);font-weight:500}
+.plist div.me{border-color:var(--yellow)}
+
+/* משחק */
+.bar{height:5px;background:rgba(255,255,255,.12);border-radius:3px;overflow:hidden;
+  display:flex;flex-direction:row-reverse;margin-top:10px}
+.bar i{display:block;height:100%;background:var(--yellow);width:100%}
+.meta{display:flex;justify-content:space-between;font-size:12px;color:var(--dim);margin-top:8px}
+.meta b{color:var(--text);font-weight:900}
+.clues{display:flex;flex-direction:column;gap:7px;margin-top:16px}
+.clue{background:var(--slate);border-radius:9px;padding:12px 14px;display:flex;
+  justify-content:space-between;align-items:baseline;opacity:0;transform:translateY(-6px);
+  transition:opacity .3s,transform .3s}
+.clue.on{opacity:1;transform:none}
+.clue span{font-size:11.5px;color:var(--dim)}
+.clue b{font-size:17px;font-weight:900;unicode-bidi:isolate}
+.clue.on.fresh{background:var(--yellow);color:var(--ink)}
+.clue.on.fresh span{color:rgba(12,12,14,.7)}
+#vSugg{position:absolute;bottom:calc(100% + 6px);inset-inline:0;background:var(--ink-3);
+  border:1.5px solid var(--line);border-radius:var(--r);max-height:190px;overflow:auto;z-index:20;display:none}
+#vSugg.on{display:block}
+#vSugg button{width:100%;margin:0;text-align:start;padding:11px 15px;background:none;border:0;
+  border-bottom:1px solid var(--line);color:var(--text);font-size:15px;font-weight:500;border-radius:0}
+#vSugg button:hover{background:var(--yellow);color:var(--ink);font-weight:700}
+.answerbox{position:relative;margin-top:16px}
+.feed{margin-top:10px;font-size:13px;min-height:20px}
+.feed.good{color:var(--yellow);font-weight:700}.feed.bad{color:var(--olive)}
+
+/* טבלה */
+.board{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.board div{display:flex;align-items:center;gap:10px;background:var(--ink);border:1px solid var(--line);
+  border-radius:9px;padding:11px 13px}
+.board div.me{border-color:var(--yellow)}
+.board .rk{font-family:'Suez One',serif;font-size:17px;color:var(--dim);width:22px;text-align:center}
+.board div:first-child .rk{color:var(--yellow)}
+.board .nm{flex:1;font-weight:700;font-size:15px}
+.board .sc{font-weight:900;font-variant-numeric:tabular-nums;color:var(--yellow)}
+.rev{text-align:center;margin-top:14px;font-size:15px}
+.rev b{color:var(--yellow);font-size:19px;font-family:'Suez One',serif}
+
+.nav{display:flex;gap:6px;background:var(--ink-2);border:1px solid var(--line);
+  border-radius:24px;padding:4px;max-width:300px;margin:14px auto 0}
+.nav a{flex:1;text-align:center;padding:8px 10px;border-radius:20px;text-decoration:none;
+  color:var(--dim);font-size:13.5px;font-weight:700;transition:background .15s,color .15s}
+.nav a.on{background:var(--yellow);color:var(--ink);font-weight:900}
+.nav a:not(.on):hover{color:var(--text)}
+
+/* ===== ליטוש מובייל לקרב ===== */
+#versusView input,#versusView select{font-size:16px}      /* מונע זום באייפון */
+#versusView button{min-height:48px}                        /* יעד נגיעה */
+#versusView .card{padding:16px 14px}
+.roomcode{user-select:all;-webkit-user-select:all}         /* לחיצה ארוכה מסמנת */
+.clue{min-height:48px}
+.clue b{font-size:16px}
+.answerbox{position:sticky;bottom:0;background:var(--ink-2);padding-top:10px;z-index:10}
+#vSugg{max-height:38vh}
+.board div{min-height:46px}
+.plist div{min-height:44px}
+@media (max-width:380px){
+  .roomcode{font-size:38px}
+  #versusView .card h2{font-size:18px}
+  .clue span{font-size:10.5px}
+}
+@media (min-width:640px){
+  #versusView .card{padding:20px 18px}
+  .clue{min-height:52px}
+}
+/* פחות תנועה למי שביקש */
+@media (prefers-reduced-motion:reduce){
+  .clue{transition:none}
+  .nav button{transition:none}
+}
+
 footer{margin-top:26px;padding-top:14px;border-top:1px solid rgba(46,46,54,.55);
   display:flex;align-items:center;justify-content:space-between;gap:12px;
   font-size:11px;color:#55555E;line-height:1.5}
@@ -187,6 +306,17 @@ footer{margin-top:26px;padding-top:14px;border-top:1px solid rgba(46,46,54,.55);
 footer .who{text-align:start}
 footer .who a{color:#55555E;text-decoration:none}
 footer .who a:hover{color:var(--dim)}
+#comm{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.09);display:none}
+#comm.on{display:block}
+#comm .hd{font-size:12px;color:var(--dim);margin-bottom:10px}
+#comm .hd b{color:var(--text);font-weight:900}
+#comm .rank{font-size:14px;color:var(--yellow);font-weight:900;margin-bottom:11px}
+#comm .cb{display:flex;align-items:center;gap:6px;font-size:10.5px;color:var(--dim);margin-bottom:3px}
+#comm .cb i{font-style:normal;width:9px;text-align:center;font-weight:700;color:var(--text)}
+#comm .cb u{text-decoration:none;background:var(--slate);border-radius:3px;padding:1px 5px;
+  min-width:22px;text-align:center;color:var(--text);font-weight:700;font-size:10px;
+  font-variant-numeric:tabular-nums;display:inline-block}
+#comm .cb.me u{background:var(--yellow);color:var(--ink)}
 .stats{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.09)}
 .stats .nums{display:flex;justify-content:center;gap:22px;margin-bottom:12px}
 .stats .nums div{font-size:10.5px;color:var(--dim)}
@@ -276,6 +406,12 @@ input.rc:focus{border-color:var(--yellow)}
     <p class="sub">חידה <b id="pnum">#1</b> · <b id="left">8</b> ניסיונות נותרו</p>
   </header>
 
+  <nav class="nav">
+    <button type="button" class="on" data-tab="daily">חידה יומית</button>
+    <button type="button" data-tab="versus">קרב חברים</button>
+  </nav>
+
+  <div id="dailyView">
   <div class="searchbox">
     <input id="guess" type="text" autocomplete="off" autocapitalize="off" spellcheck="false"
            placeholder="טוען…" aria-label="ניחוש שחקן" disabled>
@@ -307,6 +443,7 @@ input.rc:focus{border-color:var(--yellow)}
       <p id="rtext"></p>
       <div class="mini" id="mini"></div>
       <div id="next">החידה הבאה בעוד <b id="cd">--:--:--</b> · שחקן חדש מחכה</div>
+      <div id="comm"></div>
       <div class="stats" id="stats"></div>
       <button class="act wa" id="wa">שליחה בוואטסאפ</button>
       <button class="act ghost" id="share">העתקת התוצאה</button>
@@ -316,6 +453,90 @@ input.rc:focus{border-color:var(--yellow)}
         <a href="https://techbynoam.up.railway.app/" target="_blank" rel="noopener">TechByNoam</a></div>
     </div>
   </div>
+
+  </div><!-- /dailyView -->
+
+  <div id="versusView" class="hide">
+    <div class="vtop"><button type="button" id="vHelpBtn">איך משחקים?</button></div>
+  <!-- מסך פתיחה -->
+  <section id="scHome">
+    <div class="card">
+      <label for="vName">איך קוראים לך?</label>
+      <input id="vName" maxlength="14" placeholder="השם שיופיע בטבלה" autocomplete="off">
+      <button id="btnCreate">פתיחת חדר חדש</button>
+      <div class="orsep"><span>או שיש לכם קוד</span></div>
+      <div class="joinrow">
+        <input id="joinCode" class="code" maxlength="4" placeholder="XXXX"
+               autocomplete="off" inputmode="latin" aria-label="קוד החדר">
+        <button id="btnJoin">כניסה</button>
+      </div>
+      <div class="err" id="joinErr"></div>
+    </div>
+  </section>
+
+  <!-- לובי -->
+  <section id="scLobby" class="hide">
+    <div class="card">
+      <p style="text-align:center">קוד החדר</p>
+      <div class="roomcode" id="lobbyCode">----</div>
+      <button class="ghost" id="btnShare">שיתוף הקוד</button>
+      <button class="ghost" id="btnLeave">יציאה מהחדר</button>
+    </div>
+    <div class="card">
+      <h2>מי בחדר</h2>
+      <div class="plist" id="lobbyPlayers"></div>
+    </div>
+    <div class="card" id="hostBox">
+      <h2>הגדרות</h2>
+      <label for="setRounds">כמה סיבובים</label>
+      <select id="setRounds"><option>5</option><option selected>10</option><option>15</option></select>
+      <label for="setReveal">כל כמה שניות נחשף רמז</label>
+      <select id="setReveal"><option value="4">4</option><option value="5" selected>5</option><option value="7">7</option></select>
+      <button id="btnStart">התחלה</button>
+      <div class="err" id="startErr"></div>
+    </div>
+    <p id="waitMsg" class="card hide" style="text-align:center;color:var(--dim)">
+      מחכים שמנהל החדר יתחיל…</p>
+  </section>
+
+  <!-- משחק -->
+  <section id="scPlay" class="hide">
+    <div class="card">
+      <div class="meta">
+        <span>סיבוב <b id="rNum">1</b>/<b id="rTot">10</b></span>
+        <span><b id="rTime">30</b> שניות</span>
+      </div>
+      <div class="bar"><i id="rBar"></i></div>
+      <div class="clues" id="clues"></div>
+      <div class="answerbox">
+        <div id="vSugg"></div>
+        <input id="answer" placeholder="מי השחקן?" autocomplete="off" spellcheck="false">
+      </div>
+      <div class="feed" id="feed"></div>
+    </div>
+    <div class="card">
+      <div class="board" id="liveBoard"></div>
+    </div>
+  </section>
+
+  <!-- סיום סיבוב -->
+  <section id="scReveal" class="hide">
+    <div class="card">
+      <div class="rev" id="revText"></div>
+      <div class="board" id="revBoard"></div>
+    </div>
+  </section>
+
+  <!-- סיום -->
+  <section id="scEnd" class="hide">
+    <div class="card">
+      <h2 style="text-align:center">סוף המשחק</h2>
+      <div class="board" id="endBoard"></div>
+      <button id="btnAgain">חדר חדש</button>
+      <button class="ghost" id="btnHome">חזרה למשחק היומי</button>
+    </div>
+  </section>
+  </div><!-- /versusView -->
 
   <footer>
     <div class="who">
@@ -402,6 +623,32 @@ input.rc:focus{border-color:var(--yellow)}
   </div>
 </div>
 
+
+<div class="modal" id="vHelp">
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="איך משחקים קרב">
+    <button class="x" id="vHelpClose" aria-label="סגירה">✕</button>
+    <h3>קרב חברים</h3>
+    <p>אחד פותח חדר ומקבל קוד בן ארבע אותיות. כולם מזינים אותו ונכנסים.
+       צריך לפחות שני שחקנים כדי להתחיל.</p>
+
+    <h4>איך סיבוב עובד</h4>
+    <p>יש שחקן בית"ר מסתורי, והרמזים נחשפים <b>לכולם יחד</b> — אחד כל כמה שניות:
+       עמדה, לאום, עונה ראשונה, תארים ושנת לידה.</p>
+
+    <h4>הניקוד</h4>
+    <p>מי שמזהה מוקדם מקבל יותר. אחרי רמז אחד — <b>5 נקודות</b>, אחרי שניים <b>4</b>,
+       וכך עד <b>1</b> כשכל הרמזים כבר על המסך.<br>
+       הראשון שפוגע סוגר את הסיבוב לכולם. טעות נועלת אתכם לשלוש שניות,
+       אז עדיף לחשוב לפני שיורים.</p>
+
+    <h4>כמה כללים</h4>
+    <p>המאגר הוא 119 שחקנים שהיו לפחות שלוש עונות במועדון — אותם שחקנים
+       שיכולים להופיע בחידה היומית.<br>
+       מי שמתנתק לרגע נשאר בטבלה עם הניקוד שלו וחוזר לבד.<br>
+       אפשר לרענן את הדף באמצע — חוזרים לאותו חדר.</p>
+  </div>
+</div>
+
 <div class="scarf bottom"></div>
 
 <script>
@@ -417,7 +664,7 @@ const SHUFFLE_SEED = 20260825;
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
    "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
               נשברים בווינדוס ישן ובאנדרואיד עתיק. */
-const BUILD = "b22";
+const BUILD = "b30";
 const SHARE_STYLE = "safe";
 
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
@@ -574,7 +821,7 @@ const PLAYERS_RAW = [
 {he:"ג'ף טוטואנה",pos:"FW",nat:"CD",born:1982,spells:[[2006,2006]],seasons:1,titles:0,target:false},
 {he:"גל אלברמן",pos:"MF",nat:"IL",born:1983,spells:[[2006,2008]],seasons:3,titles:3,target:true},
 {he:"ז'רום לרואה",pos:"MF",nat:"FR",born:1974,spells:[[2006,2006]],seasons:1,titles:0,target:false},
-{he:"חן עזריאל",pos:"MF",nat:"IL",born:1988,spells:[[2006,2008],[2010,2011]],seasons:5,titles:3,target:true},
+{he:"חן עזריאל",pos:"FW",nat:"IL",born:1988,spells:[[2006,2008],[2010,2011]],seasons:5,titles:3,target:true},
 {he:"יואב זיו",pos:"DF",nat:"IL",born:1981,spells:[[2006,2008]],seasons:3,titles:3,target:true},
 {he:"לבן סילגדזה",pos:"DF",nat:"GE",born:1976,spells:[[2006,2006]],seasons:1,titles:0,target:false},
 {he:"נסומבו מזואה",pos:"MF",nat:"CD",born:1982,spells:[[2006,2006]],seasons:1,titles:0,target:false},
@@ -622,7 +869,6 @@ const PLAYERS_RAW = [
 {he:"פאולו האסה",pos:"DF",nat:"PE",born:1983,spells:[[2010,2010]],seasons:1,titles:0,target:false},
 {he:"אופיר קריאף",pos:"MF",nat:"IL",born:1991,spells:[[2011,2015],[2018,2024]],seasons:12,titles:1,target:true},
 {he:"אלי דסה",pos:"DF",nat:"IL",born:1992,spells:[[2011,2015]],seasons:5,titles:0,target:true},
-{he:"זהי אליהן",pos:"MF",nat:"IL",born:1991,spells:[[2011,2014]],seasons:4,titles:0,target:true},
 {he:"כריסטיאן גונזאלס",pos:"DF",nat:"UY",born:1976,spells:[[2011,2011]],seasons:1,titles:0,target:false},
 {he:"ליאור ראובן",pos:"DF",nat:"IL",born:1980,spells:[[2011,2011]],seasons:1,titles:0,target:false},
 {he:"משה בן לולו",pos:"FW",nat:"IL",born:1988,spells:[[2011,2011]],seasons:1,titles:0,target:false},
@@ -630,6 +876,7 @@ const PLAYERS_RAW = [
 {he:"סטיבן כהן",pos:"MF",nat:"FR",born:1986,spells:[[2011,2013]],seasons:3,titles:0,target:true},
 {he:"סמואל יבואה",pos:"FW",nat:"GH",born:1986,spells:[[2011,2011]],seasons:1,titles:0,target:false},
 {he:"עדן מלכה",pos:"FW",nat:"IL",born:1991,spells:[[2011,2012]],seasons:2,titles:0,target:false},
+{he:"צחי אליחן",pos:"MF",nat:"IL",born:1991,spells:[[2011,2014]],seasons:4,titles:0,target:true},
 {he:"אבירם זיאת",pos:"GK",nat:"IL",born:1992,spells:[[2012,2013]],seasons:2,titles:0,target:false},
 {he:"אופיר עמרם",pos:"MF",nat:"IL",born:1986,spells:[[2012,2013]],seasons:2,titles:0,target:false},
 {he:"אנדריי פילאבסקי",pos:"DF",nat:"UA",born:1988,spells:[[2012,2012]],seasons:1,titles:0,target:false},
@@ -678,7 +925,7 @@ const PLAYERS_RAW = [
 {he:"תומר סויסה",pos:"MF",nat:"IL",born:1988,spells:[[2015,2015]],seasons:1,titles:0,target:false},
 {he:"אוגוסטין קוום",pos:"FW",nat:"NG",born:1997,spells:[[2016,2016]],seasons:1,titles:0,target:false},
 {he:"אופק מרום",pos:"FW",nat:"IL",born:1997,spells:[[2016,2016]],seasons:1,titles:0,target:false},
-{he:"אורי מגבו",pos:"MF",nat:"IL",born:1987,spells:[[2016,2016],[2020,2021]],seasons:3,titles:0,target:true},
+{he:"אורי מגבו",pos:"DF",nat:"IL",born:1987,spells:[[2016,2016],[2020,2021]],seasons:3,titles:0,target:true},
 {he:"איתי שכטר",pos:"FW",nat:"IL",born:1987,spells:[[2016,2018]],seasons:3,titles:0,target:true},
 {he:"אלעד גבאי",pos:"MF",nat:"IL",born:1985,spells:[[2016,2016]],seasons:1,titles:0,target:false},
 {he:"ארסניו ולפורט",pos:"FW",nat:"NL",born:1992,spells:[[2016,2016]],seasons:1,titles:0,target:false},
@@ -850,45 +1097,45 @@ const PLAYERS_RAW = [
    ============================================================ */
 const SCHEDULE = [
   "דני נוימן", "דני פרדה", "מאור מליקסון",
-  "אנטואן קונט", "אלי ששון", "תומר אזולאי",
-  "עומר נחמני", "תמאש שנדור", "אישטוון האמר",
-  "גריגורי מורוזוב", "יעקב בריהון", "אופיר קריאף",
-  "ליאל דרעי", "מיכאל זנדברג", "אלי דסה",
-  "אישטוון פישונט", "ישראל כהן", "טל בן חיים",
-  "אור ואקנין", "סתיו שושן", "אבישי כהן",
-  "מירון טל", "טל אלמשעלי", "אביאל זרגרי",
-  "איתמר ניצן", "עידן טל", "דוד אמסלם",
-  "שלמה שירזי", "אוהד סיידוף", "תומר בן יוסף",
-  "דושאן מאטוביץ'", "חלאופילו פלייטר", "גל אלברמן",
-  "גיא גריף", "אלירן דנין", "שמואל לוי",
-  "קובי מויאל", "איציק קורנפיין", "אהוד כחילה",
-  "ברק משה", "אלון מזרחי", "עמית שמש",
-  "סטיבן כהן", "בוריס קליימן", "ניר סביליה",
-  "חן עזריאל", "מיכאל אוחנה", "שמואל קוז'וקין",
-  "מיגל סילבה", "אורי מגבו", "אריאל הרוש",
-  "נהוראי דבוש", "אורי דהן", "רונן חרזי",
-  "רוי דוגה", "ירדן שועה", "ז'אן טלסניקוב",
-  "נתנאל דלויה", "אריק בנדו", "אבירם ברוכיאן",
-  "שי חדד", "קלאודמיר", "מקסים גרצ'קין",
-  "רענן דרעי", "דן איינבינדר", "יוסי אבוקסיס",
-  "ג'ורג' פאולינו", "עידן ורד", "פליקס חלפון",
-  "אור זהבי", "אורי מלמיליאן", "יוסף סורינוב",
-  "מתן בראשי", "אלי אוחנה", "עופר טלקר",
-  "תומר ירוחם", "זהי אליהן", "שמעון גרשון",
-  "ברק יצחקי", "איתן מזרחי", "לי און מזרחי",
-  "עוזיאל פרדו", "סרגיי טרטיאק", "אישטוון שאלוי",
-  "משה ביטון", "דוד קלטינס", "אסי דומב",
-  "אביתר ברוכיאן", "יוסי מזרחי", "יצחק כהן",
-  "יואב זיו", "גאטאן וארן", "טוטו תמוז",
-  "עידן מליחי", "אלון סגיר", "דוד דגו",
-  "עדן נחמני", "מיכאל סירושטיין", "עומר אצילי",
-  "דור מיכה", "אוראל דגני", "טימוטי מוזי",
-  "תמיר עדי", "עדי יונה", "יעקב שוורץ",
-  "אופיר שמואלי", "אלעד יעקובי", "איתי שכטר",
-  "דן עזריה", "ניר רייכמן", "שלומי משה",
-  "איתן טיבי", "יוסי אברהמי", "אבי ריקן",
-  "טל כחילה", "אבי כהן", "דריו פרננדס",
-  "עמית בן שושן", "רוי ששון"
+  "סטיבן כהן", "עידן ורד", "איתמר ניצן",
+  "יעקב בריהון", "אלון סגיר", "מקסים גרצ'קין",
+  "שי חדד", "רונן חרזי", "סרגיי טרטיאק",
+  "מיכאל אוחנה", "גיא גריף", "איתן מזרחי",
+  "שמעון גרשון", "אבי כהן", "עופר טלקר",
+  "אוהד סיידוף", "שלמה שירזי", "אישטוון פישונט",
+  "יצחק כהן", "אופיר שמואלי", "אביאל זרגרי",
+  "אלעד יעקובי", "עמית בן שושן", "ברק יצחקי",
+  "דוד אמסלם", "תמאש שנדור", "ניר רייכמן",
+  "ירדן שועה", "אוראל דגני", "תומר בן יוסף",
+  "אלון מזרחי", "יוסי מזרחי", "ברק משה",
+  "אישטוון שאלוי", "יוסף סורינוב", "אלי דסה",
+  "שלומי משה", "טל כחילה", "אלי ששון",
+  "אורי דהן", "טוטו תמוז", "קלאודמיר",
+  "דוד קלטינס", "נתנאל דלויה", "רענן דרעי",
+  "שמואל לוי", "יעקב שוורץ", "אבירם ברוכיאן",
+  "עדי יונה", "איתי שכטר", "דריו פרננדס",
+  "אור ואקנין", "גל אלברמן", "אריאל הרוש",
+  "אסי דומב", "עמית שמש", "עידן טל",
+  "אהוד כחילה", "ג'ורג' פאולינו", "ליאל דרעי",
+  "אריק בנדו", "גאטאן וארן", "עומר אצילי",
+  "יואב זיו", "נהוראי דבוש", "אבי ריקן",
+  "אנטואן קונט", "עדן נחמני", "יוסי אברהמי",
+  "יוסי אבוקסיס", "מתן בראשי", "מיכאל זנדברג",
+  "אלירן דנין", "איציק קורנפיין", "תמיר עדי",
+  "מיגל סילבה", "רוי דוגה", "טל אלמשעלי",
+  "רוי ששון", "חן עזריאל", "מיכאל סירושטיין",
+  "אלי אוחנה", "בוריס קליימן", "חלאופילו פלייטר",
+  "מירון טל", "איתן טיבי", "דן איינבינדר",
+  "אביתר ברוכיאן", "צחי אליחן", "סתיו שושן",
+  "אורי מלמיליאן", "אישטוון האמר", "ניר סביליה",
+  "טימוטי מוזי", "אבישי כהן", "עומר נחמני",
+  "טל בן חיים", "תומר אזולאי", "לי און מזרחי",
+  "גריגורי מורוזוב", "תומר ירוחם", "עידן מליחי",
+  "משה ביטון", "דוד דגו", "פליקס חלפון",
+  "ישראל כהן", "קובי מויאל", "דור מיכה",
+  "דושאן מאטוביץ'", "אורי מגבו", "דן עזריה",
+  "אור זהבי", "אופיר קריאף", "ז'אן טלסניקוב",
+  "שמואל קוז'וקין", "עוזיאל פרדו"
 ];
 
 /* ============================================================
@@ -1105,11 +1352,17 @@ function finish(won){
     addStat(won, guesses.length);
     renderStats(won ? guesses.length : 0);
     track("done", {guesses: guesses.length, won, hint: hinted});
+    // המתנה קצרה כדי שהדיווח שלנו כבר ייספר
+    if (ANALYTICS_URL) setTimeout(() => {
+      const n = guesses.length, w = won;
+      fetchStats(puzzleNo).then(r => renderComm(r && r.stats, n, w));
+    }, 1200);
     $("#next").style.display = "";
   } else {
     if (!practice) saveState();
     $("#next").style.display = practice ? "none" : "";
     $("#stats").innerHTML = "";
+    $("#comm").classList.remove("on");
   }
   tickCountdown();
   $("#share").style.display = practice ? "none" : "";
@@ -1269,6 +1522,57 @@ $("#hintBtn").addEventListener("click", ()=>{
   $("#hintBtn").style.display = "none";
   saveState();
 });
+
+/* ---------- סטטיסטיקה קהילתית ---------- */
+const MIN_PLAYERS = 20;      // מתחת לזה לא מציגים — מדגם קטן נראה עלוב
+
+function fetchStats(puzzle){
+  // GET רגיל, ואם CORS חוסם — נפילה ל-JSONP
+  return fetch(`${ANALYTICS_URL}?puzzle=${puzzle}`)
+    .then(r => r.json())
+    .catch(() => new Promise(res => {
+      const cb = "__bs" + Date.now();
+      const t  = setTimeout(() => { cleanup(); res(null); }, 6000);
+      const sc = document.createElement("script");
+      function cleanup(){ clearTimeout(t); delete window[cb]; sc.remove(); }
+      window[cb] = d => { cleanup(); res(d); };
+      sc.src = `${ANALYTICS_URL}?puzzle=${puzzle}&callback=${cb}`;
+      sc.onerror = () => { cleanup(); res(null); };
+      document.body.appendChild(sc);
+    }))
+    .catch(() => null);
+}
+
+function renderComm(st, myGuesses, iWon){
+  const el = $("#comm");
+  if (!st || st.done < MIN_PLAYERS){ el.classList.remove("on"); return; }
+
+  const pct = Math.round(st.wins / st.done * 100);
+  let html = `<div class="hd">היום שיחקו <b>${st.done}</b> ·
+    <b>${pct}%</b> פיצחו${st.avg ? ` · ממוצע <b>${st.avg}</b>` : ""}</div>`;
+
+  // כמה סיימו גרוע ממני: יותר ניחושים, או לא פיצחו בכלל
+  if (iWon){
+    let worse = st.fail;
+    for (let i = myGuesses; i < MAX; i++) worse += st.dist[i] || 0;
+    const better = Math.round(worse / st.done * 100);
+    if (better >= 5)
+      html += `<div class="rank">פיצחת ב-${myGuesses} — טוב יותר מ-${better}% מהשחקנים היום</div>`;
+  }
+
+  const max = Math.max(1, ...st.dist, st.fail);
+  for (let i = 1; i <= MAX; i++){
+    const v = st.dist[i-1] || 0;
+    html += `<div class="cb${iWon && i===myGuesses ? " me" : ""}"><i>${i}</i>
+      <u style="width:${12 + v/max*72}%">${v}</u></div>`;
+  }
+  if (st.fail)
+    html += `<div class="cb${!iWon ? " me" : ""}"><i>✕</i>
+      <u style="width:${12 + st.fail/max*72}%">${st.fail}</u></div>`;
+
+  el.innerHTML = html;
+  el.classList.add("on");
+}
 
 /* ---------- סטטיסטיקה אישית ---------- */
 function loadStats(){
@@ -1473,6 +1777,518 @@ addEventListener("keydown", e => { if (e.key === "Escape"){ closeHelp(); closeRe
     }
   }catch(e){}
 })();
+</script>
+
+<script type="module">
+/* ============================================================
+   קרב חברים — נטען רק כשנכנסים ללשונית.
+   פיירבייס לא יורד בכלל למי שמשחק רק את החידה היומית.
+   ============================================================ */
+const $ = s => document.querySelector(s);
+let vReady = false, initVersus = null;
+
+/* דיווח אנונימי על שימוש בקרב.
+   נשלח לאותה נקודת קצה עם puzzle="קרב", אז בגיליון daily נוצרת שורה אחת:
+   "נכנסו" = חדרים שנפתחו · "סיימו" = משחקים שהסתיימו · "ממוצע" = ממוצע משתתפים */
+function vTrack(type, extra){
+  try{
+    if (typeof ANALYTICS_URL !== "string" || !ANALYTICS_URL) return;
+    const body = JSON.stringify({ type, puzzle: "קרב", ...extra });
+    if (navigator.sendBeacon) navigator.sendBeacon(ANALYTICS_URL, body);
+    else fetch(ANALYTICS_URL, { method:"POST", mode:"no-cors", body });
+  }catch(e){}
+}
+
+async function bootVersus(){
+  if (vReady) return;
+  vReady = true;
+  const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+  const { getDatabase, ref, set, get, update, onValue, onDisconnect,
+          runTransaction, serverTimestamp, off }
+    = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js");
+
+  const app = initializeApp(FIREBASE_CONFIG);
+  const db  = getDatabase(app);
+
+  /* ============================================================
+     1. FIREBASE — הדבק כאן את ההגדרות מהקונסולה
+     ============================================================ */
+  const FIREBASE_CONFIG = {
+    apiKey: "AIzaSyAPslfQe12H5yZYthGbQhEcL433xR2LMQk",
+    authDomain: "beitardle.firebaseapp.com",
+    databaseURL: "https://beitardle-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "beitardle",
+    storageBucket: "beitardle.firebasestorage.app",
+    messagingSenderId: "53875390040",
+    appId: "1:53875390040:web:99d92bde86e3c00abf7c2d"
+  };
+  
+  
+  
+  /* ============================================================
+     2. בריכת השחקנים
+     ============================================================ */
+  /* שתי בריכות, נגזרות מהמאגר הראשי — בלי עותק כפול:
+     CORE  = 3+ עונות. אלה שגם בחידה היומית, מוכרים היטב.
+     WIDE  = 2+ עונות. מרחיב את המגוון כדי שמשחקים לא יחזרו על עצמם.
+     רוב הסיבובים נלקחים מ-CORE, כדי שלא יהיו יותר מדי סיבובים מתים. */
+  const CORE = PLAYERS_RAW.filter(p => p.target);
+  const WIDE = PLAYERS_RAW.filter(p => p.born && p.seasons >= 2 && !p.target);
+  const POOL = CORE.concat(WIDE);
+  
+  const V_POS={GK:"שוער",DF:"מגן",MF:"קשר",FW:"חלוץ"};
+  const V_NAT={IL:"ישראל",UA:"אוקראינה",HU:"הונגריה",GH:"גאנה",MK:"מקדוניה",PT:"פורטוגל",
+    BR:"ברזיל",AR:"ארגנטינה",ES:"ספרד",FR:"צרפת",NG:"ניגריה",GE:"גאורגיה",CO:"קולומביה",
+    RU:"רוסיה",CM:"קמרון",RO:"רומניה",UY:"אורוגוואי",CL:"צ'ילה",HR:"קרואטיה",RS:"סרביה",
+    SK:"סלובקיה",CI:"חוף השנהב",CD:"קונגו",SN:"סנגל",NL:"הולנד",BE:"בלגיה",DE:"גרמניה",
+    IT:"איטליה",PL:"פולין",SE:"שוודיה",US:"ארה\"ב",CR:"קוסטה ריקה",VE:"ונצואלה",TG:"טוגו",
+    MQ:"מרטיניק",NC:"קלדוניה החדשה",TT:"טרינידד",PY:"פרגוואי",MG:"מדגסקר",CV:"כף ורדה",
+    MD:"מולדובה",BY:"בלארוס",XK:"קוסובו",AL:"אלבניה",SI:"סלובניה",CZ:"צ'כיה",AT:"אוסטריה",
+    CH:"שווייץ",GR:"יוון",TR:"טורקיה",EN:"אנגליה",AU:"אוסטרליה",BG:"בולגריה",DK:"דנמרק",
+    ME:"מונטנגרו",BA:"בוסניה",GT:"גואטמלה",MA:"מרוקו",LV:"לטביה",LT:"ליטא",KZ:"קזחסטן",
+    ZM:"זמביה",JM:"ג'מייקה",KE:"קניה",RW:"רואנדה",SR:"סורינאם",FI:"פינלנד",GA:"גבון",PE:"פרו"};
+  
+  const vSeason = y => `${String(y-1).slice(-2)}/${String(y).slice(-2)}`;
+  const vNorm = t => (t||"").replace(/[-־]/g," ").replace(/['"״׳]/g,"")
+                           .replace(/\s+/g," ").trim();
+  
+  /* חמשת הרמזים, לפי סדר חשיפה */
+  function cluesOf(p){
+    return [
+      ["עמדה",  V_POS[p.pos] || p.pos],
+      ["לאום",  V_NAT[p.nat] || p.nat],
+      ["עונה ראשונה", vSeason(p.spells[0][0])],
+      ["תארים", String(p.titles)],
+      ["נולד",  String(p.born)]
+    ];
+  }
+  const CLUES = 5;
+  const POINTS = [5,4,3,2,1];        // לפי כמה רמזים היו חשופים
+  
+  /* ============================================================
+     3. עזרים
+     ============================================================ */
+  const show = id => { ["scHome","scLobby","scPlay","scReveal","scEnd"]
+    .forEach(s => $("#"+s).classList.toggle("hide", s !== id)); };
+  
+  const uid = (() => {
+    let u = null;
+    try { u = localStorage.getItem("bd:uid"); } catch(e){}
+    if (!u){ u = Math.random().toString(36).slice(2,10);
+             try{ localStorage.setItem("bd:uid",u); }catch(e){} }
+    return u;
+  })();
+  
+  let skew = 0;                       // הפרש שעון מול השרת
+  onValue(ref(db,".info/serverTimeOffset"), s => skew = s.val() || 0);
+  const now = () => Date.now() + skew;
+  
+  function mkCode(){
+    const A = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";   // בלי I O 0 1
+    return Array.from({length:4}, () => A[Math.floor(Math.random()*A.length)]).join("");
+  }
+  function mulberry32(a){
+    return function(){ a|=0; a=a+0x6D2B79F5|0;
+      let t=Math.imul(a^a>>>15,1|a); t=t+Math.imul(t^t>>>7,61|t)^t;
+      return ((t^t>>>14)>>>0)/4294967296; };
+  }
+  /** בחירת סיבובים דטרמיניסטית מהקוד — כל המשתתפים מקבלים אותם שחקנים.
+      ~70% מהמוכרים, ~30% מהרחב, כדי לשמור על רעננות בלי סיבובים מתים. */
+  function pickRounds(code, n){
+    let seed = 0; for (const c of code) seed = (seed*31 + c.charCodeAt(0))|0;
+    const r = mulberry32(seed);
+    const shuffle = arr => { const a=[...arr];
+      for (let i=a.length-1;i>0;i--){ const j=Math.floor(r()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+      return a; };
+
+    const nWide = WIDE.length ? Math.min(WIDE.length, Math.round(n * 0.3)) : 0;
+    const nCore = n - nWide;
+    const picks = shuffle(CORE).slice(0, nCore).concat(shuffle(WIDE).slice(0, nWide));
+    return shuffle(picks).map(p => POOL.indexOf(p));
+  }
+  
+  /* ============================================================
+     4. מצב מקומי
+     ============================================================ */
+  let room = null, roomRef = null, unsub = null, state = null;
+  let isHost = false, tick = null, lastStage = -1, locked = 0, answered = false;
+  let presenceOff = null;
+  
+  /* זיכרון מקומי: באיזה חדר אני ומה השם שלי */
+  const mem = {
+    get(){ try{ return JSON.parse(localStorage.getItem("bd:versus")) || null; }catch(e){ return null; } },
+    set(v){ try{ localStorage.setItem("bd:versus", JSON.stringify(v)); }catch(e){} },
+    clear(){ try{ localStorage.removeItem("bd:versus"); }catch(e){} }
+  };
+  
+  /* נוכחות: בכל התחברות מחדש מנקה את סימון היציאה ומחדש את onDisconnect.
+     בלי זה, נתק של חצי שנייה מוחק שחקן מהחדר לתמיד. */
+  function keepPresence(code){
+    if (presenceOff) presenceOff();
+    const gRef = ref(db, `rooms/${code}/players/${uid}/gone`);
+    const un = onValue(ref(db, ".info/connected"), snap => {
+      if (snap.val() !== true) return;
+      onDisconnect(gRef).set(true);
+      set(gRef, null);
+    });
+    presenceOff = () => off(ref(db, ".info/connected"), "value", un);
+  }
+  
+  /* ============================================================
+     5. פתיחה והצטרפות
+     ============================================================ */
+  $("#btnCreate").addEventListener("click", async () => {
+    const name = $("#vName").value.trim();
+    if (!name) return $("#vName").focus();
+    const code = mkCode();
+    isHost = true; room = code; roomRef = ref(db, "rooms/"+code);
+    await set(roomRef, {
+      createdAt: serverTimestamp(), host: uid, status: "lobby",
+      settings: { rounds: 10, revealMs: 5000, roundMs: 30000 },
+      players: { [uid]: { name, score: 0, at: serverTimestamp() } }
+    });
+    mem.set({ room: code, name });
+    keepPresence(code);
+    vTrack("view");
+    watch();
+  });
+  
+  $("#joinCode").addEventListener("input", e => {
+    e.target.value = e.target.value.toUpperCase().replace(/[^A-Z2-9]/g,"").slice(0,4);
+  });
+  
+  $("#btnJoin").addEventListener("click", async () => {
+    const code = $("#joinCode").value.trim().toUpperCase();
+    const name = $("#vName").value.trim();
+    const err  = $("#joinErr");
+    err.textContent = "";
+    if (code.length !== 4) return err.textContent = "קוד בן ארבע אותיות";
+    if (!name) return err.textContent = "צריך שם";
+  
+    const snap = await get(ref(db, "rooms/"+code));
+    if (!snap.exists()) return err.textContent = "אין חדר עם הקוד הזה";
+    if (snap.val().status === "done") return err.textContent = "המשחק בחדר הזה כבר נגמר";
+    if (snap.val().status === "playing" && !(snap.val().players||{})[uid])
+      return err.textContent = "המשחק כבר התחיל — בקשו לפתוח חדר חדש";
+  
+    room = code; isHost = snap.val().host === uid; roomRef = ref(db, "rooms/"+code);
+    await update(ref(db, `rooms/${code}/players/${uid}`),
+                 { name, score: 0, at: serverTimestamp(), gone: null });
+    mem.set({ room: code, name });
+    keepPresence(code);
+    watch();
+  });
+  
+  $("#btnLeave").addEventListener("click", leaveRoom);
+  
+  $("#btnShare").addEventListener("click", async () => {
+    const link = `${location.origin}${location.pathname}?room=${room}`;
+    const txt =
+`⚫🟡 בואו לדו־קרב בביתרדל
+
+מי מזהה את שחקן בית"ר הכי מהר?
+הרמזים נחשפים לכולם יחד — והראשון שפוגע לוקח את הסיבוב.
+
+פתחתי חדר. תלחצו וזה נכנס לבד 👇
+${link}
+
+(אם צריך ידנית — קוד החדר: ${room})`;
+    try{
+      if (navigator.share) return void await navigator.share({ text: txt });
+      await navigator.clipboard.writeText(txt);
+      $("#btnShare").textContent = "הועתק ✓";
+      setTimeout(()=> $("#btnShare").textContent = "שיתוף הקוד", 1800);
+    }catch(e){}
+  });
+  
+  $("#btnStart").addEventListener("click", async () => {
+    const ps = Object.values(state?.players || {}).filter(p => !p.gone);
+    if (ps.length < 2) return $("#startErr").textContent = "צריך לפחות שני שחקנים";
+    await update(roomRef, {
+      status: "playing", round: 0, roundStartedAt: serverTimestamp(),
+      settings: {
+        rounds:   +$("#setRounds").value,
+        revealMs: +$("#setReveal").value * 1000,
+        roundMs:  +$("#setReveal").value * 1000 * CLUES + 6000
+      }
+    });
+  });
+  
+  $("#btnAgain").addEventListener("click", () => { mem.clear(); location.reload(); });
+  $("#btnHome").addEventListener("click", () => { mem.clear(); location.href = "./"; });
+  
+  /* יציאה מרצון */
+  async function leaveRoom(){
+    if (room){
+      try{ await update(ref(db, `rooms/${room}/players/${uid}`), { gone: true }); }catch(e){}
+    }
+    if (presenceOff) presenceOff();
+    mem.clear();
+    location.reload();
+  }
+  
+  /* ---------- הגעה מקישור הזמנה ---------- */
+  (function fromLink(){
+    const code = new URLSearchParams(location.search).get("room");
+    if (!code) return;
+    const c = code.toUpperCase().replace(/[^A-Z2-9]/g,"").slice(0,4);
+    if (c.length !== 4) return;
+    const f = $("#joinCode");
+    f.value = c; f.readOnly = true; f.style.opacity = ".75";
+    $("#joinErr").textContent = "";
+    const saved = (mem.get() || {}).name;
+    if (saved) $("#vName").value = saved;
+    setTimeout(() => $("#vName").focus(), 200);
+    // מסמן ויזואלית שזו הזמנה
+    const card = f.closest(".card");
+    if (card){
+      const lb = card.querySelector("label");
+      if (lb) lb.textContent = `הוזמנת לחדר ${c} — איך קוראים לך?`;
+    }
+  })();
+
+  /* ---------- חזרה אוטומטית אחרי רענון ---------- */
+  (async function resume(){
+    const m = mem.get();
+    if (!m || !m.room) return;
+    try{
+      const snap = await get(ref(db, "rooms/" + m.room));
+      if (!snap.exists() || snap.val().status === "done"){ mem.clear(); return; }
+      room = m.room; roomRef = ref(db, "rooms/" + room);
+      isHost = snap.val().host === uid;
+      await update(ref(db, `rooms/${room}/players/${uid}`),
+                   { name: m.name, at: snap.val().players?.[uid]?.at || serverTimestamp(), gone: null });
+      keepPresence(room);
+      watch();
+    }catch(e){ mem.clear(); }
+  })();
+  
+  /* ============================================================
+     6. מעקב אחרי מצב החדר
+     ============================================================ */
+  function watch(){
+    if (unsub) off(roomRef);
+    unsub = onValue(roomRef, snap => {
+      state = snap.val();
+      if (!state) return;
+      isHost = state.host === uid;
+      render();
+    });
+  }
+  
+  /** כולם — כולל מנותקים. מי שנופל לרגע לא נעלם מהטבלה. */
+  function allPlayers(){
+    return Object.entries(state.players || {})
+      .map(([id,p]) => ({ id, ...p, score: p.score || 0 }))
+      .sort((a,b) => b.score - a.score || (a.at||0) - (b.at||0));
+  }
+  const livePlayers = () => allPlayers().filter(p => !p.gone);
+  
+  function render(){
+    if (state.status === "lobby"){
+      show("scLobby");
+      $("#lobbyCode").textContent = room;
+      $("#lobbyPlayers").innerHTML = allPlayers().map(p =>
+        `<div class="${p.id===uid?"me":""}" style="${p.gone?"opacity:.45":""}">${esc(p.name)}
+           <i>${p.gone ? "מנותק" : (p.id===state.host?"מנהל החדר":"")}</i></div>`).join("");
+      $("#hostBox").classList.toggle("hide", !isHost);
+      $("#waitMsg").classList.toggle("hide", isHost);
+      return;
+    }
+    if (state.status === "done"){ show("scEnd"); drawBoard("#endBoard"); stopTick(); return; }
+    if (state.status === "playing") runRound();
+  }
+  
+  const esc = s => String(s).replace(/[<>&"]/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c]));
+  
+  function drawBoard(sel){
+    $(sel).innerHTML = allPlayers().map((p,i) =>
+      `<div class="${p.id===uid?"me":""}">
+         <span class="rk">${i+1}</span>
+         <span class="nm" style="${p.gone?"opacity:.5":""}">${esc(p.name)}</span>
+         <span class="sc">${p.score}</span>
+       </div>`).join("");
+  }
+  
+  /* ============================================================
+     7. סיבוב
+     ============================================================ */
+  function stopTick(){ if (tick){ clearInterval(tick); tick = null; } }
+  
+  function runRound(){
+    const st = state.settings, rounds = pickRounds(room, st.rounds);
+    const idx = state.round;
+    if (idx >= rounds.length){ finishGame(); return; }
+  
+    const answer = POOL[rounds[idx]];
+    const res    = (state.results || {})[idx] || null;
+  
+    if (res){ showReveal(answer, res); return; }
+  
+    show("scPlay");
+    $("#rNum").textContent = idx + 1;
+    $("#rTot").textContent = st.rounds;
+    if (lastStage === -1 || $("#clues").dataset.round != idx) buildClues(idx);
+    drawBoard("#liveBoard");
+  
+    stopTick();
+    tick = setInterval(() => {
+      const el = now() - (state.roundStartedAt || now());
+      const left = Math.max(0, st.roundMs - el);
+      $("#rTime").textContent = Math.ceil(left/1000);
+      $("#rBar").style.width = (left / st.roundMs * 100) + "%";
+  
+      const stage = Math.min(CLUES, Math.floor(el / st.revealMs) + 1);
+      if (stage !== lastStage){ revealTo(stage); lastStage = stage; }
+  
+      if (left <= 0){ stopTick(); closeRound(idx, null, 0); }
+    }, 200);
+  }
+  
+  function buildClues(idx){
+    const c = $("#clues");
+    c.dataset.round = idx; c.innerHTML = ""; lastStage = -1;
+    answered = false; locked = 0;
+    $("#answer").value = ""; $("#answer").disabled = false;
+    $("#feed").textContent = ""; $("#feed").className = "feed";
+    const rounds = pickRounds(room, state.settings.rounds);
+    cluesOf(POOL[rounds[idx]]).forEach(([k,v]) => {
+      const d = document.createElement("div");
+      d.className = "clue";
+      d.innerHTML = `<span>${k}</span><b>${v}</b>`;
+      c.appendChild(d);
+    });
+  }
+  
+  function revealTo(stage){
+    [...$("#clues").children].forEach((el,i) => {
+      el.classList.toggle("on", i < stage);
+      el.classList.toggle("fresh", i === stage-1);
+    });
+  }
+  
+  /** סוגר סיבוב — טרנזקציה כדי שרק ניחוש אחד ייקלט כמנצח */
+  async function closeRound(idx, winnerId, pts){
+    const r = ref(db, `rooms/${room}/results/${idx}`);
+    const out = await runTransaction(r, cur => {
+      if (cur) return;                                  // כבר נסגר
+      return { winner: winnerId || null, pts, at: serverTimestamp() };
+    });
+    if (!out.committed) return;
+  
+    if (winnerId){
+      await runTransaction(ref(db, `rooms/${room}/players/${winnerId}/score`),
+                           s => (s || 0) + pts);
+    }
+    // כל לקוח שמגיע לכאן ראשון מקדם — הטרנזקציה מונעת קפיצה כפולה
+    setTimeout(() => {
+      runTransaction(ref(db, `rooms/${room}/round`), r2 => (r2 === idx ? idx + 1 : undefined))
+        .then(() => update(roomRef, { roundStartedAt: serverTimestamp() }));
+    }, 4200);
+  }
+  
+  function showReveal(answer, res){
+    show("scReveal");
+    stopTick();
+    const who = res.winner ? (state.players[res.winner]?.name || "מישהו") : null;
+    $("#revText").innerHTML = who
+      ? `<b>${esc(answer.he)}</b><br>${esc(who)} זיהה ראשון · ${res.pts} נקודות`
+      : `<b>${esc(answer.he)}</b><br>אף אחד לא זיהה`;
+    drawBoard("#revBoard");
+  }
+  
+  async function finishGame(){
+    stopTick();
+    if (isHost){
+      await update(roomRef, { status: "done" });
+      vTrack("done", { guesses: allPlayers().length, won: true });
+    }
+    show("scEnd"); drawBoard("#endBoard");
+  }
+  
+  /* ============================================================
+     8. ניחוש
+     ============================================================ */
+  const inp = $("#answer"), sg = $("#vSugg");
+  inp.addEventListener("focus", () => setTimeout(() =>
+    inp.scrollIntoView({ behavior:"smooth", block:"center" }), 300));
+  
+  inp.addEventListener("input", () => {
+    const q = vNorm(inp.value);
+    if (!q) return closeSugg();
+    const hits = POOL.filter(p => vNorm(p.he).includes(q)).slice(0,6);
+    sg.innerHTML = hits.map(p => `<button type="button" data-n="${esc(p.he)}">${esc(p.he)}</button>`).join("");
+    sg.classList.toggle("on", hits.length > 0);
+  });
+  function closeSugg(){ sg.classList.remove("on"); sg.innerHTML = ""; }
+  sg.addEventListener("click", e => {
+    const b = e.target.closest("button");
+    if (b){ inp.value = b.dataset.n; closeSugg(); submit(); }
+  });
+  inp.addEventListener("keydown", e => {
+    if (e.key === "Enter"){ e.preventDefault();
+      const first = sg.querySelector("button");
+      if (first && vNorm(inp.value) !== vNorm(first.dataset.n)) inp.value = first.dataset.n;
+      closeSugg(); submit(); }
+  });
+  
+  function submit(){
+    if (answered || !state || state.status !== "playing") return;
+    if (now() < locked) return;
+    const idx = state.round;
+    if ((state.results || {})[idx]) return;
+  
+    const rounds = pickRounds(room, state.settings.rounds);
+    const answer = POOL[rounds[idx]];
+    const guess  = vNorm(inp.value);
+    if (!guess) return;
+    inp.value = ""; closeSugg();
+  
+    if (guess === vNorm(answer.he)){
+      answered = true;
+      inp.disabled = true;
+      const el = now() - (state.roundStartedAt || now());
+      const stage = Math.min(CLUES, Math.floor(el / state.settings.revealMs) + 1);
+      const pts = POINTS[stage-1] || 1;
+      $("#feed").textContent = `נכון! ${pts} נקודות`;
+      $("#feed").className = "feed good";
+      closeRound(idx, uid, pts);
+    } else {
+      locked = now() + 3000;
+      $("#feed").textContent = "לא נכון · שלוש שניות המתנה";
+      $("#feed").className = "feed bad";
+      let n = 3;
+      const c = setInterval(() => {
+        if (--n <= 0){ clearInterval(c); $("#feed").textContent = ""; }
+        else $("#feed").textContent = `לא נכון · ${n}`;
+      }, 1000);
+    }
+  }
+}
+
+/* ---------- לשוניות ---------- */
+const vHelp = $("#vHelp");
+$("#vHelpBtn").addEventListener("click", () => vHelp.classList.add("on"));
+$("#vHelpClose").addEventListener("click", () => vHelp.classList.remove("on"));
+vHelp.addEventListener("click", e => { if (e.target === vHelp) vHelp.classList.remove("on"); });
+addEventListener("keydown", e => { if (e.key === "Escape") vHelp.classList.remove("on"); });
+
+const views = { daily: $("#dailyView"), versus: $("#versusView") };
+function openTab(t){
+  document.querySelectorAll(".nav button").forEach(b =>
+    b.classList.toggle("on", b.dataset.tab === t));
+  views.daily.classList.toggle("hide", t !== "daily");
+  views.versus.classList.toggle("hide", t !== "versus");
+  try{ history.replaceState(null, "", t === "versus" ? "#versus" : location.pathname); }
+  catch(e){ /* iframe עם origin שונה — לא קריטי */ }
+  // גלילה לראש כדי שהמעבר לא יקפוץ באמצע הדף
+  window.scrollTo({ top: 0, behavior: "instant" in document.documentElement.style ? "instant" : "auto" });
+  if (t === "versus") bootVersus();
+}
+document.querySelectorAll(".nav button").forEach(b =>
+  b.addEventListener("click", () => openTab(b.dataset.tab)));
+const hasRoom = new URLSearchParams(location.search).has("room");
+if (hasRoom || location.hash === "#versus") openTab("versus");
 </script>
 </body>
 </html>
