@@ -1,0 +1,89 @@
+{
+  "beitar": {
+    "game": "ביתרdle",
+    "players": 410,
+    "targets": 121,
+    "coverage": {
+      "from": 1970,
+      "to": 2026,
+      "sources": [
+        "reference",
+        "wikiplayers",
+        "wikiextra",
+        "wikilang"
+      ]
+    }
+  },
+  "hapoel-bs": {
+    "game": "באר־שבעdle",
+    "players": 418,
+    "targets": 79,
+    "coverage": {
+      "from": 1973,
+      "to": 2026,
+      "sources": [
+        "ifa",
+        "enbridge",
+        "worldfootball",
+        "wikilang",
+        "wikiplayers",
+        "wikiextra",
+        "wikilang"
+      ]
+    }
+  },
+  "maccabi-ta": {
+    "game": "מכביdle",
+    "players": 373,
+    "targets": 121,
+    "coverage": {
+      "from": 1970,
+      "to": 2026,
+      "sources": [
+        "ifa",
+        "enbridge",
+        "worldfootball",
+        "wikilang",
+        "wikiplayers",
+        "wikiextra",
+        "wikilang"
+      ]
+    }
+  },
+  "maccabi-haifa": {
+    "game": "חיפהdle",
+    "players": 407,
+    "targets": 114,
+    "coverage": {
+      "from": 1970,
+      "to": 2026,
+      "sources": [
+        "ifa",
+        "enbridge",
+        "worldfootball",
+        "wikilang",
+        "wikiplayers",
+        "wikiextra",
+        "wikilang"
+      ]
+    }
+  },
+  "hapoel-ta": {
+    "game": "הפועלdle",
+    "players": 450,
+    "targets": 95,
+    "coverage": {
+      "from": 1970,
+      "to": 2026,
+      "sources": [
+        "ifa",
+        "enbridge",
+        "worldfootball",
+        "wikilang",
+        "wikiplayers",
+        "wikiextra",
+        "wikilang"
+      ]
+    }
+  }
+}
