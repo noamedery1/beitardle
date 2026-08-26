@@ -286,7 +286,7 @@ body.kb .clue{flex-direction:column;align-items:flex-start;justify-content:cente
   min-height:0;padding:7px 10px;gap:1px}
 body.kb .clue span{font-size:9.5px;line-height:1.2}
 body.kb .clue b{font-size:14px;line-height:1.2}
-body.kb .clue:nth-child(5){grid-column:1 / -1}
+
 body.kb #versusView .card{padding:11px 12px;margin-top:8px}
 body.kb .meta{margin-top:4px;font-size:11px}
 body.kb .bar{margin-top:6px}
@@ -481,9 +481,9 @@ input.rc:focus{border-color:var(--yellow)}
       <input id="vName" maxlength="14" placeholder="השם שיופיע בטבלה" autocomplete="off">
       <label for="preReveal">כמה זמן בין רמז לרמז</label>
       <select id="preReveal">
-        <option value="5">5 שניות · מהיר</option>
-        <option value="7" selected>7 שניות · רגיל</option>
-        <option value="10">10 שניות · נינוח</option>
+        <option value="6">6 שניות · מהיר</option>
+        <option value="8" selected>8 שניות · רגיל</option>
+        <option value="12">12 שניות · נינוח</option>
       </select>
       <button id="btnCreate">פתיחת חדר חדש</button>
       <div class="orsep"><span>או שיש לכם קוד</span></div>
@@ -514,9 +514,9 @@ input.rc:focus{border-color:var(--yellow)}
       <select id="setRounds"><option>5</option><option selected>10</option><option>15</option></select>
       <label for="setReveal">כל כמה שניות נחשף רמז</label>
       <select id="setReveal">
-        <option value="5">5 שניות · מהיר</option>
-        <option value="7" selected>7 שניות · רגיל</option>
-        <option value="10">10 שניות · נינוח</option>
+        <option value="6">6 שניות · מהיר</option>
+        <option value="8" selected>8 שניות · רגיל</option>
+        <option value="12">12 שניות · נינוח</option>
       </select>
       <button id="btnStart">התחלה</button>
       <div class="err" id="startErr"></div>
@@ -658,18 +658,18 @@ input.rc:focus{border-color:var(--yellow)}
        צריך לפחות שני שחקנים כדי להתחיל.</p>
 
     <h4>איך סיבוב עובד</h4>
-    <p>יש שחקן בית"ר מסתורי, והרמזים נחשפים <b>לכולם יחד</b> — אחד כל כמה שניות:
-       עמדה, לאום, עונה ראשונה, תארים ושנת לידה.</p>
+    <p>יש שחקן בית"ר מסתורי, ושישה רמזים נחשפים <b>לכולם יחד</b> — אחד כל כמה שניות:
+       עמדה, לאום, עונה ראשונה, תארים, שנת לידה, ולבסוף <b>האות שהשם מתחיל בה</b>.</p>
 
     <h4>הניקוד</h4>
-    <p>מי שמזהה מוקדם מקבל יותר. אחרי רמז אחד — <b>5 נקודות</b>, אחרי שניים <b>4</b>,
+    <p>מי שמזהה מוקדם מקבל יותר. אחרי רמז אחד — <b>6 נקודות</b>, אחרי שניים <b>5</b>,
        וכך עד <b>1</b> כשכל הרמזים כבר על המסך.<br>
        הראשון שפוגע סוגר את הסיבוב לכולם. טעות נועלת אתכם לשלוש שניות,
        אז עדיף לחשוב לפני שיורים.</p>
 
     <h4>כמה כללים</h4>
-    <p>המאגר הוא 119 שחקנים שהיו לפחות שלוש עונות במועדון — אותם שחקנים
-       שיכולים להופיע בחידה היומית.<br>
+    <p>המאגר הוא שחקנים שהיו לפחות שלוש עונות במועדון, ורובם מהוותיקים
+       והמוכרים — כדי שאפשר יהיה באמת לשלוף את השם.<br>
        מי שמתנתק לרגע נשאר בטבלה עם הניקוד שלו וחוזר לבד.<br>
        אפשר לרענן את הדף באמצע — חוזרים לאותו חדר.</p>
   </div>
@@ -690,7 +690,7 @@ const SHUFFLE_SEED = 20260825;
               קיימים בכל פונט. מלא=מדויק, חצי=קרוב, ריק=רחוק.
    "square" — ריבועים צבעוניים (יוניקוד 12, 2019). יפים יותר, אבל
               נשברים בווינדוס ישן ובאנדרואיד עתיק. */
-const BUILD = "b34";
+const BUILD = "b35";
 const SHARE_STYLE = "safe";
 
 /* כתובת ה-Web App מ-Apps Script. השאר ריק כדי לכבות איסוף לגמרי. */
@@ -1879,8 +1879,10 @@ async function startVersus(){
      WIDE  = 2+ עונות. מרחיב את המגוון כדי שמשחקים לא יחזרו על עצמם.
      רוב הסיבובים נלקחים מ-CORE, כדי שלא יהיו יותר מדי סיבובים מתים. */
   const RAW  = window.PLAYERS_RAW || [];
-  const CORE = RAW.filter(p => p.target);
-  const WIDE = RAW.filter(p => p.born && p.seasons >= 2 && !p.target);
+  /* בקרב צריך לשלוף שם מהזיכרון, בלי משוב על ניחוש שגוי.
+     לכן הבריכה מצומצמת למי שבאמת מזוהה: 4+ עונות במועדון. */
+  const CORE = RAW.filter(p => p.born && p.seasons >= 5);
+  const WIDE = RAW.filter(p => p.born && p.seasons >= 3 && p.seasons < 5);
   const POOL = CORE.concat(WIDE);
   
   const V_POS={GK:"שוער",DF:"מגן",MF:"קשר",FW:"חלוץ"};
@@ -1906,11 +1908,12 @@ async function startVersus(){
       ["לאום",  V_NAT[p.nat] || p.nat],
       ["עונה ראשונה", vSeason(p.spells[0][0])],
       ["תארים", String(p.titles)],
-      ["נולד",  String(p.born)]
+      ["נולד",  String(p.born)],
+      ["השם מתחיל ב",  p.he.trim()[0]]
     ];
   }
-  const CLUES = 5;
-  const POINTS = [5,4,3,2,1];        // לפי כמה רמזים היו חשופים
+  const CLUES = 6;
+  const POINTS = [6,5,4,3,2,1];        // לפי כמה רמזים היו חשופים
   
   /* ============================================================
      3. עזרים
@@ -1987,13 +1990,13 @@ async function startVersus(){
   $("#btnCreate").addEventListener("click", async () => {
     const name = $("#vName").value.trim();
     if (!name) return $("#vName").focus();
-    const pre = +($("#preReveal").value || 7);
+    const pre = +($("#preReveal").value || 8);
     const sel = $("#setReveal"); if (sel) sel.value = String(pre);
     const code = mkCode();
     isHost = true; room = code; roomRef = ref(db, "rooms/"+code);
     await set(roomRef, {
       createdAt: serverTimestamp(), host: uid, status: "lobby",
-      settings: { rounds: 10, revealMs: pre * 1000, roundMs: pre * 1000 * CLUES + 8000 },
+      settings: { rounds: 10, revealMs: pre * 1000, roundMs: pre * 1000 * (CLUES - 1) + 12000 },
       players: { [uid]: { name, score: 0, at: serverTimestamp() } }
     });
     mem.set({ room: code, name });
@@ -2058,7 +2061,7 @@ ${link}
       settings: {
         rounds:   +$("#setRounds").value,
         revealMs: +$("#setReveal").value * 1000,
-        roundMs:  +$("#setReveal").value * 1000 * CLUES + 8000
+        roundMs:  +$("#setReveal").value * 1000 * (CLUES - 1) + 12000
       }
     });
   });
