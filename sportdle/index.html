@@ -66,7 +66,6 @@ body{background:var(--ink);color:var(--text);font-family:'Heebo',system-ui,sans-
   .card{padding:24px 22px}
   .card h2{font-size:30px}
   .mini i{width:17px;height:17px}
-  #helpBtn,#archBtn{top:30px;width:33px;height:33px;font-size:15px}
   #streak{top:32px;font-size:13px}
 }
 @media (min-width:1024px){ .wrap{max-width:600px} }
@@ -277,8 +276,11 @@ input.rc:focus{border-color:var(--brand)}
    הגליף יושב על קו הבסיס, וכל אחד יושב אחרת. */
 #helpBtn,#archBtn{position:absolute;top:22px;width:30px;height:30px;border-radius:50%;
   background:var(--ink-2);border:1px solid var(--line);color:var(--dim);
-  font-family:inherit;font-size:14px;font-weight:900;cursor:pointer;padding:0;line-height:1;
-  display:flex;align-items:center;justify-content:center}
+  cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center}
+/* שני האייקונים הם SVG באותה תיבת 24×24, אז הם זהים בפיקסל.
+   הגליפים ☰ ו-? נבדלים ברוחב ב-75% ו-☰ יורד מתחת לקו הבסיס —
+   flex ממרכז את תיבת השורה ולא את הדיו, ולכן הם נראו עקומים. */
+#helpBtn svg,#archBtn svg{width:15px;height:15px;display:block}
 #helpBtn{inset-inline-end:0}
 #archBtn{inset-inline-end:38px}
 #helpBtn:hover,#archBtn:hover{color:var(--brand);border-color:var(--brand)}
@@ -291,7 +293,12 @@ input.rc:focus{border-color:var(--brand)}
 .arch button i{font-style:normal;font-size:12px;font-weight:500;color:#5A5A64}
 .arch button i.win{color:var(--brand)} .arch button i.lose{color:var(--near)}
 .arch button.cur{border-color:var(--brand)}
+/* כל מה שנוגע לגודל שני הכפתורים יושב כאן, אחרי כלל הבסיס.
+   קודם היה כלל נפרד ל-#archBtn שהגיע אחרי כלל משותף — ולכן
+   במסך רחב הארכיון היה 33px והעזרה 30px, בגבהים שונים. */
 @media (min-width:640px){
+  #helpBtn,#archBtn{top:30px;width:33px;height:33px}
+  #helpBtn svg,#archBtn svg{width:16px;height:16px}
   #archBtn{inset-inline-end:43px}
 }
 
@@ -521,9 +528,6 @@ input.rc:focus{border-color:var(--brand)}
 .arch button i{font-style:normal;font-size:12px;font-weight:500;color:#5A5A64}
 .arch button i.win{color:var(--brand)} .arch button i.lose{color:var(--near)}
 .arch button.cur{border-color:var(--brand)}
-@media (min-width:640px){
-  #archBtn{top:30px;inset-inline-end:43px;width:33px;height:33px;font-size:14px}
-}
 
 #report{margin-top:11px;font-size:11.5px}
 #report a{color:#5F5F69;text-decoration:none;border-bottom:1px dotted #3A3A44}
@@ -542,8 +546,8 @@ input.rc:focus{border-color:var(--brand)}
 <div class="wrap">
   <header>
     <div id="streak">רצף <b id="streakn">0</b></div>
-    <button id="helpBtn" aria-label="איך משחקים" title="איך משחקים">?</button>
-    <button id="archBtn" aria-label="ארכיון חידות" title="ארכיון">☰</button>
+    <button id="helpBtn" aria-label="איך משחקים" title="איך משחקים"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.6 8.8a3.5 3.5 0 1 1 4.8 3.3c-1.1.5-1.9 1.4-1.9 2.6v.5"/><circle cx="11.5" cy="19" r="1.35" fill="currentColor" stroke="none"/></svg></button>
+    <button id="archBtn" aria-label="ארכיון חידות" title="ארכיון"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4.5 7h15M4.5 12h15M4.5 17h15"/></svg></button>
     <h1><a href="./" id="gameName" aria-label="ספורטדל">ספורטדל</a></h1>
     <p class="sub">חידה <b id="pnum">#1</b> · <b id="left">8</b> ניסיונות נותרו</p>
     <button id="clubBtn" type="button"><i>⇄</i>החלפת מועדון</button>
