@@ -40,7 +40,7 @@
     "targets": 120,
     "hidden": 95,
     "coverage": {
-      "from": 1970,
+      "from": 1969,
       "to": 2026,
       "sources": [
         "ifa",
