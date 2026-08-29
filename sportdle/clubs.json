@@ -74,9 +74,9 @@
   },
   "hapoel-ta": {
     "game": "הפועלdle",
-    "players": 270,
+    "players": 269,
     "targets": 95,
-    "hidden": 161,
+    "hidden": 162,
     "coverage": {
       "from": 1970,
       "to": 2026,
