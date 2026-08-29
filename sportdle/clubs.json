@@ -55,8 +55,8 @@
   },
   "maccabi-haifa": {
     "game": "חיפהdle",
-    "players": 282,
-    "targets": 112,
+    "players": 281,
+    "targets": 111,
     "hidden": 99,
     "coverage": {
       "from": 1970,
