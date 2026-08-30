@@ -18,9 +18,9 @@
   },
   "hapoel-bs": {
     "game": "באר־שבעdle",
-    "players": 217,
-    "targets": 75,
-    "hidden": 187,
+    "players": 264,
+    "targets": 81,
+    "hidden": 140,
     "unconfirmed": 1,
     "coverage": {
       "from": 1973,
@@ -38,9 +38,9 @@
   },
   "maccabi-ta": {
     "game": "מכביdle",
-    "players": 264,
-    "targets": 121,
-    "hidden": 90,
+    "players": 282,
+    "targets": 124,
+    "hidden": 72,
     "unconfirmed": 1,
     "coverage": {
       "from": 1969,
@@ -58,9 +58,9 @@
   },
   "maccabi-haifa": {
     "game": "חיפהdle",
-    "players": 280,
-    "targets": 111,
-    "hidden": 100,
+    "players": 311,
+    "targets": 114,
+    "hidden": 69,
     "unconfirmed": 1,
     "coverage": {
       "from": 1970,
@@ -78,9 +78,9 @@
   },
   "hapoel-ta": {
     "game": "הפועלdle",
-    "players": 276,
-    "targets": 95,
-    "hidden": 155,
+    "players": 350,
+    "targets": 101,
+    "hidden": 81,
     "unconfirmed": 0,
     "coverage": {
       "from": 1970,
