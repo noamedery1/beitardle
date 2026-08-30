@@ -1,9 +1,10 @@
 {
   "beitar": {
     "game": "ביתרdle",
-    "players": 410,
+    "players": 398,
     "targets": 121,
-    "hidden": 0,
+    "hidden": 12,
+    "unconfirmed": 12,
     "coverage": {
       "from": 1970,
       "to": 2026,
@@ -17,9 +18,10 @@
   },
   "hapoel-bs": {
     "game": "באר־שבעdle",
-    "players": 218,
+    "players": 217,
     "targets": 75,
-    "hidden": 186,
+    "hidden": 187,
+    "unconfirmed": 1,
     "coverage": {
       "from": 1973,
       "to": 2026,
@@ -36,9 +38,10 @@
   },
   "maccabi-ta": {
     "game": "מכביdle",
-    "players": 265,
+    "players": 264,
     "targets": 121,
-    "hidden": 89,
+    "hidden": 90,
+    "unconfirmed": 1,
     "coverage": {
       "from": 1969,
       "to": 2026,
@@ -55,9 +58,10 @@
   },
   "maccabi-haifa": {
     "game": "חיפהdle",
-    "players": 281,
+    "players": 280,
     "targets": 111,
-    "hidden": 99,
+    "hidden": 100,
+    "unconfirmed": 1,
     "coverage": {
       "from": 1970,
       "to": 2026,
@@ -77,6 +81,7 @@
     "players": 276,
     "targets": 95,
     "hidden": 155,
+    "unconfirmed": 0,
     "coverage": {
       "from": 1970,
       "to": 2026,
