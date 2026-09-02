@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.techbynoam.sportdle",
+      "sha256_cert_fingerprints": [
+        "DD:32:BA:19:5F:41:CE:B2:3F:8B:4D:B4:A7:E5:37:16:30:C9:89:B3:EA:1C:24:6B:AC:67:7D:44:76:41:5A:8C"
+      ]
+    }
+  }
+]
