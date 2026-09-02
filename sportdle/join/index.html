@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>הצטרפות לחדר · SportDle</title>
+<link rel="stylesheet" href="../fonts.css">
+<style>
+  html,body{margin:0;height:100%;background:#0C0C0E;color:#8C8C94;
+    font-family:'Heebo',system-ui,sans-serif;display:flex;
+    align-items:center;justify-content:center;text-align:center}
+  a{color:#FFC72C}
+</style>
+</head>
+<body>
+  <div>
+    <p>פותח את החדר…</p>
+    <p><a id="go" href="../">להמשך</a></p>
+  </div>
+<script>
+/* מעבירים את הקוד לעמוד המשחק, ששם הטיפול בהצטרפות כבר קיים
+   ונבדק. עומדים על אותם כללים כמו fromLink ב-versus.js. */
+(function(){
+  var c = (new URLSearchParams(location.search).get("room") || "")
+    .toUpperCase().replace(/[^A-Z2-9]/g, "").slice(0, 4);
+  var to = c.length === 4 ? "../?room=" + c : "../";
+  document.getElementById("go").setAttribute("href", to);
+  location.replace(to);
+})();
+</script>
+</body>
+</html>

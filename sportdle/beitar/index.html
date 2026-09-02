@@ -10,19 +10,19 @@
 <meta property="og:type"        content="website">
 <meta property="og:title"       content="ביתרdle · חידת השחקן היומית של בית"ר ירושלים">
 <meta property="og:description" content="בית"ר ירושלים: שחקן אחד מסתורי בכל יום, שמונה ניסיונות. עמדה, לאום, עונה ראשונה, תארים ושנת לידה.">
-<meta property="og:url"         content="https://sportsdel.techbynoam.com/beitar/">
-<meta property="og:image"       content="https://sportsdel.techbynoam.com/og-beitar.png">
+<meta property="og:url"         content="https://sportdle.techbynoam.com/beitar/">
+<meta property="og:image"       content="https://sportdle.techbynoam.com/og-beitar.png">
 <meta property="og:image:width"  content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card"        content="summary_large_image">
 <meta name="twitter:title"       content="ביתרdle · חידת השחקן היומית של בית"ר ירושלים">
 <meta name="twitter:description" content="בית"ר ירושלים: שחקן אחד מסתורי בכל יום, שמונה ניסיונות. עמדה, לאום, עונה ראשונה, תארים ושנת לידה.">
-<meta name="twitter:image"       content="https://sportsdel.techbynoam.com/og-beitar.png">
+<meta name="twitter:image"       content="https://sportdle.techbynoam.com/og-beitar.png">
 
 <!-- הדומיין הקנוני. הכתובת הישנה ב-Railway עוד מגישה תנועה, ובלי
      התג הזה גוגל רואה שני אתרים עם אותו תוכן ומפצל ביניהם דירוג.
      עמודי המועדונים דורסים אותו בנתיב שלהם — scripts/lib/clubpages.mjs -->
-<link rel="canonical" href="https://sportsdel.techbynoam.com/beitar/">
+<link rel="canonical" href="https://sportdle.techbynoam.com/beitar/">
 
 <!-- נתונים מובנים. הבנייה מזריקה כאן Organization בעמוד הראשי,
      ו-scripts/lib/clubpages.mjs מחליף אותו ב-BreadcrumbList בעמודי
@@ -31,7 +31,7 @@
      ואגב — אין לכתוב בהערה כאן תגית סקריפט מלאה בתוך סוגריים
      זוויתיים. הרגקס שסורק בלוקים אינו מדלג על הערות, והוא יתפוס
      אותה כתחילת בלוק. זה בדיוק מה שקרה כאן פעם אחת. -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"חידה יומית","item":"https://sportsdel.techbynoam.com/"},{"@type":"ListItem","position":2,"name":"בית\"ר ירושלים","item":"https://sportsdel.techbynoam.com/beitar/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"חידה יומית","item":"https://sportdle.techbynoam.com/"},{"@type":"ListItem","position":2,"name":"בית\"ר ירושלים","item":"https://sportdle.techbynoam.com/beitar/"}]}</script>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -615,6 +615,7 @@ select.rc:focus{border-color:var(--brand)}
     <div class="card">
       <p style="text-align:center">קוד החדר</p>
       <div class="roomcode" id="lobbyCode">----</div>
+      <button class="wa" id="btnShareWa">שליחת הזמנה בוואטסאפ</button>
       <button class="ghost" id="btnShare">שיתוף הקוד</button>
       <button class="ghost" id="btnLeave">יציאה מהחדר</button>
     </div>
@@ -869,7 +870,7 @@ select.rc:focus{border-color:var(--brand)}
 /* ============================================================
    1. הגדרות — נכתבות על ידי scripts/build.mjs
    ============================================================ */
-const SITE_URL      = "https://sportsdel.techbynoam.com";   // בלי / בסוף
+const SITE_URL      = "https://sportdle.techbynoam.com";   // בלי / בסוף
 const START         = [2026,8,24];        // [שנה, חודש 1-12, יום] של חידה #1
 const MAX           = 8;
 const BUILD         = "s3";
@@ -1166,7 +1167,11 @@ function shareText(){
   /* הקישור נושא את המועדון. בלעדיו מי שמקבל "מכביdle · חידה #7"
      נוחת בבורר המועדונים, או גרוע מזה — במועדון האחרון שהוא בחר
      בעצמו, ומסתכל על חידה אחרת לגמרי מזו ששותפה איתו. */
-  return `${head}\n\n${grid}\n\n${key}\n${SITE_URL}/?club=${club.slug}`;
+  /* /<slug>/ ולא /?club=<slug>: intent-filter באנדרואיד אינו יכול
+     להתאים לפי query string, ולכן רק נתיב פותח את האפליקציה בקישור
+     ששותפו. הדף הזה קיים ממילא — הוא המשחק עם המועדון נבחר — והוא
+     גם מאונדקס, כך שהקישור טוב יותר גם לרשת. */
+  return `${head}\n\n${grid}\n\n${key}\n${SITE_URL}/${club.slug}/`;
 }
 async function copyText(txt){
   // הדרך המודרנית — דורשת HTTPS
@@ -2299,6 +2304,56 @@ function migrateFromBeitardle(){
     else addEventListener("load", () => setTimeout(stamp, 300));
   });
 
+  /* ---------- 8. קישור הזמנה שנפתח באפליקציה ----------
+     intent-filter במניפסט קולט https://<הדומיין>/join/... ומעביר
+     את הכתובת לכאן. **בלי הקוד הזה האפליקציה הייתה נפתחת בעמוד
+     הראשי ומתעלמת מהחדר** — כלומר הקישור עובד, ההזמנה לא.
+
+     שתי דרכים להגיע: appUrlOpen כשהאפליקציה כבר פתוחה,
+     ו-getLaunchUrl כשהיא נפתחת מאפס. שתיהן נדרשות.
+
+     הניווט הוא ל-"/?room=CODE" ולא קריאה ישירה למנוע הקרב:
+     המסלול הזה כבר קיים ונבדק (fromLink ב-versus.js פותח את
+     הלשונית וממלא את הקוד), ומסלול הצטרפות שני היה מקום נוסף
+     שיכול להישבר. */
+  safe(async () => {
+    if (!P.App) return;
+    const roomOf = (url) => {
+      try { return new URL(url).searchParams.get("room"); } catch (e) { return null; }
+    };
+    const goRoom = (raw) => {
+      const c = String(raw || "").toUpperCase().replace(/[^A-Z2-9]/g, "").slice(0, 4);
+      if (c.length !== 4) return false;
+      /* כבר באותו חדר — בלי זה לחיצה חוזרת על הקישור טוענת מחדש */
+      if (new URLSearchParams(location.search).get("room") === c) return true;
+      location.replace(`/?room=${c}`);
+      return true;
+    };
+
+    /* שיתוף הפתרון היומי מקשר ל-/<slug>/ — דף המועדון. באפליקציה
+       פותחים את אותו מועדון דרך ?club=, שהמנוע כבר יודע לקרוא. */
+    const goClub = (url) => {
+      let seg;
+      try { seg = new URL(url).pathname.split("/").filter(Boolean)[0]; }
+      catch (e) { return false; }
+      const known = (window.SPORTDEL && window.SPORTDEL.order) || [];
+      if (!seg || !known.includes(seg)) return false;
+      if (new URLSearchParams(location.search).get("club") === seg) return true;
+      location.replace(`/?club=${encodeURIComponent(seg)}`);
+      return true;
+    };
+
+    const route = (url) => {
+      if (!url) return;
+      if (goRoom(roomOf(url))) return;
+      goClub(url);
+    };
+
+    P.App.addListener("appUrlOpen", (ev) => route(ev && ev.url));
+    const launch = await P.App.getLaunchUrl();
+    if (launch && launch.url) route(launch.url);
+  });
+
   /* פתיחה מתוך ההתראה — לא צריך לעשות כלום מלבד לא להיתקע */
   safe(() => P.LocalNotifications &&
     P.LocalNotifications.addListener("localNotificationActionPerformed", () => {}));
@@ -2777,20 +2832,53 @@ async function startVersus(){
     watch();
   });
   
-  $("#btnLeave").addEventListener("click", leaveRoom);
-  
-  $("#btnShare").addEventListener("click", async () => {
-    const link = `${location.origin}${location.pathname}?room=${room}`;
-    const txt =
-`⚫🟡 בואו לדו־קרב בביתרdle
+  /* ---------- קישור ההזמנה ----------
+     נבנה מהכתובת הקנונית ולא מ-location. באפליקציה location.origin
+     הוא https://localhost, ולכן הקישור היה יוצא
+     https://localhost/index.html?room=XXXX — חסר תועלת לכל מי
+     שמקבל אותו. זה מה שהפך את "שיתוף הקוד" למשהו שרק מעתיק מספר. */
+  const roomLink = () => {
+    const base = (window.SPORTDEL && window.SPORTDEL.siteUrl) || location.origin;
+    /* /join/ ולא השורש: intent-filter של אנדרואיד אינו יכול
+       להתאים לפי query string, ולכן נתיב נפרד הוא הדרך היחידה
+       לפתוח את האפליקציה על הזמנה בלי לחטוף כל קישור לאתר. */
+    return `${String(base).replace(/\/+$/, "")}/join/?room=${room}`;
+  };
 
-מי מזהה את שחקן בית"ר הכי מהר?
+  /* פתיחת יעד חיצוני. עוגן סינתטי ולא window.open: ב-WebView של
+     Capacitor לא מוגדר setSupportMultipleWindows ואין onCreateWindow,
+     ולכן window.open עלול להיות no-op שקט. לחיצה על עוגן היא ניווט
+     אמיתי מתוך מחוות משתמש — בדפדפן זו לשונית חדשה, ובאפליקציה
+     shouldOverrideUrlLoading פותח את האפליקציה החיצונית. */
+  const openExternal = (url) => {
+    const a = document.createElement("a");
+    a.href = url; a.target = "_blank"; a.rel = "noopener";
+    document.body.appendChild(a); a.click(); a.remove();
+  };
+
+  const inviteText = () =>
+`⚫🟡 בואו לדו־קרב ב${(window.SPORTDEL && window.SPORTDEL.game) || "ספורטדל"}
+
+מי מזהה את השחקן הכי מהר?
 הרמזים נחשפים לכולם יחד — והראשון שפוגע לוקח את הסיבוב.
 
 פתחתי חדר. תלחצו וזה נכנס לבד 👇
-${link}
+${roomLink()}
 
 (אם צריך ידנית — קוד החדר: ${room})`;
+
+  $("#btnLeave").addEventListener("click", leaveRoom);
+  
+  /* וואטסאפ ישירות. זה המסלול שבו הזמנה באמת נשלחת, ובלעדיו
+     נשאר רק "הועתק" — והמזמין צריך לפתוח וואטסאפ ולהדביק לבד. */
+  $("#btnShareWa").addEventListener("click", () => {
+    if (!room) return;
+    openExternal("https://wa.me/?text=" + encodeURIComponent(inviteText()));
+  });
+
+  $("#btnShare").addEventListener("click", async () => {
+    if (!room) return;
+    const txt = inviteText();
     try{
       if (navigator.share) return void await navigator.share({ text: txt });
       await navigator.clipboard.writeText(txt);
@@ -2849,7 +2937,7 @@ ${link}
     const rows = allPlayers()
       .map((p, i) => `${i + 1}. ${p.name} — ${p.score || 0}`)
       .join("\n");
-    const link = `${location.origin}${location.pathname}?room=${room}`;
+    const link = roomLink();
     const txt = `🏆 ${(window.SPORTDEL && window.SPORTDEL.game) || "ספורטדל"} · קרב חברים\n\n` +
                 `${rows}\n\nעוד סיבוב באותו חדר:\n${link}`;
     try{
