@@ -116,6 +116,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://sportdle.techbynoam.com/archive/12/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://sportdle.techbynoam.com/players/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
