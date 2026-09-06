@@ -2,7 +2,7 @@
   "beitar": {
     "game": "ביתרdle",
     "players": 398,
-    "targets": 121,
+    "targets": 196,
     "hidden": 12,
     "unconfirmed": 12,
     "coverage": {
@@ -19,7 +19,7 @@
   "hapoel-bs": {
     "game": "באר־שבעdle",
     "players": 254,
-    "targets": 79,
+    "targets": 130,
     "hidden": 149,
     "unconfirmed": 1,
     "coverage": {
@@ -39,7 +39,7 @@
   "maccabi-ta": {
     "game": "מכביdle",
     "players": 276,
-    "targets": 123,
+    "targets": 179,
     "hidden": 78,
     "unconfirmed": 1,
     "coverage": {
@@ -59,7 +59,7 @@
   "maccabi-haifa": {
     "game": "חיפהdle",
     "players": 300,
-    "targets": 113,
+    "targets": 184,
     "hidden": 80,
     "unconfirmed": 1,
     "coverage": {
@@ -79,7 +79,7 @@
   "hapoel-ta": {
     "game": "הפועלdle",
     "players": 334,
-    "targets": 99,
+    "targets": 164,
     "hidden": 97,
     "unconfirmed": 0,
     "coverage": {

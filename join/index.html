@@ -11,12 +11,16 @@
     font-family:'Heebo',system-ui,sans-serif;display:flex;
     align-items:center;justify-content:center;text-align:center}
   a{color:#FFC72C}
+  .btn{display:inline-block;background:#FFC72C;color:#0C0C0E;text-decoration:none;
+    font-weight:700;padding:13px 26px;border-radius:10px;font-size:17px}
+  #msg{color:#F2F2F0;font-size:19px;font-weight:700}
 </style>
 </head>
 <body>
   <div>
-    <p>פותח את החדר…</p>
-    <p><a id="go" href="../">להמשך</a></p>
+    <p id="msg">פותח את החדר…</p>
+    <p id="app" hidden><a class="btn" id="openApp" href="#">פתיחה באפליקציה</a></p>
+    <p><a id="go" href="../">המשך בדפדפן</a></p>
   </div>
 <script>
 /* מעבירים את הקוד לעמוד המשחק, ששם הטיפול בהצטרפות כבר קיים
@@ -26,7 +30,25 @@
     .toUpperCase().replace(/[^A-Z2-9]/g, "").slice(0, 4);
   var to = c.length === 4 ? "../?room=" + c : "../";
   document.getElementById("go").setAttribute("href", to);
-  location.replace(to);
+
+  var pkg = "sportdle.techbynoam.com";
+  var inApp = !!window.Capacitor;
+  var android = navigator.userAgent.toLowerCase().indexOf("android") !== -1;
+
+  /* בתוך האפליקציה היא כבר פתוחה, ובלי חבילה אין לאן לפתוח. */
+  if (inApp || !android || !pkg || c.length !== 4){ location.replace(to); return; }
+
+  /* intent:// — עובד גם מדפדפן פנימי של וואטסאפ, ואם האפליקציה
+     אינה מותקנת אנדרואיד נופל ל-browser_fallback_url בשקט. */
+  var https = "https://sportdle.techbynoam.com" +
+              "/join/?room=" + c;
+  var host = https.split("://")[1];
+  var intent = "intent://" + host + "#Intent;scheme=https;package=" + pkg +
+               ";S.browser_fallback_url=" + encodeURIComponent(https) + ";end";
+
+  document.getElementById("msg").textContent = "הוזמנת לחדר " + c;
+  document.getElementById("openApp").setAttribute("href", intent);
+  document.getElementById("app").hidden = false;
 })();
 </script>
 </body>
