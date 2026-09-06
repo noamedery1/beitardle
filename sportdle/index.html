@@ -514,6 +514,20 @@ select.rc:focus{border-color:var(--brand)}
 #fixStat.ok{color:var(--brand)} #fixStat.bad{color:#E8B77A}
 #fixWas{margin-top:14px;padding:9px 12px;border-radius:var(--r);background:var(--ink-2);
   border:1px solid var(--line);font-size:12.5px;color:var(--dim);line-height:1.5}
+
+/* באנר האפליקציה — אותו CSS בדיוק כמו בדפי התוכן.
+   מקורו ב-scripts/lib/content.mjs, ולא כתוב כאן, כדי שהמשחק
+   והדפים לא ייפרדו. */
+
+.appban{margin:26px auto 0;max-width:430px;padding:14px 16px;border-radius:10px;
+  background:var(--ink-2,#141418);border:1px solid var(--line,#2E2E36);
+  text-align:center;line-height:1.6}
+.appban b{display:block;color:var(--text,#F2F2F0);font-size:14.5px;font-weight:700}
+.appban span{display:block;font-size:12.5px;color:var(--dim,#8C8C94);margin-top:3px}
+.appban a{display:inline-block;margin-top:9px;background:var(--brand,#FFC72C);
+  color:#0C0C0E;text-decoration:none;font-weight:700;font-size:13.5px;
+  padding:9px 20px;border-radius:8px}
+
 </style>
 </head>
 <body>
@@ -685,6 +699,15 @@ select.rc:focus{border-color:var(--brand)}
   <!-- ניווט קבוע לדפי התוכן. יחסי ולא מוחלט, כי אותו dist מוגש
        גם משורש הדומיין הקנוני וגם מ-/sportdle/ בכתובת הישנה.
        scripts/lib/clubpages.mjs מוסיף ../ בעמודי המועדונים. -->
+  <!-- באנר האפליקציה. הסימון והעיצוב מגיעים מ-scripts/lib/content.mjs,
+       כדי שהמשחק ודפי התוכן יציגו בדיוק את אותו דבר, והמצב נשלט
+       מ-`androidApp` ב-config/site.json. נמחק מעותק האפליקציה
+       ב-tools/app-prepare.mjs. -->
+  <div class="appban" id="appban">
+    <b>אפליקציית אנדרואיד — בקרוב</b>
+    <span>הגרסה בבדיקות. כשהיא תאושר, קישור ההורדה יופיע כאן.</span>
+  </div>
+
   <nav class="sitenav" aria-label="ניווט באתר">
     <a class="navhome" href="./">חידה יומית</a><span>·</span><a
        href="how-to-play/">איך משחקים</a><span>·</span><a
