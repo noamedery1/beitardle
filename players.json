@@ -1,5 +1,5 @@
 {
- "v": "s3-d0c7eb72f6",
+ "v": "s3-ea9e3640a1",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -38,6 +38,10 @@
      2009,
      2023
     ]
+   },
+   "titlesPreState": {
+    "league": [],
+    "cup": []
    },
    "coverage": {
     "from": 1970,
@@ -6425,6 +6429,10 @@
      2025
     ]
    },
+   "titlesPreState": {
+    "league": [],
+    "cup": []
+   },
    "coverage": {
     "from": 1973,
     "to": 2026,
@@ -11218,6 +11226,10 @@
      2021,
      2026
     ]
+   },
+   "titlesPreState": {
+    "league": [],
+    "cup": []
    },
    "coverage": {
     "from": 1969,
@@ -16411,6 +16423,10 @@
      1998,
      2016
     ]
+   },
+   "titlesPreState": {
+    "league": [],
+    "cup": []
    },
    "coverage": {
     "from": 1970,
@@ -22061,6 +22077,10 @@
      2011,
      2012
     ]
+   },
+   "titlesPreState": {
+    "league": [],
+    "cup": []
    },
    "coverage": {
     "from": 1970,
