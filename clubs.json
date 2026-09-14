@@ -1,7 +1,7 @@
 {
   "beitar": {
     "game": "ביתרdle",
-    "players": 398,
+    "players": 399,
     "targets": 196,
     "hidden": 12,
     "unconfirmed": 12,
@@ -12,7 +12,8 @@
         "reference",
         "wikiplayers",
         "wikiextra",
-        "wikilang"
+        "wikilang",
+        "wikicareer"
       ]
     }
   },
@@ -38,8 +39,8 @@
   },
   "maccabi-ta": {
     "game": "מכביdle",
-    "players": 276,
-    "targets": 179,
+    "players": 277,
+    "targets": 180,
     "hidden": 78,
     "unconfirmed": 1,
     "coverage": {
@@ -52,15 +53,16 @@
         "wikilang",
         "wikiplayers",
         "wikiextra",
-        "wikilang"
+        "wikilang",
+        "wikicareer"
       ]
     }
   },
   "maccabi-haifa": {
     "game": "חיפהdle",
-    "players": 300,
-    "targets": 184,
-    "hidden": 80,
+    "players": 303,
+    "targets": 187,
+    "hidden": 79,
     "unconfirmed": 1,
     "coverage": {
       "from": 1970,
@@ -72,14 +74,15 @@
         "wikilang",
         "wikiplayers",
         "wikiextra",
-        "wikilang"
+        "wikilang",
+        "wikicareer"
       ]
     }
   },
   "hapoel-ta": {
     "game": "הפועלdle",
-    "players": 335,
-    "targets": 165,
+    "players": 336,
+    "targets": 166,
     "hidden": 96,
     "unconfirmed": 0,
     "coverage": {
@@ -92,7 +95,8 @@
         "wikilang",
         "wikiplayers",
         "wikiextra",
-        "wikilang"
+        "wikilang",
+        "wikicareer"
       ]
     }
   }
