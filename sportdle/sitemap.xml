@@ -161,6 +161,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://sportdle.techbynoam.com/archive/21/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://sportdle.techbynoam.com/players/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
@@ -786,7 +791,7 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://sportdle.techbynoam.com/players/beitar/%D7%A9%D7%9C%D7%95%D7%9E%D7%99-%D7%90%D7%96%D7%95%D7%9C%D7%90%D7%99/</loc>
+    <loc>https://sportdle.techbynoam.com/players/beitar/%D7%A9%D7%9C%D7%95%D7%9E%D7%99-%D7%90%D7%96%D7%95%D7%9C%D7%90%D7%99-1989/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -2491,7 +2496,7 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://sportdle.techbynoam.com/players/maccabi-ta/%D7%A9%D7%9C%D7%95%D7%9E%D7%99-%D7%90%D7%96%D7%95%D7%9C%D7%90%D7%99/</loc>
+    <loc>https://sportdle.techbynoam.com/players/maccabi-ta/%D7%A9%D7%9C%D7%95%D7%9E%D7%99-%D7%90%D7%96%D7%95%D7%9C%D7%90%D7%99-1990/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -3191,7 +3196,7 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://sportdle.techbynoam.com/players/maccabi-haifa/%D7%A9%D7%9C%D7%95%D7%9E%D7%99-%D7%90%D7%96%D7%95%D7%9C%D7%90%D7%99/</loc>
+    <loc>https://sportdle.techbynoam.com/players/maccabi-haifa/%D7%A9%D7%9C%D7%95%D7%9E%D7%99-%D7%90%D7%96%D7%95%D7%9C%D7%90%D7%99-1990/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -4382,6 +4387,11 @@
   </url>
   <url>
     <loc>https://sportdle.techbynoam.com/players/hapoel-ta/%D7%A8%D7%96-%D7%98%D7%95%D7%99%D7%96%D7%A8/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://sportdle.techbynoam.com/players/hapoel-ta/%D7%A9%D7%9C%D7%95%D7%9E%D7%99-%D7%90%D7%96%D7%95%D7%9C%D7%90%D7%99-1990/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
