@@ -31,7 +31,7 @@ html{background:var(--ink);-webkit-text-size-adjust:100%}
 html,body{margin:0;padding:0}
 body{background:var(--ink);color:var(--text);font-family:'Heebo',system-ui,sans-serif;
   font-size:16px;line-height:1.7;min-height:100dvh;display:flex;flex-direction:column;
-  padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
+  padding-top:var(--safe-area-inset-top,env(safe-area-inset-top));padding-bottom:var(--safe-area-inset-bottom,env(safe-area-inset-bottom))}
 .wrap{max-width:640px;width:100%;margin:0 auto;padding:0 16px 40px;flex:1}
 @media (min-width:640px){
   body{background:radial-gradient(900px 520px at 50% -8%, #1A1A21 0%, rgba(12,12,14,0) 68%), var(--ink)}
@@ -141,6 +141,11 @@ footer .who a:hover{color:var(--dim)}
   <div class="note">החידה של <b>היום</b> אינה כאן, וגם לא תופיע
      כאן עד מחר — הארכיון נחתך בכוונה על החידה של אתמול.</div>
   <div class="cards">
+  <a class="card" href="../archive/43/">
+    <div class="n">חידה #43 · יום שני, 5.10.2026</div>
+    <div class="t">5 תשובות</div>
+    <div class="s">אורי דהן · יעקב כהן · משה שווייצר · עאיד חבשי · ברוך דגו</div>
+  </a>
   <a class="card" href="../archive/42/">
     <div class="n">חידה #42 · יום ראשון, 4.10.2026</div>
     <div class="t">5 תשובות</div>
@@ -352,7 +357,7 @@ footer .who a:hover{color:var(--dim)}
     <div class="s">דני נוימן · אלי אוזן · עומרי בן הרוש · אברהם אבוקרט · איאד אבו עביד</div>
   </a>
   </div>
-  <p>הארכיון גדל בכל יום. 42 חידות
+  <p>הארכיון גדל בכל יום. 43 חידות
      עד כה.</p>
   <footer>
     <div class="appban" id="appban">

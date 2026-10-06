@@ -62,7 +62,7 @@ body{background:var(--ink);color:var(--text);font-family:'Heebo',system-ui,sans-
   font-size:16px;line-height:1.5;min-height:100dvh;
   /* למעלה גם כן: אנדרואיד 15 עם targetSdk 35+ כופה edge-to-edge,
      והכותרת יושבת מתחת לשעון. בדפדפן הערך 0, ולכן זה בטוח לאתר. */
-  padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);
+  padding-top:var(--safe-area-inset-top,env(safe-area-inset-top));padding-bottom:var(--safe-area-inset-bottom,env(safe-area-inset-bottom));
   display:flex;flex-direction:column}
 .wrap{max-width:520px;width:100%;margin:0 auto;padding:0 14px 48px;flex:1}
 
@@ -174,7 +174,7 @@ h1 a{color:inherit;text-decoration:none}
 .modal.on{display:flex}
 .sheet{background:var(--ink-2);border:1px solid var(--line);border-bottom:0;
   border-radius:16px 16px 0 0;width:100%;max-width:520px;max-height:88dvh;overflow:auto;
-  padding:22px 18px calc(26px + env(safe-area-inset-bottom));position:relative}
+  padding:22px 18px calc(26px + var(--safe-area-inset-bottom,env(safe-area-inset-bottom)));position:relative}
 @media (min-width:640px){
   .modal{align-items:center;padding:20px}
   .sheet{border-radius:16px;border-bottom:1px solid var(--line);max-height:82dvh}
@@ -264,6 +264,17 @@ input.rc:focus{border-color:var(--brand)}
 #hintOut:empty{display:none}
 #hintBtn + #hintOut{margin-top:9px}
 
+/* ---------- עזרת חבר ----------
+   אותו שפה ויזואלית כמו הרמז, כי הם יושבים באותו מקום בזרימה ושניהם
+   "אני תקוע". ההבדל היחיד הוא הרוחב: הכיתוב ארוך יותר ובמסך צר הוא
+   נשבר לשתי שורות, ולכן padding מעט הדוק יותר. */
+#friendRow{margin-top:10px;text-align:center;display:none}
+#friendRow.on{display:block}
+#friendBtn{background:none;border:1.5px dashed var(--line);border-radius:var(--r);
+  padding:9px 14px;color:var(--dim);font-family:inherit;font-size:13px;font-weight:700;
+  cursor:pointer;margin:0;width:auto;line-height:1.4}
+#friendBtn:hover{color:var(--brand);border-color:var(--brand)}
+
 /* ---------- ארכיון ---------- */
 /* ---------- בורר מועדון ---------- */
 #clubBtn{display:inline-flex;align-items:center;gap:7px;margin:11px auto 0;width:auto;
@@ -274,7 +285,7 @@ input.rc:focus{border-color:var(--brand)}
 #clubBtn:hover{background:var(--brand);color:var(--ink)}
 
 #picker{position:fixed;inset:0;z-index:80;background:var(--ink);display:none;
-  overflow:auto;padding:calc(28px + env(safe-area-inset-top)) 16px 40px}
+  overflow:auto;padding:calc(28px + var(--safe-area-inset-top,env(safe-area-inset-top))) 16px 40px}
 #picker.on{display:block}
 #picker .inner{max-width:520px;margin:0 auto}
 #picker h2{font-family:'Suez One',Georgia,serif;font-size:clamp(28px,8vw,38px);
@@ -471,7 +482,7 @@ html{scrollbar-gutter:stable}
 .clue{min-height:48px}
 .clue b{font-size:16px}
 .answerbox{position:sticky;bottom:0;background:var(--ink-2);padding-top:10px;z-index:10;
-  padding-bottom:env(safe-area-inset-bottom)}
+  padding-bottom:var(--safe-area-inset-bottom,env(safe-area-inset-bottom))}
 
 /* ===== כשהמקלדת פתוחה =====
    באייפון המקלדת מכסה את הדף ולא מכווצת אותו: פריסת הדף נשארת בגובה
@@ -486,7 +497,7 @@ html{scrollbar-gutter:stable}
 body.kb #scPlay{
   position:fixed;inset-inline:0;top:var(--vvtop,0px);height:var(--vvh,100dvh);z-index:40;
   display:flex;flex-direction:column;overflow:hidden;background:var(--ink);
-  margin:0;padding:8px max(14px,env(safe-area-inset-right)) 0 max(14px,env(safe-area-inset-left))}
+  margin:0;padding:8px max(14px,var(--safe-area-inset-right,env(safe-area-inset-right))) 0 max(14px,var(--safe-area-inset-left,env(safe-area-inset-left)))}
 @media (min-width:640px){ body.kb #scPlay{max-width:580px;margin-inline:auto;padding-inline:30px} }
 
 body.kb #versusView .card{padding:11px 12px;margin-top:8px}
@@ -610,6 +621,12 @@ select.rc:focus{border-color:var(--brand)}
   <div id="hintRow">
     <button id="hintBtn">תקועים? קבלו רמז</button>
     <div id="hintOut"></div>
+  </div>
+
+  <!-- עזרת חבר. נפתח משלושה ניחושים ונסגר בסיום ובאימון.
+       הטקסט נבנה ב-friendText() ב-engine.js — מסקנות, לא יומן. -->
+  <div id="friendRow">
+    <button id="friendBtn">צריכים עזרה? שאלו חבר בוואטסאפ</button>
   </div>
 
   <div id="board"></div>
@@ -1178,8 +1195,8 @@ const CLUB_ORDER = window.SD.order;
    קו שיחק. אין כאן שינוי נתונים ואף חידה לא זזה. */
 const POS_HE = {GK:"שוער", DF:"הגנה", MF:"קישור", FW:"התקפה"};
 const POS_ORDER = ["GK","DF","MF","FW"];
-const NAT_HE = {"IL":"ישראל","UA":"אוקראינה","HU":"הונגריה","GH":"גאנה","MK":"מקדוניה","PT":"פורטוגל","BR":"ברזיל","AR":"ארגנטינה","ES":"ספרד","FR":"צרפת","NG":"ניגריה","GE":"גאורגיה","CO":"קולומביה","RU":"רוסיה","CM":"קמרון","RO":"רומניה","UY":"אורוגוואי","CL":"צ'ילה","RS":"סרביה","HR":"קרואטיה","BA":"בוסניה","SI":"סלובניה","ME":"מונטנגרו","BG":"בולגריה","PL":"פולין","CZ":"צ'כיה","SK":"סלובקיה","NL":"הולנד","BE":"בלגיה","DE":"גרמניה","IT":"איטליה","EN":"אנגליה","SC":"סקוטלנד","IE":"אירלנד","SE":"שוודיה","NO":"נורווגיה","DK":"דנמרק","FI":"פינלנד","GR":"יוון","TR":"טורקיה","US":"ארצות הברית","CA":"קנדה","MX":"מקסיקו","PY":"פרגוואי","VE":"ונצואלה","PE":"פרו","EC":"אקוודור","CI":"חוף השנהב","SN":"סנגל","MA":"מרוקו","TN":"תוניסיה","DZ":"אלג'יריה","EG":"מצרים","ZA":"דרום אפריקה","CD":"קונגו","AO":"אנגולה","ML":"מאלי","GN":"גינאה","TG":"טוגו","BJ":"בנין","ZW":"זימבבואה","NE":"ניז'ר","KE":"קניה","AU":"אוסטרליה","JP":"יפן","KR":"דרום קוריאה","UZ":"אוזבקיסטן","AM":"ארמניה","AZ":"אזרבייג'ן","MD":"מולדובה","BY":"בלארוס","LT":"ליטא","LV":"לטביה","EE":"אסטוניה","AL":"אלבניה","XK":"קוסובו","CH":"שווייץ","AT":"אוסטריה","IS":"איסלנד","JM":"ג'מייקה","CY":"קפריסין"};
-const REGION = {"IL":"ME","UA":"EU","HU":"EU","MK":"EU","PT":"EU","ES":"EU","FR":"EU","GE":"EU","RU":"EU","RO":"EU","RS":"EU","HR":"EU","BA":"EU","SI":"EU","ME":"EU","BG":"EU","PL":"EU","CZ":"EU","SK":"EU","NL":"EU","BE":"EU","DE":"EU","IT":"EU","EN":"EU","SC":"EU","IE":"EU","SE":"EU","NO":"EU","DK":"EU","FI":"EU","GR":"EU","TR":"EU","AM":"EU","AZ":"EU","MD":"EU","BY":"EU","LT":"EU","LV":"EU","EE":"EU","AL":"EU","XK":"EU","CH":"EU","AT":"EU","IS":"EU","CY":"EU","GH":"AF","NG":"AF","CM":"AF","CI":"AF","SN":"AF","MA":"AF","TN":"AF","DZ":"AF","EG":"AF","ZA":"AF","CD":"AF","AO":"AF","ML":"AF","GN":"AF","TG":"AF","BJ":"AF","ZW":"AF","KE":"AF","NE":"AF","BR":"SA","AR":"SA","CO":"SA","UY":"SA","CL":"SA","PY":"SA","VE":"SA","PE":"SA","EC":"SA","US":"NA","CA":"NA","MX":"NA","JM":"NA","JP":"AS","KR":"AS","UZ":"AS","AU":"AS"};
+const NAT_HE = {"IL":"ישראל","UA":"אוקראינה","HU":"הונגריה","GH":"גאנה","MK":"מקדוניה","PT":"פורטוגל","BR":"ברזיל","AR":"ארגנטינה","ES":"ספרד","FR":"צרפת","NG":"ניגריה","GE":"גאורגיה","CO":"קולומביה","RU":"רוסיה","CM":"קמרון","RO":"רומניה","UY":"אורוגוואי","CL":"צ'ילה","RS":"סרביה","HR":"קרואטיה","BA":"בוסניה","SI":"סלובניה","ME":"מונטנגרו","BG":"בולגריה","PL":"פולין","CZ":"צ'כיה","SK":"סלובקיה","NL":"הולנד","BE":"בלגיה","DE":"גרמניה","IT":"איטליה","EN":"אנגליה","SC":"סקוטלנד","IE":"אירלנד","SE":"שוודיה","NO":"נורווגיה","DK":"דנמרק","FI":"פינלנד","GR":"יוון","TR":"טורקיה","US":"ארצות הברית","CA":"קנדה","MX":"מקסיקו","PY":"פרגוואי","VE":"ונצואלה","PE":"פרו","EC":"אקוודור","CI":"חוף השנהב","SN":"סנגל","MA":"מרוקו","TN":"תוניסיה","DZ":"אלג'יריה","EG":"מצרים","ZA":"דרום אפריקה","CD":"קונגו","AO":"אנגולה","ML":"מאלי","GN":"גינאה","TG":"טוגו","BJ":"בנין","ZW":"זימבבואה","NE":"ניז'ר","ZM":"זמביה","MG":"מדגסקר","CV":"כף ורדה","GW":"גינאה ביסאו","GM":"גמביה","SR":"סורינאם","BO":"בוליביה","GT":"גואטמלה","CR":"קוסטה ריקה","TT":"טרינידד וטובגו","MQ":"מרטיניק","GP":"גוואדלופ","KE":"קניה","AU":"אוסטרליה","JP":"יפן","KR":"דרום קוריאה","UZ":"אוזבקיסטן","AM":"ארמניה","AZ":"אזרבייג'ן","MD":"מולדובה","BY":"בלארוס","LT":"ליטא","LV":"לטביה","EE":"אסטוניה","AL":"אלבניה","XK":"קוסובו","CH":"שווייץ","AT":"אוסטריה","IS":"איסלנד","JM":"ג'מייקה","CY":"קפריסין"};
+const REGION = {"IL":"ME","UA":"EU","HU":"EU","MK":"EU","PT":"EU","ES":"EU","FR":"EU","GE":"EU","RU":"EU","RO":"EU","RS":"EU","HR":"EU","BA":"EU","SI":"EU","ME":"EU","BG":"EU","PL":"EU","CZ":"EU","SK":"EU","NL":"EU","BE":"EU","DE":"EU","IT":"EU","EN":"EU","SC":"EU","IE":"EU","SE":"EU","NO":"EU","DK":"EU","FI":"EU","GR":"EU","TR":"EU","AM":"EU","AZ":"EU","MD":"EU","BY":"EU","LT":"EU","LV":"EU","EE":"EU","AL":"EU","XK":"EU","CH":"EU","AT":"EU","IS":"EU","CY":"EU","GH":"AF","NG":"AF","CM":"AF","CI":"AF","SN":"AF","MA":"AF","TN":"AF","DZ":"AF","EG":"AF","ZA":"AF","CD":"AF","AO":"AF","ML":"AF","GN":"AF","TG":"AF","BJ":"AF","ZW":"AF","KE":"AF","NE":"AF","ZM":"AF","MG":"AF","CV":"AF","GW":"AF","GM":"AF","BR":"SA","AR":"SA","CO":"SA","UY":"SA","CL":"SA","PY":"SA","VE":"SA","PE":"SA","EC":"SA","SR":"SA","BO":"SA","US":"NA","CA":"NA","MX":"NA","JM":"NA","GT":"NA","CR":"NA","TT":"NA","MQ":"NA","GP":"NA","JP":"AS","KR":"AS","UZ":"AS","AU":"AS"};
 
 /* ============================================================
    4. עזרים
@@ -1348,7 +1365,7 @@ function submit(name){
   input.value = ""; closeSugg();
   if (p.name === answer.name) finish(true);
   else if (guesses.length >= MAX) finish(false);
-  else { saveState(); maybeHint(); }
+  else { saveState(); maybeHint(); maybeFriend(); }
 }
 
 /* ---------- רצף ---------- */
@@ -1403,6 +1420,7 @@ function finish(won){
   });
 
   $("#hintRow").classList.remove("on");
+  $("#friendRow").classList.remove("on");
   if (isToday()){
     saveState();
     bumpStreak(won); showStreak();
@@ -1669,6 +1687,7 @@ $("#again").addEventListener("click", ()=>{
   $("#story").style.display = "none";
   $("#yday").classList.remove("on");
   $("#hintRow").classList.remove("on"); $("#hintOut").textContent = "";
+  $("#friendRow").classList.remove("on");
   $("#hintBtn").style.display = "";
   answer = POOL[Math.floor(Math.random()*POOL.length)];
   board.innerHTML = ""; $("#result").classList.remove("on");
@@ -1751,6 +1770,7 @@ function loadPuzzle(n){
   board.innerHTML = "";
   $("#result").classList.remove("on");
   $("#hintOut").textContent = ""; $("#hintRow").classList.remove("on");
+  $("#friendRow").classList.remove("on");
   $("#hintBtn").style.display = "";
   input.disabled = false; input.value = "";
   $("#left").textContent = MAX;
@@ -1788,6 +1808,168 @@ $("#hintBtn").addEventListener("click", ()=>{
   $("#hintOut").textContent = hintText();
   $("#hintBtn").style.display = "none";
   saveState();
+});
+
+/* ---------- עזרת חבר ----------
+   הודעת וואטסאפ באמצע משחק. **מסקנות ולא יומן.** מי שמקבל אותה
+   לא בהכרח משחק בעצמו, ורשימת ניחושים עם סמלים לא אומרת לו כלום;
+   מה שהוא צריך זה מה שכבר ידוע על המבוקש. זה גם מה שנותן להודעה
+   אורך קבוע — עשר שורות בין אם ניחשת פעמיים או שבע.
+
+   **אין כאן שום גישה לתשובה.** הגבולות נגזרים מהחץ ומהצבע בלבד,
+   כלומר בדיוק מה שכבר מוצג על המסך. "קרוב" הוא מידע אמיתי ולא
+   קישוט: הוא מגביל לטווח 3 (עונה, לידה) או 1 (תארים), ולכן הוא
+   מכווץ משני הצדדים. "רחוק" עם חץ מלמד את ההפך — שהפער גדול
+   מהטווח — ולכן הוא דוחף את הגבול הלאה ולא רק בערך אחד.
+
+   **בלי אף אימוג'י, בכוונה.** checkShareChars ב-build.mjs חוסם
+   תווים מחוץ למישור הבסיסי כי הם נשברים בוואטסאפ ווב, ולכן צבע
+   ממילא פסול.
+
+   **וגם בלי תווי נקודה בתחילת שורה, וזה נמדד ולא הונח.** הגרסה
+   הראשונה פתחה כל עובדה ב-"• ". מדידת מיקום בפועל בשני ההקשרים
+   (tools/friend-check.mjs --bidi) הראתה שהנקודה נוחתת בצד ההפוך
+   של השורה כשההודעה מוצגת בהקשר LTR — כלומר וואטסאפ ווב בממשק
+   אנגלי — כי היא תו ניטרלי בתחילת שורה. עכשיו **כל שורה נפתחת
+   באות עברית**, והכיוון נקבע מעצמו בשני ההקשרים בלי אף תו בקרה.
+   הכוכביות של ה-bold אינן בעיה: וואטסאפ בולע אותן כסימון.
+
+   מכאן גם הכלל להמשך: אין להתחיל שורה כאן בתו ניטרלי — לא נקודה,
+   לא מקף, לא מספר. */
+const NEAR_RANGE = { "עונה 1": 3, "תארים": 1, "נולד": 3 };
+const RAW_OF     = { "עונה 1": g => g.from, "תארים": g => g.titles, "נולד": g => g.born };
+
+function knownFacts(){
+  let posCand = new Set(POS_ORDER);
+  let natHit = null, natNear = null;
+  const natOut = new Set();
+  const num = { "עונה 1": {lo:null,hi:null,exact:null},
+                "תארים":  {lo:null,hi:null,exact:null},
+                "נולד":   {lo:null,hi:null,exact:null} };
+
+  for (const g of guesses) for (const c of compare(g, answer)){
+    if (c.k === "עמדה"){
+      if (!g.pos) continue;
+      const gi  = POS_ORDER.indexOf(g.pos);
+      const adj = new Set([POS_ORDER[gi-1], POS_ORDER[gi+1]].filter(Boolean));
+      if      (c.s === "hit")  posCand = new Set([g.pos]);
+      else if (c.s === "near") posCand = new Set([...posCand].filter(p => adj.has(p)));
+      /* "רחוק" שולל גם את השכנות: אילו הייתה שכנה, התא היה "קרוב". */
+      else                     posCand = new Set([...posCand].filter(p => p !== g.pos && !adj.has(p)));
+    }
+    else if (c.k === "לאום"){
+      if (c.s === "hit") natHit = c.v;
+      else {
+        for (const n of g.nats) natOut.add(NAT_HE[n] || n);
+        if (c.s === "near" && !natNear) natNear = c.v;
+      }
+    }
+    else if (num[c.k]){
+      const v = RAW_OF[c.k](g);
+      if (v == null) continue;
+      const b = num[c.k], near = NEAR_RANGE[c.k];
+      if      (c.s === "hit") b.exact = v;
+      else if (c.ar === "↑"){
+        b.lo = Math.max(b.lo ?? -Infinity, c.s === "near" ? v + 1 : v + near + 1);
+        if (c.s === "near") b.hi = Math.min(b.hi ??  Infinity, v + near);
+      }
+      else if (c.ar === "↓"){
+        b.hi = Math.min(b.hi ??  Infinity, c.s === "near" ? v - 1 : v - near - 1);
+        if (c.s === "near") b.lo = Math.max(b.lo ?? -Infinity, v - near);
+      }
+    }
+  }
+  return { posCand, natHit, natNear, natOut, num };
+}
+
+/* ניסוח טווח. fmt ממיר ערך גולמי למחרוזת (שנה → "96/97"), ו-w
+   נותן את ארבעת הנוסחים. טווח שהתכווץ לערך יחיד מנוסח כערך מדויק
+   ולא כ"בין X ל-X". */
+function rangeLine(b, fmt, w){
+  if (b.exact != null)                return w.exact(fmt(b.exact));
+  if (b.lo != null && b.hi != null)   return b.lo === b.hi ? w.exact(fmt(b.lo))
+                                                          : w.both(fmt(b.lo), fmt(b.hi));
+  if (b.lo != null)                   return w.lo(fmt(b.lo));
+  if (b.hi != null)                   return w.hi(fmt(b.hi));
+  return null;
+}
+
+function friendText(){
+  const f = knownFacts(), L = [];
+
+  /* שתי השורות האלה מתויגות והאחרות לא, בכוונה. "התקפה" ו"ישראל"
+     לבדן נקראות כרשימת שמות עצם ולא כעובדות על שחקן; "הגיע למועדון
+     ב-98/99" כבר משפט שלם ותווית עליו רק מכבידה. */
+  if (f.posCand.size === 1)
+    L.push(`עמדה: ${POS_HE[[...f.posCand][0]]}`);
+  else if (f.posCand.size > 1 && f.posCand.size < POS_ORDER.length)
+    L.push(`עמדה: ${[...f.posCand].map(p => POS_HE[p]).join(" או ")}`);
+
+  if (f.natHit)            L.push(`לאום: ${f.natHit}`);
+  else if (f.natNear)      L.push(`לאום: מאותו אזור כמו ${f.natNear}, אבל לא ${f.natNear}`);
+  else if (f.natOut.size)  L.push(`לאום: לא ${[...f.natOut].join(", לא ")}`);
+
+  const num = f.num;
+  L.push(rangeLine(num["עונה 1"], season, {
+    exact: s      => `הגיע למועדון ב-${s}`,
+    both:  (a, b) => `הגיע למועדון בין ${a} ל-${b}`,
+    lo:    a      => `הגיע למועדון ב-${a} או אחרי`,
+    hi:    b      => `הגיע למועדון עד ${b}`
+  }));
+  /* "בדיוק 0 תארים" ו"לפחות 1 תארים" הם עברית שבורה, והם המקרים
+     הנפוצים דווקא — רוב השחקנים בלי תואר. titleWord מטפל בשלוש
+     הצורות; המספרים הגדולים תקינים ממילא. */
+  const tw = n => n === 0 ? "תארים" : n === 1 ? "תואר אחד" : `${n} תארים`;
+  L.push(rangeLine(num["תארים"], n => n, {
+    exact: n      => n === 0 ? `בלי תארים כלל` : `בדיוק ${tw(n)}`,
+    both:  (a, b) => `בין ${a} ל-${b} תארים`,
+    lo:    a      => `לפחות ${tw(a)}`,
+    hi:    b      => b === 0 ? `בלי תארים כלל` : `עד ${tw(b)}`
+  }));
+  L.push(rangeLine(num["נולד"], String, {
+    exact: y      => `נולד ב-${y}`,
+    both:  (a, b) => `נולד בין ${a} ל-${b}`,
+    lo:    a      => `נולד ב-${a} או אחרי`,
+    hi:    b      => `נולד עד ${b}`
+  }));
+
+  const facts = L.filter(Boolean);
+  const left  = MAX - guesses.length;
+  /* הכוכביות הן bold אמיתי בוואטסאפ, והן נבלעות כסימון — ולכן
+     אינן נחשבות לתו הפותח של השורה לעניין כיוון.
+
+     "מישהו יודע?" הוקדם, ולא רק כדי לפתוח בשאלה: השאלה בסוף
+     השאירה סימן שאלה בתו האחרון, וזה תו ניטרלי שזז בין ההקשרים.
+     עכשיו השורה נפתחת ונסגרת בעברית.
+
+     הכותרת היא החריג היחיד שנשאר, והוא בכוונה: היא מסתיימת ב-"#N"
+     וה-"dle" לועזי, ולכן שני חצאיה מתחלפים בהקשר LTR. זה מוסבר
+     ונסבל כי shareText() מציג אותה כותרת בדיוק מאז ומעולם, ושתי
+     גרסאות שונות לאותה כותרת גרועות יותר מהיפוך שקריא ממילא. */
+  const head  = `*${club.game} · חידה #${puzzleNo}*\n` +
+                `מישהו יודע? נשארו לי רק ${left} ${left === 1 ? "ניחוש" : "ניחושים"}`;
+  const known = facts.length ? `*מה שכבר ידוע*\n${facts.join("\n")}`
+                             : `עוד לא הצלחתי לצמצם כלום`;
+  const out   = `*נפסלו:* ${guesses.map(g => g.name).join(" · ")}`;
+  return `${head}\n\n${known}\n\n${out}\n\n${SITE_URL}/${club.slug}/`;
+}
+
+/* הסף הוא 3 ולא 5 כמו ברמז. הרמז מתומחר בקושי — הוא נפתח כשבאמת
+   נתקעת. זה לא רמז אלא שיתוף, והוא שווה משהו רק כשיש כבר מה
+   לספר: פחות משלושה ניחושים ו"מה שכבר ידוע" הוא שורה או שתיים. */
+function maybeFriend(){
+  $("#friendRow").classList.toggle("on", !over && !practice && guesses.length >= 3);
+}
+
+/* window.open עם "_blank" הוא no-op שקט ב-WebView של אנדרואיד;
+   src/native.js דורס את המאזין הזה ב-location.href. ההסבר המלא שם. */
+/* src/native.js עוצר את המאזין הזה עם stopImmediatePropagation, ולכן
+   הדיווח חייב להיות קריא גם משם ולא רק מתוך המאזין. */
+window.trackFriend = () => track("friend", { guesses: guesses.length });
+
+$("#friendBtn").addEventListener("click", ()=>{
+  window.trackFriend();
+  window.open("https://wa.me/?text=" + encodeURIComponent(friendText()), "_blank", "noopener");
 });
 
 /* ---------- סטטיסטיקה קהילתית ----------
@@ -2159,7 +2341,7 @@ function restore(){
     const last = guesses[guesses.length - 1];
     if (st.over || last.name === answer.name || guesses.length >= MAX)
       finish(last.name === answer.name);
-    else maybeHint();
+    else { maybeHint(); maybeFriend(); }
   }catch(e){}
 }
 
@@ -2635,7 +2817,17 @@ function migrateFromBeitardle(){
   safe(async () => {
     if (!P.StatusBar) return;
     await P.StatusBar.setStyle({ style: "DARK" });
-    if (platform === "android") await P.StatusBar.setBackgroundColor({ color: "#0C0C0E" });
+    if (platform === "android") {
+      /* **האפליקציה מתחת לשורת הסטטוס, לא תחתיה.** ברירת המחדל של
+         @capacitor/status-bar היא overlaysWebView=true — ה-WebView
+         מצויר מאחורי השורה. ובאנדרואיד 14 ומטה SystemBars של
+         Capacitor מניח שאין חפיפה ומזריק --safe-area-inset-top=0,
+         כך שהכותרת ("ביתרdle" והכפתורים) נחתכה מתחת לשעון.
+         באנדרואיד 15+ זה no-op: שם Capacitor מטפל בשוליים בעצמו.
+         רק באנדרואיד — ב-iOS ה-WebView מתחת לשורה ו-env() מדויק. */
+      await P.StatusBar.setOverlaysWebView({ overlay: false }).catch(() => {});
+      await P.StatusBar.setBackgroundColor({ color: "#0C0C0E" });
+    }
   });
 
   /* המסך נסגר אחרי שהגופנים נטענו, לא אחרי DOMContentLoaded.
@@ -2716,6 +2908,26 @@ function migrateFromBeitardle(){
     }, true);
   });
 
+  /* ---------- 3ג. עזרת חבר ----------
+     אותה מלכודת בדיוק כמו 3ב, ומאותה סיבה: המנוע קורא ל-window.open
+     ובלעדי העקיפה הזאת הכפתור לא עושה שום דבר באפליקציה — בשקט,
+     בלי שגיאה. אם מוסיפים עוד כפתור שפותח כתובת חיצונית, הוא צריך
+     את אותו טיפול.
+
+     שים לב: stopImmediatePropagation מבטל גם את track() שבמאזין של
+     המנוע, ולכן הדיווח נשלח כאן. window.SPORTDEL.analyticsUrl הוא
+     מה שהמנוע כבר מפרסם. */
+  safe(() => {
+    const fb = document.getElementById("friendBtn");
+    if (!fb || typeof window.friendText !== "function") return;
+    fb.addEventListener("click", (ev) => {
+      ev.stopImmediatePropagation();
+      ev.preventDefault();
+      if (typeof window.trackFriend === "function") window.trackFriend();
+      location.href = "https://wa.me/?text=" + encodeURIComponent(window.friendText());
+    }, true);
+  });
+
   /* ---------- 4. כפתור "חזור" של אנדרואיד ----------
      בלי זה לחיצה אחת על "חזור" סוגרת את האפליקציה מתוך חלונית
      פתוחה. זו אחת התלונות הנפוצות בביקורות, ובדיקת איכות של
@@ -2748,34 +2960,60 @@ function migrateFromBeitardle(){
      דחייה אין דרך חזרה בלי להישלח להגדרות המערכת. אחרי שפתרת
      חידה, "להזכיר לך מחר?" הוא בדיוק מה שמצפים לו.
 
-     התזמון הוא התראה מקומית חוזרת, לא Push. אין שרת, אין FCM,
-     אין טוקנים, ואין תלות ברשת — וזה כל מה שצריך כדי להגיד
-     "החידה של היום באוויר". Push יתווסף רק אם נרצה לשלוח
-     הודעות שאינן יומיות. */
-  const NOTIF_ID = 1;
+     ההתראה מקומית, לא Push. אין שרת, אין FCM, אין טוקנים, ואין
+     תלות ברשת — וזה כל מה שצריך כדי להגיד "החידה של היום באוויר".
+
+     **תזכורות מתוארכות, לא התראה חוזרת.** עד 1.0.11 זו הייתה
+     התראה אחת "כל יום ב-8:30" (repeats), והיא לא יכלה לדעת
+     שכבר פתרת: מי ששיחק אחרי חצות קיבל בבוקר "החידה של היום
+     באוויר" על חידה שכבר סיים. עכשיו כל יום הוא התראה נפרדת עם
+     מזהה של התאריך, לשבועיים קדימה, וסיום החידה של היום מבטל את
+     של היום. כל פתיחה ממלאת את החלון מחדש, כך שהוא לא נגמר.
+
+     **isExactNotification: false.** ברירת המחדל של התוסף היא אזעקה
+     מדויקת. באנדרואיד 12+ בלי הרשאת SCHEDULE_EXACT_ALARM הוא פותח
+     את מסך "Alarms & reminders" של המערכת מעל האפליקציה — וזה מה
+     שקרה לכל מי שאישר התראות, מיד אחרי התוצאה. ההרשאה גם הוסרה
+     מהמניפסט. allowWhileIdle כבוי מאותה סיבה: תזכורת שמגיעה 8:30
+     או 8:41 היא אותה תזכורת. */
+  const LEGACY_ID = 1;                // ההתראה החוזרת של 1.0.11 ומטה
   const HOUR = 8, MINUTE = 30;
+  const DAYS = 14;
+  const BASE = 2000000;               // מזהה = BASE + מספר היום (שעון מקומי)
+
+  const dayKey = d => `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+  const dayNum = d => Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 86400000);
+
+  /* החידה של היום כבר נגמרה, באיזה מועדון שהוא. נרשם כשכרטיס התוצאה
+     נפתח על חידת היום — לא ארכיון ולא משחק אימון. */
+  const doneToday = () => get("done") === dayKey(new Date());
 
   async function scheduleDaily() {
     if (!P.LocalNotifications) return;
     const perm = await P.LocalNotifications.checkPermissions();
     if (perm.display !== "granted") return;
-    /* מחיקה לפני קביעה: בלי זה עדכון של הטקסט או השעה משאיר את
-       הקודמת בתוקף, והמשתמש מקבל שתי התראות בבוקר. */
-    await P.LocalNotifications.cancel({ notifications: [{ id: NOTIF_ID }] }).catch(() => {});
-    await P.LocalNotifications.schedule({
-      notifications: [{
-        id: NOTIF_ID,
-        title: "SportDle",
-        body: "החידה של היום באוויר. מי השחקן?",
-        /* allowWhileIdle כבוי בכוונה. הוא מתרגם לאזעקה מדויקת,
-           ואזעקה מדויקת דורשת SCHEDULE_EXACT_ALARM — הרשאה שגוגל
-           מצפה שתידרש רק כשתזמון מדויק הוא ליבת האפליקציה.
-           תזכורת יומית שמגיעה 8:30 או 8:41 היא אותה תזכורת, ולכן
-           אין שום סיבה לבקש את זה ולהזמין שאלות בביקורת. */
-        schedule: { on: { hour: HOUR, minute: MINUTE }, repeats: true },
+
+    const now = new Date();
+    const ids = [{ id: LEGACY_ID }];
+    const items = [];
+    for (let i = 0; i < DAYS; i++) {
+      /* Date מגלגל חודש ושנה בעצמו, ושומר 8:30 מקומי גם במעבר שעון */
+      const at = new Date(now.getFullYear(), now.getMonth(), now.getDate() + i, HOUR, MINUTE);
+      const id = BASE + dayNum(at);
+      ids.push({ id });
+      if (at <= now) continue;                     // השעה של היום כבר עברה
+      if (i === 0 && doneToday()) continue;        // כבר פתרת היום
+      items.push({
+        id, title: "SportDle", body: "החידה של היום באוויר. מי השחקן?",
+        schedule: { at, allowWhileIdle: false },
+        isExactNotification: false,
         smallIcon: "ic_stat_sportdle"
-      }]
-    });
+      });
+    }
+    /* מחיקה לפני קביעה — כולל ההתראה החוזרת הישנה, אחרת מי שמעדכן
+       מ-1.0.11 מקבל שתי התראות בכל בוקר. */
+    await P.LocalNotifications.cancel({ notifications: ids }).catch(() => {});
+    if (items.length) await P.LocalNotifications.schedule({ notifications: items });
     set("daily", "1");
   }
 
@@ -2787,21 +3025,35 @@ function migrateFromBeitardle(){
     if (res.display === "granted") await scheduleDaily();
   }
 
-  /* מחדשים את התזמון בכל פתיחה של מי שכבר אישר — התראה חוזרת
-     יכולה להיאבד באיפוס מכשיר או בעדכון גרסה. */
+  /* מחדשים את החלון בכל פתיחה של מי שכבר אישר. */
   safe(() => { if (get("daily")) scheduleDaily(); });
 
-  /* הרגע הנכון לבקש: התוצאה נחשפה. #result מקבל class="on"
-     גם בניצחון וגם בהפסד, ובשני המקרים "מחר שחקן חדש" נכון. */
+  /* כרטיס התוצאה נפתח: גם הרגע לבקש הרשאה (פעם אחת), וגם הסימן
+     שהחידה של היום נגמרה. #result מקבל class="on" בניצחון ובהפסד.
+
+     המשתנים של המנוע (puzzleNo, todayNo, practice) גלויים כאן: שני
+     הקבצים הם סקריפטים רגילים באותו דף, לא מודולים.
+
+     **בדיקה גם בטעינה**, לא רק בשינוי: מי שפותח אחרי שכבר פתר — המנוע
+     משחזר את הלוח ומדליק את הכרטיס לפני שהסקריפט הזה רץ, והמשקיף
+     לא היה רואה שום שינוי. */
   safe(() => {
     const result = document.getElementById("result");
     if (!result || !window.MutationObserver) return;
-    const obs = new MutationObserver(() => {
+    let asked = false;
+    const onResult = (fromChange) => {
       if (!result.classList.contains("on")) return;
-      obs.disconnect();
-      setTimeout(askThenSchedule, 1400);   // אחרי שהשחקן ראה את התשובה
-    });
-    obs.observe(result, { attributes: true, attributeFilter: ["class"] });
+      const today = typeof puzzleNo !== "undefined" && typeof todayNo !== "undefined"
+        && puzzleNo === todayNo && !(typeof practice !== "undefined" && practice);
+      if (today && !doneToday()) {
+        set("done", dayKey(new Date()));
+        if (get("daily")) scheduleDaily();
+      }
+      if (fromChange && !asked) { asked = true; setTimeout(askThenSchedule, 1400); }
+    };
+    new MutationObserver(() => onResult(true))
+      .observe(result, { attributes: true, attributeFilter: ["class"] });
+    onResult(false);
   });
 
   /* ---------- 7. חתימת גרסה גלויה ----------
