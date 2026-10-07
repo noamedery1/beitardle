@@ -1,5 +1,5 @@
 {
- "v": "s3-e5f577fa24",
+ "v": "s3-5a8951306b",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -56,7 +56,7 @@
     ]
    },
    "counts": {
-    "players": 482,
+    "players": 481,
     "targets": 214,
     "hidden": 12,
     "unconfirmed": 12
@@ -4781,21 +4781,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
-    },
-    {
-     "he": "קלאודמיר פריירה",
-     "pos": "MF",
-     "nat": "BR",
-     "born": 1984,
-     "spells": [
-      [
-       2015,
-       2018
-      ]
-     ],
-     "titles": 0,
-     "target": false
+     "target": true,
+     "aliases": [
+      "קלאודמיר פריירה"
+     ]
     },
     {
      "he": "שלומי אזולאי (1990)",
