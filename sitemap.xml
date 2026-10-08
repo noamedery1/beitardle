@@ -281,6 +281,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://sportdle.techbynoam.com/archive/45/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://sportdle.techbynoam.com/players/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
@@ -996,7 +1001,7 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://sportdle.techbynoam.com/players/beitar/%D7%A7%D7%9C%D7%90%D7%95%D7%93%D7%9E%D7%99%D7%A8/</loc>
+    <loc>https://sportdle.techbynoam.com/players/beitar/%D7%A7%D7%9C%D7%90%D7%95%D7%93%D7%9E%D7%99%D7%A8-%D7%A4%D7%A8%D7%99%D7%99%D7%A8%D7%94/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
