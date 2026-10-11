@@ -138,6 +138,12 @@ td:first-child{min-width:7.5em}
 .card .n{font-size:13.5px;font-weight:500;color:var(--ui-ink-2)}
 .card .t{font-size:18px;font-weight:900;margin-top:2px}
 .card .s{font-size:14.5px;color:var(--ui-ink-2);margin-top:4px}
+/* ארכיון: התשובות מאחורי לחיצה — בדף (לגוגל), לא בעין (למי שעוד משחק) */
+details.reveal{margin:18px 0}
+details.reveal summary{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:var(--r-ctl);
+  background:var(--brand,#17181C);color:var(--on-brand,#fff);font-weight:700;cursor:pointer;list-style:none}
+details.reveal summary::-webkit-details-marker{display:none}
+details.reveal[open] summary{background:var(--surface);color:var(--ui-ink);border:1px solid var(--ui-line)}
 
 /* ---- שפת הרמזים: אותם ריבועים שטוחים כמו במשחק ---- */
 .swatch{display:inline-block;width:15px;height:15px;border-radius:3px;vertical-align:-2px;
@@ -181,8 +187,11 @@ footer .who a:hover{color:var(--ui-ink)}
   <h1>חידה #39</h1>
   <p class="kicker">יום חמישי, 1.10.2026</p>
 
-  <p>אלה היו התשובות של יום חמישי, 1.10.2026, בכל אחד מחמשת המועדונים.
-     לחיצה על שחקן פותחת את דף השחקן שלו.</p>
+  <p>התשובות של יום חמישי, 1.10.2026, בכל אחד מחמשת המועדונים.
+     עוד לא פתרתם? את החידה הזו אפשר לשחק דרך "ארכיון" במשחק
+     (<a href="../../">לשחק</a>) — לכן התשובות מוסתרות עד שלוחצים.</p>
+  <details class="reveal">
+  <summary>הצגת התשובות</summary>
   <div class="cards">
   <a class="card" style="--c:#FFC72C" href="../../players/beitar/אלי-דסה/">
     <div class="n">ביתרdle</div>
@@ -210,9 +219,7 @@ footer .who a:hover{color:var(--ui-ink)}
     <div class="s">הגנה · 84/85–84/85 · 1 עונות</div>
   </a>
   </div>
-  <div class="note">המשחק מגיש תמיד את החידה של <b>היום</b>, ולכן
-     אי אפשר לשחק חידה מהארכיון מתוך הדף הזה.
-     <a href="../../">לחידה של היום</a>.</div>
+  </details>
   <div class="pager"><a href="../38/">← חידה #38</a><a href="../40/">חידה #40 →</a></div>
   <p style="margin-top:20px"><a href="../">↑ כל הארכיון</a></p>
   <footer>

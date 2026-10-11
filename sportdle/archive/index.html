@@ -138,6 +138,12 @@ td:first-child{min-width:7.5em}
 .card .n{font-size:13.5px;font-weight:500;color:var(--ui-ink-2)}
 .card .t{font-size:18px;font-weight:900;margin-top:2px}
 .card .s{font-size:14.5px;color:var(--ui-ink-2);margin-top:4px}
+/* ארכיון: התשובות מאחורי לחיצה — בדף (לגוגל), לא בעין (למי שעוד משחק) */
+details.reveal{margin:18px 0}
+details.reveal summary{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:var(--r-ctl);
+  background:var(--brand,#17181C);color:var(--on-brand,#fff);font-weight:700;cursor:pointer;list-style:none}
+details.reveal summary::-webkit-details-marker{display:none}
+details.reveal[open] summary{background:var(--surface);color:var(--ui-ink);border:1px solid var(--ui-line)}
 
 /* ---- שפת הרמזים: אותם ריבועים שטוחים כמו במשחק ---- */
 .swatch{display:inline-block;width:15px;height:15px;border-radius:3px;vertical-align:-2px;
@@ -182,249 +188,251 @@ footer .who a:hover{color:var(--ui-ink)}
   <p class="kicker">כל החידות שפורסמו, והתשובות שלהן.</p>
 
   <p>כל החידות שפורסמו, מהחדשה לישנה. לכל חידה דף משלה עם
-     התאריך והתשובה בכל אחד מחמשת המועדונים, וקישור לדף השחקן.</p>
+     התאריך והתשובה בכל אחד מחמשת המועדונים, וקישור לדף השחקן.
+     התשובות מוסתרות עד שלוחצים — מי שעוד לא פתר יכול לשחק כל חידה
+     ישנה דרך "ארכיון" במשחק עצמו.</p>
   <div class="note">החידה של <b>היום</b> אינה כאן, וגם לא תופיע
      כאן עד מחר — הארכיון נחתך בכוונה על החידה של אתמול.</div>
   <div class="cards">
   <a class="card" href="../archive/48/">
     <div class="n">חידה #48 · יום שבת, 10.10.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">רענן דרעי · חאתם אלחמיד · דדי בן דיין · עומרי גלזר · שי אליאס</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/47/">
     <div class="n">חידה #47 · יום שישי, 9.10.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">נתנאל דלויה · מריאנו באריירו · סאלם אבו סיאם · דולב חזיזה · אוראל דגני</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/46/">
     <div class="n">חידה #46 · יום חמישי, 8.10.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">דוד קלטינס · חנן פדידה · משה לוגסי · אייל ברקוביץ' · גל שיש</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/45/">
     <div class="n">חידה #45 · יום רביעי, 7.10.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">קלאודמיר פריירה · מיגל ויטור · רודריגו גולדברג · שלומי ארבייטמן · רפעת טורק</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/44/">
     <div class="n">חידה #44 · יום שלישי, 6.10.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">טוטו תמוז · אופיר חיים · בן לוז · עילאי חג'ג' · סבסטיאן סימרוטיץ'</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/43/">
     <div class="n">חידה #43 · יום שני, 5.10.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">אורי דהן · יעקב כהן · משה שווייצר · עאיד חבשי · ברוך דגו</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/42/">
     <div class="n">חידה #42 · יום ראשון, 4.10.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">אלי ששון · מהראן ראדי · אנדז'יי קוביקה · רפי אוסמו · מוטי ברשצקי</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/41/">
     <div class="n">חידה #41 · יום שבת, 3.10.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">טל כחילה · ניב אליאסי · טל בנין · תומר חמד · מרווין פירסמן</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/40/">
     <div class="n">חידה #40 · יום שישי, 2.10.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">שלומי משה · אור בלוריאן · ברוך דגו · ראובן עטר · סתיו טוריאל</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/39/">
     <div class="n">חידה #39 · יום חמישי, 1.10.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">אלי דסה · שוקי נגר · שרן ייני · אוראל דגני · אלי אוזן</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/38/">
     <div class="n">חידה #38 · יום רביעי, 30.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">יוסף סורינוב · אליניב ברדה · יונתן כהן · רוברטו קולאוטי · שחר הירש</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/37/">
     <div class="n">חידה #37 · יום שלישי, 29.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">אישטוון שאלוי · שלמה אילוז · ברק לוי · ברוך ממן · אלרואי כהן</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/36/">
     <div class="n">חידה #36 · יום שני, 28.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">ברק משה · סיראז' נסאר · קרלוס גרסיה · אייל משומר · פליקס חלפון</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/35/">
     <div class="n">חידה #35 · יום ראשון, 27.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">יוסי מזרחי · אסי רחמים · דן גלזר · עומר אצילי · ג'ורג' בורבה</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/34/">
     <div class="n">חידה #34 · יום שבת, 26.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">אלון מזרחי · גרשון קופי · אופיר חיים · סוף פודגוראנו · קלמי סבן</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/33/">
     <div class="n">חידה #33 · יום שישי, 25.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">תומר בן יוסף · בן תורג'מן · דניאל ליפשיץ · זאהי ארמלי · יחזקאל חזום</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/32/">
     <div class="n">חידה #32 · יום חמישי, 24.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">אוראל דגני · בן שהר · אייל גולסה · איתן עזריה · רועי גורדנה</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/31/">
     <div class="n">חידה #31 · יום רביעי, 23.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">ירדן שועה · אלעד בונפלד · יובל שפונגין · אריק בנדו · בן לוז</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/30/">
     <div class="n">חידה #30 · יום שלישי, 22.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">ניר רייכמן · יניב אלול · מאור קנדיל · אלון תורג'מן · עומרי אלטמן</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/29/">
     <div class="n">חידה #29 · יום שני, 21.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">תמאש שנדור · דובב גבאי · דניאל פרץ · ניר קלינגר · שלום תקווה</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/28/">
     <div class="n">חידה #28 · יום ראשון, 20.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">דוד אמסלם · מיכאל אוחנה · עידו שחר · דין דוד · דני בונדר</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/27/">
     <div class="n">חידה #27 · יום שבת, 19.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">ברק יצחקי · אור דדיה · אלון ברומר · מאור לוי · ניר לקס</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/26/">
     <div class="n">חידה #26 · יום שישי, 18.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">עמית בן שושן · איליי מדמון · עומר אצילי · ארנסט מבוקה · משה סיני</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/25/">
     <div class="n">חידה #25 · יום חמישי, 17.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">אלעד יעקובי · גדי חזות · ניסו קפילוטו · קני סייף · אילן בכר</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/24/">
     <div class="n">חידה #24 · יום רביעי, 16.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">אביאל זרגרי · אופיר דוידזאדה · אושר דוידה · נהוראי יפרח · אדי גוטליב</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/23/">
     <div class="n">חידה #23 · יום שלישי, 15.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">אופיר שמואלי · ג'ון אוגו · אלי דריקס · מיכאל זנדברג · אושר דוידה</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/22/">
     <div class="n">חידה #22 · יום שני, 14.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">יצחק כהן · דן ביטון · דור פרץ · אריק אג'יופור · בוריס קליימן</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/21/">
     <div class="n">חידה #21 · יום ראשון, 13.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">אישטוון פישונט · תומר יוספי · יוסי שבחון · מוחמד גדיר · דן איינבינדר</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/20/">
     <div class="n">חידה #20 · יום שבת, 12.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">שלמה שירזי · סתיו אלימלך · מוטי איוניר · עידן טל · אסי דומב</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/19/">
     <div class="n">חידה #19 · יום שישי, 11.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">אוהד סיידוף · דוד קלטינס · אלירן עטר · שון גולדברג · ג'וזף גנדה</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/18/">
     <div class="n">חידה #18 · יום חמישי, 10.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">עופר טלקר · אורן סגרון · ניק בלקמן · בירם כיאל · אלון חלפון</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/17/">
     <div class="n">חידה #17 · יום רביעי, 9.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">אבי כהן · ויליאם סוארס · פרדראג ראיקוביץ' · פייר קורנו · שמעון גרשון</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/16/">
     <div class="n">חידה #16 · יום שלישי, 8.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">שמעון גרשון · עודד גביש · בוני גינצבורג · אלי כהן · רוי קורין</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/15/">
     <div class="n">חידה #15 · יום שני, 7.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">איתן מזרחי · אמיר אביגדור · אלי דסה · ריימונדס ז'וטאוטאס · יעקב הלל</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/14/">
     <div class="n">חידה #14 · יום ראשון, 6.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">גיא גריף · אורן ביטון · טל בן חיים (1989) · עטאא ג'אבר · אריק ינקו</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/13/">
     <div class="n">חידה #13 · יום שבת, 5.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">מיכאל אוחנה · אמיר גנאח · ניר סביליה · משה גלאם · יוסי זאנה</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/12/">
     <div class="n">חידה #12 · יום שישי, 4.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">סרגיי טרטיאק · רמזי ספורי · דוד רביבו · שריף כיוף · דורון ליידנר</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/11/">
     <div class="n">חידה #11 · יום חמישי, 3.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">רונן חרזי · שגיב יחזקאל · דן ביטון · מוחמד כליבאת · זאב חיימוביץ'</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/10/">
     <div class="n">חידה #10 · יום רביעי, 2.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">שי חדד · אופיר מרציאנו · נדב נידם · ענאן ח'לאילי · מהראן לאלא</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/9/">
     <div class="n">חידה #9 · יום שלישי, 1.9.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">מקסים גרצ'קין · ראיין אדליי · אבי ריקן · בוני גינצבורג · אל ים קנצפולסקי</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/8/">
     <div class="n">חידה #8 · יום שני, 31.8.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">אלון סגיר · דודי טויטו · רוני גפני · טאלב טוואטחה · תומר אליהו</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/7/">
     <div class="n">חידה #7 · יום ראשון, 30.8.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">יעקב בריהון · שי אליאס · עידן נחמיאס · מרקו בלבול · שביט אלימלך</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/6/">
     <div class="n">חידה #6 · יום שבת, 29.8.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">איתמר ניצן · נועם גמון · דור מלול · יונתן לוי · פיני בלילי</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/5/">
     <div class="n">חידה #5 · יום שישי, 28.8.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">עידן ורד · אוהד לויטה · דוד קרקו · אבישי ז'אנו · רמי דואני</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/4/">
     <div class="n">חידה #4 · יום חמישי, 27.8.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">סטיבן כהן · יוני סטויאנוב · מאיר נמני · איתן אהרוני · עמרי אפק</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/3/">
     <div class="n">חידה #3 · יום רביעי, 26.8.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">מאור מליקסון · דודו גורש · גז'גוז' ונדזינסקי · אביחי ידין · ירוסלב באקו</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/2/">
     <div class="n">חידה #2 · יום שלישי, 25.8.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">דני פרדה · שאול סמדג'ה · דור תורג'מן · אדורם קייסי · יוסי אבוקסיס</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   <a class="card" href="../archive/1/">
     <div class="n">חידה #1 · יום שני, 24.8.2026</div>
     <div class="t">5 תשובות</div>
-    <div class="s">דני נוימן · אלי אוזן · עומרי בן הרוש · אברהם אבוקרט · איאד אבו עביד</div>
+    <div class="s">התשובות מוסתרות — עוד אפשר לשחק אותה בארכיון שבמשחק</div>
   </a>
   </div>
   <p>הארכיון גדל בכל יום. 48 חידות
