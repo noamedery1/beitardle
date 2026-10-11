@@ -1,0 +1,49 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "T4LAH8P2HN.sportdle.techbynoam.com"
+        ],
+        "components": [
+          {
+            "/": "/join"
+          },
+          {
+            "/": "/join/*"
+          },
+          {
+            "/": "/beitar"
+          },
+          {
+            "/": "/beitar/*"
+          },
+          {
+            "/": "/hapoel-bs"
+          },
+          {
+            "/": "/hapoel-bs/*"
+          },
+          {
+            "/": "/hapoel-ta"
+          },
+          {
+            "/": "/hapoel-ta/*"
+          },
+          {
+            "/": "/maccabi-haifa"
+          },
+          {
+            "/": "/maccabi-haifa/*"
+          },
+          {
+            "/": "/maccabi-ta"
+          },
+          {
+            "/": "/maccabi-ta/*"
+          }
+        ]
+      }
+    ]
+  }
+}
