@@ -1,5 +1,5 @@
 {
- "v": "s3-b7a6196fa9",
+ "v": "s3-bb146c3af4",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -13713,7 +13713,7 @@
    "counts": {
     "players": 394,
     "targets": 205,
-    "hidden": 91,
+    "hidden": 88,
     "unconfirmed": 24
    },
    "players": [
@@ -20542,7 +20542,8 @@
      "titles": 1,
      "target": false,
      "aliases": [
-      "Hélio Varela"
+      "Hélio Varela",
+      "חליו וארלה"
      ]
     },
     {
@@ -20590,7 +20591,8 @@
      "titles": 1,
      "target": false,
      "aliases": [
-      "Kristijan Belić"
+      "Kristijan Belić",
+      "קריסטיאן בליץ"
      ]
     },
     {
@@ -20605,22 +20607,9 @@
       ]
      ],
      "titles": 1,
-     "target": false
-    },
-    {
-     "he": "מוחמד קאמארה",
-     "pos": "DF",
-     "nat": "IL",
-     "born": 1997,
-     "spells": [
-      [
-       2026,
-       2026
-      ]
-     ],
-     "titles": 1,
      "target": false,
      "aliases": [
+      "מוחמד קאמארה",
       "מוחמד עלי קאמארה"
      ]
     },
@@ -20675,6 +20664,24 @@
      "target": false,
      "aliases": [
       "שליו סעדיה"
+     ]
+    },
+    {
+     "he": "ג'יימס טברנייר",
+     "pos": "DF",
+     "nat": "EN",
+     "born": 1991,
+     "spells": [
+      [
+       2027,
+       2027
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "James Tavernier",
+      "טברנייר"
      ]
     }
    ],
