@@ -1,5 +1,5 @@
 {
- "v": "s3-ab3aa2da3b",
+ "v": "s3-5e2b0b9328",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -56,108 +56,12 @@
     ]
    },
    "counts": {
-    "players": 481,
+    "players": 463,
     "targets": 214,
-    "hidden": 12,
-    "unconfirmed": 12
+    "hidden": 30,
+    "unconfirmed": 30
    },
    "players": [
-    {
-     "he": "סימון אלפסי",
-     "pos": "FW",
-     "nat": null,
-     "born": 1923,
-     "spells": [
-      [
-       1943,
-       1945
-      ],
-      [
-       1954,
-       1956
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
-     "he": "אהוד פדרמן",
-     "pos": "DF",
-     "nat": null,
-     "born": 1936,
-     "spells": [
-      [
-       1955,
-       1963
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
-     "he": "חי מזרחי",
-     "pos": "DF",
-     "nat": "IL",
-     "born": 1936,
-     "spells": [
-      [
-       1955,
-       1965
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
-     "he": "שאול מזרחי",
-     "pos": "DF",
-     "nat": null,
-     "born": 1936,
-     "spells": [
-      [
-       1955,
-       1970
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
-     "he": "דוד דוידוף",
-     "pos": "FW",
-     "nat": "IL",
-     "born": 1937,
-     "spells": [
-      [
-       1956,
-       1966
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "דודו דוידוף",
-      "דויד דוידוף"
-     ]
-    },
-    {
-     "he": "יצחק מונסה",
-     "pos": "FW",
-     "nat": null,
-     "born": 1941,
-     "spells": [
-      [
-       1959,
-       1970
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "איציק מונסה",
-      "ציקי מונסה"
-     ]
-    },
     {
      "he": "ניסים אלמליח",
      "pos": "FW",
@@ -177,103 +81,6 @@
      ]
     },
     {
-     "he": "אברהם לוי",
-     "pos": "FW",
-     "nat": null,
-     "born": 1933,
-     "spells": [
-      [
-       1961,
-       1962
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "אבי לוי"
-     ]
-    },
-    {
-     "he": "אודי רובוביץ'",
-     "pos": "DF",
-     "nat": "IL",
-     "born": 1945,
-     "spells": [
-      [
-       1961,
-       1973
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
-     "he": "בצלאל אביטון",
-     "pos": "DF",
-     "nat": null,
-     "born": 1941,
-     "spells": [
-      [
-       1961,
-       1966
-      ],
-      [
-       1970,
-       1972
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
-     "he": "שלומי אברהמי",
-     "pos": "DF",
-     "nat": "IL",
-     "born": 1944,
-     "spells": [
-      [
-       1961,
-       1973
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "שלמה אברהמי"
-     ]
-    },
-    {
-     "he": "חיים אזולאי",
-     "pos": "FW",
-     "nat": "MA",
-     "born": 1945,
-     "spells": [
-      [
-       1963,
-       1973
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "חיימק אזולאי"
-     ]
-    },
-    {
-     "he": "סמואל רזניק",
-     "pos": "FW",
-     "nat": "AR",
-     "born": 1928,
-     "spells": [
-      [
-       1963,
-       1964
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
      "he": "יוסי חכם",
      "pos": "DF",
      "nat": "IL",
@@ -289,20 +96,6 @@
      "aliases": [
       "יוסף חכם"
      ]
-    },
-    {
-     "he": "מישל פורטל",
-     "pos": "GK",
-     "nat": "FR",
-     "born": 1936,
-     "spells": [
-      [
-       1968,
-       1971
-      ]
-     ],
-     "titles": 0,
-     "target": false
     },
     {
      "he": "ארצי בן יעקב",
@@ -439,23 +232,6 @@
      "aliases": [
       "דודו ישי",
       "דויד ישי"
-     ]
-    },
-    {
-     "he": "אברהם סאבו",
-     "pos": "FW",
-     "nat": "IT",
-     "born": 1946,
-     "spells": [
-      [
-       1974,
-       1976
-      ]
-     ],
-     "titles": 1,
-     "target": false,
-     "aliases": [
-      "אבי סאבו"
      ]
     },
     {
@@ -612,20 +388,6 @@
      ]
     },
     {
-     "he": "רחמים שלום",
-     "pos": "MF",
-     "nat": "IL",
-     "born": 1957,
-     "spells": [
-      [
-       1978,
-       1978
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
      "he": "שלמה כירת",
      "pos": "DF",
      "nat": "IL",
@@ -645,7 +407,7 @@
     },
     {
      "he": "יוסי זאנה",
-     "pos": "FW",
+     "pos": "DF",
      "nat": "IL",
      "born": 1957,
      "spells": [
@@ -766,20 +528,6 @@
      "aliases": [
       "אליהו אוחנה"
      ]
-    },
-    {
-     "he": "משה בן ארוש",
-     "pos": "DF",
-     "nat": "IL",
-     "born": 1962,
-     "spells": [
-      [
-       1981,
-       1990
-      ]
-     ],
-     "titles": 4,
-     "target": false
     },
     {
      "he": "אודי אשש",
@@ -996,7 +744,7 @@
     },
     {
      "he": "משה סלקטר",
-     "pos": "MF",
+     "pos": "FW",
      "nat": "IL",
      "born": 1961,
      "spells": [
@@ -1055,23 +803,6 @@
      "target": true,
      "aliases": [
       "איציק מזרחי"
-     ]
-    },
-    {
-     "he": "אלי יאני",
-     "pos": "FW",
-     "nat": "IL",
-     "born": 1959,
-     "spells": [
-      [
-       1989,
-       1989
-      ]
-     ],
-     "titles": 1,
-     "target": false,
-     "aliases": [
-      "אליהו יאני"
      ]
     },
     {
@@ -1210,7 +941,7 @@
     },
     {
      "he": "עופר דגמי",
-     "pos": "MF",
+     "pos": "FW",
      "nat": "IL",
      "born": 1967,
      "spells": [
@@ -1398,7 +1129,7 @@
      "he": "יובל מימון",
      "pos": "DF",
      "nat": "IL",
-     "born": null,
+     "born": 1969,
      "spells": [
       [
        1994,
@@ -1458,7 +1189,7 @@
      "he": "אייל כהן",
      "pos": "DF",
      "nat": "IL",
-     "born": null,
+     "born": 1973,
      "spells": [
       [
        1995,
@@ -1792,7 +1523,7 @@
      "he": "אושרי אוחנה",
      "pos": "MF",
      "nat": "IL",
-     "born": null,
+     "born": 1978,
      "spells": [
       [
        1998,
@@ -1999,7 +1730,7 @@
     },
     {
      "he": "אלון כהן",
-     "pos": "DF",
+     "pos": "MF",
      "nat": "IL",
      "born": 1979,
      "spells": [
@@ -2151,7 +1882,7 @@
     },
     {
      "he": "אלון סגיר",
-     "pos": "FW",
+     "pos": "DF",
      "nat": "IL",
      "born": 1981,
      "spells": [
@@ -2436,20 +2167,6 @@
      ],
      "titles": 4,
      "target": true
-    },
-    {
-     "he": "אינדיו פריירה",
-     "pos": "DF",
-     "nat": "BR",
-     "born": 1974,
-     "spells": [
-      [
-       2003,
-       2005
-      ]
-     ],
-     "titles": 0,
-     "target": false
     },
     {
      "he": "אלי ששון",
@@ -3002,7 +2719,7 @@
     },
     {
      "he": "שי חדד",
-     "pos": "MF",
+     "pos": "DF",
      "nat": "IL",
      "born": 1987,
      "spells": [
@@ -3019,7 +2736,7 @@
     },
     {
      "he": "שלומי משה",
-     "pos": "FW",
+     "pos": "MF",
      "nat": "IL",
      "born": 1983,
      "spells": [
@@ -4436,7 +4153,7 @@
     },
     {
      "he": "משה לוגסי",
-     "pos": "DF",
+     "pos": "MF",
      "nat": "IL",
      "born": 1991,
      "spells": [
@@ -5609,7 +5326,7 @@
     },
     {
      "he": "שון גולדברג",
-     "pos": "MF",
+     "pos": "DF",
      "nat": "IL",
      "born": 1995,
      "spells": [
@@ -7765,10 +7482,10 @@
     ]
    },
    "counts": {
-    "players": 305,
+    "players": 332,
     "targets": 146,
-    "hidden": 148,
-    "unconfirmed": 1
+    "hidden": 132,
+    "unconfirmed": 13
    },
    "players": [
     {
@@ -7786,55 +7503,6 @@
      "target": false,
      "aliases": [
       "אלי עופר"
-     ]
-    },
-    {
-     "he": "יחיאל מור",
-     "pos": "DF",
-     "nat": null,
-     "born": 1932,
-     "spells": [
-      [
-       1960,
-       1964
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
-     "he": "שמואל אדמון",
-     "pos": "FW",
-     "nat": null,
-     "born": 1944,
-     "spells": [
-      [
-       1961,
-       1972
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "שמוליק אדמון",
-      "סמי אדמון"
-     ]
-    },
-    {
-     "he": "חיים כהן",
-     "pos": "DF",
-     "nat": "TN",
-     "born": 1944,
-     "spells": [
-      [
-       1963,
-       1974
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "חיימק כהן"
      ]
     },
     {
@@ -7873,24 +7541,6 @@
      "target": false
     },
     {
-     "he": "יצחק גוזלן",
-     "pos": "MF",
-     "nat": "MA",
-     "born": 1944,
-     "spells": [
-      [
-       1967,
-       1970
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "איציק גוזלן",
-      "ציקי גוזלן"
-     ]
-    },
-    {
      "he": "רפי אליהו",
      "pos": "MF",
      "nat": "IL",
@@ -7908,20 +7558,6 @@
      ]
     },
     {
-     "he": "אפרים צבי",
-     "pos": "DF",
-     "nat": "IL",
-     "born": 1951,
-     "spells": [
-      [
-       1969,
-       1980
-      ]
-     ],
-     "titles": 2,
-     "target": false
-    },
-    {
      "he": "אלון בן דור",
      "pos": "DF",
      "nat": "IL",
@@ -7935,55 +7571,8 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Alon Ben Dor",
       "אילון בן דור"
-     ]
-    },
-    {
-     "he": "דניאל דניאלי",
-     "pos": "FW",
-     "nat": "IL",
-     "born": 1945,
-     "spells": [
-      [
-       1970,
-       1972
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "דני דניאלי"
-     ]
-    },
-    {
-     "he": "יאיר נוסובסקי",
-     "pos": "GK",
-     "nat": null,
-     "born": 1937,
-     "spells": [
-      [
-       1972,
-       1972
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
-     "he": "רוני מוסקוביץ'",
-     "pos": "GK",
-     "nat": null,
-     "born": 1945,
-     "spells": [
-      [
-       1973,
-       1982
-      ]
-     ],
-     "titles": 2,
-     "target": false,
-     "aliases": [
-      "אהרון מוסקוביץ"
      ]
     },
     {
@@ -8006,7 +7595,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Shalom Avitan"
+     ]
     },
     {
      "he": "אורי בנימין",
@@ -8057,6 +7649,7 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Jacob Cohen",
       "ג'קי כהן",
       "ז'קי כהן",
       "יעקוב כהן"
@@ -8122,6 +7715,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Shlomo Iluz",
       "שלומי אילוז",
       "מומי אילוז"
      ]
@@ -8142,7 +7736,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Efraim Davidi"
+     ]
     },
     {
      "he": "אלי אוזן",
@@ -8162,6 +7759,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Eli Uzan",
       "אליהו אוזן"
      ]
     },
@@ -8320,7 +7918,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Asi Rahamim"
+     ]
     },
     {
      "he": "גדי חזות",
@@ -8334,7 +7935,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Gadi Hazut"
+     ]
     },
     {
      "he": "אמיר אביגדור",
@@ -8356,7 +7960,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Amir Avigdor"
+     ]
     },
     {
      "he": "אריה אלטר",
@@ -8394,6 +8001,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Nisso Avitan",
       "ניסים אביטן",
       "נסים אביטן"
      ]
@@ -8504,7 +8112,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Viktor Moroz"
+     ]
     },
     {
      "he": "מיקה אלטונן",
@@ -8518,7 +8129,32 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Mika Aaltonen"
+     ]
+    },
+    {
+     "he": "אלון ריף",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1975,
+     "spells": [
+      [
+       1995,
+       1998
+      ],
+      [
+       2004,
+       2004
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "Alon Rif",
+      "אילון ריף"
+     ]
     },
     {
      "he": "מריאן קלפטיאנו",
@@ -8532,21 +8168,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
-    },
-    {
-     "he": "נאור גלילי",
-     "pos": "FW",
-     "nat": "IL",
-     "born": 1967,
-     "spells": [
-      [
-       1995,
-       1995
-      ]
-     ],
-     "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Marian Calafeteanu"
+     ]
     },
     {
      "he": "אבי פרץ",
@@ -8562,6 +8187,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Avi Perets",
       "אברהם פרץ",
       "אביחי פרץ"
      ]
@@ -8586,6 +8212,27 @@
      ]
     },
     {
+     "he": "שרון אביטן",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1973,
+     "spells": [
+      [
+       1996,
+       1998
+      ],
+      [
+       2000,
+       2000
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "Sharon Avitan"
+     ]
+    },
+    {
      "he": "ג'ובאני רוסו",
      "pos": "MF",
      "nat": "HR",
@@ -8597,7 +8244,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Đovani Roso"
+     ]
     },
     {
      "he": "לירון בסיס",
@@ -8625,7 +8275,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Sejad Halilović"
+     ]
     },
     {
      "he": "שי הולצמן",
@@ -8641,6 +8294,7 @@
      "titles": 1,
      "target": false,
      "aliases": [
+      "Shay Holtzman",
       "ישי הולצמן"
      ]
     },
@@ -8739,7 +8393,7 @@
     },
     {
      "he": "יניב אלול",
-     "pos": "MF",
+     "pos": "DF",
      "nat": "IL",
      "born": 1978,
      "spells": [
@@ -8751,9 +8405,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
-      "יניב אלול",
-      "Blessing Kaku",
-      "בלסינג קאקו"
+      "יניב אלול"
      ]
     },
     {
@@ -8782,7 +8434,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Noam Shoham"
+     ]
     },
     {
      "he": "אלעד בונפלד",
@@ -8817,7 +8472,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Davy Cooreman"
+     ]
     },
     {
      "he": "רמי אבו לבן",
@@ -8923,7 +8581,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Kfir Edri"
+     ]
     },
     {
      "he": "שוקי נגר",
@@ -8939,7 +8600,80 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Shuki Nagar",
       "יהושע נגר"
+     ]
+    },
+    {
+     "he": "אייל עבד",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1982,
+     "spells": [
+      [
+       2003,
+       2004
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אייל עבד"
+     ]
+    },
+    {
+     "he": "אלעזר לביא",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1980,
+     "spells": [
+      [
+       2003,
+       2003
+      ],
+      [
+       2005,
+       2005
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אלעזר לביא"
+     ]
+    },
+    {
+     "he": "אמיר אבוטבול",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1979,
+     "spells": [
+      [
+       2003,
+       2003
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אמיר אבוטבול"
+     ]
+    },
+    {
+     "he": "בלסינג קאקו",
+     "pos": "MF",
+     "nat": "NG",
+     "born": 1978,
+     "spells": [
+      [
+       2003,
+       2003
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Blessing Kaku"
      ]
     },
     {
@@ -8977,6 +8711,27 @@
      ]
     },
     {
+     "he": "ינאי דרעי",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1975,
+     "spells": [
+      [
+       2003,
+       2004
+      ],
+      [
+       2006,
+       2006
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "ינאי דרעי"
+     ]
+    },
+    {
      "he": "ינון ברדה",
      "pos": "FW",
      "nat": "IL",
@@ -8994,6 +8749,40 @@
      ]
     },
     {
+     "he": "מדונוביץ דרזן",
+     "pos": "DF",
+     "nat": null,
+     "born": 1971,
+     "spells": [
+      [
+       2003,
+       2003
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "מדונוביץ' דרז'ן"
+     ]
+    },
+    {
+     "he": "עוז יפרח",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1982,
+     "spells": [
+      [
+       2003,
+       2007
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "עוז יפרח"
+     ]
+    },
+    {
      "he": "קאקו בלסינג",
      "pos": "MF",
      "nat": "IL",
@@ -9008,6 +8797,61 @@
      "target": false,
      "aliases": [
       "קאקו בלסינג"
+     ]
+    },
+    {
+     "he": "רמי אבולבן",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1977,
+     "spells": [
+      [
+       2003,
+       2003
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "רמי אבולבן"
+     ]
+    },
+    {
+     "he": "רמי אליהו",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1977,
+     "spells": [
+      [
+       2003,
+       2006
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "רמי אליהו"
+     ]
+    },
+    {
+     "he": "שרון לוי",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1980,
+     "spells": [
+      [
+       2003,
+       2003
+      ],
+      [
+       2005,
+       2005
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "שרון לוי"
      ]
     },
     {
@@ -9029,7 +8873,25 @@
      "target": true,
      "aliases": [
       "תומר חליוה",
-      "תומר חליבה"
+      "תומר חליבה",
+      "Tomer Haliva"
+     ]
+    },
+    {
+     "he": "תומר טדסה",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1978,
+     "spells": [
+      [
+       2003,
+       2003
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "תומר טדסה"
      ]
     },
     {
@@ -9084,6 +8946,27 @@
      "target": false
     },
     {
+     "he": "זוהר חוגג",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1984,
+     "spells": [
+      [
+       2004,
+       2004
+      ],
+      [
+       2006,
+       2009
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "זוהר חוגג"
+     ]
+    },
+    {
      "he": "מירוסלב וייס",
      "pos": "DF",
      "nat": "MK",
@@ -9095,7 +8978,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Miroslav Vajs"
+     ]
     },
     {
      "he": "איגור טומאסיץ'",
@@ -9113,6 +8999,24 @@
      "aliases": [
       "איגור טומסיץ",
       "איגור טומסיץ'"
+     ]
+    },
+    {
+     "he": "אלון אברמוביץ",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1980,
+     "spells": [
+      [
+       2005,
+       2006
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אלון אברמוביץ",
+      "אילון אברמוביץ"
      ]
     },
     {
@@ -9271,7 +9175,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "George Kipiani"
+     ]
     },
     {
      "he": "חיים סילבס",
@@ -9490,6 +9397,23 @@
      ]
     },
     {
+     "he": "רועי סבג",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1981,
+     "spells": [
+      [
+       2008,
+       2009
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "רועי סבג"
+     ]
+    },
+    {
      "he": "שי בירוק",
      "pos": "MF",
      "nat": "IL",
@@ -9572,7 +9496,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "James Bissue"
+     ]
     },
     {
      "he": "זיו קבדה",
@@ -9590,6 +9517,28 @@
      "aliases": [
       "זיו קבדה",
       "Ziv Caveda"
+     ]
+    },
+    {
+     "he": "יוסי אלקיים",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1989,
+     "spells": [
+      [
+       2009,
+       2009
+      ],
+      [
+       2011,
+       2011
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "יוסי אלקיים",
+      "יוסף אלקיים"
      ]
     },
     {
@@ -9679,7 +9628,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Barak Badash"
+     ]
     },
     {
      "he": "גיל בלומשטיין",
@@ -9750,7 +9702,8 @@
      "target": true,
      "aliases": [
       "וויליאם סוארס",
-      "ויליאם סוארס"
+      "ויליאם סוארס",
+      "William Soares"
      ]
     },
     {
@@ -9768,8 +9721,8 @@
      "target": false,
      "aliases": [
       "קאלה דרשלר",
-      "Tvrtko Kale",
-      "טברטקו קאלה"
+      "טברטקו קאלה",
+      "Tvrtko Kale"
      ]
     },
     {
@@ -9826,6 +9779,23 @@
      ]
     },
     {
+     "he": "משה אסולין",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1988,
+     "spells": [
+      [
+       2010,
+       2011
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Moshe Asulin"
+     ]
+    },
+    {
      "he": "סיראז' נסאר",
      "pos": "MF",
      "nat": "IL",
@@ -9837,7 +9807,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Siraj Nassar"
+     ]
     },
     {
      "he": "ראיין אדליי",
@@ -9857,6 +9830,7 @@
       "IL"
      ],
      "aliases": [
+      "Ryan Adeleye",
       "ראין אדליי",
       "ראין אלכסנדר אדליי"
      ]
@@ -9940,6 +9914,7 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Ofir Davidzada",
       "אופיר דודזאדה"
      ]
     },
@@ -9955,7 +9930,28 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ibrahim Basit"
+     ]
+    },
+    {
+     "he": "יוסף טורזמן",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1986,
+     "spells": [
+      [
+       2011,
+       2012
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "יוסף טורזמן",
+      "יוסי טורזמן"
+     ]
     },
     {
      "he": "יחיאל צגאי",
@@ -9969,7 +9965,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Yehiel Tzagai"
+     ]
     },
     {
      "he": "ליאור ז'אן",
@@ -10041,6 +10040,23 @@
      "target": false
     },
     {
+     "he": "שמעון לוגסי",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1991,
+     "spells": [
+      [
+       2011,
+       2012
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "שמעון לוגסי"
+     ]
+    },
+    {
      "he": "אוהד לויטה",
      "pos": "GK",
      "nat": "IL",
@@ -10060,7 +10076,6 @@
      "aliases": [
       "אוהד לויטה",
       "Ohad Levita",
-      "Yaniv Ifergan",
       "אהד לויטה"
      ]
     },
@@ -10194,6 +10209,23 @@
      ]
     },
     {
+     "he": "יניב איפרגן",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1986,
+     "spells": [
+      [
+       2012,
+       2012
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Yaniv Ifergan"
+     ]
+    },
+    {
      "he": "יצחק וקנין",
      "pos": "DF",
      "nat": "IL",
@@ -10210,6 +10242,23 @@
       "יצחק וקנין",
       "איציק וקנין",
       "ציקי וקנין"
+     ]
+    },
+    {
+     "he": "ירדן אבוחצירה",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1992,
+     "spells": [
+      [
+       2012,
+       2012
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "ירדן משה אבוחצירה"
      ]
     },
     {
@@ -10242,7 +10291,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Laryea Kingston"
+     ]
     },
     {
      "he": "מוטי מלכה",
@@ -10436,7 +10488,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "William Njobvu"
+     ]
     },
     {
      "he": "ניקולאס פלצ'וק",
@@ -10450,7 +10505,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Nicolás Falczuk"
+     ]
     },
     {
      "he": "פטריק אוסיאקו",
@@ -10464,7 +10522,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Patrick Osiako"
+     ]
     },
     {
      "he": "פיראס עווד",
@@ -10481,6 +10542,23 @@
      "target": false,
      "aliases": [
       "פיראס עווד"
+     ]
+    },
+    {
+     "he": "פראס עוואד",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1991,
+     "spells": [
+      [
+       2013,
+       2015
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Feras Awad"
      ]
     },
     {
@@ -10555,6 +10633,24 @@
      ]
     },
     {
+     "he": "אור חביביאן",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1994,
+     "spells": [
+      [
+       2014,
+       2016
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "אור חביביאן",
+      "ליאור חביביאן"
+     ]
+    },
+    {
      "he": "בן אלגרבלי",
      "pos": "MF",
      "nat": "IL",
@@ -10573,7 +10669,7 @@
     },
     {
      "he": "בן ביטון",
-     "pos": "MF",
+     "pos": "DF",
      "nat": "IL",
      "born": 1991,
      "spells": [
@@ -10586,7 +10682,6 @@
      "target": true,
      "aliases": [
       "בן ביטון",
-      "Feras Awad",
       "Ben Bitton"
      ]
     },
@@ -10649,6 +10744,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Glynor Plet",
       "גלינור פליט",
       "גלינור אורביל פליט"
      ]
@@ -10667,6 +10763,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "David Hubert",
       "דודו הובר",
       "דויד הובר"
      ]
@@ -10685,6 +10782,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Tomislav Pajović",
       "טומיסלב פיוביץ",
       "טומיסלב פיוביץ'"
      ]
@@ -10704,9 +10802,7 @@
      "target": true,
      "aliases": [
       "מאור בוזגלו",
-      "Maor Buzaglo",
-      "Mihály Korhut",
-      "מיהאי קורהוט"
+      "Maor Buzaglo"
      ]
     },
     {
@@ -10776,7 +10872,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "John Ogu"
+     ]
     },
     {
      "he": "דודי טויטו",
@@ -10916,6 +11015,7 @@
       "אנתוני ננדוזו נוואקמה",
       "אנתוני נוואקמה",
       "אנתוני ואקמה",
+      "Anthony Nwakaeme",
       "טוני ואקמה"
      ]
     },
@@ -11057,7 +11157,10 @@
       ]
      ],
      "titles": 7,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Noam Gamon"
+     ]
     },
     {
      "he": "שיר צדק",
@@ -11125,7 +11228,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Vladimir Broun"
+     ]
     },
     {
      "he": "יואל גנון",
@@ -11210,6 +11316,23 @@
      ]
     },
     {
+     "he": "מיהאי קורהוט",
+     "pos": "DF",
+     "nat": "HU",
+     "born": 1988,
+     "spells": [
+      [
+       2017,
+       2019
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "Mihály Korhut"
+     ]
+    },
+    {
      "he": "מיחאלי קורהוט",
      "pos": "DF",
      "nat": "IL",
@@ -11244,6 +11367,23 @@
       "Michael Ohana",
       "מיקי אוחנה",
       "מייק אוחנה"
+     ]
+    },
+    {
+     "he": "נועם דיעי",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1999,
+     "spells": [
+      [
+       2017,
+       2019
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "Noam Dey"
      ]
     },
     {
@@ -11344,7 +11484,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Isaac Cuenca"
+     ]
     },
     {
      "he": "בנימין נתן",
@@ -11429,7 +11572,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Vadim Manzon"
+     ]
     },
     {
      "he": "חאתם אלחמיד",
@@ -11450,9 +11596,7 @@
      "target": true,
      "aliases": [
       "חאתם אלחמיד",
-      "Hatem Elhamed",
-      "Davide Petrucci",
-      "דוידה פטרוצ'י"
+      "Hatem Elhamed"
      ]
     },
     {
@@ -11544,7 +11688,26 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Erik Sabo",
       "אריק סבו"
+     ]
+    },
+    {
+     "he": "חיים אוחנה",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1999,
+     "spells": [
+      [
+       2019,
+       2019
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "חיים יגיל אוחנה",
+      "חיימק אוחנה"
      ]
     },
     {
@@ -11598,7 +11761,8 @@
      "target": true,
      "aliases": [
       "מרואן קבהא",
-      "מרואן כבהא"
+      "מרואן כבהא",
+      "Marwan Kabha"
      ]
     },
     {
@@ -11615,6 +11779,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Nigel Hasselbaink",
       "נייגל האסלבנק",
       "נייג'ל האסלבנק"
      ]
@@ -11668,7 +11833,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Ernestas Šetkus"
+     ]
     },
     {
      "he": "ג'ימי מרין",
@@ -11738,7 +11906,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Josué"
+     ]
     },
     {
      "he": "ירדן קרישטול",
@@ -11773,6 +11944,23 @@
      "aliases": [
       "נאור סבג",
       "Naor Sabag"
+     ]
+    },
+    {
+     "he": "עבדאללה אבו עאבד",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 2001,
+     "spells": [
+      [
+       2020,
+       2022
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "Abdallah Abu Abaid"
      ]
     },
     {
@@ -11826,7 +12014,44 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Kevin Tapoko"
+     ]
+    },
+    {
+     "he": "רואי אביטן",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 2000,
+     "spells": [
+      [
+       2020,
+       2020
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "רואי אביטן"
+     ]
+    },
+    {
+     "he": "רון ויזמן",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 2000,
+     "spells": [
+      [
+       2020,
+       2020
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "רון יוחאי ויזמן"
+     ]
     },
     {
      "he": "רמזי ספורי",
@@ -11926,7 +12151,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Gaëtan Varenne"
+     ]
     },
     {
      "he": "גל לוי",
@@ -11943,6 +12171,23 @@
      "target": false,
      "aliases": [
       "גל לוי"
+     ]
+    },
+    {
+     "he": "חאלד זייד",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 2004,
+     "spells": [
+      [
+       2021,
+       2023
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "Khaled Zaid"
      ]
     },
     {
@@ -11978,6 +12223,9 @@
      "nats": [
       "AR",
       "IL"
+     ],
+     "aliases": [
+      "Mariano Bareiro"
      ]
     },
     {
@@ -12024,7 +12272,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Farley Rosa"
+     ]
     },
     {
      "he": "קייס גאנם",
@@ -12108,7 +12359,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Iyad Abu Abaid"
+     ]
     },
     {
      "he": "איתי שכטר",
@@ -12159,7 +12413,27 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Gustavo Marmentini"
+     ]
+    },
+    {
+     "he": "דוידה פטרוצ'י",
+     "pos": "MF",
+     "nat": "IT",
+     "born": 1991,
+     "spells": [
+      [
+       2022,
+       2023
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "Davide Petrucci"
+     ]
     },
     {
      "he": "דור מיכה",
@@ -12210,7 +12484,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Hélder Lopes"
+     ]
     },
     {
      "he": "יוג'ין אנסה",
@@ -12272,6 +12549,23 @@
      ]
     },
     {
+     "he": "סאלי גינון",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 2002,
+     "spells": [
+      [
+       2022,
+       2022
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "סאלי גינון"
+     ]
+    },
+    {
      "he": "עומרי גלזר",
      "pos": "GK",
      "nat": "IL",
@@ -12307,6 +12601,23 @@
      ]
     },
     {
+     "he": "רום אליגון",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 2002,
+     "spells": [
+      [
+       2022,
+       2022
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "רום אליגון"
+     ]
+    },
+    {
      "he": "שגיב יחזקאל",
      "pos": "FW",
      "nat": "IL",
@@ -12336,7 +12647,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Adrian Păun"
+     ]
     },
     {
      "he": "אור בלוריאן",
@@ -12386,7 +12700,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "André Martins"
+     ]
     },
     {
      "he": "אסטריט סלמני",
@@ -12438,7 +12755,8 @@
      ],
      "aliases": [
       "יואן סטויאנוב",
-      "יוני סטויאנוב"
+      "יוני סטויאנוב",
+      "Yoan Stoyanov"
      ]
     },
     {
@@ -12793,7 +13111,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Imran Oulad Omar"
+     ]
     },
     {
      "he": "ראם גולן",
@@ -12924,6 +13245,23 @@
      ]
     },
     {
+     "he": "סמיר פרהוד",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 2000,
+     "spells": [
+      [
+       2025,
+       2026
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "סמיר פרהוד"
+     ]
+    },
+    {
      "he": "פול גריטה",
      "pos": "FW",
      "nat": "CM",
@@ -12954,7 +13292,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Kings Kangwa"
+     ]
     },
     {
      "he": "קרלוש פונק",
@@ -12988,6 +13329,7 @@
      "titles": 1,
      "target": false,
      "aliases": [
+      "Igor Zlatanović",
       "איגור זלאטנוביץ"
      ]
     },
@@ -13055,6 +13397,23 @@
      "target": false,
      "aliases": [
       "ג'בון רומריו איסט"
+     ]
+    },
+    {
+     "he": "יונתן שני",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 2006,
+     "spells": [
+      [
+       2026,
+       2026
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "יונתן שני"
      ]
     },
     {
@@ -13352,10 +13711,10 @@
     ]
    },
    "counts": {
-    "players": 395,
+    "players": 394,
     "targets": 205,
-    "hidden": 78,
-    "unconfirmed": 1
+    "hidden": 91,
+    "unconfirmed": 24
    },
    "players": [
     {
@@ -13367,20 +13726,6 @@
       [
        1935,
        1945
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
-     "he": "ישראל אלסנר",
-     "pos": "GK",
-     "nat": "PL",
-     "born": 1909,
-     "spells": [
-      [
-       1936,
-       1943
       ]
      ],
      "titles": 0,
@@ -13450,37 +13795,6 @@
      ]
     },
     {
-     "he": "אלי פוקס",
-     "pos": "MF",
-     "nat": "IL",
-     "born": 1924,
-     "spells": [
-      [
-       1942,
-       1954
-      ]
-     ],
-     "titles": 4,
-     "target": false,
-     "aliases": [
-      "אליהו פוקס"
-     ]
-    },
-    {
-     "he": "משה ליטבק",
-     "pos": "DF",
-     "nat": null,
-     "born": 1926,
-     "spells": [
-      [
-       1945,
-       1945
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
      "he": "צבי סטודינסקי",
      "pos": "MF",
      "nat": "DE",
@@ -13540,45 +13854,6 @@
      ]
     },
     {
-     "he": "יוסף גולדשטיין",
-     "pos": "MF",
-     "nat": "IL",
-     "born": 1932,
-     "spells": [
-      [
-       1948,
-       1954
-      ],
-      [
-       1958,
-       1962
-      ]
-     ],
-     "titles": 7,
-     "target": false,
-     "aliases": [
-      "יוסי גולדשטיין"
-     ]
-    },
-    {
-     "he": "שמואל ישראלי",
-     "pos": "FW",
-     "nat": "GR",
-     "born": 1928,
-     "spells": [
-      [
-       1948,
-       1959
-      ]
-     ],
-     "titles": 9,
-     "target": false,
-     "aliases": [
-      "שמוליק ישראלי",
-      "סמי ישראלי"
-     ]
-    },
-    {
      "he": "יצחק שניאור",
      "pos": "DF",
      "nat": "PL",
@@ -13595,38 +13870,6 @@
       "איציק שניאור",
       "ציקי שניאור"
      ]
-    },
-    {
-     "he": "יצחק נחמיאס",
-     "pos": "FW",
-     "nat": null,
-     "born": 1935,
-     "spells": [
-      [
-       1952,
-       1964
-      ]
-     ],
-     "titles": 9,
-     "target": false,
-     "aliases": [
-      "איציק נחמיאס",
-      "ציקי נחמיאס"
-     ]
-    },
-    {
-     "he": "נח רזניק",
-     "pos": "DF",
-     "nat": null,
-     "born": 1933,
-     "spells": [
-      [
-       1952,
-       1963
-      ]
-     ],
-     "titles": 8,
-     "target": false
     },
     {
      "he": "שאול מתניה",
@@ -13662,20 +13905,6 @@
      "aliases": [
       "רפאל לוי"
      ]
-    },
-    {
-     "he": "אמנון אהרונסקינד",
-     "pos": "FW",
-     "nat": null,
-     "born": 1940,
-     "spells": [
-      [
-       1957,
-       1964
-      ]
-     ],
-     "titles": 4,
-     "target": false
     },
     {
      "he": "חיים לוין",
@@ -13742,37 +13971,9 @@
       ]
      ],
      "titles": 7,
-     "target": true
-    },
-    {
-     "he": "שלום שיקווה",
-     "pos": "FW",
-     "nat": null,
-     "born": 1943,
-     "spells": [
-      [
-       1963,
-       1970
-      ]
-     ],
-     "titles": 6,
-     "target": false
-    },
-    {
-     "he": "אורי קדמי",
-     "pos": "MF",
-     "nat": null,
-     "born": 1947,
-     "spells": [
-      [
-       1964,
-       1969
-      ]
-     ],
-     "titles": 4,
-     "target": false,
+     "target": true,
      "aliases": [
-      "אוריאל קדמי"
+      "Rachamim Talbi"
      ]
     },
     {
@@ -13789,6 +13990,7 @@
      "titles": 7,
      "target": true,
      "aliases": [
+      "David Karako",
       "דודו קרקו",
       "דויד קרקו"
      ]
@@ -13805,7 +14007,10 @@
       ]
      ],
      "titles": 9,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Menachem Bello"
+     ]
     },
     {
      "he": "רפי ברנס",
@@ -13836,7 +14041,10 @@
       ]
      ],
      "titles": 5,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Zvi Rosen"
+     ]
     },
     {
      "he": "דרור בר-נור",
@@ -13853,20 +14061,6 @@
      "target": false
     },
     {
-     "he": "שאול עובאדיה",
-     "pos": "MF",
-     "nat": null,
-     "born": 1950,
-     "spells": [
-      [
-       1968,
-       1974
-      ]
-     ],
-     "titles": 4,
-     "target": false
-    },
-    {
      "he": "מאיר נמני",
      "pos": "DF",
      "nat": "IL",
@@ -13878,7 +14072,10 @@
       ]
      ],
      "titles": 6,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Meir Nimni"
+     ]
     },
     {
      "he": "אברהם שטמברג",
@@ -13913,7 +14110,10 @@
       ]
      ],
      "titles": 4,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Giora Spiegel"
+     ]
     },
     {
      "he": "צבי היימן",
@@ -13948,24 +14148,6 @@
      ]
     },
     {
-     "he": "יצחק גוזלן",
-     "pos": "MF",
-     "nat": "MA",
-     "born": 1944,
-     "spells": [
-      [
-       1971,
-       1973
-      ]
-     ],
-     "titles": 1,
-     "target": false,
-     "aliases": [
-      "איציק גוזלן",
-      "ציקי גוזלן"
-     ]
-    },
-    {
      "he": "ירון עוז",
      "pos": "MF",
      "nat": "IL",
@@ -13978,27 +14160,6 @@
      ],
      "titles": 4,
      "target": false
-    },
-    {
-     "he": "אורי סלימאן",
-     "pos": "DF",
-     "nat": "IL",
-     "born": 1952,
-     "spells": [
-      [
-       1972,
-       1982
-      ],
-      [
-       1985,
-       1985
-      ]
-     ],
-     "titles": 4,
-     "target": false,
-     "aliases": [
-      "אוריאל סלימאן"
-     ]
     },
     {
      "he": "לופא קדוש",
@@ -14026,7 +14187,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Moshe Schweitzer"
+     ]
     },
     {
      "he": "בני טבק",
@@ -14042,6 +14206,7 @@
      "titles": 5,
      "target": true,
      "aliases": [
+      "Beni Tabak",
       "בנימין טבק"
      ]
     },
@@ -14061,7 +14226,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Vicky Peretz"
+     ]
     },
     {
      "he": "אבי כהן (1956)",
@@ -14085,6 +14253,7 @@
      "titles": 4,
      "target": true,
      "aliases": [
+      "Avi Cohen",
       "Avi Cohen II",
       "אבי כהן",
       "אברהם כהן (1956)",
@@ -14092,32 +14261,27 @@
      ]
     },
     {
-     "he": "ליאון קונסטנטינובסקי",
-     "pos": "FW",
-     "nat": null,
-     "born": 1946,
+     "he": "אבי ירושלמי",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1958,
      "spells": [
       [
-       1975,
-       1976
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
-     "he": "גדי צלניקר",
-     "pos": "FW",
-     "nat": null,
-     "born": 1944,
-     "spells": [
+       1977,
+       1982
+      ],
       [
-       1976,
-       1976
+       1984,
+       1985
       ]
      ],
-     "titles": 0,
-     "target": false
+     "titles": 3,
+     "target": false,
+     "aliases": [
+      "Avi Yerushalmi",
+      "אברהם ירושלמי",
+      "אביחי ירושלמי"
+     ]
     },
     {
      "he": "יוסף סורינוב",
@@ -14133,6 +14297,7 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Yosef Sorinov",
       "יוסי סורינוב"
      ]
     },
@@ -14162,7 +14327,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Barry Silkman"
+     ]
     },
     {
      "he": "בוני גינצבורג",
@@ -14176,7 +14344,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Boni Ginzburg"
+     ]
     },
     {
      "he": "דני נוימן",
@@ -14209,6 +14380,7 @@
      "titles": 7,
      "target": true,
      "aliases": [
+      "Eli Driks",
       "אליהו דריקס"
      ]
     },
@@ -14230,6 +14402,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Motti Ivanir",
       "מרדכי איוניר"
      ]
     },
@@ -14282,6 +14455,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Gabi Lasri",
       "גבריאל לסרי"
      ]
     },
@@ -14300,25 +14474,6 @@
      "target": false,
      "aliases": [
       "חיימק לוי"
-     ]
-    },
-    {
-     "he": "יעקב כהן",
-     "pos": "DF",
-     "nat": "IL",
-     "born": 1956,
-     "spells": [
-      [
-       1983,
-       1983
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "ג'קי כהן",
-      "ז'קי כהן",
-      "יעקוב כהן"
      ]
     },
     {
@@ -14387,20 +14542,6 @@
      ]
     },
     {
-     "he": "יחיאל אבן צור",
-     "pos": "DF",
-     "nat": "MA",
-     "born": 1962,
-     "spells": [
-      [
-       1985,
-       1985
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
      "he": "מיקי בן שטרית",
      "pos": "FW",
      "nat": "IL",
@@ -14460,7 +14601,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Oded Machnes"
+     ]
     },
     {
      "he": "ג'קי צרפתי",
@@ -14474,20 +14618,6 @@
       ]
      ],
      "titles": 2,
-     "target": false
-    },
-    {
-     "he": "יואל סויסה",
-     "pos": "MF",
-     "nat": "IL",
-     "born": 1969,
-     "spells": [
-      [
-       1988,
-       1989
-      ]
-     ],
-     "titles": 1,
      "target": false
     },
     {
@@ -14506,7 +14636,10 @@
       ]
      ],
      "titles": 6,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Noam Shoham"
+     ]
     },
     {
      "he": "אבי פיטוסי",
@@ -14568,7 +14701,10 @@
       ]
      ],
      "titles": 4,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Meir Melika"
+     ]
     },
     {
      "he": "שביט אלימלך",
@@ -14582,7 +14718,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Shavit Elimelech"
+     ]
     },
     {
      "he": "אבי כהן (1962)",
@@ -14641,6 +14780,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Uri Malmilian",
       "אוריאל מלמיליאן"
      ]
     },
@@ -14714,7 +14854,10 @@
       ]
      ],
      "titles": 7,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Amir Shelach"
+     ]
     },
     {
      "he": "אנדריי באל",
@@ -14728,7 +14871,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Andriy Bal"
+     ]
     },
     {
      "he": "אריק שריקי",
@@ -14770,7 +14916,10 @@
       ]
      ],
      "titles": 5,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Nir Klinger"
+     ]
     },
     {
      "he": "שרון מרציאנו",
@@ -14804,6 +14953,7 @@
      "titles": 6,
      "target": true,
      "aliases": [
+      "Alon Brumer",
       "אילון ברומר"
      ]
     },
@@ -14822,7 +14972,8 @@
      "target": true,
      "aliases": [
       "אלכסנדר אוברוב",
-      "אלכסנדר אובארוב"
+      "אלכסנדר אובארוב",
+      "Aleksandr Uvarov"
      ]
     },
     {
@@ -14837,11 +14988,14 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Aleksandr Polukarov"
+     ]
     },
     {
      "he": "גדי ברומר",
-     "pos": "MF",
+     "pos": "DF",
      "nat": "IL",
      "born": 1973,
      "spells": [
@@ -14869,7 +15023,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Hisham Zuabi"
+     ]
     },
     {
      "he": "יעקב הלל",
@@ -14906,7 +15063,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Nir Sivilia"
+     ]
     },
     {
      "he": "עמית לוי",
@@ -14921,6 +15081,23 @@
      ],
      "titles": 5,
      "target": false
+    },
+    {
+     "he": "גל פיבך",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1976,
+     "spells": [
+      [
+       1993,
+       1997
+      ]
+     ],
+     "titles": 4,
+     "target": false,
+     "aliases": [
+      "Gal Fibach"
+     ]
     },
     {
      "he": "חיים חג'ג'",
@@ -14940,6 +15117,23 @@
      ]
     },
     {
+     "he": "ירון מליקה",
+     "pos": "GK",
+     "nat": "IL",
+     "born": null,
+     "spells": [
+      [
+       1993,
+       1993
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Yaron Melika"
+     ]
+    },
+    {
      "he": "נצח מסובי",
      "pos": "FW",
      "nat": "IL",
@@ -14954,6 +15148,23 @@
      "target": false
     },
     {
+     "he": "אלן משרקי",
+     "pos": "GK",
+     "nat": "IL",
+     "born": null,
+     "spells": [
+      [
+       1994,
+       1997
+      ]
+     ],
+     "titles": 4,
+     "target": false,
+     "aliases": [
+      "Elen Masraki"
+     ]
+    },
+    {
      "he": "סיריל מקנאקי",
      "pos": "MF",
      "nat": "CM",
@@ -14965,7 +15176,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Cyrille Makanaky"
+     ]
     },
     {
      "he": "קובי רפואה",
@@ -15001,7 +15215,27 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ben Luz"
+     ]
+    },
+    {
+     "he": "גיא נחמן",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1974,
+     "spells": [
+      [
+       1995,
+       1996
+      ]
+     ],
+     "titles": 3,
+     "target": false,
+     "aliases": [
+      "Guy Nachman"
+     ]
     },
     {
      "he": "ויקטור בלקין",
@@ -15057,7 +15291,10 @@
       ]
      ],
      "titles": 2,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Viktor Moroz"
+     ]
     },
     {
      "he": "יבגני קשנצב",
@@ -15105,6 +15342,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "David Revivo",
       "דודו רביבו",
       "דויד רביבו"
      ]
@@ -15152,7 +15390,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Elek Nyilas"
+     ]
     },
     {
      "he": "ג'פרי ישי",
@@ -15183,9 +15424,7 @@
      "target": true,
      "aliases": [
       "דדי בן דיין",
-      "Dedi Ben Dayan",
-      "Bruno Reis",
-      "ברונו רייס"
+      "Dedi Ben Dayan"
      ]
     },
     {
@@ -15214,7 +15453,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Moshe Glam"
+     ]
     },
     {
      "he": "עופר לוי",
@@ -15242,7 +15484,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Rodrigo Goldberg"
+     ]
     },
     {
      "he": "אבי סטרול",
@@ -15264,7 +15509,6 @@
      "aliases": [
       "אבי סטרול",
       "Avi Strool",
-      "Elad Bounfeld",
       "אברהם סטרול",
       "אביחי סטרול"
      ]
@@ -15321,7 +15565,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Aleksey Kosolapov"
+     ]
     },
     {
      "he": "אנדז'יי קוביקה",
@@ -15339,7 +15586,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Andrzej Kubica"
+     ]
     },
     {
      "he": "כפיר אדרי",
@@ -15353,7 +15603,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Kfir Edri"
+     ]
     },
     {
      "he": "מייקל אמנלו",
@@ -15367,7 +15620,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Michael Emenalo"
+     ]
     },
     {
      "he": "מרקו בלבול",
@@ -15381,7 +15637,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Marco Balbul"
+     ]
     },
     {
      "he": "רוני גפני",
@@ -15435,7 +15694,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Grzegorz Wędzyński"
+     ]
     },
     {
      "he": "דודו אברהם",
@@ -15467,7 +15729,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Liron Basis"
+     ]
     },
     {
      "he": "לירן שטראובר",
@@ -15503,13 +15768,16 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Felix Halfon"
+     ]
     },
     {
      "he": "ברוך דגו",
      "pos": "MF",
      "nat": "IL",
-     "born": 1982,
+     "born": 1981,
      "spells": [
       [
        2001,
@@ -15567,7 +15835,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Meho Kodro"
+     ]
     },
     {
      "he": "מני לוי",
@@ -15599,7 +15870,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ferenc Horváth"
+     ]
     },
     {
      "he": "קובי מוסא",
@@ -15645,7 +15919,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Oshri Levi"
+     ]
     },
     {
      "he": "דניאל היידמן",
@@ -15701,6 +15978,23 @@
      ]
     },
     {
+     "he": "איל שן",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1980,
+     "spells": [
+      [
+       2003,
+       2003
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "איל שן"
+     ]
+    },
+    {
      "he": "אנדרייס פרוחורנקובס",
      "pos": "FW",
      "nat": "LV",
@@ -15712,7 +16006,44 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Andrejs Prohorenkovs"
+     ]
+    },
+    {
+     "he": "אסף שדה",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1983,
+     "spells": [
+      [
+       2003,
+       2004
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "אסף שדה"
+     ]
+    },
+    {
+     "he": "ברונו רייס",
+     "pos": "MF",
+     "nat": "BR",
+     "born": 1978,
+     "spells": [
+      [
+       2003,
+       2005
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "Bruno Reis"
+     ]
     },
     {
      "he": "ג'ון פנטסיל",
@@ -15730,7 +16061,8 @@
      "aliases": [
       "ג'ון פנסטיל",
       "גון פנסטיל",
-      "ג'ון פנטסיל"
+      "ג'ון פנטסיל",
+      "John Paintsil"
      ]
     },
     {
@@ -15802,7 +16134,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Mauricio Aros"
+     ]
     },
     {
      "he": "משה מישאלוף",
@@ -15903,7 +16238,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Aldo Adorno"
+     ]
     },
     {
      "he": "ארז מסיקה",
@@ -15960,6 +16298,23 @@
      ]
     },
     {
+     "he": "קובי נכטיילר",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1978,
+     "spells": [
+      [
+       2004,
+       2004
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "קובי נכטיילר"
+     ]
+    },
+    {
      "he": "רועי דיין",
      "pos": "FW",
      "nat": "IL",
@@ -16008,7 +16363,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Elad Bounfeld"
+     ]
     },
     {
      "he": "אמיל אמבמבה",
@@ -16026,7 +16384,8 @@
      "aliases": [
       "אמיל-ברטרנד מבמבה",
       "אמיל מבמבה",
-      "אמיל אמבמבה"
+      "אמיל אמבמבה",
+      "Émile Mbamba"
      ]
     },
     {
@@ -16047,8 +16406,25 @@
      ]
     },
     {
+     "he": "ברק ורד",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1985,
+     "spells": [
+      [
+       2005,
+       2005
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "ברק ורד"
+     ]
+    },
+    {
      "he": "יקיר שינה",
-     "pos": "MF",
+     "pos": "DF",
      "nat": "IL",
      "born": 1985,
      "spells": [
@@ -16146,6 +16522,7 @@
      "titles": 1,
      "target": false,
      "aliases": [
+      "Shuki Nagar",
       "שוקי נגאר",
       "יהושע נגר"
      ]
@@ -16169,9 +16546,7 @@
      "target": true,
      "aliases": [
       "שרן ייני",
-      "Sheran Yeini",
-      "Rúben Micael",
-      "רובן מיקאל"
+      "Sheran Yeini"
      ]
     },
     {
@@ -16346,8 +16721,8 @@
      "target": false,
      "aliases": [
       "קאלה דרשלר",
-      "Tvrtko Kale",
-      "טברטקו קאלה"
+      "טברטקו קאלה",
+      "Tvrtko Kale"
      ]
     },
     {
@@ -16564,7 +16939,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Joe Bizera"
+     ]
     },
     {
      "he": "דודו ביטון",
@@ -16636,6 +17014,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Dragoslav Jevrić",
       "דראגוסלב יבריץ",
       "דראגוסלב יבריץ'"
      ]
@@ -16654,6 +17033,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Yannick Kamanan",
       "יאניק קמנאן"
      ]
     },
@@ -16690,8 +17070,29 @@
      "target": false
     },
     {
+     "he": "עומרי רון",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1989,
+     "spells": [
+      [
+       2008,
+       2008
+      ],
+      [
+       2010,
+       2010
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Omri Ron"
+     ]
+    },
+    {
      "he": "עמירן שקלים",
-     "pos": "MF",
+     "pos": "DF",
      "nat": "IL",
      "born": 1988,
      "spells": [
@@ -16775,6 +17176,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Igor Tomašić",
       "איגור טומסיץ",
       "איגור טומסיץ'"
      ]
@@ -16794,7 +17196,8 @@
      "target": true,
      "aliases": [
       "איליה יבוריאן",
-      "איליה יברויאן"
+      "איליה יברויאן",
+      "Ilya Yavruyan"
      ]
     },
     {
@@ -16917,6 +17320,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Emmanuel Mayuka",
       "עמי מאיוקה",
       "עמיחי מאיוקה"
      ]
@@ -16933,7 +17337,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Ivica Iliev"
+     ]
     },
     {
      "he": "אנדריי קומאץ",
@@ -16990,6 +17397,23 @@
      ]
     },
     {
+     "he": "מאור חלבי",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1990,
+     "spells": [
+      [
+       2010,
+       2010
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "מאור חלבי"
+     ]
+    },
+    {
      "he": "רונלד ראלדס",
      "pos": "DF",
      "nat": "BO",
@@ -17001,7 +17425,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Ronald Raldes"
+     ]
     },
     {
      "he": "ריף פרץ",
@@ -17109,7 +17536,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Dimitar Rangelov"
+     ]
     },
     {
      "he": "האריס מדוניאנין",
@@ -17181,7 +17611,7 @@
     },
     {
      "he": "משה לוגסי",
-     "pos": "DF",
+     "pos": "MF",
      "nat": "IL",
      "born": 1991,
      "spells": [
@@ -17213,7 +17643,8 @@
      "aliases": [
       "ניבאלדו בטיסטה סנטנה",
       "ניבאלדו סנטנה",
-      "ניבאלדו"
+      "ניבאלדו",
+      "Nivaldo"
      ]
     },
     {
@@ -17669,7 +18100,10 @@
       ]
      ],
      "titles": 4,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Carlos García"
+     ]
     },
     {
      "he": "רוסלן ברסקי",
@@ -17683,7 +18117,10 @@
       ]
      ],
      "titles": 7,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ruslan Barsky"
+     ]
     },
     {
      "he": "דן איינבינדר",
@@ -17715,7 +18152,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Juan Pablo Colinas"
+     ]
     },
     {
      "he": "טל בן חיים (1989)",
@@ -17847,7 +18287,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Rémi Maréval"
+     ]
     },
     {
      "he": "רמי מרוול",
@@ -17951,7 +18394,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Nosa Igiebor"
+     ]
     },
     {
      "he": "עדן בן בסט",
@@ -18034,7 +18480,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Orlando Sá"
+     ]
     },
     {
      "he": "אלי דסה",
@@ -18116,20 +18565,6 @@
      ]
     },
     {
-     "he": "דיאן ראדוניץ'",
-     "pos": "FW",
-     "nat": "DE",
-     "born": 1990,
-     "spells": [
-      [
-       2016,
-       2016
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
      "he": "דן גלזר",
      "pos": "MF",
      "nat": "IL",
@@ -18201,7 +18636,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Maksim Grechkin"
+     ]
     },
     {
      "he": "מתן חוזז",
@@ -18249,6 +18687,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Predrag Rajković",
       "פרדראג ריאקוביץ",
       "פרדראג ריאקוביץ'"
      ]
@@ -18304,7 +18743,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Óscar Scarione"
+     ]
     },
     {
      "he": "אייל גולסה",
@@ -18356,6 +18798,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Viðar Kjartansson",
       "וידר קיארטנסון",
       "וידר אורן קיארטנסון"
      ]
@@ -18372,7 +18815,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Egor Filipenko"
+     ]
     },
     {
      "he": "יוסי בניון",
@@ -18391,6 +18837,23 @@
       "יוסי בניון",
       "Yossi Benayoun",
       "יוסף בניון"
+     ]
+    },
+    {
+     "he": "רובן מיקאל",
+     "pos": "MF",
+     "nat": "PT",
+     "born": 1986,
+     "spells": [
+      [
+       2017,
+       2017
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Rúben Micael"
      ]
     },
     {
@@ -18429,6 +18892,7 @@
      "titles": 5,
      "target": true,
      "aliases": [
+      "Ofir Davidzada",
       "אופיר דודזאדה"
      ]
     },
@@ -18463,7 +18927,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Aaron Schoenfeld"
+     ]
     },
     {
      "he": "גידי קאניוק",
@@ -18589,6 +19056,9 @@
      "nats": [
       "EN",
       "IL"
+     ],
+     "aliases": [
+      "Nick Blackman"
      ]
     },
     {
@@ -18695,6 +19165,7 @@
      "titles": 4,
      "target": true,
      "aliases": [
+      "Enric Saborit",
       "אנריק סבוריט"
      ]
     },
@@ -18823,7 +19294,8 @@
      "aliases": [
       "אנדרה ג'ראלדש",
       "אנדרה גראלדש",
-      "אנדרה ז'ראלדש"
+      "אנדרה ז'ראלדש",
+      "André Geraldes"
      ]
     },
     {
@@ -18854,6 +19326,7 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Daniel Peretz",
       "דניאל פרץ (2000)",
       "דניאל פרץ",
       "דני פרץ"
@@ -18899,7 +19372,10 @@
       ]
      ],
      "titles": 5,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Nadav Niddam"
+     ]
     },
     {
      "he": "עידו שחר",
@@ -18935,7 +19411,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Parfait Guiagon"
+     ]
     },
     {
      "he": "תמיר גלזר",
@@ -18950,6 +19429,24 @@
      ],
      "titles": 3,
      "target": false
+    },
+    {
+     "he": "אור יצחק",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 2001,
+     "spells": [
+      [
+       2021,
+       2024
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "אור יצחק",
+      "ליאור יצחק"
+     ]
     },
     {
      "he": "אלכסנדר פשיץ'",
@@ -18996,7 +19493,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Guy Mizrahi"
+     ]
     },
     {
      "he": "דור תורג'מן",
@@ -19015,8 +19515,6 @@
       "דור דויד תורגמן",
       "Dor Turgeman",
       "דור תורג'מן",
-      "Rareş Ilie",
-      "רארש איליה",
       "דור תורגמן"
      ]
     },
@@ -19124,6 +19622,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Osama Khalaila",
       "אוסאמה חלאילה",
       "אוסאמה ח'לאילה"
      ]
@@ -19140,7 +19639,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Oscar Gloukh"
+     ]
     },
     {
      "he": "אור רויזמן",
@@ -19206,7 +19708,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Josué Sá"
+     ]
     },
     {
      "he": "נובטוס דיסמאס",
@@ -19277,20 +19782,6 @@
      ]
     },
     {
-     "he": "קרלוס ריברה",
-     "pos": "FW",
-     "nat": null,
-     "born": 2003,
-     "spells": [
-      [
-       2022,
-       2026
-      ]
-     ],
-     "titles": 3,
-     "target": false
-    },
-    {
      "he": "רוי רביבו",
      "pos": "DF",
      "nat": "IL",
@@ -19320,7 +19811,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Orel Baye"
+     ]
     },
     {
      "he": "ג'ורג'ה יובאנוביץ'",
@@ -19400,6 +19894,23 @@
      ]
     },
     {
+     "he": "רארש איליה",
+     "pos": "MF",
+     "nat": "RO",
+     "born": 2003,
+     "spells": [
+      [
+       2023,
+       2023
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Rareş Ilie"
+     ]
+    },
+    {
      "he": "רארש אילייה",
      "pos": "MF",
      "nat": "IL",
@@ -19429,6 +19940,23 @@
      ],
      "titles": 2,
      "target": false
+    },
+    {
+     "he": "תומר אלון",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 2003,
+     "spells": [
+      [
+       2023,
+       2024
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "תומר אלון"
+     ]
     },
     {
      "he": "אבישי כהן",
@@ -19463,6 +19991,24 @@
      "target": false,
      "aliases": [
       "אדיר קורדובה"
+     ]
+    },
+    {
+     "he": "אורי עזו",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 2005,
+     "spells": [
+      [
+       2024,
+       2024
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "Ori Azo",
+      "אוריאל עזו"
      ]
     },
     {
@@ -19555,7 +20101,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Kiko Bondoso"
+     ]
     },
     {
      "he": "רועי משפתי",
@@ -19593,6 +20142,23 @@
      ]
     },
     {
+     "he": "אופק אהרון",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 2005,
+     "spells": [
+      [
+       2025,
+       2026
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "אופק מליקה אהרון"
+     ]
+    },
+    {
      "he": "אופק מליקה",
      "pos": "GK",
      "nat": "IL",
@@ -19604,7 +20170,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ofek Melika"
+     ]
     },
     {
      "he": "איסוף סיסוקו",
@@ -19670,6 +20239,7 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Hisham Layous",
       "השאם ליוס"
      ]
     },
@@ -19720,7 +20290,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Weslley Patati"
+     ]
     },
     {
      "he": "טייריס אסאנטה",
@@ -19736,6 +20309,7 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Tyrese Asante",
       "טייריס אסנטה"
      ]
     },
@@ -19830,6 +20404,40 @@
      ]
     },
     {
+     "he": "עידן וינברג",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 2007,
+     "spells": [
+      [
+       2025,
+       2026
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "Idan Weinberg"
+     ]
+    },
+    {
+     "he": "עידן טראו",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 2007,
+     "spells": [
+      [
+       2025,
+       2026
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "Idan Trau"
+     ]
+    },
+    {
      "he": "רז שלמה",
      "pos": "DF",
      "nat": "IL",
@@ -19921,20 +20529,6 @@
      ]
     },
     {
-     "he": "הייטור",
-     "pos": "DF",
-     "nat": "BR",
-     "born": 2000,
-     "spells": [
-      [
-       2026,
-       2026
-      ]
-     ],
-     "titles": 1,
-     "target": false
-    },
-    {
      "he": "הליו וארלה",
      "pos": "FW",
      "nat": "PT",
@@ -19946,7 +20540,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Hélio Varela"
+     ]
     },
     {
      "he": "יואב ג'ראפי",
@@ -19974,7 +20571,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Ion Nicolăescu"
+     ]
     },
     {
      "he": "כריסטיאן בליץ'",
@@ -19988,7 +20588,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Kristijan Belić"
+     ]
     },
     {
      "he": "מוחמד עלי קמארה",
@@ -20341,10 +20944,10 @@
     ]
    },
    "counts": {
-    "players": 378,
+    "players": 395,
     "targets": 215,
-    "hidden": 78,
-    "unconfirmed": 1
+    "hidden": 74,
+    "unconfirmed": 11
    },
    "players": [
     {
@@ -20360,27 +20963,6 @@
      ],
      "titles": 0,
      "target": false
-    },
-    {
-     "he": "בנימין דוידוביץ'",
-     "pos": "GK",
-     "nat": "DE",
-     "born": 1930,
-     "spells": [
-      [
-       1952,
-       1961
-      ],
-      [
-       1963,
-       1963
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "בני דוידוביץ"
-     ]
     },
     {
      "he": "ג'וני הרדי",
@@ -20412,20 +20994,6 @@
      "aliases": [
       "אבי מנצל"
      ]
-    },
-    {
-     "he": "אשר עלמני",
-     "pos": "MF",
-     "nat": "IL",
-     "born": 1935,
-     "spells": [
-      [
-       1953,
-       1968
-      ]
-     ],
-     "titles": 1,
-     "target": false
     },
     {
      "he": "אלי פוקס",
@@ -20472,6 +21040,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Dani Rom",
       "דניאל רום"
      ]
     },
@@ -20490,27 +21059,6 @@
      "target": false,
      "aliases": [
       "חיימק לוין"
-     ]
-    },
-    {
-     "he": "יחזקאל גרשוני",
-     "pos": "GK",
-     "nat": null,
-     "born": 1940,
-     "spells": [
-      [
-       1959,
-       1970
-      ],
-      [
-       1972,
-       1972
-      ]
-     ],
-     "titles": 1,
-     "target": false,
-     "aliases": [
-      "חזי גרשוני"
      ]
     },
     {
@@ -20542,37 +21090,6 @@
      "target": false,
      "aliases": [
       "רוני גרשגורן"
-     ]
-    },
-    {
-     "he": "מישל פורטל",
-     "pos": "GK",
-     "nat": "FR",
-     "born": 1936,
-     "spells": [
-      [
-       1965,
-       1965
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
-     "he": "חיים חזמוס",
-     "pos": "DF",
-     "nat": "IL",
-     "born": 1948,
-     "spells": [
-      [
-       1970,
-       1975
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "חיימק חזמוס"
      ]
     },
     {
@@ -20608,11 +21125,14 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Baruch Maman"
+     ]
     },
     {
      "he": "יהושע גל",
-     "pos": "FW",
+     "pos": "MF",
      "nat": "IL",
      "born": 1951,
      "spells": [
@@ -20624,6 +21144,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Yehoshua Gal",
       "שוקי גל"
      ]
     },
@@ -20676,20 +21197,6 @@
      ]
     },
     {
-     "he": "שאול חייק",
-     "pos": "FW",
-     "nat": "IL",
-     "born": 1948,
-     "spells": [
-      [
-       1977,
-       1977
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
      "he": "אברהם אבוקרט",
      "pos": "MF",
      "nat": "IL",
@@ -20703,6 +21210,7 @@
      "titles": 6,
      "target": true,
      "aliases": [
+      "Avraham Abukarat",
       "אבי אבוקרט"
      ]
     },
@@ -20770,6 +21278,7 @@
      "titles": 7,
      "target": true,
      "aliases": [
+      "Eitan Aharoni",
       "איציק אהרוני"
      ]
     },
@@ -20787,12 +21296,13 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Eli Cohen",
       "אליהו כהן"
      ]
     },
     {
      "he": "משה סלקטר",
-     "pos": "MF",
+     "pos": "FW",
      "nat": "IL",
      "born": 1961,
      "spells": [
@@ -20806,7 +21316,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Moshe Selecter"
+     ]
     },
     {
      "he": "רוני רוזנטל",
@@ -20822,6 +21335,7 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Ronny Rosenthal",
       "אהרון רוזנטל"
      ]
     },
@@ -20839,6 +21353,7 @@
      "titles": 5,
      "target": true,
      "aliases": [
+      "Rafi Osmo",
       "רפאל אוסמו"
      ]
     },
@@ -20856,6 +21371,7 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Avi Ran",
       "אברהם רן",
       "אביחי רן"
      ]
@@ -20915,7 +21431,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Elisha Levy"
+     ]
     },
     {
      "he": "זאהי ארמלי",
@@ -20929,7 +21448,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Zahi Armeli"
+     ]
     },
     {
      "he": "צדוק מלכה",
@@ -20957,7 +21479,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Zion Marili"
+     ]
     },
     {
      "he": "שלום לוי",
@@ -20985,7 +21510,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Nir Klinger"
+     ]
     },
     {
      "he": "עופר מזרחי",
@@ -21033,6 +21561,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Daniel Brailovsky",
       "דני בריילובסקי"
      ]
     },
@@ -21052,7 +21581,10 @@
       ]
      ],
      "titles": 9,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Marco Balbul"
+     ]
     },
     {
      "he": "ראובן עטר",
@@ -21096,21 +21628,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
-    },
-    {
-     "he": "גולן מלול",
-     "pos": "GK",
-     "nat": "IL",
-     "born": 1969,
-     "spells": [
-      [
-       1988,
-       1988
-      ]
-     ],
-     "titles": 0,
-     "target": false
+     "target": true,
+     "aliases": [
+      "Boni Ginzburg"
+     ]
     },
     {
      "he": "גיורא אנטמן",
@@ -21124,7 +21645,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Giora Antman"
+     ]
     },
     {
      "he": "דני מלכין",
@@ -21186,7 +21710,10 @@
       ]
      ],
      "titles": 5,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Eyal Berkovic"
+     ]
     },
     {
      "he": "טל בנין",
@@ -21202,6 +21729,7 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Tal Banin",
       "טליק בנין"
      ]
     },
@@ -21236,7 +21764,10 @@
       ]
      ],
      "titles": 4,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Viktor Chanov"
+     ]
     },
     {
      "he": "ולדימיר בסונוב",
@@ -21333,7 +21864,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Moshe Glam"
+     ]
     },
     {
      "he": "איוואן גצקו",
@@ -21347,7 +21881,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ivan Getsko"
+     ]
     },
     {
      "he": "אלון חזן",
@@ -21363,6 +21900,7 @@
      "titles": 3,
      "target": true,
      "aliases": [
+      "Alon Hazan",
       "אילון חזן"
      ]
     },
@@ -21408,6 +21946,7 @@
      "titles": 3,
      "target": true,
      "aliases": [
+      "Ronny Levy",
       "אהרון לוי"
      ]
     },
@@ -21425,6 +21964,7 @@
      "titles": 3,
      "target": true,
      "aliases": [
+      "Alon Mizrahi",
       "אילון מזרחי"
      ]
     },
@@ -21457,7 +21997,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Serhiy Kandaurov"
+     ]
     },
     {
      "he": "רומן פץ",
@@ -21471,7 +22014,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Roman Pets"
+     ]
     },
     {
      "he": "רפי כהן (1970)",
@@ -21505,6 +22051,7 @@
      "titles": 1,
      "target": false,
      "aliases": [
+      "Shay Holtzman",
       "ישי הולצמן"
      ]
     },
@@ -21558,6 +22105,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Haim Silvas",
       "חיימק סילבס"
      ]
     },
@@ -21575,6 +22123,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Haim Revivo",
       "חיימק רביבו"
      ]
     },
@@ -21632,7 +22181,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ofer Shitrit"
+     ]
     },
     {
      "he": "שגיא שטראוס",
@@ -21646,7 +22198,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Sagi Strauss"
+     ]
     },
     {
      "he": "אבישי ז'אנו",
@@ -21696,7 +22251,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Jaroslav Kentoš"
+     ]
     },
     {
      "he": "אדורם קייסי",
@@ -21727,7 +22285,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ofir Kopel"
+     ]
     },
     {
      "he": "חזי שירזי",
@@ -21744,6 +22305,25 @@
      "target": false,
      "aliases": [
       "יחזקאל שירזי"
+     ]
+    },
+    {
+     "he": "מיכאל ציציאשוילי",
+     "pos": "DF",
+     "nat": "IL",
+     "born": null,
+     "spells": [
+      [
+       1997,
+       1999
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "Michael Tsitsiashvili",
+      "מיקי ציציאשוילי",
+      "מייק ציציאשוילי"
      ]
     },
     {
@@ -21772,7 +22352,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Idan Shum"
+     ]
     },
     {
      "he": "עמיר תורג'מן",
@@ -21786,7 +22369,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Amir Turgeman"
+     ]
     },
     {
      "he": "קובי גנון",
@@ -21800,7 +22386,27 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Kobi Ganon"
+     ]
+    },
+    {
+     "he": "רג׳יד בראנסה",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1979,
+     "spells": [
+      [
+       1997,
+       1998
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "Ragid Baransi"
+     ]
     },
     {
      "he": "איברהים דורו",
@@ -21814,7 +22420,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ibrahim Duro"
+     ]
     },
     {
      "he": "ולדימיר נידרגאוס",
@@ -21828,7 +22437,44 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Vladimir Niederhaus"
+     ]
+    },
+    {
+     "he": "נדיב סימנטוב",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1980,
+     "spells": [
+      [
+       1998,
+       2000
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "Nadiv Simantov"
+     ]
+    },
+    {
+     "he": "אייל וקראט",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 1973,
+     "spells": [
+      [
+       1999,
+       1999
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Eyal Wakrat"
+     ]
     },
     {
      "he": "ויקטור פאצ'ו",
@@ -21842,7 +22488,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Viktor Paço"
+     ]
     },
     {
      "he": "יוסי בניון",
@@ -21882,9 +22531,7 @@
      "target": true,
      "aliases": [
       "יניב קטן",
-      "Yaniv Katan",
-      "John Culma",
-      "ג'ון קולמה"
+      "Yaniv Katan"
      ]
     },
     {
@@ -21913,7 +22560,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Radovan Hromádko"
+     ]
     },
     {
      "he": "רונן חרזי",
@@ -21927,7 +22577,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Ronen Harazi"
+     ]
     },
     {
      "he": "שוקי נגר",
@@ -21943,7 +22596,26 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Shuki Nagar",
       "יהושע נגר"
+     ]
+    },
+    {
+     "he": "שלומי בן חמו",
+     "pos": "FW",
+     "nat": "IL",
+     "born": null,
+     "spells": [
+      [
+       1999,
+       2000
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Shlomi Ben Hamo",
+      "שלמה בן חמו"
      ]
     },
     {
@@ -22020,7 +22692,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Jerzy Brzęczek"
+     ]
     },
     {
      "he": "יעקובו איגביני",
@@ -22034,7 +22709,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Yakubu Ayegbeni"
+     ]
     },
     {
      "he": "סרגיי קלשצ'נקו",
@@ -22048,7 +22726,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Serghei Cleşcenco"
+     ]
     },
     {
      "he": "עמוס סאסי",
@@ -22062,7 +22743,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Amos Sasy"
+     ]
     },
     {
      "he": "רדוסלב מיכאלסקי",
@@ -22076,7 +22760,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Radosław Michalski"
+     ]
     },
     {
      "he": "ריימונדס ז'וטאוטאס",
@@ -22090,7 +22777,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Raimondas Žutautas"
+     ]
     },
     {
      "he": "רפי כהן (1974)",
@@ -22124,6 +22814,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Shlomi Dahan",
       "שלמה דהאן"
      ]
     },
@@ -22188,7 +22879,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Manor Hassan"
+     ]
     },
     {
      "he": "ננאד פראליה",
@@ -22202,7 +22896,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Nenad Pralija"
+     ]
     },
     {
      "he": "אייל אלמושנינו",
@@ -22245,6 +22942,24 @@
      ]
     },
     {
+     "he": "אסלאם כנעאן",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1983,
+     "spells": [
+      [
+       2002,
+       2008
+      ]
+     ],
+     "titles": 4,
+     "target": false,
+     "aliases": [
+      "Islam Cana'an",
+      "איסלם כנען"
+     ]
+    },
+    {
      "he": "ג'ובאני רוסו",
      "pos": "MF",
      "nat": "HR",
@@ -22281,6 +22996,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Dudu Aouate",
       "דודו אואט",
       "דוד אוואט",
       "דויד אוואט"
@@ -22298,7 +23014,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Nir Sivilia"
+     ]
     },
     {
      "he": "אמיר אדרי",
@@ -22315,8 +23034,7 @@
      "target": true,
      "aliases": [
       "אמיר אדרי",
-      "Amir Edri",
-      "Eran Levy"
+      "Amir Edri"
      ]
     },
     {
@@ -22331,7 +23049,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Eric Ejiofor"
+     ]
     },
     {
      "he": "גיז'רמו ישראלביץ'",
@@ -22371,9 +23092,25 @@
      "target": true,
      "aliases": [
       "דקל קינן",
-      "Dekel Keinan",
-      "Thembinkosi Fanteni",
-      "טמבינקוסי פאנטיני"
+      "Dekel Keinan"
+     ]
+    },
+    {
+     "he": "יוסי נגר",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1982,
+     "spells": [
+      [
+       2003,
+       2003
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "יוסי נגר",
+      "יוסף נגר"
      ]
     },
     {
@@ -22442,7 +23179,10 @@
       ]
      ],
      "titles": 2,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Eran Levy"
+     ]
     },
     {
      "he": "שי בירוק",
@@ -22811,6 +23551,24 @@
      "target": false
     },
     {
+     "he": "שלומי חנוכה",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1985,
+     "spells": [
+      [
+       2005,
+       2005
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "שלומי חנוכה",
+      "שלמה חנוכה"
+     ]
+    },
+    {
      "he": "מאור בוזגלו",
      "pos": "FW",
      "nat": "IL",
@@ -22903,8 +23661,6 @@
      "target": true,
      "aliases": [
       "אייל משומר",
-      "Islam Cana'an",
-      "אסלאם כנעאן",
       "Eyal Meshumar"
      ]
     },
@@ -22974,6 +23730,23 @@
      "aliases": [
       "מאור מליקסון",
       "Maor Melikson"
+     ]
+    },
+    {
+     "he": "מוחמד שחברי",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1984,
+     "spells": [
+      [
+       2007,
+       2007
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "מוחמד שחברי"
      ]
     },
     {
@@ -23092,6 +23865,23 @@
      ]
     },
     {
+     "he": "יהב יולזרי",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 1985,
+     "spells": [
+      [
+       2008,
+       2008
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "יהב יולזרי"
+     ]
+    },
+    {
      "he": "לוהאב כיאל",
      "pos": "DF",
      "nat": "IL",
@@ -23154,6 +23944,7 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Tsepo Masilela",
       "פטר מסיללה",
       "פטר צפו מסיללה"
      ]
@@ -23246,6 +24037,23 @@
      ]
     },
     {
+     "he": "ג'ון קולמה",
+     "pos": "DF",
+     "nat": "CO",
+     "born": 1981,
+     "spells": [
+      [
+       2009,
+       2011
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "John Culma"
+     ]
+    },
+    {
      "he": "גד עמוס",
      "pos": "GK",
      "nat": "IL",
@@ -23261,6 +24069,23 @@
      "aliases": [
       "גד עמוס",
       "Gad Amos"
+     ]
+    },
+    {
+     "he": "טמבינקוסי פאנטיני",
+     "pos": "FW",
+     "nat": "ZA",
+     "born": 1984,
+     "spells": [
+      [
+       2009,
+       2009
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "Thembinkosi Fanteni"
      ]
     },
     {
@@ -23378,7 +24203,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Vladimer Dvalishvili"
+     ]
     },
     {
      "he": "ז'ורז'ה טיישיירה",
@@ -23392,7 +24220,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Jorge Teixeira"
+     ]
     },
     {
      "he": "זיו אוסון",
@@ -23447,6 +24278,7 @@
      "titles": 4,
      "target": true,
      "aliases": [
+      "Taleb Tawatha",
       "טאלב טואטחה"
      ]
     },
@@ -23518,7 +24350,8 @@
      "target": true,
      "aliases": [
       "עלי עוסמאן",
-      "עלי עות'מאן"
+      "עלי עות'מאן",
+      "Ali Ottman"
      ]
     },
     {
@@ -23587,7 +24420,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Mohammed Kalibat"
+     ]
     },
     {
      "he": "סיידו יאיא",
@@ -23603,6 +24439,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Seidu Yahaya",
       "יא סיידו",
       "יא יא סיידו"
      ]
@@ -23626,9 +24463,7 @@
      "target": true,
      "aliases": [
       "סינטאיהו סלליך",
-      "Sintayehu Sallalich",
-      "Seydouba Soumah",
-      "סיידובה סומה"
+      "Sintayehu Sallalich"
      ]
     },
     {
@@ -23661,7 +24496,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Shadi Shaaban"
+     ]
     },
     {
      "he": "שלומי אזולאי (1989)",
@@ -23720,6 +24558,23 @@
      ]
     },
     {
+     "he": "אסף מנדס",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 1984,
+     "spells": [
+      [
+       2012,
+       2012
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אסף מנדס"
+     ]
+    },
+    {
      "he": "בויאן שראנוב",
      "pos": "GK",
      "nat": "RS",
@@ -23767,7 +24622,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Dela Yampolsky"
+     ]
     },
     {
      "he": "ויאם עמאשה",
@@ -23818,6 +24676,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Jurica Buljat",
       "יוריצה בולייט"
      ]
     },
@@ -23925,7 +24784,8 @@
      "aliases": [
       "איסמעיל ריאן",
       "Iyad Abu Abaid",
-      "אסמאעיל ריאן"
+      "אסמאעיל ריאן",
+      "Ismaeel Ryan"
      ]
     },
     {
@@ -23959,6 +24819,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Dino Ndlovu",
       "דינו נדלובו"
      ]
     },
@@ -24029,7 +24890,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Martynas Dapkus"
+     ]
     },
     {
      "he": "עאיד חבשי",
@@ -24117,6 +24981,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Shoval Gozlan",
       "שובל גוזלאן"
      ]
     },
@@ -24143,7 +25008,7 @@
     },
     {
      "he": "אלעד גבאי",
-     "pos": "MF",
+     "pos": "DF",
      "nat": "IL",
      "born": 1985,
      "spells": [
@@ -24227,20 +25092,6 @@
      "target": false
     },
     {
-     "he": "רז שטיין",
-     "pos": "FW",
-     "nat": "IL",
-     "born": 1994,
-     "spells": [
-      [
-       2014,
-       2016
-      ]
-     ],
-     "titles": 1,
-     "target": false
-    },
-    {
      "he": "רן אבוקרט",
      "pos": "MF",
      "nat": "IL",
@@ -24287,7 +25138,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Tamás Priskin"
+     ]
     },
     {
      "he": "אברהם פאס",
@@ -24303,6 +25157,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Abraham Paz",
       "אבי פאס"
      ]
     },
@@ -24337,7 +25192,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Dor Hugi"
+     ]
     },
     {
      "he": "ולדימיר סטויקוביץ'",
@@ -24423,6 +25281,23 @@
      ],
      "titles": 0,
      "target": false
+    },
+    {
+     "he": "עלא געפר",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1995,
+     "spells": [
+      [
+       2015,
+       2015
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "עלא געפר"
+     ]
     },
     {
      "he": "קובי מויאל",
@@ -24551,6 +25426,23 @@
      ]
     },
     {
+     "he": "גיל אופק",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 1986,
+     "spells": [
+      [
+       2016,
+       2020
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "גיל אופק"
+     ]
+    },
+    {
      "he": "גליינור פלט",
      "pos": "FW",
      "nat": "NL",
@@ -24564,6 +25456,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Glynor Plet",
       "גלינור פליט",
       "גלינור אורביל פליט"
      ]
@@ -24601,6 +25494,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Marc Valiente",
       "מארק וליינטה"
      ]
     },
@@ -24651,9 +25545,7 @@
      "target": true,
      "aliases": [
       "סאן מנחם",
-      "Sun Menachem",
-      "Kerim Frei",
-      "קרים פריי"
+      "Sun Menachem"
      ]
     },
     {
@@ -24768,6 +25660,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Gary Kagelmacher",
       "גארי קאגלמכר",
       "גארי כריסטופר קאגלמכר"
      ]
@@ -24787,7 +25680,8 @@
      "target": true,
      "aliases": [
       "גיל ורמוט",
-      "גילי ורמוט"
+      "גילי ורמוט",
+      "Gil Vermouth"
      ]
     },
     {
@@ -24951,6 +25845,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Kamil Vacek",
       "קמיל וואצק"
      ]
     },
@@ -25024,6 +25919,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Ernest Mabouka",
       "ארנסט מאבוקה"
      ]
     },
@@ -25074,7 +25970,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Yahav Gurfinkel"
+     ]
     },
     {
      "he": "יונתן לוי",
@@ -25095,6 +25994,24 @@
      ]
     },
     {
+     "he": "מוחמד אבו פאני",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1998,
+     "spells": [
+      [
+       2018,
+       2023
+      ]
+     ],
+     "titles": 3,
+     "target": false,
+     "aliases": [
+      "Mohammad Abu Fani",
+      "מוחמד אבו פני"
+     ]
+    },
+    {
      "he": "סטפנוס אתנסיאדיס",
      "pos": "FW",
      "nat": "GR",
@@ -25108,6 +26025,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Stefanos Athanasiadis",
       "סטפנוס אתנאסיאדיס"
      ]
     },
@@ -25162,9 +26080,7 @@
      "target": true,
      "aliases": [
       "עופרי ארד",
-      "Ofri Arad",
-      "Mohammad Abu Fani",
-      "מוחמד אבו פאני"
+      "Ofri Arad"
      ]
     },
     {
@@ -25295,7 +26211,8 @@
      "aliases": [
       "ג'ורג' מנדז'ק",
       "גורג מנדזק",
-      "ז'ורז' מנדז'ק"
+      "ז'ורז' מנדז'ק",
+      "Georges Mandjeck"
      ]
     },
     {
@@ -25331,6 +26248,23 @@
      ]
     },
     {
+     "he": "סיידובה סומה",
+     "pos": "MF",
+     "nat": "GN",
+     "born": 1991,
+     "spells": [
+      [
+       2019,
+       2019
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Seydouba Soumah"
+     ]
+    },
+    {
      "he": "קארים פריי",
      "pos": "FW",
      "nat": "IL",
@@ -25345,6 +26279,40 @@
      "target": false,
      "aliases": [
       "קארים פריי"
+     ]
+    },
+    {
+     "he": "קרים פריי",
+     "pos": "FW",
+     "nat": "TR",
+     "born": 1993,
+     "spells": [
+      [
+       2019,
+       2019
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Kerim Frei"
+     ]
+    },
+    {
+     "he": "אדר אזרואל",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 2002,
+     "spells": [
+      [
+       2020,
+       2022
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "Adar Azrual"
      ]
     },
     {
@@ -25394,6 +26362,9 @@
      "nats": [
       "US",
       "IL"
+     ],
+     "aliases": [
+      "Josh Cohen"
      ]
     },
     {
@@ -25626,7 +26597,8 @@
      "aliases": [
       "צ'ארון שרי",
       "צארון שרי",
-      "צ'רון שרי"
+      "צ'רון שרי",
+      "Tjaronn Chery"
      ]
     },
     {
@@ -25643,6 +26615,7 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Bogdan Planić",
       "בוגדאן פלאניץ",
       "בוגדאן פלאניץ'"
      ]
@@ -25661,6 +26634,7 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "Godsway Donyoh",
       "גודסווי דונהיו"
      ]
     },
@@ -25676,7 +26650,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "José Rodríguez"
+     ]
     },
     {
      "he": "טימוטי מוזי",
@@ -25722,7 +26699,28 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Stav Nachmani"
+     ]
+    },
+    {
+     "he": "רוני לאופר",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 2001,
+     "spells": [
+      [
+       2021,
+       2021
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "רוני לאופר",
+      "אהרון לאופר"
+     ]
     },
     {
      "he": "שריף כיוף",
@@ -25828,9 +26826,7 @@
      "target": true,
      "aliases": [
       "דין דוד",
-      "Dean David",
-      "Matías Nahuel",
-      "מתיאס נאוול"
+      "Dean David"
      ]
     },
     {
@@ -25852,6 +26848,23 @@
      ]
     },
     {
+     "he": "נבו שדו",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 2002,
+     "spells": [
+      [
+       2022,
+       2022
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "נבו יחזקאל שדו"
+     ]
+    },
+    {
      "he": "נהוראי יפרח",
      "pos": "FW",
      "nat": "IL",
@@ -25863,7 +26876,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Nehorai Ifrah"
+     ]
     },
     {
      "he": "עומר אצילי",
@@ -25885,7 +26901,7 @@
     },
     {
      "he": "עילאי חג'ג'",
-     "pos": "FW",
+     "pos": "MF",
      "nat": "IL",
      "born": 2001,
      "spells": [
@@ -25914,7 +26930,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ali Mohamed"
+     ]
     },
     {
      "he": "ראיין סטריין",
@@ -25928,7 +26947,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Ryan Strain"
+     ]
     },
     {
      "he": "רועי אלימלך",
@@ -26048,7 +27070,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Mavis Tchibota"
+     ]
     },
     {
      "he": "עבדוליי סק",
@@ -26069,7 +27094,8 @@
      ],
      "aliases": [
       "עבדולאיי סק",
-      "עבדוליי סק"
+      "עבדוליי סק",
+      "Abdoulaye Seck"
      ]
     },
     {
@@ -26128,7 +27154,8 @@
      "target": true,
      "aliases": [
       "פרנטזדי פיירו",
-      "פרנזי פיירו"
+      "פרנזי פיירו",
+      "Frantzdy Pierrot"
      ]
     },
     {
@@ -26280,7 +27307,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Lorenco Šimić"
+     ]
     },
     {
      "he": "מאור קנדיל",
@@ -26351,6 +27381,9 @@
      "nats": [
       "US",
       "IL"
+     ],
+     "aliases": [
+      "Kenny Saief"
      ]
     },
     {
@@ -26384,7 +27417,25 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Oleksandr Syrota",
       "אלכסנדר סירוטה"
+     ]
+    },
+    {
+     "he": "איאד חלאילי",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 2006,
+     "spells": [
+      [
+       2025,
+       2025
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Iyad Khalaili"
      ]
     },
     {
@@ -26487,7 +27538,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Yarin Levi"
+     ]
     },
     {
      "he": "ליאם חרמש",
@@ -26525,6 +27579,40 @@
      ]
     },
     {
+     "he": "מתיאס נאוול",
+     "pos": "FW",
+     "nat": "ES",
+     "born": 1996,
+     "spells": [
+      [
+       2025,
+       2026
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Matías Nahuel"
+     ]
+    },
+    {
+     "he": "עומר דהן",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 2005,
+     "spells": [
+      [
+       2025,
+       2025
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "עומר דוד דהן"
+     ]
+    },
+    {
      "he": "עמית ארזי",
      "pos": "MF",
      "nat": "IL",
@@ -26553,7 +27641,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Pedrão"
+     ]
     },
     {
      "he": "קסאנדר סברינה",
@@ -26569,6 +27660,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Xander Severina",
       "קסנדר סברינה"
      ]
     },
@@ -26726,7 +27818,26 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Jelle Bataille",
       "יילה בטאיי"
+     ]
+    },
+    {
+     "he": "ליאור קאסה",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 2005,
+     "spells": [
+      [
+       2026,
+       2026
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "ליאור קאסה",
+      "אור קאסה"
      ]
     },
     {
@@ -26761,7 +27872,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Manuel Benson"
+     ]
     },
     {
      "he": "סדריק דון",
@@ -27107,10 +28221,10 @@
     ]
    },
    "counts": {
-    "players": 452,
+    "players": 465,
     "targets": 183,
-    "hidden": 98,
-    "unconfirmed": 0
+    "hidden": 99,
+    "unconfirmed": 16
    },
    "players": [
     {
@@ -27177,37 +28291,6 @@
      "target": false
     },
     {
-     "he": "אברהם בית הלוי",
-     "pos": "DF",
-     "nat": "PL",
-     "born": 1913,
-     "spells": [
-      [
-       1930,
-       1939
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "אבי בית הלוי"
-     ]
-    },
-    {
-     "he": "משה מלמד",
-     "pos": "DF",
-     "nat": "UA",
-     "born": 1921,
-     "spells": [
-      [
-       1939,
-       1950
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
      "he": "צבי ארליך",
      "pos": "FW",
      "nat": null,
@@ -27248,38 +28331,6 @@
      ],
      "titles": 0,
      "target": false
-    },
-    {
-     "he": "אשר בלוט",
-     "pos": "MF",
-     "nat": "DE",
-     "born": 1932,
-     "spells": [
-      [
-       1950,
-       1959
-      ]
-     ],
-     "titles": 1,
-     "target": false
-    },
-    {
-     "he": "דוד שווייצר",
-     "pos": "DF",
-     "nat": null,
-     "born": 1925,
-     "spells": [
-      [
-       1950,
-       1955
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "דודו שווייצר",
-      "דויד שווייצר"
-     ]
     },
     {
      "he": "רחביה רוזנבוים",
@@ -27328,24 +28379,6 @@
      "target": false
     },
     {
-     "he": "מיכאל מיכאלוב",
-     "pos": "FW",
-     "nat": null,
-     "born": 1935,
-     "spells": [
-      [
-       1956,
-       1959
-      ]
-     ],
-     "titles": 1,
-     "target": false,
-     "aliases": [
-      "מיקי מיכאלוב",
-      "מייק מיכאלוב"
-     ]
-    },
-    {
      "he": "איצ'ה מנחם",
      "pos": "MF",
      "nat": null,
@@ -27374,37 +28407,6 @@
      "target": false,
      "aliases": [
       "חיימק נוריאלי"
-     ]
-    },
-    {
-     "he": "שמעון כהן",
-     "pos": "MF",
-     "nat": null,
-     "born": 1942,
-     "spells": [
-      [
-       1960,
-       1961
-      ]
-     ],
-     "titles": 1,
-     "target": false
-    },
-    {
-     "he": "דניאל דניאלי",
-     "pos": "FW",
-     "nat": "IL",
-     "born": 1945,
-     "spells": [
-      [
-       1962,
-       1966
-      ]
-     ],
-     "titles": 1,
-     "target": false,
-     "aliases": [
-      "דני דניאלי"
      ]
     },
     {
@@ -27453,23 +28455,10 @@
      "titles": 2,
      "target": true,
      "aliases": [
+      "David Primo",
       "דודו פרימו",
       "דויד פרימו"
      ]
-    },
-    {
-     "he": "יואל שוהם",
-     "pos": "GK",
-     "nat": null,
-     "born": 1944,
-     "spells": [
-      [
-       1964,
-       1965
-      ]
-     ],
-     "titles": 0,
-     "target": false
     },
     {
      "he": "יחזקאל חזום",
@@ -27485,6 +28474,7 @@
      "titles": 3,
      "target": true,
      "aliases": [
+      "Yechezkel Chazom",
       "חזי חזום"
      ]
     },
@@ -27514,25 +28504,9 @@
       ]
      ],
      "titles": 3,
-     "target": true
-    },
-    {
-     "he": "יעקב רחמינוביץ'",
-     "pos": "DF",
-     "nat": "IL",
-     "born": 1948,
-     "spells": [
-      [
-       1967,
-       1980
-      ]
-     ],
-     "titles": 2,
-     "target": false,
+     "target": true,
      "aliases": [
-      "ג'קי רחמינוביץ",
-      "ז'קי רחמינוביץ",
-      "יעקוב רחמינוביץ"
+      "George Borba"
      ]
     },
     {
@@ -27635,7 +28609,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Rifaat Turk"
+     ]
     },
     {
      "he": "גילי לנדאו",
@@ -27649,7 +28626,10 @@
       ]
      ],
      "titles": 4,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Gili Landau"
+     ]
     },
     {
      "he": "יעקב אקהויז",
@@ -27755,6 +28735,7 @@
      "titles": 4,
      "target": true,
      "aliases": [
+      "Yossi Zana",
       "יוסף זאנה"
      ]
     },
@@ -27793,7 +28774,10 @@
       ]
      ],
      "titles": 4,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Moshe Sinai"
+     ]
     },
     {
      "he": "מוריס ז'אנו",
@@ -27865,24 +28849,8 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Eli Uzan",
       "אליהו אוזן"
-     ]
-    },
-    {
-     "he": "אלי יאני",
-     "pos": "FW",
-     "nat": "IL",
-     "born": 1959,
-     "spells": [
-      [
-       1985,
-       1986
-      ]
-     ],
-     "titles": 1,
-     "target": false,
-     "aliases": [
-      "אליהו יאני"
      ]
     },
     {
@@ -27949,6 +28917,7 @@
      "titles": 1,
      "target": true,
      "aliases": [
+      "Jacob Cohen",
       "ג'קי כהן",
       "ז'קי כהן",
       "יעקוב כהן"
@@ -27967,6 +28936,23 @@
      ],
      "titles": 1,
      "target": false
+    },
+    {
+     "he": "אחמד מוסא",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1968,
+     "spells": [
+      [
+       1987,
+       1993
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "Ahmed Mussa"
+     ]
     },
     {
      "he": "גיורא אנטמן",
@@ -27996,6 +28982,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "David Pizanti",
       "דודו פיזנטי",
       "דויד פיזנטי"
      ]
@@ -28056,7 +29043,10 @@
       ]
      ],
      "titles": 1,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Felix Halfon"
+     ]
     },
     {
      "he": "אלון מזרחי",
@@ -28072,22 +29062,9 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Alon Mizrahi",
       "אילון מזרחי"
      ]
-    },
-    {
-     "he": "רונן הילל",
-     "pos": "FW",
-     "nat": "IL",
-     "born": 1961,
-     "spells": [
-      [
-       1991,
-       1991
-      ]
-     ],
-     "titles": 0,
-     "target": false
     },
     {
      "he": "שולי גילארדי",
@@ -28239,6 +29216,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Haim Revivo",
       "חיימק רביבו"
      ]
     },
@@ -28275,7 +29253,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Yaron Ben-Dov"
+     ]
     },
     {
      "he": "רונן פייגנבוים",
@@ -28303,7 +29284,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Sharon Mimer"
+     ]
     },
     {
      "he": "תומר אליהו",
@@ -28335,7 +29319,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Guy Sharabi"
+     ]
     },
     {
      "he": "דוד אמסלם",
@@ -28351,6 +29338,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "David Amsalem",
       "דודו אמסלם",
       "דויד אמסלם"
      ]
@@ -28367,7 +29355,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Damian Łukasik"
+     ]
     },
     {
      "he": "יעקב שוורץ",
@@ -28383,6 +29374,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Yaakov Schwartz",
       "ג'קי שוורץ",
       "ז'קי שוורץ",
       "יעקוב שוורץ"
@@ -28400,7 +29392,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Jarosław Bako"
+     ]
     },
     {
      "he": "מאיר מליקה",
@@ -28428,7 +29423,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Kazimierz Moskal"
+     ]
     },
     {
      "he": "מוטי פליטר",
@@ -28461,8 +29459,26 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Nisso Avitan",
       "ניסים אביטן",
       "נסים אביטן"
+     ]
+    },
+    {
+     "he": "קובי הדדי",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1973,
+     "spells": [
+      [
+       1996,
+       1997
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Kobi Hadadi"
      ]
     },
     {
@@ -28480,6 +29496,23 @@
      "target": false
     },
     {
+     "he": "שחר כהן",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1976,
+     "spells": [
+      [
+       1996,
+       1999
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "Shahar Cohen"
+     ]
+    },
+    {
      "he": "אלון חזן",
      "pos": "MF",
      "nat": "IL",
@@ -28493,6 +29526,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Alon Hazan",
       "אילון חזן"
      ]
     },
@@ -28508,7 +29542,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Sergey Pogodin"
+     ]
     },
     {
      "he": "שביט אלימלך",
@@ -28540,7 +29577,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Shalom Tikva"
+     ]
     },
     {
      "he": "שמעון גרשון",
@@ -28633,7 +29673,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Israel Cohen"
+     ]
     },
     {
      "he": "כפיר אודי",
@@ -28651,7 +29694,10 @@
       ]
      ],
      "titles": 4,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Kfir Udi"
+     ]
     },
     {
      "he": "עופר שטרית",
@@ -28665,7 +29711,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Ofer Shitrit"
+     ]
     },
     {
      "he": "פיני בלילי",
@@ -28684,6 +29733,23 @@
       "פיני בלילי",
       "Pini Balili",
       "פנחס בלילי"
+     ]
+    },
+    {
+     "he": "אדי אלקיים",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1980,
+     "spells": [
+      [
+       1999,
+       2000
+      ]
+     ],
+     "titles": 3,
+     "target": false,
+     "aliases": [
+      "Edi Elkayam"
      ]
     },
     {
@@ -28726,7 +29792,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Gábor Márton"
+     ]
     },
     {
      "he": "דאבור רופניק",
@@ -28740,7 +29809,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Davor Rupnik"
+     ]
     },
     {
      "he": "זיו קבדה",
@@ -28754,7 +29826,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ziv Caveda"
+     ]
     },
     {
      "he": "מוטי אוחיון",
@@ -28775,7 +29850,7 @@
     },
     {
      "he": "ניר רחמין",
-     "pos": "FW",
+     "pos": "GK",
      "nat": "IL",
      "born": 1980,
      "spells": [
@@ -28791,8 +29866,7 @@
      "titles": 4,
      "target": true,
      "aliases": [
-      "ניר רחמין",
-      "Henry Nwosu"
+      "ניר רחמין"
      ]
     },
     {
@@ -28807,7 +29881,10 @@
       ]
      ],
      "titles": 3,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Sebastjan Cimirotič"
+     ]
     },
     {
      "he": "סלים טועמה",
@@ -28832,8 +29909,7 @@
      "target": true,
      "aliases": [
       "סלים טועמה",
-      "Salim Toama",
-      "Tomer Ben Yousef"
+      "Salim Toama"
      ]
     },
     {
@@ -28848,7 +29924,27 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Idan Tal"
+     ]
+    },
+    {
+     "he": "קובי שאלו",
+     "pos": "GK",
+     "nat": "IL",
+     "born": null,
+     "spells": [
+      [
+       1999,
+       1999
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "Kobi Shalo"
+     ]
     },
     {
      "he": "אילן בכר",
@@ -28880,7 +29976,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "István Pisont"
+     ]
     },
     {
      "he": "דיאן ראצ'וניצה",
@@ -28894,7 +29993,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Dean Računica"
+     ]
     },
     {
      "he": "יגאל אנטבי",
@@ -28948,7 +30050,10 @@
       ]
      ],
      "titles": 2,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Ronen Harazi"
+     ]
     },
     {
      "he": "אבי תקווה",
@@ -28994,11 +30099,14 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Gábor Halmai"
+     ]
     },
     {
      "he": "דודו דהאן",
-     "pos": "FW",
+     "pos": "DF",
      "nat": "IL",
      "born": 1971,
      "spells": [
@@ -29010,6 +30118,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Dudu Dahan",
       "דוד דהאן",
       "דויד דהאן"
      ]
@@ -29026,7 +30135,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Denis Onishenko"
+     ]
     },
     {
      "he": "מילאן אוסטרץ",
@@ -29040,7 +30152,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Milan Osterc"
+     ]
     },
     {
      "he": "אבי כנפו",
@@ -29056,6 +30171,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Avi Knafo",
       "אברהם כנפו",
       "אביחי כנפו"
      ]
@@ -29079,7 +30195,6 @@
      "target": true,
      "aliases": [
       "בן לוז",
-      "Denis Onishenko",
       "Ben Luz"
      ]
     },
@@ -29113,7 +30228,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Serghei Cleşcenco"
+     ]
     },
     {
      "he": "קלמי סבן",
@@ -29131,6 +30249,23 @@
      "aliases": [
       "קלמי סבן",
       "Klemi Saban"
+     ]
+    },
+    {
+     "he": "אביב אלחדד",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1983,
+     "spells": [
+      [
+       2003,
+       2003
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אביב אלחדד"
      ]
     },
     {
@@ -29167,6 +30302,40 @@
      "target": true,
      "aliases": [
       "גליל בן שאנן"
+     ]
+    },
+    {
+     "he": "וולטון סילבה",
+     "pos": "FW",
+     "nat": null,
+     "born": 1978,
+     "spells": [
+      [
+       2003,
+       2003
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "וולטון קרלוס סילבה"
+     ]
+    },
+    {
+     "he": "רחמים חלייס",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1982,
+     "spells": [
+      [
+       2003,
+       2006
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "רחמים חלייס"
      ]
     },
     {
@@ -29232,7 +30401,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ibezito Ogbonna"
+     ]
     },
     {
      "he": "גיא כוואז",
@@ -29337,6 +30509,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Laryea Kingston",
       "לריה קינגסטון"
      ]
     },
@@ -29474,7 +30647,8 @@
      "aliases": [
       "ג'ון פנסטיל",
       "גון פנסטיל",
-      "ג'ון פנטסיל"
+      "ג'ון פנטסיל",
+      "John Paintsil"
      ]
     },
     {
@@ -29638,7 +30812,7 @@
      "he": "ברוך דגו",
      "pos": "MF",
      "nat": "IL",
-     "born": 1982,
+     "born": 1981,
      "spells": [
       [
        2006,
@@ -29674,7 +30848,8 @@
      "target": true,
      "aliases": [
       "גיל ורמוט",
-      "גילי ורמוט"
+      "גילי ורמוט",
+      "Gil Vermouth"
      ]
     },
     {
@@ -29693,6 +30868,23 @@
      "aliases": [
       "ואליד באדיר",
       "Walid Badir"
+     ]
+    },
+    {
+     "he": "יקיר לוסקי",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1986,
+     "spells": [
+      [
+       2006,
+       2007
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "יקיר לוסקי"
      ]
     },
     {
@@ -29741,7 +30933,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Ivan Jolic"
+     ]
     },
     {
      "he": "ביברס נאתכו",
@@ -29775,25 +30970,9 @@
      "titles": 1,
      "target": false,
      "aliases": [
+      "Javier Páez",
       "חאבייר פאיס",
       "חאבייר מארסלו פאיס"
-     ]
-    },
-    {
-     "he": "יוסי ביטון",
-     "pos": "DF",
-     "nat": "IL",
-     "born": 1983,
-     "spells": [
-      [
-       2007,
-       2007
-      ]
-     ],
-     "titles": 1,
-     "target": false,
-     "aliases": [
-      "יוסף ביטון"
      ]
     },
     {
@@ -29874,7 +31053,7 @@
     },
     {
      "he": "רמי דואני",
-     "pos": "MF",
+     "pos": "DF",
      "nat": "IL",
      "born": 1987,
      "spells": [
@@ -29902,7 +31081,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Tomer Haliva"
+     ]
     },
     {
      "he": "אומות גוזלסש",
@@ -30041,7 +31223,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Nsumbu Mazuwa"
+     ]
     },
     {
      "he": "עדי סבג",
@@ -30238,6 +31423,27 @@
      "target": false
     },
     {
+     "he": "יהודה חוטה",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1989,
+     "spells": [
+      [
+       2009,
+       2010
+      ],
+      [
+       2012,
+       2012
+      ]
+     ],
+     "titles": 3,
+     "target": false,
+     "aliases": [
+      "יהודה חוטה"
+     ]
+    },
+    {
      "he": "יניב מזרחי",
      "pos": "GK",
      "nat": "IL",
@@ -30284,7 +31490,10 @@
       ]
      ],
      "titles": 4,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Maharan Al-Lala"
+     ]
     },
     {
      "he": "סמואל יבואה",
@@ -30396,7 +31605,10 @@
       ]
      ],
      "titles": 2,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Bojan Vručina"
+     ]
     },
     {
      "he": "בוריס קליימן",
@@ -30495,6 +31707,27 @@
      ]
     },
     {
+     "he": "מור שושן",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1988,
+     "spells": [
+      [
+       2010,
+       2010
+      ],
+      [
+       2012,
+       2013
+      ]
+     ],
+     "titles": 3,
+     "target": false,
+     "aliases": [
+      "מור שושן"
+     ]
+    },
+    {
      "he": "מיכאל זנדברג",
      "pos": "MF",
      "nat": "IL",
@@ -30508,6 +31741,7 @@
      "titles": 2,
      "target": false,
      "aliases": [
+      "Michael Zandberg",
       "מיקי זנדברג",
       "מייק זנדברג"
      ]
@@ -30526,6 +31760,7 @@
      "titles": 2,
      "target": false,
      "aliases": [
+      "Nemanja Vučićević",
       "נמניה וויציצביץ",
       "נמניה וויצ'יצ'ביץ"
      ]
@@ -30559,7 +31794,10 @@
       ]
      ],
      "titles": 2,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Bevan Fransman"
+     ]
     },
     {
      "he": "בן ביטון",
@@ -30580,9 +31818,7 @@
      "target": true,
      "aliases": [
       "בן ביטון",
-      "Ben Bitton",
-      "Sintayehu Sallalich",
-      "סינטאיהו סלליך"
+      "Ben Bitton"
      ]
     },
     {
@@ -30605,6 +31841,23 @@
      "aliases": [
       "בן שהר",
       "Ben Sahar"
+     ]
+    },
+    {
+     "he": "גל מאיו",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1991,
+     "spells": [
+      [
+       2011,
+       2011
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "גל מאיו"
      ]
     },
     {
@@ -30775,6 +32028,9 @@
      "nats": [
       "AM",
       "CM"
+     ],
+     "aliases": [
+      "Apoula Edel"
      ]
     },
     {
@@ -30842,7 +32098,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Mirko Oremuš"
+     ]
     },
     {
      "he": "מריו פצ'אלקה",
@@ -30856,7 +32115,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Mário Pečalka"
+     ]
     },
     {
      "he": "מרקו שולר",
@@ -30888,7 +32150,10 @@
       ]
      ],
      "titles": 1,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Nosa Igiebor"
+     ]
     },
     {
      "he": "עומר דמארי",
@@ -30999,6 +32264,23 @@
       "Eric Djemba-Djemba",
       "אריק דג'מבה-דג'מבה",
       "אריק דגמבה"
+     ]
+    },
+    {
+     "he": "דור חמו",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1993,
+     "spells": [
+      [
+       2013,
+       2013
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "דור חי חמו"
      ]
     },
     {
@@ -31137,7 +32419,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Sean Malka"
+     ]
     },
     {
      "he": "תומר בן-יוסף",
@@ -31151,7 +32436,29 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Tomer Ben Yousef",
+      "תומר בן יוסף"
+     ]
+    },
+    {
+     "he": "אברהם צקול",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1992,
+     "spells": [
+      [
+       2014,
+       2015
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אברהם צ'קול",
+      "אבי צקול"
+     ]
     },
     {
      "he": "אוראל דגני",
@@ -31172,8 +32479,7 @@
      "target": true,
      "aliases": [
       "אוראל דגני",
-      "Orel Dgani",
-      "Tal Benesh"
+      "Orel Dgani"
      ]
     },
     {
@@ -31345,7 +32651,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Lucas Sasha"
+     ]
     },
     {
      "he": "עומר פדידה",
@@ -31469,6 +32778,24 @@
      ]
     },
     {
+     "he": "אביחי דהן",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 1995,
+     "spells": [
+      [
+       2015,
+       2015
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אביחי דהן",
+      "אבי דהן"
+     ]
+    },
+    {
      "he": "אמידו באלדה",
      "pos": "FW",
      "nat": "GW",
@@ -31482,6 +32809,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Amido Baldé",
       "אמידו בלדה"
      ]
     },
@@ -31564,7 +32892,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Harmony Ikande"
+     ]
     },
     {
      "he": "משה אוחיון",
@@ -31763,9 +33094,7 @@
      "target": true,
      "aliases": [
       "אדי גוטליב",
-      "Adi Gotlieb",
-      "Amir Agayev",
-      "אמיר עגייב"
+      "Adi Gotlieb"
      ]
     },
     {
@@ -31784,7 +33113,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Iyad Abu Abaid"
+     ]
     },
     {
      "he": "איסומאילה לינגאנה",
@@ -31838,6 +33170,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Anas Mahamid",
       "אנאס מחאמיד"
      ]
     },
@@ -32009,7 +33342,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Siraj Nassar"
+     ]
     },
     {
      "he": "עומרי אלטמן",
@@ -32034,8 +33370,7 @@
      "target": true,
      "aliases": [
       "עומרי אלטמן",
-      "Omri Altman",
-      "Raz Stain"
+      "Omri Altman"
      ]
     },
     {
@@ -32095,6 +33430,23 @@
      "target": true,
      "aliases": [
       "פרחאת עבדי"
+     ]
+    },
+    {
+     "he": "צליל חתוכה",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 1989,
+     "spells": [
+      [
+       2016,
+       2017
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "צליל חתוכה"
      ]
     },
     {
@@ -32198,7 +33550,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Ezechiel N'Douassel"
+     ]
     },
     {
      "he": "אייל משומר",
@@ -32230,7 +33585,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Aaron Schoenfeld"
+     ]
     },
     {
      "he": "דוד אלון",
@@ -32315,6 +33673,27 @@
      ]
     },
     {
+     "he": "יהונתן לוי",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1999,
+     "spells": [
+      [
+       2017,
+       2017
+      ],
+      [
+       2019,
+       2019
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Yehonatan Levy"
+     ]
+    },
+    {
      "he": "מייקל סיטון",
      "pos": "FW",
      "nat": "JM",
@@ -32329,6 +33708,23 @@
      "target": false,
      "aliases": [
       "מייקל ג'וזף ארנטס סיטון"
+     ]
+    },
+    {
+     "he": "עדן הרשקוביץ",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1997,
+     "spells": [
+      [
+       2017,
+       2018
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "עדן הרשקוביץ"
      ]
     },
     {
@@ -32416,6 +33812,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Or Ostvind",
       "ליאור אוסטוינד"
      ]
     },
@@ -32543,6 +33940,7 @@
      "titles": 0,
      "target": false,
      "aliases": [
+      "Tal Benesh",
       "טליק בנש"
      ]
     },
@@ -32580,6 +33978,23 @@
       "מוטי ברשצקי",
       "Moti Barshazky",
       "מרדכי ברשצקי"
+     ]
+    },
+    {
+     "he": "מור נעמן",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1998,
+     "spells": [
+      [
+       2018,
+       2018
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "מור נעמן"
      ]
     },
     {
@@ -32650,6 +34065,23 @@
      ]
     },
     {
+     "he": "אמיר עגייב",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1992,
+     "spells": [
+      [
+       2019,
+       2019
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Amir Agayev"
+     ]
+    },
+    {
      "he": "אפק בלס",
      "pos": "DF",
      "nat": "IL",
@@ -32713,7 +34145,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Marvin Peersman"
+     ]
     },
     {
      "he": "נריוס ואלסקיס",
@@ -32727,7 +34162,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Nerijus Valskis"
+     ]
     },
     {
      "he": "עלי אל עברה",
@@ -32795,7 +34233,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Fejsal Mulić"
+     ]
     },
     {
      "he": "קאיו אלבס",
@@ -32870,7 +34311,8 @@
      "target": true,
      "aliases": [
       "רועי זכרי",
-      "רועי זיקרי"
+      "רועי זיקרי",
+      "Roei Zikri"
      ]
     },
     {
@@ -32889,6 +34331,23 @@
      "aliases": [
       "רז כהן",
       "Raz Cohen"
+     ]
+    },
+    {
+     "he": "אופק עובדיה",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 2001,
+     "spells": [
+      [
+       2020,
+       2020
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Ofek Ovadia"
      ]
     },
     {
@@ -32993,7 +34452,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Yoav Gerafi"
+     ]
     },
     {
      "he": "מאור בוזגלו",
@@ -33046,6 +34508,32 @@
      "target": false
     },
     {
+     "he": "עידו שרון",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 2002,
+     "spells": [
+      [
+       2020,
+       2021
+      ],
+      [
+       2023,
+       2023
+      ],
+      [
+       2025,
+       2025
+      ]
+     ],
+     "titles": 0,
+     "target": true,
+     "aliases": [
+      "עידו שרון",
+      "Ido Sharon"
+     ]
+    },
+    {
      "he": "עלי כנאנה",
      "pos": "FW",
      "nat": "IL",
@@ -33074,7 +34562,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Amit Meir"
+     ]
     },
     {
      "he": "פיליפ רודריגז",
@@ -33135,6 +34626,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Shay Ayzen",
       "שי איזן",
       "שי לי איזן",
       "ישי אייזן"
@@ -33171,7 +34663,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ilay Tamam"
+     ]
     },
     {
      "he": "ארנסטס שטקוס",
@@ -33185,7 +34680,10 @@
       ]
      ],
      "titles": 0,
-     "target": true
+     "target": true,
+     "aliases": [
+      "Ernestas Šetkus"
+     ]
     },
     {
      "he": "גיל יצחק",
@@ -33295,6 +34793,27 @@
      ]
     },
     {
+     "he": "עילי קריספי",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 2002,
+     "spells": [
+      [
+       2021,
+       2021
+      ],
+      [
+       2024,
+       2024
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Ilay Krispi"
+     ]
+    },
+    {
      "he": "רוי ברנס",
      "pos": "GK",
      "nat": "IL",
@@ -33313,6 +34832,23 @@
      "target": true,
      "aliases": [
       "רוי ברנס"
+     ]
+    },
+    {
+     "he": "רז שטיין",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1994,
+     "spells": [
+      [
+       2021,
+       2021
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Raz Stain"
      ]
     },
     {
@@ -33405,20 +34941,6 @@
      ]
     },
     {
-     "he": "אלפה קונטה",
-     "pos": "MF",
-     "nat": null,
-     "born": 2000,
-     "spells": [
-      [
-       2022,
-       2022
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
      "he": "אנג פלימיין",
      "pos": "FW",
      "nat": "IL",
@@ -33447,7 +34969,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Ange-Freddy Plumain"
+     ]
     },
     {
      "he": "בוגדאן סרנבסקי",
@@ -33699,20 +35224,6 @@
      ]
     },
     {
-     "he": "אבו דוסו",
-     "pos": "DF",
-     "nat": "CI",
-     "born": 1996,
-     "spells": [
-      [
-       2023,
-       2023
-      ]
-     ],
-     "titles": 0,
-     "target": false
-    },
-    {
      "he": "אלכסנדר בולייביץ'",
      "pos": "FW",
      "nat": "ME",
@@ -33769,7 +35280,8 @@
      ],
      "aliases": [
       "אנטואן קונטה",
-      "אנטואן קונט"
+      "אנטואן קונט",
+      "Antoine Conté"
      ]
     },
     {
@@ -33846,6 +35358,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "Hisham Layous",
       "השאם ליוס"
      ]
     },
@@ -33864,7 +35377,8 @@
      "target": false,
      "aliases": [
       "גודפריד רומראטו",
-      "חוטפריט רומראטו"
+      "חוטפריט רומראטו",
+      "Godfried Roemeratoe"
      ]
     },
     {
@@ -33926,6 +35440,23 @@
      ]
     },
     {
+     "he": "סבסטיאן לאנוס",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 2003,
+     "spells": [
+      [
+       2023,
+       2023
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "סבסטיאן איסאיי הרננדז לאנוס"
+     ]
+    },
+    {
      "he": "סטפן מרינוביץ'",
      "pos": "GK",
      "nat": null,
@@ -33938,6 +35469,23 @@
      ],
      "titles": 0,
      "target": false
+    },
+    {
+     "he": "סינטאיהו סלליך",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1991,
+     "spells": [
+      [
+       2023,
+       2023
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Sintayehu Sallalich"
+     ]
     },
     {
      "he": "סתיו למקין",
@@ -33955,27 +35503,6 @@
      "aliases": [
       "סתיו למקין",
       "Stav Lemkin"
-     ]
-    },
-    {
-     "he": "עידו שרון",
-     "pos": "GK",
-     "nat": "IL",
-     "born": 2002,
-     "spells": [
-      [
-       2023,
-       2023
-      ],
-      [
-       2025,
-       2025
-      ]
-     ],
-     "titles": 0,
-     "target": true,
-     "aliases": [
-      "עידו שרון"
      ]
     },
     {
@@ -34243,7 +35770,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Mavis Tchibota"
+     ]
     },
     {
      "he": "מתיו פרנק",
@@ -34260,6 +35790,23 @@
      "target": false,
      "aliases": [
       "מתיו פרנק"
+     ]
+    },
+    {
+     "he": "רועי אלקוקין",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 2004,
+     "spells": [
+      [
+       2024,
+       2026
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "רועי אלקוקין"
      ]
     },
     {
@@ -34385,6 +35932,7 @@
      "titles": 0,
      "target": true,
      "aliases": [
+      "David Cuperman",
       "דודו קופרמן",
       "דויד קופרמן"
      ]
@@ -34497,6 +36045,24 @@
      ]
     },
     {
+     "he": "ישי ברוש",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 2007,
+     "spells": [
+      [
+       2025,
+       2026
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "Yishay Brosh",
+      "שי ברוש"
+     ]
+    },
+    {
      "he": "לירן רוטמן",
      "pos": "FW",
      "nat": "IL",
@@ -34526,7 +36092,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Milan Makarić"
+     ]
     },
     {
      "he": "סתיו טוריאל",
@@ -34583,7 +36152,7 @@
     },
     {
      "he": "רוי קורין",
-     "pos": "GK",
+     "pos": "FW",
      "nat": "IL",
      "born": 2002,
      "spells": [
@@ -34596,7 +36165,6 @@
      "target": true,
      "aliases": [
       "רוי קורין",
-      "Ido Sharon",
       "Roy Korine"
      ]
     },
@@ -34755,7 +36323,8 @@
      "target": false,
      "aliases": [
       "לויזוס לויזו",
-      "לואיזוס לואיזו"
+      "לואיזוס לואיזו",
+      "Loizos Loizou"
      ]
     },
     {
@@ -34822,7 +36391,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "Fernand Mayembo"
+     ]
     },
     {
      "he": "שאנדה סילבה",
