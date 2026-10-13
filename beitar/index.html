@@ -1371,12 +1371,12 @@ button.wa,button.act.wa{background:#15803D}
 [data-theme-mode="system"] #themeBtn .ts,[data-theme-mode="dark"] #themeBtn .td,
 [data-theme-mode="light"] #themeBtn .tl{display:block}
 /* בקשת דירוג: שורה שקטה בכרטיס, לא חלון. הכוכבים הם הצבע היחיד */
-#rateApp{box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:10px;width:calc(100% - 32px);margin:12px 16px 0;
+#rateApp,#notifyApp{box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:10px;width:calc(100% - 32px);margin:12px 16px 0;
   padding:12px 14px;border-radius:14px;border:1.5px dashed var(--ui-ctl,#B9B5AC);background:transparent;
   color:var(--ui-ink-2,#55555E);font:inherit;font-size:14.5px;font-weight:500;cursor:pointer;line-height:1.3}
-#rateApp .stars{color:#F5B301;font-size:17px;letter-spacing:1px;flex:none}
-#rateApp:hover,#rateApp:focus-visible{border-style:solid;color:var(--ui-ink,#121214)}
-#rateApp[hidden]{display:none}
+#rateApp .stars,#notifyApp .stars{color:#F5B301;font-size:17px;letter-spacing:1px;flex:none}
+#rateApp:hover,#rateApp:focus-visible,#notifyApp:hover,#notifyApp:focus-visible{border-style:solid;color:var(--ui-ink,#121214)}
+#rateApp[hidden],#notifyApp[hidden]{display:none}
 </style>
 </head>
 <body>
@@ -1450,6 +1450,9 @@ button.wa,button.act.wa{background:#15803D}
       <!-- דירוג בחנות: רק באפליקציה, אחרי 3 פיצוחים, עד לחיצה אחת (native.js) -->
       <button class="rate" id="rateApp" hidden><span class="stars" aria-hidden="true">★★★★★</span>
         <span>נהנים? דירוג קצר בחנות עוזר למשחק לגדול</span></button>
+      <!-- תזכורת בוקר: רק באפליקציה, כל עוד אין הרשאה (native.js 5ב) -->
+      <button class="rate" id="notifyApp" hidden><span class="stars" aria-hidden="true">🔔</span>
+        <span>תזכורת כל בוקר ב-08:30</span></button>
       <button class="act ghost" id="again">משחק אימון (שחקן אקראי)</button>
       <div id="report"><a id="fixLink" href="#">טעות בפרטי השחקן?</a> ·
         <a id="reportLink" href="#">פידבק ובאגים</a></div>
@@ -4049,13 +4052,65 @@ function migrateFromBeitardle(){
     set("daily", "1");
   }
 
+  /* מה קרה לבקשת ההרשאה, לגיליון האנליטיקס. דווח מהשטח: "באייפון אין
+     תזכורת בבוקר, ובהגדרות אין בכלל שורת התראות" — כלומר iOS מעולם לא
+     ראה בקשה. בלי דיווח אי אפשר לדעת מה קורה במכשיר שאין לנו. */
+  const report = (state, extra) => safe(() => {
+    if (typeof track === "function") track("notif", { platform, state, ...(extra || {}) });
+  });
+
   async function askThenSchedule() {
-    if (!P.LocalNotifications) return;
+    if (!P.LocalNotifications) { report("no-plugin"); return; }
     if (get("asked")) { if (get("daily")) scheduleDaily(); return; }
-    set("asked", "1");
-    const res = await P.LocalNotifications.requestPermissions();
-    if (res.display === "granted") await scheduleDaily();
+    try {
+      const res = await P.LocalNotifications.requestPermissions();
+      /* "asked" נרשם רק אחרי שהבקשה באמת חזרה. קודם הוא נרשם לפני,
+         וכל כישלון בדרך נעל את המשתמש מחוץ להתראות לתמיד. */
+      set("asked", "1");
+      report(res.display);
+      if (res.display === "granted") await scheduleDaily();
+    } catch (e) {
+      report("error", { err: String(e && (e.message || e)).slice(0, 120) });
+    }
+    await refreshNotify();
   }
+
+  /* ---------- 5ב. כפתור "תזכורת כל בוקר" ----------
+     הבקשה האוטומטית קורית פעם אחת, שנייה וחצי אחרי שהחידה הראשונה
+     נגמרת. מי שפספס אותה — או שהיא לא הגיעה — לא היה לו שום דרך
+     להפעיל תזכורת, וב-iOS אפילו שורת "התראות" לא קיימת בהגדרות עד
+     שהאפליקציה מבקשת פעם אחת. עכשיו בכרטיס התוצאה יש כפתור, כל עוד
+     ההרשאה לא ניתנה. חסום? iOS פותח את מסך ההגדרות של האפליקציה. */
+  const notifyBtn = document.getElementById("notifyApp");
+  async function refreshNotify() {
+    if (!notifyBtn) return;
+    const result = document.getElementById("result");
+    if (!P.LocalNotifications || !result || !result.classList.contains("on")) { notifyBtn.hidden = true; return; }
+    const perm = await P.LocalNotifications.checkPermissions().catch(() => null);
+    notifyBtn.hidden = !perm || perm.display === "granted";
+    if (perm && perm.display === "denied")
+      notifyBtn.lastElementChild.textContent = platform === "ios"
+        ? "התזכורת חסומה — להפעלה בהגדרות"
+        : "התזכורת חסומה — אפשר להפעיל בהגדרות הטלפון";
+  }
+  safe(() => {
+    if (!notifyBtn) return;
+    notifyBtn.addEventListener("click", async () => {
+      const perm = await P.LocalNotifications.checkPermissions().catch(() => null);
+      if (perm && perm.display === "denied") {
+        report("denied-tap");
+        if (platform === "ios") location.href = "app-settings:";
+        return;
+      }
+      set("asked", "");
+      await askThenSchedule();
+      if (!notifyBtn.hidden) return;
+      notifyBtn.hidden = false;
+      notifyBtn.lastElementChild.textContent = "מעולה — נתראה מחר ב-08:30";
+      notifyBtn.disabled = true;
+      setTimeout(() => { notifyBtn.hidden = true; }, 2500);
+    });
+  });
 
   /* מחדשים את החלון בכל פתיחה של מי שכבר אישר. */
   safe(() => { if (get("daily")) scheduleDaily(); });
@@ -4082,6 +4137,7 @@ function migrateFromBeitardle(){
         if (get("daily")) scheduleDaily();
       }
       if (fromChange && !asked) { asked = true; setTimeout(askThenSchedule, 1400); }
+      refreshNotify();
     };
     new MutationObserver(() => onResult(true))
       .observe(result, { attributes: true, attributeFilter: ["class"] });
