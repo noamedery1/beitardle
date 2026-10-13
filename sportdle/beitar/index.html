@@ -1370,6 +1370,13 @@ button.wa,button.act.wa{background:#15803D}
 #themeBtn svg{display:none}
 [data-theme-mode="system"] #themeBtn .ts,[data-theme-mode="dark"] #themeBtn .td,
 [data-theme-mode="light"] #themeBtn .tl{display:block}
+/* בקשת דירוג: שורה שקטה בכרטיס, לא חלון. הכוכבים הם הצבע היחיד */
+#rateApp{box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:10px;width:calc(100% - 32px);margin:12px 16px 0;
+  padding:12px 14px;border-radius:14px;border:1.5px dashed var(--ui-ctl,#B9B5AC);background:transparent;
+  color:var(--ui-ink-2,#55555E);font:inherit;font-size:14.5px;font-weight:500;cursor:pointer;line-height:1.3}
+#rateApp .stars{color:#F5B301;font-size:17px;letter-spacing:1px;flex:none}
+#rateApp:hover,#rateApp:focus-visible{border-style:solid;color:var(--ui-ink,#121214)}
+#rateApp[hidden]{display:none}
 </style>
 </head>
 <body>
@@ -1440,6 +1447,9 @@ button.wa,button.act.wa{background:#15803D}
       <button class="act wa" id="wa">שליחה בוואטסאפ</button>
       <button class="act ghost" id="story">תמונה לסטורי</button>
       <button class="act ghost" id="share">העתקת התוצאה</button>
+      <!-- דירוג בחנות: רק באפליקציה, אחרי 3 פיצוחים, עד לחיצה אחת (native.js) -->
+      <button class="rate" id="rateApp" hidden><span class="stars" aria-hidden="true">★★★★★</span>
+        <span>נהנים? דירוג קצר בחנות עוזר למשחק לגדול</span></button>
       <button class="act ghost" id="again">משחק אימון (שחקן אקראי)</button>
       <div id="report"><a id="fixLink" href="#">טעות בפרטי השחקן?</a> ·
         <a id="reportLink" href="#">פידבק ובאגים</a></div>
@@ -3903,6 +3913,46 @@ function migrateFromBeitardle(){
       ev.stopImmediatePropagation();
       P.Browser.open({ url: u.href, toolbarColor: "#ECEAE5" }).catch(() => { location.href = u.href; });
     }, true);
+  });
+
+  /* ---------- 3ה. דירוג בחנות ----------
+     שורה בכרטיס התוצאה, לא חלון קופץ: מופיעה רק אחרי ניצחון, ורק מי
+     שכבר פיצח 3 חידות (באיזה מועדון שהוא) — מי שחזר שלוש פעמים אוהב את
+     המשחק. לחיצה אחת והיא נעלמת לתמיד, גם אם לא דירג בסוף.
+
+     קישור לדף כתיבת הביקורת ולא ה-API של הדירוג בתוך האפליקציה: שתי
+     החנויות מגבילות את החלון המובנה במכסה, ולפעמים הוא פשוט לא מופיע —
+     כפתור שלא עושה כלום גרוע מבלי כפתור. location.href יוצא לחנות
+     (play.google.com/apps.apple.com פטורים מהדפדפן הפנימי ב-3ד).
+
+     בלי שאלת "אהבתם?" לפני: גוגל ואפל אוסרות לסנן מי נשלח לדרג. התזמון —
+     רגע הניצחון — הוא כל ההטיה, וזה מותר. */
+  safe(() => {
+    const btn = document.getElementById("rateApp");
+    const result = document.getElementById("result");
+    if (!btn || !result || !window.MutationObserver) return;
+    const STORE = platform === "ios"
+      ? "https://apps.apple.com/app/id6819586243?action=write-review"
+      : "https://play.google.com/store/apps/details?id=sportdle.techbynoam.com";
+    const solved = () => { try { return JSON.parse(get("solved")) || []; } catch (e) { return []; } };
+    const update = () => {
+      if (get("rated") || !result.classList.contains("on")) { btn.hidden = true; return; }
+      const won = typeof guesses !== "undefined" && guesses.length
+        && typeof answer !== "undefined" && answer && guesses[guesses.length - 1].name === answer.name;
+      const real = typeof practice === "undefined" || !practice;
+      if (won && real && typeof club !== "undefined" && club && typeof puzzleNo !== "undefined") {
+        const key = `${club.slug}:${puzzleNo}`, list = solved();
+        if (!list.includes(key)) { list.push(key); set("solved", JSON.stringify(list.slice(-50))); }
+      }
+      btn.hidden = !(won && real && solved().length >= 3);
+    };
+    btn.addEventListener("click", () => {
+      set("rated", "1");
+      btn.hidden = true;
+      location.href = STORE;
+    });
+    new MutationObserver(update).observe(result, { attributes: true, attributeFilter: ["class"] });
+    update();
   });
 
   /* ---------- 4. כפתור "חזור" של אנדרואיד ----------
