@@ -1,15 +1,16 @@
 {
   "beitar": {
     "game": "ביתרdle",
-    "players": 463,
+    "players": 466,
     "targets": 214,
-    "hidden": 30,
+    "hidden": 39,
     "unconfirmed": 30,
     "coverage": {
       "from": 1969,
-      "to": 2026,
+      "to": 2027,
       "sources": [
         "reference",
+        "ifa",
         "wikiplayers",
         "wikiextra",
         "wikilang",
@@ -20,9 +21,9 @@
   },
   "hapoel-bs": {
     "game": "באר־שבעdle",
-    "players": 332,
+    "players": 339,
     "targets": 146,
-    "hidden": 132,
+    "hidden": 139,
     "unconfirmed": 13,
     "coverage": {
       "from": 1970,
@@ -41,13 +42,13 @@
   },
   "maccabi-ta": {
     "game": "מכביdle",
-    "players": 394,
+    "players": 396,
     "targets": 205,
-    "hidden": 88,
+    "hidden": 91,
     "unconfirmed": 24,
     "coverage": {
       "from": 1963,
-      "to": 2026,
+      "to": 2027,
       "sources": [
         "ifa",
         "enbridge",
@@ -63,13 +64,13 @@
   },
   "maccabi-haifa": {
     "game": "חיפהdle",
-    "players": 395,
+    "players": 398,
     "targets": 215,
-    "hidden": 74,
+    "hidden": 84,
     "unconfirmed": 11,
     "coverage": {
       "from": 1958,
-      "to": 2026,
+      "to": 2027,
       "sources": [
         "ifa",
         "enbridge",
@@ -85,13 +86,13 @@
   },
   "hapoel-ta": {
     "game": "הפועלdle",
-    "players": 465,
+    "players": 466,
     "targets": 183,
-    "hidden": 99,
+    "hidden": 108,
     "unconfirmed": 16,
     "coverage": {
       "from": 1964,
-      "to": 2026,
+      "to": 2027,
       "sources": [
         "ifa",
         "enbridge",
