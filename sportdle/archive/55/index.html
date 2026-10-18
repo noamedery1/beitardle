@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>חידה #55 · יום שבת, 17.10.2026 · SportDle</title>
+<meta name="description" content="התשובות לחידה #55 של SportDle, 17.10.2026, בכל חמשת המועדונים.">
+<link rel="canonical" href="https://sportdle.techbynoam.com/archive/55/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="חידה #55 · יום שבת, 17.10.2026 · SportDle">
+<meta property="og:description" content="התשובות לחידה #55 של SportDle, 17.10.2026, בכל חמשת המועדונים.">
+<meta property="og:url" content="https://sportdle.techbynoam.com/archive/55/">
+<meta property="og:image" content="https://sportdle.techbynoam.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="חידה #55 · יום שבת, 17.10.2026 · SportDle">
+<meta name="twitter:description" content="התשובות לחידה #55 של SportDle, 17.10.2026, בכל חמשת המועדונים.">
+<meta name="twitter:image" content="https://sportdle.techbynoam.com/og.png">
+<meta name="theme-color" content="#ECEAE5"><meta name="apple-itunes-app" content="app-id=6819586243">
+<script>
+(function(){
+  var K = "sportdle:theme", root = document.documentElement,
+      mq = window.matchMedia ? matchMedia("(prefers-color-scheme: dark)") : null,
+      LABEL = { system: "לפי המכשיר", dark: "כהה", light: "בהירה" };
+  function mode(){
+    try { var v = localStorage.getItem(K); return v === "dark" || v === "light" ? v : "system"; }
+    catch (e) { return "system"; }
+  }
+  function apply(){
+    var m = mode(), dark = m === "dark" || (m === "system" && !!(mq && mq.matches));
+    root.setAttribute("data-theme", dark ? "dark" : "light");
+    root.setAttribute("data-theme-mode", m);
+    var tc = document.querySelector('meta[name="theme-color"]');
+    if (tc) tc.setAttribute("content", dark ? "#121214" : "#ECEAE5");
+    var b = document.getElementById("themeBtn");
+    if (b) { var l = "ערכת צבעים: " + LABEL[m]; b.setAttribute("aria-label", l); b.title = l; }
+    document.dispatchEvent(new CustomEvent("sd:theme", { detail: { mode: m, dark: dark } }));
+  }
+  window.SDTheme = {
+    mode: mode,
+    dark: function(){ return root.getAttribute("data-theme") === "dark"; },
+    set: function(m){
+      try { if (m === "system") localStorage.removeItem(K); else localStorage.setItem(K, m); } catch (e) {}
+      apply();
+    }
+  };
+  /* מחזור שכל לחיצה בו משנה משהו על המסך: מ"לפי המכשיר" קודם אל
+     ההפך ממה שה-OS מציג, אחר כך השני, ואז חזרה ל-OS. */
+  document.addEventListener("click", function(e){
+    if (!e.target.closest || !e.target.closest("#themeBtn")) return;
+    var order = mq && mq.matches ? ["system", "light", "dark"] : ["system", "dark", "light"];
+    SDTheme.set(order[(order.indexOf(mode()) + 1) % 3]);
+  });
+  if (mq) { if (mq.addEventListener) mq.addEventListener("change", apply); else if (mq.addListener) mq.addListener(apply); }
+  document.addEventListener("DOMContentLoaded", apply);
+  apply();
+})();
+</script>
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../icon-32.png">
+<link rel="apple-touch-icon" href="../../icon-180.png">
+<link rel="stylesheet" href="../../fonts.css">
+<style>
+.appban{margin:26px auto 0;max-width:430px;padding:14px 16px;border-radius:10px;
+  background:var(--ink-2,#141418);border:1px solid var(--line,#2E2E36);
+  text-align:center;line-height:1.6}
+.appban b{display:block;color:var(--text,#F2F2F0);font-size:14.5px;font-weight:700}
+.appban span{display:block;font-size:12.5px;color:var(--dim,#8C8C94);margin-top:3px}
+.appban a{display:inline-block;margin-top:9px;background:var(--brand,#FFC72C);
+  color:#0C0C0E;text-decoration:none;font-weight:700;font-size:13.5px;
+  padding:9px 20px;border-radius:8px}
+/* תג Google Play — שחור עם מסגרת אפורה, כמו התג הרשמי, כי זה הצורה
+   שאנשים מזהים כ"כאן מורידים". לא צבע המועדון: כפתור צהוב נראה
+   כמו עוד כפתור באתר. ltr כי הלוגו משמאל לשם, כמו בתג המקורי. */
+.appban a.play{display:inline-flex;align-items:center;gap:9px;direction:ltr;
+  background:#000;color:#fff;border:1px solid #A6A6A6;padding:7px 16px 7px 12px;
+  border-radius:9px;line-height:1.15;text-align:left}
+.appban a.play svg{width:26px;height:28px;flex:none}
+.appban a.play span{display:block;margin:0;color:#fff}
+.appban a.play small{display:block;font-size:10.5px;font-weight:400;direction:rtl;text-align:left}
+.appban a.play em{display:block;font-style:normal;font-size:17px;font-weight:700;letter-spacing:.2px}
+.appban span.stores{display:flex;margin:0;flex-wrap:wrap;justify-content:center;gap:0 10px}
+
+:root{
+  --ground:#ECEAE5; --surface:#FFFFFF; --surface-2:#F5F4F1;
+  --ui-ink:#17181C; --ui-ink-2:#454850; --ui-line:#D4D0C8; --ui-ctl:#77736B;
+  --miss:#454750; --on-miss:#FFFFFF; --knit-mute:.68; --r-ctl:12px;
+  --brand:#FFC72C; --brand-rgb:255,199,44; --on-brand:#121214;
+  --second-band:#26272D; --title-ink:#0C0C0E;
+  --knit:url(../../scarf/knit.webp);
+  /* הטוקנים הישנים שבאנר האפליקציה קורא — אותו מיפוי כמו במשחק */
+  --text:#17181C; --dim:#454850; --line:#D4D0C8; --ink-2:#FFFFFF;
+  --hover:#F1EFEA; --ui-line-2:#E6E3DD; --zebra:#FAF9F7; --scroll:#B9B5AD; --shadow:23,24,28;
+}
+:root[data-theme="dark"]{color-scheme:dark;
+  --ground:#121214; --surface:#1C1C21; --surface-2:#25252B;
+  --ui-ink:#EDEDEF; --ui-ink-2:#A0A0A8; --ui-line:#2E2E35; --ui-ctl:#6E6E78;
+  --miss:#2F3036; --on-miss:#EDEDEF;
+  --text:#EDEDEF; --dim:#A0A0A8; --line:#2E2E35; --ink-2:#1C1C21;
+  --hover:#27272D; --ui-line-2:#2A2A30; --scroll:#3A3A42; --shadow:0,0,0;--zebra:#202026;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+  --ground:#121214; --surface:#1C1C21; --surface-2:#25252B;
+  --ui-ink:#EDEDEF; --ui-ink-2:#A0A0A8; --ui-line:#2E2E35; --ui-ctl:#6E6E78;
+  --miss:#2F3036; --on-miss:#EDEDEF;
+  --text:#EDEDEF; --dim:#A0A0A8; --line:#2E2E35; --ink-2:#1C1C21;
+  --hover:#27272D; --ui-line-2:#2A2A30; --scroll:#3A3A42; --shadow:0,0,0;--zebra:#202026;}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scrollbar-color:var(--scroll) var(--ground)}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{color:var(--ui-ink);font-family:'Heebo',system-ui,sans-serif;
+  font-size:17px;line-height:1.75;min-height:100dvh;display:flex;flex-direction:column;overflow-wrap:break-word;
+  padding-top:var(--safe-area-inset-top,env(safe-area-inset-top));padding-bottom:var(--safe-area-inset-bottom,env(safe-area-inset-bottom))}
+::selection{background:var(--ui-ink);color:var(--surface)}
+.wrap{max-width:700px;width:100%;margin:0 auto;padding:0 16px 48px;flex:1}
+/* 18px על 592px של טקסט: כ-70 תווים בשורה */
+@media (min-width:640px){body{font-size:18px}.wrap{max-width:640px;padding:0 24px 64px}}
+
+/* ---- ראש הדף: הלוגו כצעיף, וכפתור משני לחידה ---- */
+.top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px 12px;
+  padding:22px 0 20px;margin-bottom:26px;border-bottom:1px solid var(--ui-line)}
+.logo{position:relative;display:block;margin:0 22px;padding:13px 16px 14px;
+  font-weight:900;font-size:26px;line-height:1;letter-spacing:-.02em;color:var(--title-ink);text-decoration:none;
+  background:
+    linear-gradient(var(--second-band),var(--second-band)) top/100% 6px no-repeat,
+    linear-gradient(var(--second-band),var(--second-band)) bottom/100% 6px no-repeat,
+    linear-gradient(rgba(var(--brand-rgb),var(--knit-mute)),rgba(var(--brand-rgb),var(--knit-mute))),
+    var(--knit) center/auto 100% repeat-x,
+    var(--brand);
+  background-blend-mode:normal,normal,normal,multiply}
+.logo span{color:inherit}
+.logo::before,.logo::after{content:"";position:absolute;top:1px;bottom:1px;width:22px;pointer-events:none;
+  background:url(../../scarf/fringe-beitar.webp) no-repeat center top/100% auto}
+.logo::after{right:-21px}
+.logo::before{left:-21px;transform:scaleX(-1)}
+.toplink,.pager a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 16px;
+  background:var(--surface);color:var(--ui-ink);border:1.5px solid var(--ui-ctl);border-radius:var(--r-ctl);
+  box-shadow:0 1px 2px rgba(var(--shadow),.08);font-size:15px;font-weight:700;line-height:1.3;text-decoration:none;white-space:nowrap}
+.toplink:hover,.pager a:hover{background:var(--hover);border-color:var(--ui-ink);box-shadow:none}
+@media (max-width:359px){.top{gap:14px 8px}.logo{font-size:20px;padding:11px 10px 12px;margin:0 18px}
+  .logo::before,.logo::after{width:18px}.logo::after{right:-17px}.logo::before{left:-17px}
+  .toplink{font-size:13.5px;padding:8px 10px}}
+@media (min-width:640px){.logo{font-size:30px;padding:15px 20px 16px;margin:0 26px}
+  .logo::before,.logo::after{width:26px}.logo::after{right:-25px}.logo::before{left:-25px}}
+
+/* ---- טקסט ---- */
+.crumb{font-size:14px;line-height:1.6;color:var(--ui-ink-2);margin:0 0 14px}
+.crumb a{color:var(--ui-ink-2)}
+h1{font-weight:900;font-size:clamp(30px,8.4vw,44px);line-height:1.12;letter-spacing:-.015em;
+  margin:0 0 10px;color:var(--ui-ink)}
+.kicker{color:var(--ui-ink-2);font-size:16px;line-height:1.6;margin:0 0 30px}
+h2{font-size:23px;font-weight:900;line-height:1.3;margin:48px 0 12px;color:var(--ui-ink)}
+h3{font-size:18.5px;font-weight:700;line-height:1.35;margin:32px 0 8px;color:var(--ui-ink)}
+p{margin:0 0 18px}
+ul,ol{margin:0 0 22px;padding-inline-start:24px}
+li{margin-bottom:10px;padding-inline-start:4px}
+li::marker{color:var(--ui-ink-2);font-weight:700}
+strong,b{font-weight:700}
+a{color:var(--ui-ink);text-decoration:underline;text-decoration-color:var(--ui-ctl);
+  text-decoration-thickness:1.5px;text-underline-offset:3px}
+a:hover{text-decoration-color:var(--ui-ink);text-decoration-thickness:2px}
+:focus-visible{outline:2.5px solid var(--ui-ink);outline-offset:3px;border-radius:4px}
+
+/* ---- משטחים ---- */
+.note{background:linear-gradient(var(--brand),var(--brand)) right/5px 100% no-repeat,var(--surface);border:1px solid var(--ui-line);
+  border-radius:var(--r-ctl);padding:14px 23px 14px 18px;margin:0 0 26px;font-size:16px;line-height:1.7;color:var(--ui-ink-2)}
+.note b{color:var(--ui-ink)}
+.tbl{overflow-x:auto;margin:0 0 24px;background:var(--surface);border:1px solid var(--ui-line);border-radius:var(--r-ctl)}
+table{width:100%;border-collapse:collapse;font-size:15.5px;line-height:1.5}
+th,td{text-align:start;padding:11px 14px;border-bottom:1px solid var(--ui-line-2);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{color:var(--ui-ink-2);font-weight:700;font-size:14px;background:var(--surface-2);white-space:nowrap}
+tr:nth-child(2n+3) td{background:var(--zebra)}
+td:first-child{min-width:7.5em}
+.nw{white-space:nowrap}
+@media (max-width:479px){table{font-size:15px}th,td{padding:10px 10px}}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:0 0 30px}
+.fact{background:linear-gradient(var(--brand),var(--brand)) top/100% 5px no-repeat,var(--surface);border:1px solid var(--ui-line);
+  border-radius:10px;padding:15px 14px 12px;line-height:1.35}
+.fact .k{font-size:13.5px;font-weight:500;color:var(--ui-ink-2);display:block;margin-bottom:4px}
+.fact .v{font-size:19px;font-weight:900;color:var(--ui-ink)}
+.chip{display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:700;line-height:1.2;
+  color:var(--ui-ink);background:var(--surface);border:1.5px solid var(--ui-ctl);border-radius:22px;
+  padding:8px 16px;margin:0 0 8px 8px;text-decoration:none}
+.chip:hover{background:var(--hover);border-color:var(--ui-ink)}
+.cards{display:grid;gap:10px;margin:0 0 28px}
+@media (min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+.card{display:block;background:var(--surface);border:1px solid var(--ui-line);border-radius:var(--r-ctl);
+  padding:14px 18px 15px;text-decoration:none;color:var(--ui-ink);line-height:1.45;box-shadow:0 1px 2px rgba(var(--shadow),.05)}
+.card[style]{background:linear-gradient(var(--c),var(--c)) right/6px 100% no-repeat,var(--surface);padding-right:24px}
+.card:hover{border-color:var(--ui-ink)}
+.card .n{font-size:13.5px;font-weight:500;color:var(--ui-ink-2)}
+.card .t{font-size:18px;font-weight:900;margin-top:2px}
+.card .s{font-size:14.5px;color:var(--ui-ink-2);margin-top:4px}
+/* ארכיון: התשובות מאחורי לחיצה — בדף (לגוגל), לא בעין (למי שעוד משחק) */
+details.reveal{margin:18px 0}
+details.reveal summary{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:var(--r-ctl);
+  background:var(--brand,#17181C);color:var(--on-brand,#fff);font-weight:700;cursor:pointer;list-style:none}
+details.reveal summary::-webkit-details-marker{display:none}
+details.reveal[open] summary{background:var(--surface);color:var(--ui-ink);border:1px solid var(--ui-line)}
+
+/* ---- שפת הרמזים: אותם ריבועים שטוחים כמו במשחק ---- */
+.swatch{display:inline-block;width:15px;height:15px;border-radius:3px;vertical-align:-2px;
+  margin-inline-end:8px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.28)}
+.sw-hit{background:var(--brand)} .sw-miss{background:var(--miss)}
+.sw-near{background:var(--near,#8A6A1C)}
+.demo{overflow-x:auto;margin:0 0 14px;background:var(--surface);border:1px solid var(--ui-line);border-radius:var(--r-ctl);padding:6px}
+.demo table{border-collapse:separate;border-spacing:6px}
+.demo th{background:none;border:0;padding:2px 6px;text-align:center}
+.demo td{border:0;border-radius:8px;padding:12px 10px;font-size:15px;font-weight:900;text-align:center;white-space:nowrap;
+  background:var(--surface-2)}
+.demo td:first-child{text-align:start;background:none;padding-inline:4px}
+.demo .hit{background:var(--brand);color:var(--on-brand)}
+.demo .near{background:var(--near,#8A6A1C);color:#fff}
+.demo .miss{background:var(--miss);color:var(--on-miss)}
+.pager{display:flex;justify-content:space-between;gap:10px;margin:28px 0 0}
+
+/* ---- פוטר ---- */
+.appban{background:var(--surface);border:1px solid var(--ui-line);border-radius:16px;box-shadow:none}
+.appban b{color:var(--ui-ink)} .appban span{color:var(--ui-ink-2)}
+.appban a.play span{color:#fff}
+footer{border-top:1px solid var(--ui-line);margin-top:48px;padding:6px 0 0;
+  font-size:14px;color:var(--ui-ink-2);line-height:1.8}
+.sitenav{display:flex;flex-wrap:wrap;gap:0 8px;margin:18px 0 12px;border-top:1px solid var(--ui-line);padding-top:12px}
+.sitenav a{display:inline-block;padding:4px 0;color:var(--ui-ink-2);font-size:14px;text-decoration:none}
+.sitenav a:hover{color:var(--ui-ink);text-decoration:underline}
+.sitenav span{color:var(--ui-ctl);padding:4px 0}
+footer .who a{color:var(--ui-ink-2)}
+footer .who a:hover{color:var(--ui-ink)}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"חידה יומית","item":"https://sportdle.techbynoam.com/"},{"@type":"ListItem","position":2,"name":"ארכיון","item":"https://sportdle.techbynoam.com/archive/"},{"@type":"ListItem","position":3,"name":"חידה #55","item":"https://sportdle.techbynoam.com/archive/55/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"חידה #55 — יום שבת, 17.10.2026","datePublished":"2026-10-17","url":"https://sportdle.techbynoam.com/archive/55/","author":{"@type":"Person","name":"נועם אדרי"}}</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a class="logo" href="../../">Sport<span>Dle</span></a>
+    <a class="toplink" href="../../">לחידה של היום ←</a>
+  </div>
+  <p class="crumb"><a href="../../">חידה יומית</a> › <a href="../../archive/">ארכיון</a> › חידה #55</p>
+  <h1>חידה #55</h1>
+  <p class="kicker">יום שבת, 17.10.2026</p>
+
+  <p>התשובות של יום שבת, 17.10.2026, בכל אחד מחמשת המועדונים.
+     עוד לא פתרתם? את החידה הזו אפשר לשחק דרך "ארכיון" במשחק
+     (<a href="../../">לשחק</a>) — לכן התשובות מוסתרות עד שלוחצים.</p>
+  <details class="reveal">
+  <summary>הצגת התשובות</summary>
+  <div class="cards">
+  <a class="card" style="--c:#FFC72C" href="../../players/beitar/אור-ואקנין/">
+    <div class="n">ביתרdle</div>
+    <div class="t">אור ואקנין</div>
+    <div class="s">קישור · 14/15–14/15, 17/18–18/19 · 3 עונות</div>
+  </a>
+  <a class="card" style="--c:#E4002B" href="../../players/hapoel-bs/מרואן-כבהא/">
+    <div class="n">באר־שבעdle</div>
+    <div class="t">מרואן כבהא</div>
+    <div class="s">קישור · 18/19–20/21 · 3 עונות</div>
+  </a>
+  <a class="card" style="--c:#0033A0" href="../../players/maccabi-ta/ערן-זהבי/">
+    <div class="n">מכביdle</div>
+    <div class="t">ערן זהבי</div>
+    <div class="s">התקפה · 13/14–15/16, 22/23–24/25 · 6 עונות</div>
+  </a>
+  <a class="card" style="--c:#00843D" href="../../players/maccabi-haifa/משה-סלקטר/">
+    <div class="n">חיפהdle</div>
+    <div class="t">משה סלקטר</div>
+    <div class="s">התקפה · 79/80–86/87, 89/90–89/90 · 9 עונות</div>
+  </a>
+  <a class="card" style="--c:#C8102E" href="../../players/hapoel-ta/יעקב-בריהון/">
+    <div class="n">הפועלdle</div>
+    <div class="t">יעקב בריהון</div>
+    <div class="s">התקפה · 24/25–24/25 · 1 עונות</div>
+  </a>
+  </div>
+  </details>
+  <div class="pager"><a href="../54/">← חידה #54</a><span></span></div>
+  <p style="margin-top:20px"><a href="../">↑ כל הארכיון</a></p>
+  <footer>
+    <div class="appban" id="appban">
+    <b>האפליקציה — לאייפון ולאנדרואיד</b>
+    <span>אותו משחק, גם בלי חיבור לאינטרנט, ותזכורת לחידה היומית.</span>
+    <span class="stores"><a class="play" href="https://apps.apple.com/il/app/sportdle/id6819586243" target="_blank" rel="noopener" aria-label="להורדה מ-App Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12.15 6.9c-.95 0-2.42-1.08-3.96-1.04-2.04.03-3.91 1.18-4.96 3.01-2.12 3.68-.55 9.1 1.52 12.09 1.01 1.45 2.21 3.09 3.79 3.04 1.52-.07 2.09-.99 3.94-.99 1.83 0 2.35.99 3.96.95 1.64-.03 2.68-1.48 3.68-2.95 1.16-1.69 1.64-3.33 1.66-3.42-.04-.01-3.18-1.22-3.22-4.86-.03-3.04 2.48-4.49 2.6-4.56-1.43-2.09-3.62-2.32-4.39-2.38-2-.16-3.68 1.09-4.61 1.09zM15.53 3.83c.84-1.01 1.4-2.43 1.25-3.83-1.21.05-2.66.81-3.53 1.82-.78.9-1.45 2.34-1.27 3.71 1.34.1 2.71-.69 3.56-1.7"/></svg><span><small>להורדה ב-</small><em>App Store</em></span></a><a class="play" href="https://play.google.com/store/apps/details?id=sportdle.techbynoam.com" target="_blank" rel="noopener" aria-label="להורדה מ-Google Play"><svg viewBox="0 0 24 26" aria-hidden="true">
+<path fill="#32BBFF" d="M1.6 1.2 13.4 13 1.6 24.8c-.4-.3-.6-.8-.6-1.4V2.6c0-.6.2-1.1.6-1.4z"/>
+<path fill="#00D26A" d="M1.6 1.2c.5-.4 1.2-.4 1.9 0L17.3 9.1 13.4 13z"/>
+<path fill="#FF3A44" d="M1.6 24.8 13.4 13l3.9 3.9-13.8 7.9c-.7.4-1.4.4-1.9 0z"/>
+<path fill="#FFC900" d="m17.3 9.1 4.4 2.5c1.1.6 1.1 2.2 0 2.8l-4.4 2.5-3.9-3.9z"/>
+</svg><span><small>זמין ב-</small><em>Google Play</em></span></a></span>
+  </div><nav class="sitenav" aria-label="ניווט באתר"><a href="../../">חידה יומית</a><span>·</span><a href="../../how-to-play/">איך משחקים</a><span>·</span><a href="../../archive/">ארכיון</a><span>·</span><a href="../../players/">שחקנים</a><span>·</span><a href="../../israel/">נבחרת ישראל</a><span>·</span><a href="../../about/">אודות</a><span>·</span><a href="../../contact/">צור קשר</a><span>·</span><a href="../../privacy/">פרטיות</a><span>·</span><a href="../../terms/">תנאי שימוש</a><span>·</span><a href="../../accessibility/">נגישות</a></nav>
+    <div class="who">SportDle · פרויקט אוהדים · לא רשמי<br>
+      <a href="mailto:techbynoam@gmail.com">techbynoam@gmail.com</a> ·
+      <a href="https://techbynoam.com/" target="_blank" rel="noopener">TechByNoam</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
