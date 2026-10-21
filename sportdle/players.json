@@ -1,5 +1,5 @@
 {
- "v": "s3-98cb43dfb3",
+ "v": "s3-d4d9e3c567",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -2677,20 +2677,6 @@
      "target": true
     },
     {
-     "he": "עמית שמש",
-     "pos": "GK",
-     "nat": "IL",
-     "born": 1987,
-     "spells": [
-      [
-       2005,
-       2007
-      ]
-     ],
-     "titles": 1,
-     "target": true
-    },
-    {
      "he": "רועי לויאן",
      "pos": "DF",
      "nat": "IL",
@@ -3099,6 +3085,20 @@
       ]
      ],
      "titles": 3,
+     "target": true
+    },
+    {
+     "he": "עמית שמש",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 1987,
+     "spells": [
+      [
+       2007,
+       2007
+      ]
+     ],
+     "titles": 1,
      "target": true
     },
     {
