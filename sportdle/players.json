@@ -1,5 +1,5 @@
 {
- "v": "s3-ffeab1d2a2",
+ "v": "s3-c2818d5c55",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -66,7 +66,7 @@
     {
      "he": "ניסים אלמליח",
      "pos": "FW",
-     "nat": null,
+     "nat": "IL",
      "born": 1928,
      "spells": [
       [
@@ -133,7 +133,7 @@
     {
      "he": "ויקטור סרוסי",
      "pos": "FW",
-     "nat": null,
+     "nat": "IL",
      "born": 1944,
      "spells": [
       [
@@ -2225,7 +2225,7 @@
     {
      "he": "זיו קבדה",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1978,
      "spells": [
       [
@@ -5761,7 +5761,7 @@
     {
      "he": "ליוואי גארסיה",
      "pos": "FW",
-     "nat": null,
+     "nat": "TT",
      "born": 1997,
      "spells": [
       [
@@ -6383,7 +6383,7 @@
     {
      "he": "חגי גולדנברג",
      "pos": "DF",
-     "nat": null,
+     "nat": "IL",
      "born": 1990,
      "spells": [
       [
@@ -7553,7 +7553,7 @@
     {
      "he": "אליהו עופר",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1944,
      "spells": [
       [
@@ -7570,7 +7570,7 @@
     {
      "he": "אברהם נומה",
      "pos": "FW",
-     "nat": null,
+     "nat": "IL",
      "born": 1947,
      "spells": [
       [
@@ -7734,7 +7734,7 @@
     {
      "he": "ויקטור סרוסי",
      "pos": "FW",
-     "nat": null,
+     "nat": "IL",
      "born": 1944,
      "spells": [
       [
@@ -7842,7 +7842,7 @@
     {
      "he": "סמי מלכה",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1963,
      "spells": [
       [
@@ -8030,7 +8030,7 @@
     {
      "he": "אריה אלטר",
      "pos": "GK",
-     "nat": null,
+     "nat": "IL",
      "born": 1961,
      "spells": [
       [
@@ -11902,7 +11902,7 @@
     {
      "he": "ג'ימי מרין",
      "pos": "MF",
-     "nat": null,
+     "nat": "CR",
      "born": 1997,
      "spells": [
       [
@@ -12840,7 +12840,7 @@
     {
      "he": "מגומד-שאפי סוליימאנוב",
      "pos": "MF",
-     "nat": null,
+     "nat": "RU",
      "born": 1999,
      "spells": [
       [
@@ -14053,7 +14053,7 @@
     {
      "he": "שאול מתניה",
      "pos": "DF",
-     "nat": null,
+     "nat": "IL",
      "born": 1937,
      "spells": [
       [
@@ -14067,7 +14067,7 @@
     {
      "he": "רפי לוי",
      "pos": "FW",
-     "nat": null,
+     "nat": "IL",
      "born": 1938,
      "spells": [
       [
@@ -14088,7 +14088,7 @@
     {
      "he": "חיים לוין",
      "pos": "GK",
-     "nat": null,
+     "nat": "IL",
      "born": 1937,
      "spells": [
       [
@@ -14194,7 +14194,7 @@
     {
      "he": "רפי ברנס",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1944,
      "spells": [
       [
@@ -14297,7 +14297,7 @@
     {
      "he": "צבי היימן",
      "pos": "FW",
-     "nat": null,
+     "nat": "IL",
      "born": 1943,
      "spells": [
       [
@@ -14689,7 +14689,7 @@
     {
      "he": "חיים גולדברג",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1964,
      "spells": [
       [
@@ -14788,7 +14788,7 @@
     {
      "he": "ג'קי צרפתי",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1969,
      "spells": [
       [
@@ -14823,7 +14823,7 @@
     {
      "he": "אבי פיטוסי",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1971,
      "spells": [
       [
@@ -15281,7 +15281,7 @@
     {
      "he": "חיים חג'ג'",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1975,
      "spells": [
       [
@@ -16057,7 +16057,7 @@
     {
      "he": "קובי מוסא",
      "pos": "DF",
-     "nat": null,
+     "nat": "IL",
      "born": 1982,
      "spells": [
       [
@@ -16394,7 +16394,7 @@
     {
      "he": "אביב חדד",
      "pos": "DF",
-     "nat": null,
+     "nat": "IL",
      "born": 1984,
      "spells": [
       [
@@ -17745,7 +17745,7 @@
     {
      "he": "חאתם אלחמיד",
      "pos": "DF",
-     "nat": null,
+     "nat": "IL",
      "born": 1991,
      "spells": [
       [
@@ -19156,7 +19156,7 @@
     {
      "he": "חוסה רודריגס מרטינס",
      "pos": "MF",
-     "nat": null,
+     "nat": "ES",
      "born": 1994,
      "spells": [
       [
@@ -19170,7 +19170,7 @@
     {
      "he": "טינו-סוון סושיץ'",
      "pos": "MF",
-     "nat": null,
+     "nat": "BA",
      "born": 1992,
      "spells": [
       [
@@ -21190,7 +21190,7 @@
     {
      "he": "ג'וני הרדי",
      "pos": "FW",
-     "nat": null,
+     "nat": "IL",
      "born": 1934,
      "spells": [
       [
@@ -21204,7 +21204,7 @@
     {
      "he": "אברהם מנצ'ל",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1950,
      "spells": [
       [
@@ -21270,7 +21270,7 @@
     {
      "he": "חיים לוין",
      "pos": "GK",
-     "nat": null,
+     "nat": "IL",
      "born": 1937,
      "spells": [
       [
@@ -21995,7 +21995,7 @@
     {
      "he": "ולדימיר בסונוב",
      "pos": "DF",
-     "nat": null,
+     "nat": "UA",
      "born": 1958,
      "spells": [
       [
@@ -22651,7 +22651,7 @@
     {
      "he": "ולדימיר נידרגאוס",
      "pos": "FW",
-     "nat": null,
+     "nat": "RU",
      "born": 1967,
      "spells": [
       [
@@ -25742,7 +25742,7 @@
     {
      "he": "ניקולה דרינצ'יץ'",
      "pos": "MF",
-     "nat": null,
+     "nat": "ME",
      "born": 1984,
      "spells": [
       [
@@ -25945,7 +25945,7 @@
     {
      "he": "מוחמד עוואד",
      "pos": "FW",
-     "nat": null,
+     "nat": "IL",
      "born": 1997,
      "spells": [
       [
@@ -27511,7 +27511,7 @@
     {
      "he": "חמזה שיבלי",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 2004,
      "spells": [
       [
@@ -28566,7 +28566,7 @@
     {
      "he": "יוחנן סוקניק",
      "pos": "DF",
-     "nat": null,
+     "nat": "IL",
      "born": 1909,
      "spells": [
       [
@@ -28580,7 +28580,7 @@
     {
      "he": "צבי ארליך",
      "pos": "FW",
-     "nat": null,
+     "nat": "IL",
      "born": 1909,
      "spells": [
       [
@@ -28608,7 +28608,7 @@
     {
      "he": "הרצל פריצנר",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1919,
      "spells": [
       [
@@ -28622,7 +28622,7 @@
     {
      "he": "רחביה רוזנבוים",
      "pos": "FW",
-     "nat": null,
+     "nat": "IL",
      "born": 1934,
      "spells": [
       [
@@ -28650,7 +28650,7 @@
     {
      "he": "גדעון טיש",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1939,
      "spells": [
       [
@@ -28668,7 +28668,7 @@
     {
      "he": "איצ'ה מנחם",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1939,
      "spells": [
       [
@@ -28682,7 +28682,7 @@
     {
      "he": "חיים נוריאלי",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1943,
      "spells": [
       [
@@ -28699,7 +28699,7 @@
     {
      "he": "שמעון בן יהונתן",
      "pos": "DF",
-     "nat": null,
+     "nat": "IL",
      "born": 1942,
      "spells": [
       [
@@ -28799,7 +28799,7 @@
     {
      "he": "נחמן קסטרו",
      "pos": "DF",
-     "nat": null,
+     "nat": "IL",
      "born": 1948,
      "spells": [
       [
@@ -28813,7 +28813,7 @@
     {
      "he": "אלי בכר",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1950,
      "spells": [
       [
@@ -28975,7 +28975,7 @@
     {
      "he": "יעקב זיתוני",
      "pos": "DF",
-     "nat": null,
+     "nat": "IL",
      "born": 1948,
      "spells": [
       [
@@ -29157,7 +29157,7 @@
     {
      "he": "אריה אלטר",
      "pos": "GK",
-     "nat": null,
+     "nat": "IL",
      "born": 1961,
      "spells": [
       [
@@ -29687,7 +29687,7 @@
     {
      "he": "מאיר מליקה",
      "pos": "FW",
-     "nat": null,
+     "nat": "IL",
      "born": 1969,
      "spells": [
       [
@@ -30056,7 +30056,7 @@
     {
      "he": "אסי טובי",
      "pos": "FW",
-     "nat": null,
+     "nat": "IL",
      "born": 1972,
      "spells": [
       [
@@ -30803,7 +30803,7 @@
     {
      "he": "מסאי דגו",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1986,
      "spells": [
       [
@@ -31020,7 +31020,7 @@
     {
      "he": "רומן ואסיליוק",
      "pos": "FW",
-     "nat": null,
+     "nat": "BY",
      "born": 1978,
      "spells": [
       [
@@ -31467,7 +31467,7 @@
     {
      "he": "טל איילה",
      "pos": "MF",
-     "nat": null,
+     "nat": "IL",
      "born": 1989,
      "spells": [
       [
@@ -31698,7 +31698,7 @@
     {
      "he": "דימיטר טלקייסקי",
      "pos": "MF",
-     "nat": null,
+     "nat": "BG",
      "born": 1977,
      "spells": [
       [
@@ -35981,7 +35981,7 @@
     {
      "he": "חוסה רודריגס מרטינס",
      "pos": "MF",
-     "nat": null,
+     "nat": "ES",
      "born": 1994,
      "spells": [
       [
