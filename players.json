@@ -1,5 +1,5 @@
 {
- "v": "s3-e78746fe37",
+ "v": "s3-c1519be351",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -57,7 +57,7 @@
     ]
    },
    "counts": {
-    "players": 469,
+    "players": 472,
     "targets": 214,
     "hidden": 38,
     "unconfirmed": 30
@@ -1269,6 +1269,20 @@
      "pos": "MF",
      "nat": "IL",
      "born": 1967,
+     "spells": [
+      [
+       1995,
+       1995
+      ]
+     ],
+     "titles": 0,
+     "target": false
+    },
+    {
+     "he": "מאיר מליקה",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1969,
      "spells": [
       [
        1995,
@@ -5468,6 +5482,20 @@
      "target": false
     },
     {
+     "he": "ארון אולנארה",
+     "pos": "FW",
+     "nat": "NG",
+     "born": 1994,
+     "spells": [
+      [
+       2019,
+       2019
+      ]
+     ],
+     "titles": 0,
+     "target": false
+    },
+    {
      "he": "גדי קינדה",
      "pos": "MF",
      "nat": "IL",
@@ -6624,6 +6652,20 @@
      "target": false
     },
     {
+     "he": "גידי קאניוק",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1993,
+     "spells": [
+      [
+       2024,
+       2024
+      ]
+     ],
+     "titles": 0,
+     "target": false
+    },
+    {
      "he": "דור מיכה",
      "pos": "MF",
      "nat": "IL",
@@ -7588,10 +7630,10 @@
     ]
    },
    "counts": {
-    "players": 359,
+    "players": 366,
     "targets": 146,
-    "hidden": 124,
-    "unconfirmed": 20
+    "hidden": 119,
+    "unconfirmed": 21
    },
    "players": [
     {
@@ -8581,6 +8623,20 @@
      "target": false
     },
     {
+     "he": "מירוסלב ביצ'ניץ'",
+     "pos": "MF",
+     "nat": "HR",
+     "born": 1969,
+     "spells": [
+      [
+       2000,
+       2000
+      ]
+     ],
+     "titles": 0,
+     "target": false
+    },
+    {
      "he": "נועם שוהם",
      "pos": "MF",
      "nat": "IL",
@@ -8815,6 +8871,27 @@
      "target": false,
      "aliases": [
       "אמיר אבוטבול"
+     ]
+    },
+    {
+     "he": "אסף רחמים",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 1971,
+     "spells": [
+      [
+       2003,
+       2004
+      ],
+      [
+       2006,
+       2009
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אסף רחמים"
      ]
     },
     {
@@ -9071,6 +9148,23 @@
      "aliases": [
       "דדי בן דיין",
       "Dedi Ben Dayan"
+     ]
+    },
+    {
+     "he": "וייס מירוסלב",
+     "pos": "DF",
+     "nat": "MK",
+     "born": 1979,
+     "spells": [
+      [
+       2004,
+       2004
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "וייס מירוסלב"
      ]
     },
     {
@@ -9411,6 +9505,23 @@
      ]
     },
     {
+     "he": "אקקי מקוצבזה",
+     "pos": "FW",
+     "nat": "GE",
+     "born": 1980,
+     "spells": [
+      [
+       2007,
+       2007
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אקקי מקוצ'בזה"
+     ]
+    },
+    {
      "he": "גורג דאטורו",
      "pos": "FW",
      "nat": "NG",
@@ -9554,6 +9665,20 @@
       "סעיד מקאסי",
       "Saïd Makasi"
      ]
+    },
+    {
+     "he": "צ'אסווה נסופוואה",
+     "pos": "FW",
+     "nat": "ZM",
+     "born": 1978,
+     "spells": [
+      [
+       2008,
+       2008
+      ]
+     ],
+     "titles": 0,
+     "target": false
     },
     {
      "he": "רועי סבג",
@@ -9986,6 +10111,23 @@
      "target": true,
      "aliases": [
       "Siraj Nassar"
+     ]
+    },
+    {
+     "he": "סראג נסאר",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1990,
+     "spells": [
+      [
+       2010,
+       2015
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "סראג' נסאר"
      ]
     },
     {
@@ -13711,6 +13853,23 @@
      ]
     },
     {
+     "he": "קינגס קאוגנה",
+     "pos": "MF",
+     "nat": "ZM",
+     "born": 1999,
+     "spells": [
+      [
+       2025,
+       2026
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "קינגס קאוגנה"
+     ]
+    },
+    {
      "he": "קינגס קאנגווה",
      "pos": "MF",
      "nat": "ZM",
@@ -14276,10 +14435,10 @@
     ]
    },
    "counts": {
-    "players": 405,
+    "players": 407,
     "targets": 205,
-    "hidden": 85,
-    "unconfirmed": 29
+    "hidden": 83,
+    "unconfirmed": 31
    },
    "players": [
     {
@@ -16914,6 +17073,24 @@
      ]
     },
     {
+     "he": "אדוארדו מרקוש",
+     "pos": "FW",
+     "nat": "BR",
+     "born": 1976,
+     "spells": [
+      [
+       2005,
+       2005
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "אדוארדו מרקוש",
+      "אדוארדו מרקש"
+     ]
+    },
+    {
      "he": "אורי שטרית",
      "pos": "DF",
      "nat": "IL",
@@ -17300,6 +17477,23 @@
      ],
      "titles": 0,
      "target": false
+    },
+    {
+     "he": "קאקו בלסינג",
+     "pos": "MF",
+     "nat": "NG",
+     "born": 1978,
+     "spells": [
+      [
+       2006,
+       2006
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "קאקו בלסינג"
+     ]
     },
     {
      "he": "גיא סולומון",
@@ -21704,10 +21898,10 @@
     ]
    },
    "counts": {
-    "players": 404,
+    "players": 408,
     "targets": 215,
-    "hidden": 76,
-    "unconfirmed": 12
+    "hidden": 72,
+    "unconfirmed": 14
    },
    "players": [
     {
@@ -24527,6 +24721,23 @@
      ]
     },
     {
+     "he": "מור ממן",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1986,
+     "spells": [
+      [
+       2007,
+       2007
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "מור ממן"
+     ]
+    },
+    {
      "he": "עבאס סואן",
      "pos": "MF",
      "nat": "IL",
@@ -25565,7 +25776,7 @@
     },
     {
      "he": "אסמאעיל ריאן",
-     "pos": "DF",
+     "pos": "FW",
      "nat": "IL",
      "born": 1994,
      "spells": [
@@ -25577,9 +25788,8 @@
      "titles": 1,
      "target": true,
      "aliases": [
-      "איסמעיל ריאן",
-      "Iyad Abu Abaid",
       "אסמאעיל ריאן",
+      "איסמעיל ריאן",
       "Ismaeel Ryan"
      ]
     },
@@ -27200,6 +27410,23 @@
      ]
     },
     {
+     "he": "גושוע כהן",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 1992,
+     "spells": [
+      [
+       2020,
+       2023
+      ]
+     ],
+     "titles": 3,
+     "target": false,
+     "aliases": [
+      "ג'ושוע כהן"
+     ]
+    },
+    {
      "he": "גיל יצחק",
      "pos": "FW",
      "nat": "IL",
@@ -28111,6 +28338,23 @@
      "target": false
     },
     {
+     "he": "לורנצו סימיץ",
+     "pos": "DF",
+     "nat": "HR",
+     "born": 1996,
+     "spells": [
+      [
+       2024,
+       2024
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "לורנצו סימיץ"
+     ]
+    },
+    {
      "he": "לורנצו שימיץ'",
      "pos": "DF",
      "nat": "HR",
@@ -28647,6 +28891,23 @@
      ]
     },
     {
+     "he": "יילה בטאיי",
+     "pos": "DF",
+     "nat": "BE",
+     "born": 1999,
+     "spells": [
+      [
+       2026,
+       2027
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "יילה בטאיי"
+     ]
+    },
+    {
      "he": "ילה בטאי",
      "pos": "DF",
      "nat": "BE",
@@ -29152,10 +29413,10 @@
     ]
    },
    "counts": {
-    "players": 482,
+    "players": 487,
     "targets": 183,
-    "hidden": 92,
-    "unconfirmed": 20
+    "hidden": 88,
+    "unconfirmed": 21
    },
    "players": [
     {
@@ -32474,6 +32735,23 @@
      ]
     },
     {
+     "he": "מהראן אל לאלה",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1982,
+     "spells": [
+      [
+       2009,
+       2012
+      ]
+     ],
+     "titles": 4,
+     "target": false,
+     "aliases": [
+      "מהראן אל לאלה"
+     ]
+    },
+    {
      "he": "מהראן לאלא",
      "pos": "FW",
      "nat": "IL",
@@ -34722,6 +35000,20 @@
      ]
     },
     {
+     "he": "ויאם עמאשה",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1985,
+     "spells": [
+      [
+       2017,
+       2017
+      ]
+     ],
+     "titles": 0,
+     "target": false
+    },
+    {
      "he": "חן עזרא",
      "pos": "MF",
      "nat": "IL",
@@ -35333,9 +35625,9 @@
     },
     {
      "he": "עמנואל בואטנג",
-     "pos": "MF",
+     "pos": "FW",
      "nat": "GH",
-     "born": 1997,
+     "born": 1996,
      "spells": [
       [
        2019,
@@ -35900,6 +36192,23 @@
      "aliases": [
       "לידור כהן",
       "Lidor Cohen"
+     ]
+    },
+    {
+     "he": "ניב סרדל",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1993,
+     "spells": [
+      [
+       2021,
+       2021
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "ניב סרדל"
      ]
     },
     {
@@ -37083,6 +37392,23 @@
      ]
     },
     {
+     "he": "גיא מיכאלי",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 2005,
+     "spells": [
+      [
+       2025,
+       2025
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "גיא משה מיכאלי"
+     ]
+    },
+    {
      "he": "דוד קופרמן",
      "pos": "DF",
      "nat": "CO",
@@ -37580,6 +37906,23 @@
      "aliases": [
       "פרננד דסטין מאיימבו",
       "פרנאן מאיימבו"
+     ]
+    },
+    {
+     "he": "ציקו אלבס",
+     "pos": "MF",
+     "nat": "BR",
+     "born": 1998,
+     "spells": [
+      [
+       2026,
+       2027
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "צ'יקו אלבס"
      ]
     },
     {
