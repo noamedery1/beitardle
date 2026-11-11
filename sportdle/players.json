@@ -1,5 +1,5 @@
 {
- "v": "s3-5ea4c3a72a",
+ "v": "s3-8732aa8dda",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -57,9 +57,9 @@
     ]
    },
    "counts": {
-    "players": 466,
+    "players": 469,
     "targets": 214,
-    "hidden": 39,
+    "hidden": 38,
     "unconfirmed": 30
    },
    "players": [
@@ -1068,7 +1068,7 @@
     },
     {
      "he": "רענן דרעי",
-     "pos": "DF",
+     "pos": "MF",
      "nat": "IL",
      "born": 1976,
      "spells": [
@@ -3052,6 +3052,20 @@
      "target": true
     },
     {
+     "he": "כריסטיאן פביאני",
+     "pos": "FW",
+     "nat": "AR",
+     "born": 1983,
+     "spells": [
+      [
+       2007,
+       2007
+      ]
+     ],
+     "titles": 1,
+     "target": false
+    },
+    {
      "he": "מיכאל זנדברג",
      "pos": "MF",
      "nat": "IL",
@@ -3708,7 +3722,7 @@
     },
     {
      "he": "צחי אליחן",
-     "pos": "MF",
+     "pos": "FW",
      "nat": "IL",
      "born": 1991,
      "spells": [
@@ -5072,7 +5086,7 @@
     },
     {
      "he": "עוז ראלי",
-     "pos": "MF",
+     "pos": "DF",
      "nat": "IL",
      "born": 1987,
      "spells": [
@@ -5609,6 +5623,20 @@
      "target": true
     },
     {
+     "he": "קרלוס קוויאר",
+     "pos": "DF",
+     "nat": "ES",
+     "born": 1981,
+     "spells": [
+      [
+       2019,
+       2019
+      ]
+     ],
+     "titles": 0,
+     "target": false
+    },
+    {
      "he": "רועי פדידה",
      "pos": "FW",
      "nat": "IL",
@@ -6019,7 +6047,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "מתאוסיניו"
+     ]
     },
     {
      "he": "ניקו אולסק",
@@ -7226,6 +7257,23 @@
      "target": false
     },
     {
+     "he": "זיו בן שימול",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 2004,
+     "spells": [
+      [
+       2027,
+       2027
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "זיו ישראל בן שימול"
+     ]
+    },
+    {
      "he": "יוגין אנסה",
      "pos": "FW",
      "nat": "GH",
@@ -7540,10 +7588,10 @@
     ]
    },
    "counts": {
-    "players": 339,
+    "players": 359,
     "targets": 146,
-    "hidden": 139,
-    "unconfirmed": 13
+    "hidden": 124,
+    "unconfirmed": 20
    },
    "players": [
     {
@@ -8215,6 +8263,23 @@
      ]
     },
     {
+     "he": "יוסי מדר",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1969,
+     "spells": [
+      [
+       1995,
+       1995
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "יוסף מדר"
+     ]
+    },
+    {
      "he": "מריאן קלפטיאנו",
      "pos": "MF",
      "nat": "RO",
@@ -8229,6 +8294,24 @@
      "target": false,
      "aliases": [
       "Marian Calafeteanu"
+     ]
+    },
+    {
+     "he": "אבי פיטוסי",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1971,
+     "spells": [
+      [
+       1996,
+       1996
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אברהם פיטוסי",
+      "אביחי פיטוסי"
      ]
     },
     {
@@ -8464,6 +8547,23 @@
      "target": true,
      "aliases": [
       "יניב אלול"
+     ]
+    },
+    {
+     "he": "חיים חג'ג'",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1975,
+     "spells": [
+      [
+       2000,
+       2000
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "חיימק חגג"
      ]
     },
     {
@@ -8731,7 +8831,8 @@
      "titles": 0,
      "target": false,
      "aliases": [
-      "Blessing Kaku"
+      "Blessing Kaku",
+      "קאקו בלסינג"
      ]
     },
     {
@@ -8838,23 +8939,6 @@
      "target": false,
      "aliases": [
       "עוז יפרח"
-     ]
-    },
-    {
-     "he": "קאקו בלסינג",
-     "pos": "MF",
-     "nat": "NG",
-     "born": 1978,
-     "spells": [
-      [
-       2003,
-       2003
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "קאקו בלסינג"
      ]
     },
     {
@@ -9075,6 +9159,23 @@
      "aliases": [
       "אלון אברמוביץ",
       "אילון אברמוביץ"
+     ]
+    },
+    {
+     "he": "אלין מינטואין",
+     "pos": "MF",
+     "nat": "RO",
+     "born": 1976,
+     "spells": [
+      [
+       2005,
+       2005
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אלין זר מינטואין"
      ]
     },
     {
@@ -9528,7 +9629,7 @@
     {
      "he": "גוסטין זולו",
      "pos": "MF",
-     "nat": "IL",
+     "nat": "ZM",
      "born": 1989,
      "spells": [
       [
@@ -9765,6 +9866,23 @@
      ]
     },
     {
+     "he": "חגי יצחק",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1990,
+     "spells": [
+      [
+       2010,
+       2010
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "חגי יצחק"
+     ]
+    },
+    {
      "he": "טברטקו קאלה",
      "pos": "GK",
      "nat": "HR",
@@ -9955,6 +10073,27 @@
      ]
     },
     {
+     "he": "אופיר דודזאדה",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1991,
+     "spells": [
+      [
+       2011,
+       2016
+      ],
+      [
+       2026,
+       2027
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "אופיר דודזאדה"
+     ]
+    },
+    {
      "he": "אופיר דוידזאדה",
      "pos": "DF",
      "nat": "IL",
@@ -9991,6 +10130,37 @@
      "aliases": [
       "Ibrahim Basit"
      ]
+    },
+    {
+     "he": "בסיט אברהם",
+     "pos": "FW",
+     "nat": "GH",
+     "born": 1990,
+     "spells": [
+      [
+       2011,
+       2011
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "בסיט אברהם"
+     ]
+    },
+    {
+     "he": "ברנרדו ואסקונסלוס",
+     "pos": "FW",
+     "nat": "PT",
+     "born": 1979,
+     "spells": [
+      [
+       2011,
+       2011
+      ]
+     ],
+     "titles": 0,
+     "target": false
     },
     {
      "he": "יוסף טורזמן",
@@ -10464,7 +10634,7 @@
     {
      "he": "בוגאן מרקוביץ",
      "pos": "DF",
-     "nat": "IL",
+     "nat": "BA",
      "born": 1985,
      "spells": [
       [
@@ -10548,6 +10718,23 @@
      "target": false,
      "aliases": [
       "William Njobvu"
+     ]
+    },
+    {
+     "he": "ניקולאס פלזוק",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1986,
+     "spells": [
+      [
+       2013,
+       2014
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "ניקולאס גסטון פלזוק"
      ]
     },
     {
@@ -10996,6 +11183,40 @@
      ]
     },
     {
+     "he": "דניאל אסקלינג",
+     "pos": "DF",
+     "nat": "SE",
+     "born": 1990,
+     "spells": [
+      [
+       2015,
+       2015
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "דני אסקלינג"
+     ]
+    },
+    {
+     "he": "הדר ברד",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1995,
+     "spells": [
+      [
+       2015,
+       2015
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "הדר ברד"
+     ]
+    },
+    {
      "he": "רובי לבקוביץ'",
      "pos": "GK",
      "nat": "IL",
@@ -11034,6 +11255,23 @@
      "aliases": [
       "רועי גורדנה",
       "Roei Gordana"
+     ]
+    },
+    {
+     "he": "רן רובין",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1995,
+     "spells": [
+      [
+       2015,
+       2016
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "רן רובין"
      ]
     },
     {
@@ -11631,7 +11869,8 @@
      "titles": 1,
      "target": false,
      "aliases": [
-      "Vadim Manzon"
+      "Vadim Manzon",
+      "מנזון ואדים"
      ]
     },
     {
@@ -11654,6 +11893,23 @@
      "aliases": [
       "חאתם אלחמיד",
       "Hatem Elhamed"
+     ]
+    },
+    {
+     "he": "יונתן אליאס",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1998,
+     "spells": [
+      [
+       2018,
+       2018
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "יונתן אליאס"
      ]
     },
     {
@@ -11860,6 +12116,41 @@
      ]
     },
     {
+     "he": "קווין טפוקו",
+     "pos": "MF",
+     "nat": "FR",
+     "born": 1994,
+     "spells": [
+      [
+       2019,
+       2019
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "קווין גיא-נואל פייר טפוקו"
+     ]
+    },
+    {
+     "he": "שמואל שיימן",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1987,
+     "spells": [
+      [
+       2019,
+       2019
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "שמוליק שיימן",
+      "סמי שיימן"
+     ]
+    },
+    {
      "he": "אלטון אקולטסה",
      "pos": "FW",
      "nat": "NL",
@@ -11876,6 +12167,23 @@
       "אלטון אופיי אקולטסה",
       "Elton Acolatse",
       "אלטון אקולטסה"
+     ]
+    },
+    {
+     "he": "ארנסטאס סטקוס",
+     "pos": "GK",
+     "nat": "LT",
+     "born": 1985,
+     "spells": [
+      [
+       2020,
+       2020
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "ארנסטאס סטקוס"
      ]
     },
     {
@@ -12300,6 +12608,23 @@
      "target": false
     },
     {
+     "he": "נתנאל אסקיאס",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 2001,
+     "spells": [
+      [
+       2021,
+       2021
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "נתנאל אסקיאס"
+     ]
+    },
+    {
      "he": "סינטאיהו סלליך",
      "pos": "FW",
      "nat": "IL",
@@ -12527,6 +12852,23 @@
       "דנילו מורנו אספרייה",
       "Danilo Asprilla",
       "דנילו אספרייה"
+     ]
+    },
+    {
+     "he": "הלדר לופז",
+     "pos": "DF",
+     "nat": "PT",
+     "born": 1989,
+     "spells": [
+      [
+       2022,
+       2026
+      ]
+     ],
+     "titles": 3,
+     "target": false,
+     "aliases": [
+      "הלדר פיליפ אוליביירה לופז"
      ]
     },
     {
@@ -12979,7 +13321,7 @@
     },
     {
      "he": "אמיר גנאח",
-     "pos": "MF",
+     "pos": "FW",
      "nat": "IL",
      "born": 2004,
      "spells": [
@@ -12999,7 +13341,7 @@
     {
      "he": "אנדרה פוקו",
      "pos": "MF",
-     "nat": "IL",
+     "nat": "GA",
      "born": 1993,
      "spells": [
       [
@@ -13123,6 +13465,20 @@
      ]
     },
     {
+     "he": "כריסטופר פטרסון",
+     "pos": "FW",
+     "nat": "SE",
+     "born": 1994,
+     "spells": [
+      [
+       2024,
+       2024
+      ]
+     ],
+     "titles": 0,
+     "target": false
+    },
+    {
      "he": "מקסימו לוי",
      "pos": "DF",
      "nat": "IL",
@@ -13154,6 +13510,23 @@
      "target": false,
      "aliases": [
       "נועם שחר"
+     ]
+    },
+    {
+     "he": "עומאר אימראן",
+     "pos": "MF",
+     "nat": "NL",
+     "born": 1997,
+     "spells": [
+      [
+       2024,
+       2024
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "עומאר אולאד אימראן"
      ]
     },
     {
@@ -13211,7 +13584,7 @@
     {
      "he": "ארתור שושנאצ'ב",
      "pos": "FW",
-     "nat": "IL",
+     "nat": "KZ",
      "born": 1998,
      "spells": [
       [
@@ -13357,7 +13730,7 @@
     {
      "he": "קרלוש פונק",
      "pos": "DF",
-     "nat": "IL",
+     "nat": "CV",
      "born": 1990,
      "spells": [
       [
@@ -13370,6 +13743,23 @@
      "aliases": [
       "קרלוס דוס סנטוס רודריגז פונק",
       "קרלוס פונק"
+     ]
+    },
+    {
+     "he": "איגור זלאטנוביץ",
+     "pos": "FW",
+     "nat": "RS",
+     "born": 1998,
+     "spells": [
+      [
+       2026,
+       2027
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "איגור זלאטנוביץ"
      ]
     },
     {
@@ -13391,7 +13781,7 @@
     },
     {
      "he": "איתי חזות",
-     "pos": "DF",
+     "pos": "MF",
      "nat": "IL",
      "born": 2006,
      "spells": [
@@ -13441,7 +13831,7 @@
     {
      "he": "גבון איסט",
      "pos": "FW",
-     "nat": "IL",
+     "nat": "JM",
      "born": 1995,
      "spells": [
       [
@@ -13886,10 +14276,10 @@
     ]
    },
    "counts": {
-    "players": 396,
+    "players": 405,
     "targets": 205,
-    "hidden": 91,
-    "unconfirmed": 24
+    "hidden": 85,
+    "unconfirmed": 29
    },
    "players": [
     {
@@ -14557,6 +14947,23 @@
      "aliases": [
       "Eli Driks",
       "אליהו דריקס"
+     ]
+    },
+    {
+     "he": "אלי מיאלי",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1955,
+     "spells": [
+      [
+       1982,
+       1982
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אליהו מיאלי"
      ]
     },
     {
@@ -15661,7 +16068,8 @@
      "titles": 3,
      "target": true,
      "aliases": [
-      "Rodrigo Goldberg"
+      "Rodrigo Goldberg",
+      "גולדברג רודריגו"
      ]
     },
     {
@@ -15949,6 +16357,20 @@
      ]
     },
     {
+     "he": "אנדריי טיחונוב",
+     "pos": "MF",
+     "nat": "RU",
+     "born": 1970,
+     "spells": [
+      [
+       2001,
+       2001
+      ]
+     ],
+     "titles": 1,
+     "target": false
+    },
+    {
      "he": "ברוך דגו",
      "pos": "MF",
      "nat": "IL",
@@ -16204,23 +16626,6 @@
      ]
     },
     {
-     "he": "ברונו רייס",
-     "pos": "MF",
-     "nat": "BR",
-     "born": 1978,
-     "spells": [
-      [
-       2003,
-       2005
-      ]
-     ],
-     "titles": 2,
-     "target": false,
-     "aliases": [
-      "Bruno Reis"
-     ]
-    },
-    {
      "he": "ג'ון פנטסיל",
      "pos": "DF",
      "nat": "GH",
@@ -16366,7 +16771,8 @@
      "titles": 2,
      "target": true,
      "aliases": [
-      "רייס לינו ברונו"
+      "רייס לינו ברונו",
+      "ברונו רייס"
      ]
     },
     {
@@ -16778,6 +17184,37 @@
      "target": false
     },
     {
+     "he": "אליאור וקנין",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1986,
+     "spells": [
+      [
+       2006,
+       2006
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אליאור וקנין"
+     ]
+    },
+    {
+     "he": "ארז אליאב",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1977,
+     "spells": [
+      [
+       2006,
+       2006
+      ]
+     ],
+     "titles": 0,
+     "target": false
+    },
+    {
      "he": "בלסינג קאקו",
      "pos": "MF",
      "nat": "NG",
@@ -16880,6 +17317,20 @@
      "aliases": [
       "גיא סולומון"
      ]
+    },
+    {
+     "he": "גיא שמיר",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1978,
+     "spells": [
+      [
+       2007,
+       2007
+      ]
+     ],
+     "titles": 0,
+     "target": false
     },
     {
      "he": "טברטקו קאלה",
@@ -17193,6 +17644,20 @@
       "דראגוסלב יבריץ",
       "דראגוסלב יבריץ'"
      ]
+    },
+    {
+     "he": "ז'וזה ראמליו",
+     "pos": "MF",
+     "nat": "BR",
+     "born": 1980,
+     "spells": [
+      [
+       2008,
+       2008
+      ]
+     ],
+     "titles": 0,
+     "target": false
     },
     {
      "he": "יאניק קאמנן",
@@ -17607,7 +18072,7 @@
     },
     {
      "he": "ריף פרץ",
-     "pos": "MF",
+     "pos": "DF",
      "nat": "IL",
      "born": 1991,
      "spells": [
@@ -17625,7 +18090,7 @@
     },
     {
      "he": "אלירן עטר",
-     "pos": "MF",
+     "pos": "FW",
      "nat": "IL",
      "born": 1987,
      "spells": [
@@ -18054,7 +18519,7 @@
     },
     {
      "he": "רחמים צ'קול",
-     "pos": "MF",
+     "pos": "DF",
      "nat": "IL",
      "born": 1988,
      "spells": [
@@ -19150,6 +19615,23 @@
      ]
     },
     {
+     "he": "חביב אוחיון",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 1998,
+     "spells": [
+      [
+       2018,
+       2018
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "חביב אוחיון"
+     ]
+    },
+    {
      "he": "חוסה רודריגס מרטינס",
      "pos": "MF",
      "nat": "ES",
@@ -19279,7 +19761,7 @@
     {
      "he": "אדוארדו גררו",
      "pos": "FW",
-     "nat": "IL",
+     "nat": "PA",
      "born": 2000,
      "spells": [
       [
@@ -20193,7 +20675,7 @@
     {
      "he": "אורלנדו מוסקרה",
      "pos": "GK",
-     "nat": "IL",
+     "nat": "PA",
      "born": 1994,
      "spells": [
       [
@@ -20440,6 +20922,27 @@
      ]
     },
     {
+     "he": "השאם ליוס",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 2000,
+     "spells": [
+      [
+       2025,
+       2025
+      ],
+      [
+       2027,
+       2027
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "השאם ליוס"
+     ]
+    },
+    {
      "he": "ווסלי בטיסטה",
      "pos": "FW",
      "nat": "BR",
@@ -20488,6 +20991,23 @@
      "target": true,
      "aliases": [
       "Tyrese Asante"
+     ]
+    },
+    {
+     "he": "טייריס אסנטה",
+     "pos": "DF",
+     "nat": "NL",
+     "born": 2002,
+     "spells": [
+      [
+       2025,
+       2027
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "טייריס אסנטה"
      ]
     },
     {
@@ -20845,6 +21365,27 @@
      ]
     },
     {
+     "he": "איאון ניקולסקו",
+     "pos": "FW",
+     "nat": "MD",
+     "born": 1998,
+     "spells": [
+      [
+       2027,
+       2027
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "nats": [
+      "MD",
+      "RO"
+     ],
+     "aliases": [
+      "איאון ניקולסקו"
+     ]
+    },
+    {
      "he": "אסטר סוקלר",
      "pos": "FW",
      "nat": "SI",
@@ -21163,10 +21704,10 @@
     ]
    },
    "counts": {
-    "players": 398,
+    "players": 404,
     "targets": 215,
-    "hidden": 84,
-    "unconfirmed": 11
+    "hidden": 76,
+    "unconfirmed": 12
    },
    "players": [
     {
@@ -23239,6 +23780,23 @@
      ]
     },
     {
+     "he": "אגאפור אריק",
+     "pos": "DF",
+     "nat": "NG",
+     "born": null,
+     "spells": [
+      [
+       2003,
+       2004
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "אג'אפור אריק"
+     ]
+    },
+    {
      "he": "אמיר אדרי",
      "pos": "GK",
      "nat": "IL",
@@ -24428,6 +24986,23 @@
      ]
     },
     {
+     "he": "ולדימיר דוואלישוילי",
+     "pos": "FW",
+     "nat": "GE",
+     "born": 1986,
+     "spells": [
+      [
+       2010,
+       2011
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "ולדימיר דוואלישוילי"
+     ]
+    },
+    {
      "he": "ז'ורז'ה טיישיירה",
      "pos": "DF",
      "nat": "PT",
@@ -24641,7 +25216,8 @@
      "titles": 2,
      "target": true,
      "aliases": [
-      "Mohammed Kalibat"
+      "Mohammed Kalibat",
+      "כליבאת מוחמד"
      ]
     },
     {
@@ -25436,6 +26012,24 @@
      ]
     },
     {
+     "he": "טל בומשטיין",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 1995,
+     "spells": [
+      [
+       2015,
+       2015
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "טל בומשטיין",
+      "טליק בומשטיין"
+     ]
+    },
+    {
      "he": "יניב בריק",
      "pos": "MF",
      "nat": "IL",
@@ -25950,6 +26544,20 @@
       ]
      ],
      "titles": 2,
+     "target": false
+    },
+    {
+     "he": "מריו מוסה",
+     "pos": "DF",
+     "nat": "HR",
+     "born": 1990,
+     "spells": [
+      [
+       2017,
+       2017
+      ]
+     ],
+     "titles": 0,
      "target": false
     },
     {
@@ -26490,7 +27098,7 @@
     {
      "he": "קארים פריי",
      "pos": "FW",
-     "nat": "IL",
+     "nat": "CH",
      "born": 1993,
      "spells": [
       [
@@ -26501,24 +27109,8 @@
      "titles": 0,
      "target": false,
      "aliases": [
-      "קארים פריי"
-     ]
-    },
-    {
-     "he": "קרים פריי",
-     "pos": "FW",
-     "nat": "TR",
-     "born": 1993,
-     "spells": [
-      [
-       2019,
-       2019
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "Kerim Frei"
+      "קארים פריי",
+      "קרים פריי"
      ]
     },
     {
@@ -27738,6 +28330,23 @@
      ]
     },
     {
+     "he": "גיא מלמד",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1992,
+     "spells": [
+      [
+       2025,
+       2027
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "גיא מלמד"
+     ]
+    },
+    {
      "he": "ויטאל אנסימבה",
      "pos": "DF",
      "nat": "AO",
@@ -28105,8 +28714,13 @@
      ],
      "titles": 0,
      "target": false,
+     "nats": [
+      "AO",
+      "BE"
+     ],
      "aliases": [
-      "Manuel Benson"
+      "Manuel Benson",
+      "בנסון מנואל"
      ]
     },
     {
@@ -28194,6 +28808,40 @@
      "target": false,
      "aliases": [
       "יאיר מרדכי"
+     ]
+    },
+    {
+     "he": "ינון פיינגזיכט",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 2007,
+     "spells": [
+      [
+       2027,
+       2027
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "ינון פיינגזיכט"
+     ]
+    },
+    {
+     "he": "נבות רטנר",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 2007,
+     "spells": [
+      [
+       2027,
+       2027
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "נבות רטנר"
      ]
     },
     {
@@ -28504,10 +29152,10 @@
     ]
    },
    "counts": {
-    "players": 466,
+    "players": 482,
     "targets": 183,
-    "hidden": 108,
-    "unconfirmed": 16
+    "hidden": 92,
+    "unconfirmed": 20
    },
    "players": [
     {
@@ -28747,7 +29395,7 @@
      "he": "יחזקאל חזום",
      "pos": "FW",
      "nat": "IL",
-     "born": 1947,
+     "born": 1946,
      "spells": [
       [
        1965,
@@ -29979,7 +30627,8 @@
      "titles": 4,
      "target": true,
      "aliases": [
-      "Kfir Udi"
+      "Kfir Udi",
+      "אודי כפיר"
      ]
     },
     {
@@ -30588,6 +31237,23 @@
      ]
     },
     {
+     "he": "הלמאיי גאבור",
+     "pos": "MF",
+     "nat": "HU",
+     "born": 1972,
+     "spells": [
+      [
+       2003,
+       2003
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "הלמאיי גאבור"
+     ]
+    },
+    {
      "he": "וולטון סילבה",
      "pos": "FW",
      "nat": "BR",
@@ -30602,6 +31268,23 @@
      "target": false,
      "aliases": [
       "וולטון קרלוס סילבה"
+     ]
+    },
+    {
+     "he": "קלשנקו סרגיי",
+     "pos": "FW",
+     "nat": "MD",
+     "born": 1972,
+     "spells": [
+      [
+       2003,
+       2003
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "קלשנקו סרגיי"
      ]
     },
     {
@@ -30874,6 +31557,20 @@
      "aliases": [
       "שרון בן מוחה"
      ]
+    },
+    {
+     "he": "אדוארדו מרקש",
+     "pos": "FW",
+     "nat": "BR",
+     "born": 1976,
+     "spells": [
+      [
+       2005,
+       2005
+      ]
+     ],
+     "titles": 0,
+     "target": false
     },
     {
      "he": "אילונגו נגאסניה",
@@ -31512,6 +32209,23 @@
      ]
     },
     {
+     "he": "נסומבו מזואה",
+     "pos": "MF",
+     "nat": "CD",
+     "born": 1982,
+     "spells": [
+      [
+       2008,
+       2008
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "נסומבו מזואה"
+     ]
+    },
+    {
      "he": "עדי סבג",
      "pos": "FW",
      "nat": "IL",
@@ -31877,6 +32591,23 @@
      ]
     },
     {
+     "he": "בוגאן ורוצינה",
+     "pos": "FW",
+     "nat": "HR",
+     "born": 1984,
+     "spells": [
+      [
+       2010,
+       2010
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "בוג'אן ורוצ'ינה"
+     ]
+    },
+    {
      "he": "בויאן ורוצ'ינה",
      "pos": "FW",
      "nat": "HR",
@@ -32066,6 +32797,23 @@
      ]
     },
     {
+     "he": "בבאן פרנסמן",
+     "pos": "DF",
+     "nat": "ZA",
+     "born": 1983,
+     "spells": [
+      [
+       2011,
+       2012
+      ]
+     ],
+     "titles": 2,
+     "target": false,
+     "aliases": [
+      "בבאן פרנסמן"
+     ]
+    },
+    {
      "he": "ביוואן פרנסמן",
      "pos": "DF",
      "nat": "ZA",
@@ -32182,6 +32930,23 @@
       "יוסי שבחון",
       "Yossi Shivhon",
       "יוסף שבחון"
+     ]
+    },
+    {
+     "he": "מריו פצלקה",
+     "pos": "DF",
+     "nat": "SK",
+     "born": 1980,
+     "spells": [
+      [
+       2011,
+       2011
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "מריו פצ'לקה"
      ]
     },
     {
@@ -32383,7 +33148,8 @@
      "titles": 1,
      "target": false,
      "aliases": [
-      "Mirko Oremuš"
+      "Mirko Oremuš",
+      "אורמוש מירקו"
      ]
     },
     {
@@ -32974,6 +33740,23 @@
       "פטר אורלנדיץ",
       "Petar Orlandić",
       "פטר אורלנדיץ'"
+     ]
+    },
+    {
+     "he": "פיליפ חאיכ",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1994,
+     "spells": [
+      [
+       2014,
+       2014
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "פיליפ חאיכ"
      ]
     },
     {
@@ -33821,6 +34604,24 @@
      ]
     },
     {
+     "he": "אור אוסטיינד",
+     "pos": "MF",
+     "nat": "IL",
+     "born": 1987,
+     "spells": [
+      [
+       2017,
+       2018
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אור אוסטיינד",
+      "ליאור אוסטיינד"
+     ]
+    },
+    {
      "he": "אזקיאל נדואסל",
      "pos": "FW",
      "nat": "TD",
@@ -33991,6 +34792,20 @@
      "aliases": [
       "מייקל ג'וזף ארנטס סיטון"
      ]
+    },
+    {
+     "he": "ניקולס גורובסוב",
+     "pos": "MF",
+     "nat": "AR",
+     "born": 1989,
+     "spells": [
+      [
+       2017,
+       2017
+      ]
+     ],
+     "titles": 0,
+     "target": false
     },
     {
      "he": "עדן הרשקוביץ",
@@ -34263,6 +35078,23 @@
      ]
     },
     {
+     "he": "מוליק פגסל",
+     "pos": "FW",
+     "nat": "RS",
+     "born": 1994,
+     "spells": [
+      [
+       2018,
+       2018
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "מוליק פג'סל"
+     ]
+    },
+    {
      "he": "מור נעמן",
      "pos": "DF",
      "nat": "IL",
@@ -34430,6 +35262,23 @@
      "target": true,
      "aliases": [
       "Marvin Peersman"
+     ]
+    },
+    {
+     "he": "נריגוס ולסקיס",
+     "pos": "FW",
+     "nat": "LT",
+     "born": 1987,
+     "spells": [
+      [
+       2019,
+       2019
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "נריג'וס ולסקיס"
      ]
     },
     {
@@ -34951,6 +35800,23 @@
      ]
     },
     {
+     "he": "ארנסטאס סטקוס",
+     "pos": "GK",
+     "nat": "LT",
+     "born": 1985,
+     "spells": [
+      [
+       2021,
+       2022
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "ארנסטאס סטקוס"
+     ]
+    },
+    {
      "he": "ארנסטס שטקוס",
      "pos": "GK",
      "nat": "LT",
@@ -35420,7 +36286,8 @@
      "titles": 0,
      "target": false,
      "aliases": [
-      "מרקו ינקוביץ'"
+      "מרקו ינקוביץ'",
+      "מרקו יאנקוביץ'"
      ]
     },
     {
@@ -35665,7 +36532,7 @@
     },
     {
      "he": "טל ארצל",
-     "pos": "MF",
+     "pos": "DF",
      "nat": "IL",
      "born": 2003,
      "spells": [
@@ -35942,7 +36809,7 @@
     {
      "he": "בובאקר טאמבדו",
      "pos": "FW",
-     "nat": "IL",
+     "nat": "GM",
      "born": 2002,
      "spells": [
       [
@@ -35972,6 +36839,23 @@
      "aliases": [
       "בריאן פאסי",
       "Bryan Passi"
+     ]
+    },
+    {
+     "he": "דייויד קופרמן",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1996,
+     "spells": [
+      [
+       2024,
+       2025
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "דייויד קופרמן"
      ]
     },
     {
@@ -36503,6 +37387,23 @@
      ]
     },
     {
+     "he": "אנאס מחאמיד",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1998,
+     "spells": [
+      [
+       2026,
+       2027
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "אנאס מחאמיד"
+     ]
+    },
+    {
      "he": "אנדריאן קרייב",
      "pos": "MF",
      "nat": "BG",
@@ -36662,20 +37563,25 @@
      ]
     },
     {
-     "he": "פרנאן מאיימבו",
+     "he": "פרננד מאיימבו",
      "pos": "DF",
      "nat": "CD",
      "born": 1996,
      "spells": [
       [
        2026,
-       2026
+       2027
       ]
      ],
      "titles": 0,
      "target": false,
+     "nats": [
+      "CD",
+      "FR"
+     ],
      "aliases": [
-      "Fernand Mayembo"
+      "פרננד דסטין מאיימבו",
+      "פרנאן מאיימבו"
      ]
     },
     {
@@ -36731,6 +37637,20 @@
       "Shahar Piven",
       "שחר פיבן"
      ]
+    },
+    {
+     "he": "שיקו",
+     "pos": "DF",
+     "nat": "BR",
+     "born": 1998,
+     "spells": [
+      [
+       2026,
+       2026
+      ]
+     ],
+     "titles": 0,
+     "target": false
     },
     {
      "he": "יונתן פרבר",
@@ -48047,5 +48967,622 @@
     "ליאל עבדה"
    ]
   }
+ },
+ "grids": {
+  "beitar": [
+   "dec:2010,nat,foreign|pos:FW,club:hapoel-bs,club:hapoel-ta",
+   "pos:FW,champ,pos:GK|club:hapoel-ta,club:maccabi-ta,nat",
+   "nat,foreign,pos:FW|dec:1990,club:maccabi-ta,club:maccabi-haifa",
+   "dec:2000,nat,pos:GK|club:hapoel-ta,club:hapoel-bs,champ",
+   "pos:GK,champ,foreign|club:hapoel-bs,dec:2010,club:maccabi-ta",
+   "pos:FW,pos:GK,dec:1980|champ,club:hapoel-bs,nat",
+   "champ,foreign,pos:GK|club:maccabi-haifa,club:hapoel-ta,dec:2000",
+   "champ,pos:FW,foreign|club:maccabi-haifa,dec:2010,club:maccabi-ta",
+   "foreign,nat,pos:GK|club:hapoel-ta,champ,dec:2010",
+   "dec:1990,pos:GK,pos:FW|club:maccabi-ta,champ,nat",
+   "dec:2020,nat,champ|club:hapoel-bs,club:maccabi-ta,pos:GK",
+   "dec:2000,champ,foreign|club:maccabi-haifa,club:hapoel-bs,pos:FW",
+   "pos:GK,nat,pos:FW|champ,club:maccabi-haifa,dec:1970",
+   "nat,champ,foreign|pos:FW,club:hapoel-ta,dec:1990",
+   "nat,foreign,champ|dec:2000,club:hapoel-bs,pos:FW",
+   "champ,foreign,pos:GK|club:hapoel-bs,dec:2000,club:hapoel-ta",
+   "dec:1990,champ,foreign|club:maccabi-haifa,club:hapoel-bs,pos:FW",
+   "dec:1990,champ,nat|pos:GK,club:hapoel-bs,club:hapoel-ta",
+   "nat,foreign,pos:GK|club:hapoel-ta,dec:1990,club:maccabi-ta",
+   "pos:FW,champ,pos:GK|club:maccabi-haifa,dec:1990,club:hapoel-ta",
+   "nat,pos:GK,foreign|dec:2020,champ,club:hapoel-bs",
+   "dec:2010,nat,champ|club:maccabi-haifa,club:hapoel-bs,pos:GK",
+   "dec:1990,pos:GK,nat|club:hapoel-bs,club:maccabi-haifa,champ",
+   "champ,foreign,pos:GK|club:maccabi-haifa,club:maccabi-ta,dec:2000",
+   "pos:FW,dec:2000,nat|champ,club:hapoel-ta,club:hapoel-bs",
+   "nat,dec:2010,pos:FW|club:maccabi-ta,club:hapoel-ta,champ",
+   "dec:2010,nat,foreign|club:hapoel-bs,club:hapoel-ta,champ",
+   "pos:FW,dec:1990,champ|club:hapoel-bs,foreign,club:hapoel-ta",
+   "pos:GK,champ,pos:FW|nat,club:maccabi-ta,dec:1980",
+   "nat,pos:GK,champ|club:maccabi-haifa,dec:2000,club:maccabi-ta",
+   "nat,foreign,dec:1990|champ,club:maccabi-haifa,club:hapoel-ta",
+   "foreign,nat,dec:1980|champ,club:maccabi-haifa,club:maccabi-ta",
+   "pos:FW,champ,dec:2010|foreign,club:maccabi-haifa,club:hapoel-ta",
+   "foreign,nat,pos:FW|dec:2010,club:maccabi-ta,club:hapoel-bs",
+   "champ,pos:GK,dec:2020|club:hapoel-bs,club:hapoel-ta,nat",
+   "pos:FW,dec:2010,champ|club:hapoel-bs,foreign,club:hapoel-ta",
+   "nat,pos:GK,pos:FW|dec:1980,club:maccabi-ta,club:hapoel-ta",
+   "nat,pos:FW,foreign|dec:2010,champ,club:maccabi-haifa",
+   "dec:2010,pos:FW,pos:GK|club:maccabi-haifa,club:hapoel-bs,nat",
+   "champ,pos:FW,pos:GK|club:hapoel-bs,dec:2000,club:maccabi-ta",
+   "champ,pos:GK,pos:FW|dec:1970,club:hapoel-ta,club:maccabi-ta",
+   "pos:GK,pos:FW,champ|club:maccabi-ta,club:hapoel-ta,dec:1980",
+   "pos:GK,pos:FW,champ|dec:1970,nat,club:hapoel-ta",
+   "nat,pos:GK,pos:FW|club:hapoel-bs,dec:1990,club:maccabi-ta",
+   "pos:FW,champ,dec:2020|club:hapoel-bs,foreign,club:hapoel-ta",
+   "pos:GK,foreign,pos:FW|club:maccabi-haifa,dec:2010,club:maccabi-ta",
+   "foreign,nat,pos:FW|champ,club:maccabi-ta,club:hapoel-bs",
+   "pos:FW,champ,nat|club:maccabi-haifa,dec:2000,club:hapoel-ta",
+   "dec:2010,pos:FW,pos:GK|club:hapoel-ta,champ,club:hapoel-bs",
+   "dec:2020,foreign,nat|club:maccabi-haifa,club:hapoel-ta,pos:FW",
+   "champ,pos:FW,pos:GK|club:maccabi-ta,nat,club:maccabi-haifa",
+   "dec:2010,pos:GK,champ|nat,club:maccabi-ta,club:hapoel-bs",
+   "pos:GK,pos:FW,nat|club:maccabi-haifa,dec:2020,club:maccabi-ta",
+   "pos:GK,nat,champ|club:maccabi-ta,dec:1970,club:maccabi-haifa",
+   "pos:GK,pos:FW,dec:1980|club:maccabi-ta,club:hapoel-bs,nat",
+   "nat,champ,foreign|pos:FW,club:maccabi-haifa,club:maccabi-ta",
+   "pos:FW,pos:GK,dec:2000|club:hapoel-bs,club:maccabi-ta,nat",
+   "champ,pos:FW,pos:GK|club:maccabi-haifa,dec:1980,club:hapoel-ta",
+   "pos:GK,foreign,nat|champ,club:hapoel-bs,club:hapoel-ta",
+   "dec:1990,nat,champ|pos:GK,pos:FW,club:hapoel-ta",
+   "nat,foreign,dec:1980|champ,club:hapoel-bs,club:maccabi-ta",
+   "pos:FW,nat,foreign|club:hapoel-bs,dec:2020,champ",
+   "pos:FW,pos:GK,nat|club:maccabi-ta,dec:1990,club:maccabi-haifa",
+   "champ,foreign,pos:FW|dec:2000,club:maccabi-haifa,club:hapoel-ta",
+   "foreign,pos:FW,nat|club:hapoel-ta,dec:2020,club:maccabi-ta",
+   "pos:FW,champ,dec:2000|club:maccabi-ta,foreign,club:hapoel-bs",
+   "champ,dec:2020,pos:FW|club:maccabi-ta,foreign,club:hapoel-ta",
+   "champ,dec:1980,nat|club:maccabi-ta,club:maccabi-haifa,pos:FW",
+   "foreign,dec:2010,pos:FW|club:hapoel-bs,club:maccabi-ta,champ",
+   "foreign,nat,pos:FW|champ,club:hapoel-bs,club:maccabi-haifa",
+   "foreign,champ,pos:FW|club:hapoel-ta,club:maccabi-ta,dec:2010",
+   "nat,foreign,pos:FW|club:maccabi-haifa,club:hapoel-ta,dec:2000",
+   "nat,pos:FW,pos:GK|dec:2000,club:hapoel-ta,club:maccabi-haifa",
+   "pos:FW,pos:GK,champ|club:maccabi-ta,dec:2000,club:maccabi-haifa",
+   "dec:2010,pos:GK,nat|club:maccabi-ta,club:maccabi-haifa,champ",
+   "champ,pos:FW,dec:1990|nat,foreign,club:hapoel-bs",
+   "nat,pos:GK,foreign|club:maccabi-haifa,dec:1990,club:hapoel-ta",
+   "dec:2010,foreign,nat|club:maccabi-haifa,pos:FW,club:maccabi-ta",
+   "pos:GK,champ,pos:FW|club:hapoel-bs,club:hapoel-ta,dec:1980",
+   "pos:GK,pos:FW,nat|champ,club:hapoel-bs,dec:2000",
+   "nat,foreign,pos:FW|dec:2000,champ,club:hapoel-ta",
+   "dec:2000,pos:GK,foreign|club:hapoel-bs,club:maccabi-ta,champ",
+   "pos:GK,foreign,pos:FW|club:hapoel-ta,dec:2000,club:hapoel-bs",
+   "dec:2020,pos:FW,pos:GK|club:maccabi-haifa,club:hapoel-bs,nat",
+   "foreign,champ,nat|dec:2010,club:hapoel-ta,club:maccabi-haifa",
+   "champ,nat,dec:1980|club:hapoel-bs,pos:GK,club:maccabi-haifa",
+   "dec:2020,champ,nat|club:maccabi-ta,club:hapoel-bs,pos:FW",
+   "pos:GK,champ,pos:FW|club:maccabi-ta,club:hapoel-ta,dec:2000",
+   "champ,nat,pos:FW|club:maccabi-ta,club:hapoel-bs,dec:1970",
+   "champ,nat,dec:2010|pos:GK,pos:FW,club:hapoel-bs",
+   "foreign,dec:2020,champ|club:maccabi-ta,pos:FW,club:maccabi-haifa",
+   "champ,dec:2020,pos:FW|club:maccabi-ta,foreign,club:hapoel-bs",
+   "dec:1990,pos:FW,nat|champ,club:hapoel-bs,club:maccabi-haifa",
+   "nat,pos:GK,dec:2010|club:hapoel-bs,champ,club:hapoel-ta",
+   "dec:2000,champ,pos:FW|club:hapoel-ta,club:hapoel-bs,foreign",
+   "foreign,dec:1980,pos:FW|club:maccabi-haifa,champ,club:hapoel-bs",
+   "nat,champ,pos:GK|dec:2010,club:hapoel-ta,club:maccabi-ta",
+   "nat,foreign,pos:GK|champ,club:hapoel-bs,club:maccabi-ta",
+   "champ,pos:FW,pos:GK|dec:2000,club:maccabi-haifa,club:hapoel-ta",
+   "pos:FW,pos:GK,foreign|club:hapoel-bs,dec:2020,club:maccabi-ta",
+   "pos:GK,nat,pos:FW|club:maccabi-haifa,dec:1990,champ",
+   "champ,pos:GK,pos:FW|dec:2000,club:hapoel-ta,nat",
+   "foreign,dec:2010,pos:GK|club:hapoel-bs,champ,club:maccabi-haifa",
+   "dec:2020,pos:GK,champ|club:hapoel-bs,nat,club:maccabi-ta",
+   "champ,dec:1990,pos:FW|foreign,club:maccabi-ta,club:hapoel-bs",
+   "champ,nat,dec:2010|club:hapoel-bs,club:hapoel-ta,pos:FW",
+   "dec:2000,foreign,pos:GK|club:hapoel-ta,club:maccabi-ta,champ",
+   "champ,pos:FW,pos:GK|nat,dec:1970,club:hapoel-bs",
+   "champ,dec:1970,foreign|pos:FW,club:maccabi-ta,club:hapoel-bs",
+   "pos:FW,pos:GK,foreign|dec:1990,champ,club:hapoel-bs",
+   "nat,foreign,pos:GK|dec:2000,club:hapoel-ta,club:maccabi-ta",
+   "dec:1990,nat,foreign|champ,club:maccabi-haifa,club:hapoel-bs",
+   "champ,nat,foreign|club:maccabi-ta,dec:1990,club:hapoel-ta",
+   "pos:GK,foreign,pos:FW|club:maccabi-ta,dec:2000,club:hapoel-ta",
+   "dec:2010,champ,foreign|pos:FW,club:maccabi-haifa,club:maccabi-ta",
+   "pos:FW,champ,dec:2020|foreign,club:hapoel-ta,club:maccabi-haifa",
+   "nat,pos:FW,pos:GK|club:maccabi-haifa,dec:1980,club:hapoel-ta",
+   "nat,dec:2010,foreign|club:maccabi-haifa,club:maccabi-ta,champ",
+   "nat,pos:GK,pos:FW|club:hapoel-ta,club:maccabi-ta,dec:2000",
+   "pos:FW,dec:2000,champ|club:maccabi-ta,nat,foreign",
+   "foreign,nat,champ|dec:2010,club:maccabi-haifa,club:hapoel-bs"
+  ],
+  "hapoel-bs": [
+   "pos:FW,dec:2010,pos:GK|club:beitar,club:maccabi-ta,nat",
+   "pos:FW,pos:GK,dec:2010|club:maccabi-haifa,club:hapoel-ta,foreign",
+   "nat,pos:GK,foreign|champ,dec:2020,club:beitar",
+   "dec:1990,nat,foreign|club:maccabi-ta,pos:FW,club:beitar",
+   "pos:FW,pos:GK,champ|club:hapoel-ta,club:maccabi-ta,dec:2020",
+   "pos:GK,pos:FW,nat|champ,club:maccabi-haifa,club:hapoel-ta",
+   "pos:GK,nat,dec:2000|club:beitar,club:maccabi-ta,champ",
+   "pos:FW,champ,pos:GK|nat,club:beitar,foreign",
+   "pos:GK,pos:FW,dec:1990|club:maccabi-haifa,club:maccabi-ta,foreign",
+   "champ,pos:FW,pos:GK|club:maccabi-ta,foreign,club:hapoel-ta",
+   "nat,dec:1980,champ|club:hapoel-ta,pos:FW,pos:GK",
+   "dec:2010,champ,pos:FW|nat,club:hapoel-ta,club:maccabi-ta",
+   "dec:1990,champ,nat|club:maccabi-haifa,pos:GK,club:hapoel-ta",
+   "nat,pos:FW,champ|club:maccabi-ta,club:beitar,dec:2000",
+   "champ,nat,pos:FW|dec:2000,club:beitar,club:hapoel-ta",
+   "champ,pos:GK,nat|club:hapoel-ta,dec:2010,club:maccabi-haifa",
+   "foreign,pos:GK,dec:2000|club:beitar,champ,club:maccabi-haifa",
+   "champ,nat,pos:FW|club:maccabi-ta,club:maccabi-haifa,dec:1970",
+   "dec:2010,pos:FW,pos:GK|club:hapoel-ta,foreign,champ",
+   "pos:GK,dec:2000,foreign|club:maccabi-ta,club:beitar,champ",
+   "champ,pos:GK,foreign|club:maccabi-ta,club:maccabi-haifa,dec:2000",
+   "pos:FW,nat,foreign|dec:2020,club:maccabi-haifa,club:beitar",
+   "champ,pos:GK,pos:FW|club:beitar,dec:1980,club:hapoel-ta",
+   "pos:GK,dec:2000,champ|club:hapoel-ta,club:beitar,foreign",
+   "nat,pos:GK,champ|club:maccabi-haifa,club:beitar,dec:2020",
+   "nat,pos:GK,dec:1980|club:hapoel-ta,club:beitar,champ",
+   "champ,nat,foreign|club:maccabi-haifa,dec:2020,club:maccabi-ta",
+   "nat,champ,pos:FW|club:hapoel-ta,club:maccabi-ta,dec:1970",
+   "pos:FW,nat,pos:GK|club:hapoel-ta,dec:1980,club:maccabi-haifa",
+   "nat,foreign,dec:2020|club:maccabi-ta,club:beitar,pos:GK",
+   "dec:2020,nat,champ|pos:FW,club:beitar,club:hapoel-ta",
+   "pos:FW,foreign,pos:GK|dec:2020,champ,club:maccabi-haifa",
+   "pos:GK,nat,champ|club:maccabi-ta,dec:2020,club:beitar",
+   "champ,pos:GK,foreign|club:maccabi-ta,dec:2020,club:beitar",
+   "dec:2020,pos:GK,pos:FW|nat,club:maccabi-ta,foreign",
+   "pos:GK,pos:FW,nat|club:maccabi-ta,club:maccabi-haifa,champ",
+   "nat,champ,dec:2010|club:maccabi-ta,pos:GK,pos:FW",
+   "nat,dec:2020,pos:GK|champ,club:maccabi-ta,club:hapoel-ta",
+   "champ,nat,dec:2000|pos:FW,club:maccabi-haifa,pos:GK",
+   "foreign,champ,pos:FW|dec:2000,club:maccabi-haifa,club:beitar",
+   "nat,champ,pos:GK|club:maccabi-ta,dec:1980,club:hapoel-ta",
+   "nat,pos:FW,pos:GK|dec:1990,club:maccabi-ta,club:maccabi-haifa",
+   "pos:FW,champ,pos:GK|foreign,club:beitar,dec:2020",
+   "dec:2020,pos:GK,champ|club:hapoel-ta,club:beitar,nat",
+   "champ,pos:FW,pos:GK|club:beitar,nat,club:maccabi-ta",
+   "foreign,pos:FW,pos:GK|club:maccabi-ta,club:beitar,dec:2020",
+   "nat,dec:2010,champ|pos:GK,club:hapoel-ta,club:maccabi-ta",
+   "foreign,dec:2020,nat|pos:FW,club:maccabi-ta,club:beitar",
+   "dec:2020,nat,foreign|pos:GK,club:beitar,club:maccabi-haifa",
+   "champ,pos:FW,foreign|dec:2010,club:beitar,club:maccabi-ta",
+   "nat,pos:GK,foreign|club:beitar,dec:1990,club:maccabi-haifa",
+   "dec:2000,champ,pos:GK|club:maccabi-ta,foreign,nat",
+   "pos:FW,dec:2010,champ|club:hapoel-ta,foreign,club:maccabi-haifa",
+   "pos:FW,dec:1990,champ|club:hapoel-ta,foreign,club:maccabi-ta",
+   "champ,pos:FW,nat|club:maccabi-haifa,club:maccabi-ta,dec:2010",
+   "nat,champ,foreign|club:beitar,dec:2020,club:maccabi-haifa",
+   "dec:2000,champ,nat|club:hapoel-ta,pos:FW,club:maccabi-ta",
+   "foreign,dec:2000,champ|club:maccabi-ta,pos:FW,pos:GK",
+   "nat,dec:2000,pos:GK|club:hapoel-ta,champ,club:maccabi-haifa",
+   "foreign,pos:FW,nat|dec:2020,club:maccabi-ta,club:maccabi-haifa",
+   "nat,foreign,dec:1990|pos:GK,club:maccabi-ta,pos:FW",
+   "champ,pos:GK,dec:2010|club:maccabi-ta,foreign,club:beitar",
+   "pos:GK,champ,pos:FW|club:beitar,dec:2010,club:maccabi-ta",
+   "nat,champ,pos:FW|dec:2010,club:maccabi-haifa,club:hapoel-ta",
+   "champ,nat,dec:1990|club:beitar,club:maccabi-ta,pos:FW",
+   "foreign,champ,nat|dec:2010,club:beitar,club:maccabi-ta",
+   "dec:2000,pos:GK,pos:FW|club:beitar,club:maccabi-haifa,nat",
+   "foreign,pos:GK,pos:FW|club:maccabi-haifa,dec:2020,club:beitar",
+   "champ,pos:GK,dec:1990|club:beitar,club:maccabi-ta,foreign",
+   "champ,pos:GK,foreign|club:maccabi-ta,club:maccabi-haifa,dec:2010",
+   "pos:GK,pos:FW,dec:1980|nat,club:beitar,champ",
+   "champ,pos:FW,nat|club:beitar,club:hapoel-ta,dec:2010",
+   "pos:FW,pos:GK,nat|dec:2010,club:hapoel-ta,club:maccabi-haifa",
+   "champ,nat,dec:1990|club:maccabi-haifa,club:maccabi-ta,pos:GK",
+   "pos:GK,pos:FW,nat|club:maccabi-haifa,dec:1980,club:maccabi-ta",
+   "pos:GK,pos:FW,champ|club:hapoel-ta,dec:1980,club:maccabi-ta",
+   "foreign,nat,pos:GK|champ,dec:2010,club:maccabi-ta",
+   "champ,pos:FW,nat|club:maccabi-haifa,dec:1980,club:maccabi-ta",
+   "champ,pos:FW,pos:GK|club:maccabi-ta,nat,dec:1980",
+   "foreign,pos:FW,champ|club:maccabi-ta,dec:2000,club:maccabi-haifa",
+   "nat,pos:FW,pos:GK|dec:2000,club:maccabi-ta,club:maccabi-haifa",
+   "foreign,nat,pos:FW|club:beitar,champ,dec:2010",
+   "nat,foreign,pos:GK|club:maccabi-ta,club:maccabi-haifa,dec:2010",
+   "champ,dec:2020,pos:GK|club:hapoel-ta,foreign,club:beitar",
+   "pos:FW,champ,dec:1990|nat,club:hapoel-ta,club:beitar",
+   "foreign,champ,dec:2010|club:maccabi-haifa,pos:GK,club:beitar",
+   "pos:FW,pos:GK,champ|club:maccabi-ta,club:maccabi-haifa,foreign",
+   "dec:2010,pos:FW,champ|nat,club:maccabi-ta,club:beitar",
+   "nat,foreign,dec:1990|club:maccabi-haifa,pos:FW,club:beitar",
+   "foreign,pos:FW,nat|club:maccabi-ta,club:maccabi-haifa,dec:2000",
+   "pos:FW,dec:1990,champ|club:maccabi-ta,nat,club:maccabi-haifa",
+   "pos:FW,pos:GK,nat|club:maccabi-ta,club:hapoel-ta,dec:1990",
+   "dec:2000,nat,pos:GK|champ,club:hapoel-ta,club:maccabi-ta",
+   "dec:2000,pos:GK,champ|club:hapoel-ta,nat,club:beitar",
+   "champ,nat,pos:FW|dec:2000,club:maccabi-haifa,club:hapoel-ta",
+   "champ,pos:GK,dec:2010|club:maccabi-ta,foreign,club:hapoel-ta",
+   "nat,dec:1990,foreign|pos:FW,club:maccabi-ta,club:maccabi-haifa",
+   "champ,pos:GK,pos:FW|foreign,club:beitar,club:hapoel-ta",
+   "foreign,nat,pos:GK|dec:1990,champ,club:maccabi-haifa",
+   "nat,dec:2020,champ|club:hapoel-ta,club:maccabi-haifa,pos:GK",
+   "champ,dec:2000,nat|club:maccabi-haifa,pos:GK,club:beitar",
+   "champ,nat,foreign|club:maccabi-haifa,dec:2010,club:beitar",
+   "champ,nat,pos:FW|club:maccabi-ta,dec:2010,club:hapoel-ta",
+   "dec:2010,foreign,nat|champ,pos:FW,club:maccabi-haifa",
+   "pos:FW,champ,dec:2020|foreign,club:beitar,club:hapoel-ta",
+   "champ,nat,dec:1990|pos:GK,club:maccabi-ta,club:hapoel-ta",
+   "pos:GK,champ,pos:FW|club:hapoel-ta,club:maccabi-haifa,foreign",
+   "dec:2020,pos:GK,pos:FW|club:maccabi-haifa,champ,club:maccabi-ta",
+   "pos:FW,champ,dec:2010|club:maccabi-ta,club:hapoel-ta,foreign",
+   "pos:GK,nat,pos:FW|club:maccabi-haifa,club:hapoel-ta,dec:1990",
+   "pos:GK,nat,dec:2000|champ,club:beitar,club:maccabi-ta",
+   "foreign,champ,nat|club:beitar,club:maccabi-ta,dec:2020",
+   "champ,pos:GK,pos:FW|club:maccabi-ta,foreign,dec:1980",
+   "foreign,dec:2010,champ|pos:FW,club:maccabi-haifa,pos:GK",
+   "dec:2020,pos:FW,pos:GK|champ,club:maccabi-ta,nat",
+   "pos:FW,pos:GK,nat|club:beitar,club:maccabi-ta,dec:2000",
+   "dec:2010,champ,pos:GK|club:hapoel-ta,club:beitar,foreign",
+   "nat,pos:FW,pos:GK|club:beitar,club:hapoel-ta,dec:2020",
+   "foreign,nat,pos:FW|club:maccabi-haifa,champ,dec:2020",
+   "dec:2020,pos:GK,nat|club:maccabi-ta,champ,club:maccabi-haifa",
+   "dec:2000,pos:GK,champ|club:maccabi-haifa,foreign,club:hapoel-ta"
+  ],
+  "maccabi-ta": [
+   "pos:FW,pos:GK,dec:2010|nat,foreign,club:hapoel-bs",
+   "nat,champ,foreign|dec:2000,club:hapoel-ta,club:maccabi-haifa",
+   "pos:GK,dec:1990,pos:FW|nat,club:maccabi-haifa,club:beitar",
+   "champ,nat,pos:GK|club:beitar,club:maccabi-haifa,dec:2000",
+   "champ,dec:1990,foreign|club:maccabi-haifa,pos:GK,club:hapoel-bs",
+   "pos:FW,champ,dec:1990|foreign,club:beitar,club:maccabi-haifa",
+   "nat,dec:2000,pos:FW|club:hapoel-bs,champ,club:hapoel-ta",
+   "dec:2010,nat,foreign|pos:GK,club:beitar,club:maccabi-haifa",
+   "pos:GK,champ,pos:FW|club:hapoel-ta,club:maccabi-haifa,dec:1990",
+   "champ,nat,dec:2020|club:hapoel-ta,pos:FW,club:maccabi-haifa",
+   "champ,pos:GK,dec:1990|club:hapoel-ta,club:hapoel-bs,foreign",
+   "champ,nat,pos:FW|club:hapoel-ta,dec:1990,club:beitar",
+   "pos:GK,nat,pos:FW|club:hapoel-ta,club:beitar,dec:2010",
+   "champ,dec:1980,pos:FW|club:hapoel-ta,nat,club:beitar",
+   "dec:1980,champ,foreign|pos:GK,club:maccabi-haifa,club:hapoel-ta",
+   "pos:FW,nat,foreign|club:maccabi-haifa,club:hapoel-ta,dec:2000",
+   "pos:FW,dec:2010,pos:GK|club:hapoel-ta,club:beitar,foreign",
+   "foreign,pos:FW,champ|dec:2010,club:beitar,club:hapoel-bs",
+   "pos:GK,pos:FW,dec:2020|club:hapoel-bs,club:beitar,champ",
+   "pos:FW,pos:GK,foreign|club:hapoel-bs,champ,club:maccabi-haifa",
+   "pos:FW,pos:GK,dec:2010|champ,club:maccabi-haifa,club:beitar",
+   "nat,foreign,dec:2010|club:maccabi-haifa,champ,club:hapoel-ta",
+   "pos:GK,dec:2010,champ|club:hapoel-bs,club:maccabi-haifa,foreign",
+   "dec:1990,pos:FW,pos:GK|foreign,club:hapoel-ta,nat",
+   "dec:2020,champ,nat|club:hapoel-bs,club:maccabi-haifa,pos:GK",
+   "champ,pos:GK,pos:FW|dec:2020,foreign,club:hapoel-bs",
+   "nat,champ,pos:FW|club:beitar,dec:2000,club:maccabi-haifa",
+   "foreign,nat,champ|dec:1990,pos:GK,club:hapoel-ta",
+   "foreign,nat,pos:FW|club:maccabi-haifa,dec:2000,club:beitar",
+   "foreign,pos:GK,nat|dec:1990,club:hapoel-ta,club:maccabi-haifa",
+   "pos:GK,pos:FW,champ|club:hapoel-ta,nat,dec:1980",
+   "nat,foreign,pos:FW|club:hapoel-bs,club:beitar,dec:2020",
+   "pos:GK,nat,foreign|club:hapoel-bs,dec:2000,club:beitar",
+   "pos:FW,foreign,nat|club:hapoel-bs,club:beitar,dec:2000",
+   "foreign,dec:1970,nat|club:beitar,champ,pos:GK",
+   "pos:FW,foreign,dec:2020|champ,club:hapoel-bs,club:hapoel-ta",
+   "champ,nat,foreign|club:hapoel-ta,pos:GK,dec:2010",
+   "pos:FW,foreign,nat|club:hapoel-bs,dec:2010,club:maccabi-haifa",
+   "dec:2000,champ,pos:GK|nat,club:hapoel-ta,club:hapoel-bs",
+   "pos:FW,nat,pos:GK|club:beitar,club:hapoel-ta,dec:2020",
+   "champ,foreign,pos:FW|dec:2000,club:beitar,club:hapoel-ta",
+   "champ,pos:FW,pos:GK|club:maccabi-haifa,foreign,dec:1980",
+   "foreign,champ,pos:GK|club:maccabi-haifa,club:hapoel-ta,dec:2010",
+   "dec:1990,nat,foreign|champ,club:maccabi-haifa,club:beitar",
+   "dec:2010,nat,champ|club:hapoel-bs,club:maccabi-haifa,pos:FW",
+   "pos:FW,pos:GK,champ|dec:2020,foreign,nat",
+   "champ,pos:GK,pos:FW|club:beitar,club:hapoel-ta,foreign",
+   "pos:FW,dec:2000,foreign|club:hapoel-ta,club:hapoel-bs,champ",
+   "champ,dec:2010,foreign|pos:FW,pos:GK,club:hapoel-bs",
+   "pos:GK,champ,nat|club:beitar,club:hapoel-ta,dec:2020",
+   "dec:2020,nat,foreign|club:maccabi-haifa,champ,club:hapoel-bs",
+   "champ,nat,dec:2000|club:hapoel-ta,club:maccabi-haifa,pos:FW",
+   "foreign,dec:2010,champ|club:hapoel-ta,club:hapoel-bs,pos:FW",
+   "pos:FW,dec:2020,champ|club:maccabi-haifa,club:hapoel-ta,foreign",
+   "champ,pos:FW,dec:2010|foreign,club:hapoel-ta,club:beitar",
+   "foreign,dec:2000,nat|pos:FW,champ,club:hapoel-ta",
+   "foreign,pos:GK,dec:2000|club:hapoel-bs,club:beitar,champ",
+   "nat,foreign,dec:1990|club:maccabi-haifa,champ,pos:FW",
+   "foreign,champ,dec:1990|club:hapoel-bs,club:beitar,pos:FW",
+   "dec:1990,pos:GK,champ|foreign,club:beitar,club:hapoel-ta",
+   "pos:FW,pos:GK,champ|club:hapoel-ta,club:beitar,dec:2010",
+   "pos:GK,champ,dec:1990|club:beitar,club:maccabi-haifa,nat",
+   "foreign,pos:FW,dec:2000|club:hapoel-bs,champ,club:maccabi-haifa",
+   "nat,champ,dec:1980|club:maccabi-haifa,club:hapoel-ta,pos:GK",
+   "nat,pos:GK,pos:FW|club:beitar,club:hapoel-bs,dec:2000",
+   "pos:FW,champ,pos:GK|dec:1990,club:hapoel-ta,club:beitar",
+   "pos:GK,nat,pos:FW|club:hapoel-bs,club:hapoel-ta,dec:2000",
+   "nat,dec:1980,foreign|club:hapoel-ta,pos:FW,club:beitar",
+   "dec:2000,champ,pos:FW|club:maccabi-haifa,club:hapoel-ta,foreign",
+   "pos:GK,pos:FW,dec:2000|nat,club:hapoel-ta,foreign",
+   "foreign,dec:1990,nat|club:beitar,champ,club:hapoel-bs",
+   "pos:GK,nat,pos:FW|club:hapoel-bs,dec:2010,champ",
+   "pos:FW,dec:2000,champ|nat,club:hapoel-bs,club:maccabi-haifa",
+   "pos:GK,pos:FW,dec:2020|club:hapoel-bs,nat,club:beitar",
+   "champ,nat,foreign|club:hapoel-bs,dec:1990,pos:FW",
+   "dec:2000,pos:FW,pos:GK|club:beitar,club:hapoel-ta,champ",
+   "pos:GK,pos:FW,nat|dec:2000,club:beitar,club:maccabi-haifa",
+   "dec:2010,pos:GK,pos:FW|nat,club:hapoel-bs,club:hapoel-ta",
+   "pos:FW,pos:GK,dec:2020|club:hapoel-bs,foreign,club:maccabi-haifa",
+   "dec:1980,nat,foreign|club:maccabi-haifa,club:beitar,pos:GK",
+   "nat,dec:1990,foreign|club:maccabi-haifa,club:beitar,pos:FW",
+   "foreign,champ,dec:2010|club:hapoel-ta,pos:FW,club:maccabi-haifa",
+   "dec:1980,foreign,pos:GK|champ,club:beitar,club:maccabi-haifa",
+   "pos:GK,champ,dec:2000|club:hapoel-ta,nat,club:beitar",
+   "nat,pos:GK,champ|club:hapoel-bs,club:hapoel-ta,dec:1990",
+   "pos:GK,champ,pos:FW|club:hapoel-bs,foreign,dec:1970",
+   "dec:1990,foreign,nat|club:hapoel-bs,pos:FW,club:beitar",
+   "champ,foreign,pos:FW|club:beitar,club:maccabi-haifa,dec:2000",
+   "foreign,champ,nat|dec:2010,club:hapoel-ta,pos:FW",
+   "dec:2020,champ,pos:GK|club:hapoel-bs,club:hapoel-ta,nat",
+   "nat,dec:2020,foreign|club:hapoel-ta,champ,club:hapoel-bs",
+   "dec:2020,champ,pos:FW|foreign,club:hapoel-ta,nat",
+   "foreign,dec:2010,nat|club:beitar,champ,pos:GK",
+   "pos:GK,dec:2020,champ|club:hapoel-ta,foreign,club:maccabi-haifa",
+   "pos:GK,dec:1990,champ|foreign,club:beitar,nat",
+   "champ,dec:2000,nat|club:maccabi-haifa,pos:GK,club:hapoel-bs",
+   "dec:2010,champ,pos:FW|nat,club:maccabi-haifa,club:beitar",
+   "pos:GK,dec:1990,foreign|club:hapoel-bs,club:maccabi-haifa,champ",
+   "nat,dec:2000,pos:FW|club:beitar,champ,club:hapoel-bs",
+   "pos:GK,champ,pos:FW|dec:2000,club:hapoel-ta,nat",
+   "nat,champ,foreign|dec:1990,pos:FW,club:beitar",
+   "nat,champ,pos:FW|dec:1980,club:beitar,club:maccabi-haifa",
+   "dec:2010,pos:GK,nat|club:maccabi-haifa,champ,club:beitar",
+   "pos:GK,nat,pos:FW|dec:1970,club:hapoel-ta,club:maccabi-haifa",
+   "pos:GK,dec:2010,nat|club:hapoel-bs,club:beitar,champ",
+   "champ,foreign,nat|club:hapoel-ta,dec:2000,club:maccabi-haifa",
+   "pos:FW,nat,pos:GK|club:hapoel-bs,club:hapoel-ta,champ",
+   "foreign,nat,dec:2010|pos:FW,club:hapoel-bs,club:beitar",
+   "foreign,champ,dec:1990|pos:FW,club:maccabi-haifa,club:beitar",
+   "pos:GK,dec:2010,pos:FW|club:hapoel-bs,foreign,club:beitar",
+   "foreign,nat,dec:2010|club:hapoel-ta,club:maccabi-haifa,pos:GK",
+   "nat,dec:2000,champ|club:hapoel-ta,club:maccabi-haifa,pos:GK",
+   "dec:2000,pos:GK,foreign|champ,club:hapoel-ta,club:beitar",
+   "pos:FW,nat,champ|club:hapoel-bs,dec:2010,club:beitar",
+   "dec:2020,champ,pos:GK|foreign,club:hapoel-ta,club:beitar",
+   "pos:GK,nat,foreign|dec:1990,club:hapoel-bs,club:beitar",
+   "champ,nat,foreign|club:beitar,club:hapoel-bs,dec:2000",
+   "pos:GK,nat,foreign|dec:2020,club:hapoel-bs,champ",
+   "pos:FW,nat,pos:GK|dec:2010,club:hapoel-ta,club:beitar",
+   "foreign,champ,pos:GK|dec:2020,club:hapoel-bs,club:maccabi-haifa",
+   "dec:2010,pos:FW,pos:GK|club:hapoel-ta,foreign,club:hapoel-bs"
+  ],
+  "maccabi-haifa": [
+   "nat,dec:2000,champ|club:hapoel-bs,pos:GK,pos:FW",
+   "pos:GK,nat,pos:FW|dec:2010,champ,club:hapoel-bs",
+   "pos:FW,nat,pos:GK|club:hapoel-bs,club:maccabi-ta,dec:2000",
+   "pos:GK,champ,dec:1990|club:maccabi-ta,nat,foreign",
+   "champ,pos:FW,dec:1990|club:beitar,foreign,club:hapoel-ta",
+   "nat,foreign,pos:GK|club:maccabi-ta,dec:2020,club:hapoel-ta",
+   "nat,pos:GK,champ|dec:2000,club:beitar,club:maccabi-ta",
+   "foreign,pos:FW,dec:2000|club:beitar,champ,club:hapoel-bs",
+   "pos:GK,pos:FW,nat|club:hapoel-bs,club:beitar,dec:2000",
+   "pos:GK,foreign,dec:2000|champ,club:hapoel-ta,club:maccabi-ta",
+   "nat,pos:FW,pos:GK|club:hapoel-bs,club:beitar,dec:2010",
+   "dec:2020,foreign,pos:GK|club:hapoel-bs,club:beitar,champ",
+   "foreign,pos:FW,champ|club:beitar,dec:2020,club:hapoel-bs",
+   "nat,pos:GK,foreign|champ,club:beitar,club:hapoel-bs",
+   "dec:1990,pos:GK,pos:FW|club:hapoel-ta,foreign,nat",
+   "champ,pos:GK,dec:2010|club:hapoel-ta,club:beitar,nat",
+   "pos:FW,dec:1990,champ|club:hapoel-bs,foreign,club:beitar",
+   "nat,foreign,pos:GK|club:beitar,club:maccabi-ta,dec:2000",
+   "foreign,champ,dec:2020|pos:GK,club:hapoel-ta,club:beitar",
+   "nat,dec:1990,champ|club:maccabi-ta,club:beitar,pos:FW",
+   "pos:GK,dec:1990,pos:FW|club:beitar,foreign,champ",
+   "nat,dec:2000,foreign|club:hapoel-bs,pos:FW,club:maccabi-ta",
+   "pos:GK,pos:FW,champ|foreign,nat,dec:2020",
+   "nat,dec:2010,foreign|pos:GK,club:beitar,club:hapoel-bs",
+   "dec:2000,pos:FW,foreign|club:beitar,champ,club:hapoel-ta",
+   "pos:GK,nat,champ|dec:2000,club:hapoel-ta,club:beitar",
+   "foreign,pos:GK,dec:1980|club:beitar,champ,club:maccabi-ta",
+   "champ,nat,pos:FW|dec:1970,club:hapoel-ta,club:beitar",
+   "pos:FW,champ,pos:GK|club:hapoel-ta,club:beitar,dec:2010",
+   "nat,dec:1990,pos:GK|club:beitar,champ,club:hapoel-ta",
+   "dec:2010,foreign,pos:GK|club:maccabi-ta,club:hapoel-bs,champ",
+   "dec:2000,pos:FW,foreign|club:hapoel-bs,champ,club:hapoel-ta",
+   "nat,foreign,pos:FW|club:hapoel-ta,dec:1990,club:hapoel-bs",
+   "dec:2020,pos:FW,champ|club:hapoel-bs,nat,club:beitar",
+   "pos:GK,champ,dec:2000|club:hapoel-bs,foreign,club:hapoel-ta",
+   "nat,dec:2010,foreign|pos:FW,club:beitar,club:hapoel-bs",
+   "nat,pos:GK,dec:1990|champ,club:hapoel-ta,club:hapoel-bs",
+   "foreign,dec:2000,nat|club:beitar,pos:FW,club:hapoel-ta",
+   "pos:GK,dec:2020,champ|foreign,club:maccabi-ta,club:beitar",
+   "nat,pos:FW,foreign|dec:2010,club:hapoel-bs,club:maccabi-ta",
+   "foreign,dec:2000,champ|club:beitar,pos:GK,club:hapoel-ta",
+   "foreign,dec:1990,nat|champ,pos:FW,club:hapoel-bs",
+   "pos:FW,foreign,nat|club:beitar,dec:2020,club:maccabi-ta",
+   "pos:FW,pos:GK,nat|dec:2020,club:hapoel-bs,club:maccabi-ta",
+   "pos:GK,pos:FW,champ|club:hapoel-ta,club:beitar,dec:1990",
+   "nat,foreign,pos:GK|club:hapoel-bs,dec:2020,club:maccabi-ta",
+   "pos:GK,foreign,nat|club:hapoel-bs,champ,club:maccabi-ta",
+   "pos:GK,foreign,champ|club:beitar,club:hapoel-bs,dec:2000",
+   "pos:FW,dec:2000,nat|club:hapoel-bs,club:beitar,champ",
+   "nat,dec:1980,champ|club:maccabi-ta,club:beitar,pos:FW",
+   "pos:FW,foreign,dec:1990|club:hapoel-bs,club:maccabi-ta,champ",
+   "pos:GK,dec:2000,pos:FW|foreign,club:hapoel-ta,nat",
+   "pos:FW,champ,foreign|club:hapoel-bs,club:hapoel-ta,dec:2020",
+   "champ,foreign,nat|dec:2010,pos:GK,club:beitar",
+   "champ,pos:GK,pos:FW|club:maccabi-ta,foreign,dec:1980",
+   "foreign,pos:FW,pos:GK|club:maccabi-ta,club:hapoel-ta,dec:2010",
+   "champ,pos:GK,pos:FW|foreign,club:hapoel-ta,club:maccabi-ta",
+   "nat,pos:FW,dec:2010|club:hapoel-bs,club:maccabi-ta,champ",
+   "pos:FW,pos:GK,dec:2010|club:beitar,club:hapoel-ta,foreign",
+   "champ,foreign,nat|pos:FW,club:maccabi-ta,dec:2000",
+   "champ,dec:2020,foreign|pos:FW,club:beitar,club:maccabi-ta",
+   "pos:GK,pos:FW,champ|dec:1980,club:hapoel-bs,club:maccabi-ta",
+   "champ,pos:FW,foreign|club:maccabi-ta,club:hapoel-ta,dec:2000",
+   "champ,dec:2010,nat|club:beitar,club:hapoel-bs,pos:FW",
+   "champ,nat,dec:1990|pos:GK,pos:FW,club:beitar",
+   "nat,foreign,pos:GK|dec:1990,club:hapoel-ta,champ",
+   "dec:1990,champ,pos:GK|nat,club:beitar,club:hapoel-bs",
+   "pos:FW,foreign,pos:GK|champ,club:maccabi-ta,club:hapoel-bs",
+   "dec:1990,champ,nat|pos:FW,pos:GK,club:hapoel-bs",
+   "nat,pos:GK,pos:FW|club:maccabi-ta,dec:1990,club:hapoel-bs",
+   "dec:2010,nat,champ|pos:GK,club:hapoel-bs,club:maccabi-ta",
+   "dec:1990,foreign,nat|pos:GK,club:beitar,pos:FW",
+   "pos:FW,pos:GK,dec:2010|club:maccabi-ta,club:hapoel-bs,champ",
+   "nat,dec:1990,pos:FW|club:hapoel-ta,club:hapoel-bs,champ",
+   "nat,champ,pos:FW|club:hapoel-bs,club:hapoel-ta,dec:2000",
+   "nat,pos:GK,dec:1980|club:beitar,champ,club:maccabi-ta",
+   "pos:GK,nat,foreign|club:hapoel-ta,champ,club:beitar",
+   "pos:GK,dec:2000,pos:FW|foreign,champ,club:hapoel-ta",
+   "foreign,pos:GK,pos:FW|dec:2000,club:beitar,champ",
+   "foreign,champ,pos:FW|dec:2020,club:hapoel-bs,club:maccabi-ta",
+   "pos:FW,pos:GK,champ|club:hapoel-ta,dec:1980,club:maccabi-ta",
+   "champ,pos:GK,pos:FW|dec:2010,nat,foreign",
+   "nat,foreign,champ|club:hapoel-bs,club:maccabi-ta,dec:2020",
+   "nat,foreign,pos:FW|dec:2020,club:hapoel-ta,club:beitar",
+   "pos:GK,dec:2000,champ|club:maccabi-ta,foreign,club:beitar",
+   "champ,pos:FW,foreign|dec:1990,club:maccabi-ta,club:beitar",
+   "nat,foreign,pos:FW|club:maccabi-ta,club:hapoel-bs,champ",
+   "champ,pos:FW,dec:2000|club:maccabi-ta,nat,club:beitar",
+   "nat,foreign,dec:2020|pos:GK,club:beitar,club:hapoel-bs",
+   "champ,nat,dec:2000|pos:GK,club:hapoel-bs,club:hapoel-ta",
+   "pos:FW,pos:GK,dec:2000|champ,nat,foreign",
+   "nat,pos:FW,foreign|champ,club:beitar,club:hapoel-bs",
+   "champ,nat,dec:2020|pos:FW,club:beitar,pos:GK",
+   "champ,foreign,dec:1990|club:beitar,club:hapoel-bs,pos:GK",
+   "nat,pos:GK,pos:FW|club:maccabi-ta,champ,club:hapoel-ta",
+   "pos:FW,pos:GK,foreign|club:hapoel-ta,dec:2020,club:beitar",
+   "foreign,pos:GK,pos:FW|club:hapoel-bs,champ,dec:1990",
+   "dec:1990,nat,champ|club:hapoel-bs,club:beitar,pos:FW",
+   "dec:2020,pos:GK,nat|club:beitar,club:hapoel-ta,champ",
+   "dec:2010,nat,foreign|club:hapoel-bs,champ,club:maccabi-ta",
+   "pos:GK,foreign,champ|dec:2020,club:hapoel-ta,club:hapoel-bs",
+   "pos:FW,pos:GK,foreign|champ,dec:2010,club:maccabi-ta",
+   "champ,dec:2000,foreign|club:hapoel-ta,club:maccabi-ta,pos:GK",
+   "champ,nat,dec:2010|club:beitar,pos:FW,pos:GK",
+   "foreign,pos:FW,dec:2010|champ,club:beitar,club:hapoel-bs",
+   "dec:2020,pos:FW,pos:GK|foreign,club:beitar,club:maccabi-ta",
+   "dec:2000,pos:GK,nat|club:maccabi-ta,club:hapoel-ta,champ",
+   "pos:FW,nat,pos:GK|club:maccabi-ta,dec:2000,club:hapoel-ta",
+   "dec:1990,pos:FW,foreign|club:hapoel-bs,champ,club:hapoel-ta",
+   "champ,nat,dec:2010|pos:FW,pos:GK,club:maccabi-ta",
+   "pos:FW,champ,pos:GK|club:hapoel-bs,foreign,dec:2010",
+   "champ,pos:GK,dec:1990|club:hapoel-bs,foreign,club:maccabi-ta",
+   "pos:FW,nat,pos:GK|club:hapoel-bs,club:maccabi-ta,dec:2010",
+   "nat,champ,pos:FW|dec:2010,club:maccabi-ta,club:hapoel-ta",
+   "pos:FW,pos:GK,dec:2020|foreign,club:hapoel-bs,club:maccabi-ta",
+   "dec:2010,pos:FW,foreign|champ,club:maccabi-ta,club:beitar",
+   "foreign,pos:GK,champ|dec:1990,club:hapoel-ta,club:beitar",
+   "dec:1990,pos:GK,champ|nat,club:hapoel-ta,club:maccabi-ta",
+   "nat,foreign,champ|dec:2010,club:hapoel-bs,club:hapoel-ta",
+   "nat,dec:1990,foreign|club:hapoel-ta,pos:FW,club:beitar",
+   "dec:2020,champ,pos:GK|club:maccabi-ta,club:hapoel-bs,foreign"
+  ],
+  "hapoel-ta": [
+   "dec:1990,champ,pos:FW|foreign,club:maccabi-ta,club:hapoel-bs",
+   "pos:FW,pos:GK,nat|club:hapoel-bs,club:beitar,champ",
+   "dec:2010,pos:GK,pos:FW|club:maccabi-haifa,champ,club:beitar",
+   "nat,champ,pos:FW|club:hapoel-bs,dec:1990,club:beitar",
+   "champ,pos:GK,foreign|club:maccabi-ta,dec:1990,club:maccabi-haifa",
+   "dec:1980,foreign,pos:FW|champ,club:beitar,club:maccabi-ta",
+   "pos:FW,dec:2000,pos:GK|foreign,club:maccabi-haifa,champ",
+   "foreign,nat,dec:2010|champ,pos:FW,club:maccabi-ta",
+   "pos:GK,dec:1990,champ|club:maccabi-ta,nat,club:beitar",
+   "pos:GK,foreign,champ|dec:2010,club:maccabi-haifa,club:beitar",
+   "champ,nat,foreign|club:maccabi-haifa,pos:FW,dec:1990",
+   "dec:2010,champ,pos:FW|foreign,club:beitar,club:maccabi-haifa",
+   "nat,pos:GK,dec:1990|club:maccabi-haifa,club:maccabi-ta,champ",
+   "champ,nat,pos:FW|club:maccabi-ta,dec:1980,club:beitar",
+   "champ,pos:FW,dec:1990|club:maccabi-ta,foreign,club:beitar",
+   "dec:2000,champ,nat|club:maccabi-haifa,club:maccabi-ta,pos:GK",
+   "dec:2000,champ,nat|pos:GK,club:maccabi-ta,club:hapoel-bs",
+   "dec:1980,champ,nat|pos:FW,club:beitar,pos:GK",
+   "nat,pos:FW,foreign|club:beitar,champ,dec:2010",
+   "dec:1980,pos:FW,pos:GK|club:maccabi-ta,nat,club:beitar",
+   "dec:2010,nat,champ|club:beitar,club:maccabi-ta,pos:GK",
+   "dec:1990,champ,pos:FW|foreign,club:maccabi-haifa,club:beitar",
+   "nat,champ,dec:1990|pos:FW,club:hapoel-bs,club:maccabi-haifa",
+   "nat,foreign,champ|pos:FW,club:maccabi-ta,club:beitar",
+   "pos:GK,pos:FW,dec:2000|nat,club:maccabi-haifa,club:beitar",
+   "dec:2010,foreign,champ|pos:GK,pos:FW,club:maccabi-ta",
+   "champ,dec:2010,pos:GK|club:maccabi-ta,foreign,club:hapoel-bs",
+   "champ,pos:FW,pos:GK|club:maccabi-ta,club:beitar,foreign",
+   "foreign,nat,dec:2010|champ,pos:GK,pos:FW",
+   "dec:2020,pos:FW,champ|club:hapoel-bs,club:maccabi-haifa,nat",
+   "foreign,dec:2000,nat|club:beitar,pos:GK,champ",
+   "pos:GK,pos:FW,nat|club:hapoel-bs,dec:1990,club:beitar",
+   "dec:2000,foreign,nat|pos:GK,champ,pos:FW",
+   "pos:FW,foreign,nat|dec:2020,champ,club:maccabi-ta",
+   "nat,pos:FW,foreign|club:maccabi-ta,champ,dec:2000",
+   "nat,dec:2020,foreign|club:maccabi-haifa,pos:FW,club:maccabi-ta",
+   "pos:GK,foreign,pos:FW|dec:2000,club:maccabi-ta,club:maccabi-haifa",
+   "champ,dec:2000,pos:FW|foreign,club:maccabi-haifa,club:hapoel-bs",
+   "pos:GK,pos:FW,nat|dec:2010,club:beitar,club:maccabi-ta",
+   "dec:2010,pos:FW,pos:GK|club:hapoel-bs,club:beitar,champ",
+   "pos:FW,nat,foreign|club:maccabi-ta,club:maccabi-haifa,champ",
+   "foreign,pos:FW,dec:2010|champ,club:maccabi-ta,club:maccabi-haifa",
+   "foreign,nat,champ|club:maccabi-ta,dec:1990,club:beitar",
+   "champ,pos:FW,pos:GK|foreign,dec:1980,club:maccabi-haifa",
+   "champ,dec:2020,pos:GK|foreign,club:hapoel-bs,nat",
+   "dec:1990,champ,nat|pos:GK,club:beitar,club:hapoel-bs",
+   "pos:GK,nat,pos:FW|club:maccabi-ta,club:maccabi-haifa,dec:1990",
+   "pos:GK,pos:FW,dec:2010|club:maccabi-ta,foreign,club:hapoel-bs",
+   "pos:GK,foreign,pos:FW|champ,dec:2020,club:maccabi-ta",
+   "dec:2000,pos:FW,champ|club:hapoel-bs,nat,club:maccabi-ta",
+   "pos:FW,dec:1990,pos:GK|club:maccabi-ta,club:hapoel-bs,champ",
+   "pos:FW,pos:GK,dec:2020|club:maccabi-ta,nat,club:maccabi-haifa",
+   "pos:FW,champ,pos:GK|club:maccabi-haifa,club:maccabi-ta,nat",
+   "pos:FW,pos:GK,champ|club:beitar,dec:2000,club:maccabi-haifa",
+   "pos:GK,nat,foreign|club:maccabi-haifa,club:beitar,dec:1990",
+   "nat,pos:GK,champ|club:maccabi-haifa,dec:2010,club:maccabi-ta",
+   "dec:1990,pos:FW,pos:GK|foreign,club:maccabi-haifa,club:beitar",
+   "dec:2000,nat,champ|pos:FW,club:beitar,club:maccabi-haifa",
+   "dec:2000,pos:GK,pos:FW|club:maccabi-ta,champ,club:hapoel-bs",
+   "pos:GK,pos:FW,dec:1990|club:hapoel-bs,champ,nat",
+   "pos:GK,pos:FW,foreign|club:maccabi-ta,club:maccabi-haifa,dec:2010",
+   "dec:2010,nat,champ|club:hapoel-bs,pos:FW,club:beitar",
+   "pos:FW,champ,pos:GK|club:hapoel-bs,dec:1980,club:maccabi-haifa",
+   "pos:FW,pos:GK,champ|club:beitar,club:maccabi-haifa,nat",
+   "champ,nat,foreign|club:maccabi-haifa,pos:GK,club:maccabi-ta",
+   "champ,pos:GK,pos:FW|club:maccabi-haifa,club:beitar,dec:1990",
+   "dec:1990,champ,pos:GK|club:maccabi-haifa,club:beitar,nat",
+   "pos:GK,dec:1990,champ|club:maccabi-haifa,club:hapoel-bs,nat",
+   "dec:2020,pos:GK,pos:FW|club:hapoel-bs,nat,club:maccabi-haifa",
+   "dec:2020,champ,pos:GK|nat,club:maccabi-ta,club:maccabi-haifa",
+   "pos:FW,nat,foreign|dec:2000,club:beitar,club:maccabi-haifa",
+   "pos:FW,pos:GK,dec:2010|club:hapoel-bs,nat,club:maccabi-haifa",
+   "pos:FW,champ,dec:2000|foreign,club:maccabi-ta,club:beitar",
+   "dec:1980,nat,foreign|club:maccabi-ta,champ,club:beitar",
+   "pos:GK,pos:FW,dec:1980|club:beitar,club:hapoel-bs,champ",
+   "dec:2020,pos:GK,pos:FW|club:hapoel-bs,club:beitar,foreign",
+   "pos:FW,champ,dec:2010|club:hapoel-bs,club:maccabi-ta,foreign",
+   "nat,pos:FW,champ|dec:1970,club:maccabi-ta,club:maccabi-haifa",
+   "dec:2010,foreign,nat|pos:FW,club:beitar,club:maccabi-ta",
+   "pos:GK,pos:FW,dec:1990|foreign,club:maccabi-haifa,club:hapoel-bs",
+   "pos:FW,pos:GK,dec:2000|champ,club:maccabi-ta,club:maccabi-haifa",
+   "dec:2000,nat,foreign|club:beitar,club:maccabi-ta,champ",
+   "dec:2000,pos:GK,champ|club:maccabi-ta,club:beitar,nat",
+   "champ,pos:GK,dec:1990|club:hapoel-bs,nat,club:maccabi-ta",
+   "dec:2020,pos:FW,pos:GK|nat,club:beitar,foreign",
+   "foreign,nat,dec:2000|club:maccabi-ta,champ,club:maccabi-haifa",
+   "dec:1990,foreign,champ|club:maccabi-ta,club:beitar,pos:GK",
+   "dec:1990,nat,foreign|club:maccabi-ta,club:beitar,pos:GK",
+   "pos:GK,pos:FW,dec:2000|foreign,club:beitar,champ",
+   "pos:FW,foreign,champ|club:beitar,dec:2000,club:maccabi-haifa",
+   "foreign,pos:GK,dec:2010|club:maccabi-ta,club:maccabi-haifa,champ",
+   "dec:2010,pos:FW,champ|club:maccabi-ta,club:hapoel-bs,nat",
+   "champ,pos:GK,dec:2010|club:hapoel-bs,club:maccabi-haifa,nat",
+   "dec:2010,pos:GK,pos:FW|club:beitar,foreign,club:hapoel-bs",
+   "dec:2010,pos:FW,champ|club:maccabi-ta,club:beitar,nat",
+   "nat,foreign,pos:GK|club:maccabi-haifa,club:maccabi-ta,dec:2010",
+   "pos:GK,dec:2010,pos:FW|club:maccabi-ta,champ,club:hapoel-bs",
+   "pos:GK,dec:2000,nat|club:maccabi-haifa,champ,club:hapoel-bs",
+   "pos:FW,dec:2000,nat|champ,club:maccabi-haifa,club:hapoel-bs",
+   "foreign,pos:GK,pos:FW|club:beitar,dec:2010,club:maccabi-ta",
+   "champ,pos:GK,nat|club:beitar,club:hapoel-bs,dec:1980",
+   "foreign,champ,dec:2020|pos:GK,club:maccabi-haifa,club:maccabi-ta",
+   "dec:1980,champ,nat|club:maccabi-ta,pos:FW,club:hapoel-bs",
+   "foreign,nat,dec:1990|club:maccabi-haifa,pos:GK,club:maccabi-ta",
+   "pos:FW,nat,dec:2000|champ,club:beitar,club:hapoel-bs",
+   "pos:FW,pos:GK,champ|club:beitar,club:maccabi-ta,dec:2010",
+   "champ,pos:GK,dec:1990|club:hapoel-bs,foreign,club:maccabi-ta",
+   "foreign,dec:2020,nat|pos:FW,club:beitar,club:maccabi-ta",
+   "dec:1990,pos:GK,pos:FW|club:beitar,nat,club:maccabi-ta",
+   "dec:2020,pos:FW,champ|foreign,club:hapoel-bs,club:maccabi-haifa",
+   "dec:2000,champ,foreign|club:maccabi-ta,club:maccabi-haifa,pos:FW",
+   "foreign,dec:2010,champ|club:beitar,pos:GK,club:maccabi-haifa",
+   "nat,foreign,champ|pos:GK,club:maccabi-ta,dec:2010",
+   "foreign,pos:GK,pos:FW|dec:1990,club:maccabi-ta,club:beitar",
+   "pos:FW,nat,dec:2010|club:maccabi-haifa,club:beitar,champ",
+   "pos:FW,nat,dec:1990|club:maccabi-haifa,champ,club:hapoel-bs",
+   "champ,pos:GK,dec:2000|club:beitar,club:maccabi-haifa,nat",
+   "champ,dec:2010,foreign|club:maccabi-ta,club:beitar,pos:GK",
+   "nat,dec:2000,champ|club:maccabi-haifa,pos:GK,club:maccabi-ta",
+   "pos:GK,dec:2020,champ|foreign,club:maccabi-ta,club:beitar",
+   "pos:GK,champ,pos:FW|nat,club:maccabi-haifa,dec:2010"
+  ]
  }
 }
