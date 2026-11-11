@@ -1,5 +1,5 @@
 {
- "v": "s3-c1519be351",
+ "v": "s3-46c1b4ad19",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -57,7 +57,7 @@
     ]
    },
    "counts": {
-    "players": 472,
+    "players": 475,
     "targets": 214,
     "hidden": 38,
     "unconfirmed": 30
@@ -1407,6 +1407,20 @@
      "aliases": [
       "יוסף אבוקסיס"
      ]
+    },
+    {
+     "he": "לאסלו צה",
+     "pos": "MF",
+     "nat": "HU",
+     "born": 1968,
+     "spells": [
+      [
+       1996,
+       1996
+      ]
+     ],
+     "titles": 0,
+     "target": false
     },
     {
      "he": "נועם אלבוים",
@@ -3439,6 +3453,20 @@
      "pos": "MF",
      "nat": "IL",
      "born": 1983,
+     "spells": [
+      [
+       2009,
+       2009
+      ]
+     ],
+     "titles": 1,
+     "target": false
+    },
+    {
+     "he": "סבסטיאן אבראו",
+     "pos": "FW",
+     "nat": "UY",
+     "born": 1976,
      "spells": [
       [
        2009,
@@ -6680,6 +6708,23 @@
      "target": true
     },
     {
+     "he": "דני הוצ'קו",
+     "pos": "MF",
+     "nat": "ME",
+     "born": 1994,
+     "spells": [
+      [
+       2024,
+       2024
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "דניאל הוצקו"
+     ]
+    },
+    {
      "he": "זוהר זסנו",
      "pos": "DF",
      "nat": "IL",
@@ -7632,7 +7677,7 @@
    "counts": {
     "players": 366,
     "targets": 146,
-    "hidden": 119,
+    "hidden": 118,
     "unconfirmed": 21
    },
    "players": [
@@ -9151,23 +9196,6 @@
      ]
     },
     {
-     "he": "וייס מירוסלב",
-     "pos": "DF",
-     "nat": "MK",
-     "born": 1979,
-     "spells": [
-      [
-       2004,
-       2004
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "וייס מירוסלב"
-     ]
-    },
-    {
      "he": "ז'וזה דוארטה",
      "pos": "FW",
      "nat": "BR",
@@ -9216,7 +9244,8 @@
      "titles": 0,
      "target": false,
      "aliases": [
-      "Miroslav Vajs"
+      "Miroslav Vajs",
+      "וייס מירוסלב"
      ]
     },
     {
@@ -10271,6 +10300,24 @@
      "target": true,
      "aliases": [
       "Ibrahim Basit"
+     ]
+    },
+    {
+     "he": "איברהים ראזק",
+     "pos": "MF",
+     "nat": "GH",
+     "born": 1983,
+     "spells": [
+      [
+       2011,
+       2011
+      ]
+     ],
+     "titles": 0,
+     "target": false,
+     "aliases": [
+      "איברהים עבדול ראזק",
+      "איברהים עבדול ראזאק"
      ]
     },
     {
@@ -14435,12 +14482,26 @@
     ]
    },
    "counts": {
-    "players": 407,
+    "players": 409,
     "targets": 205,
     "hidden": 83,
     "unconfirmed": 31
    },
    "players": [
+    {
+     "he": "וילי ברגר",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 1906,
+     "spells": [
+      [
+       1929,
+       1930
+      ]
+     ],
+     "titles": 0,
+     "target": false
+    },
     {
      "he": "פרי נויפלד",
      "pos": "FW",
@@ -16089,6 +16150,20 @@
      ]
     },
     {
+     "he": "מירוסלב צ'צ'אק",
+     "pos": "FW",
+     "nat": "PL",
+     "born": 1968,
+     "spells": [
+      [
+       1997,
+       1997
+      ]
+     ],
+     "titles": 0,
+     "target": false
+    },
+    {
      "he": "עופר מזרחי",
      "pos": "FW",
      "nat": "IL",
@@ -17308,6 +17383,20 @@
      ]
     },
     {
+     "he": "אאוג'ן טריקה",
+     "pos": "MF",
+     "nat": "RO",
+     "born": 1976,
+     "spells": [
+      [
+       2006,
+       2006
+      ]
+     ],
+     "titles": 0,
+     "target": false
+    },
+    {
      "he": "אבי יחיאל",
      "pos": "DF",
      "nat": "IL",
@@ -17403,7 +17492,10 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "קאקו בלסינג"
+     ]
     },
     {
      "he": "ג'ובאני רוסו",
@@ -17477,23 +17569,6 @@
      ],
      "titles": 0,
      "target": false
-    },
-    {
-     "he": "קאקו בלסינג",
-     "pos": "MF",
-     "nat": "NG",
-     "born": 1978,
-     "spells": [
-      [
-       2006,
-       2006
-      ]
-     ],
-     "titles": 0,
-     "target": false,
-     "aliases": [
-      "קאקו בלסינג"
-     ]
     },
     {
      "he": "גיא סולומון",
@@ -21898,9 +21973,9 @@
     ]
    },
    "counts": {
-    "players": 408,
+    "players": 411,
     "targets": 215,
-    "hidden": 72,
+    "hidden": 71,
     "unconfirmed": 14
    },
    "players": [
@@ -23040,6 +23115,20 @@
       "אלירן אלקיים",
       "Eliran Elkayam"
      ]
+    },
+    {
+     "he": "וסילי קרדש",
+     "pos": "MF",
+     "nat": "UA",
+     "born": 1973,
+     "spells": [
+      [
+       1995,
+       1995
+      ]
+     ],
+     "titles": 1,
+     "target": false
     },
     {
      "he": "חיים סילבס",
@@ -24281,6 +24370,23 @@
      "target": false,
      "aliases": [
       "טליק מעבי"
+     ]
+    },
+    {
+     "he": "לופז דנטה",
+     "pos": "FW",
+     "nat": "PY",
+     "born": 1983,
+     "spells": [
+      [
+       2004,
+       2004
+      ]
+     ],
+     "titles": 1,
+     "target": false,
+     "aliases": [
+      "לופז דנטה"
      ]
     },
     {
@@ -26257,6 +26363,20 @@
      ]
     },
     {
+     "he": "מוהמדו אידריסו",
+     "pos": "FW",
+     "nat": "CM",
+     "born": 1980,
+     "spells": [
+      [
+       2015,
+       2015
+      ]
+     ],
+     "titles": 0,
+     "target": false
+    },
+    {
      "he": "מוחמד קמארה",
      "pos": "MF",
      "nat": "FI",
@@ -27308,7 +27428,7 @@
     {
      "he": "קארים פריי",
      "pos": "FW",
-     "nat": "CH",
+     "nat": "TR",
      "born": 1993,
      "spells": [
       [
@@ -27318,6 +27438,10 @@
      ],
      "titles": 0,
      "target": false,
+     "nats": [
+      "TR",
+      "CH"
+     ],
      "aliases": [
       "קארים פריי",
       "קרים פריי"
@@ -29413,7 +29537,7 @@
     ]
    },
    "counts": {
-    "players": 487,
+    "players": 488,
     "targets": 183,
     "hidden": 88,
     "unconfirmed": 21
@@ -29463,6 +29587,24 @@
       [
        1932,
        1935
+      ]
+     ],
+     "titles": 0,
+     "target": false
+    },
+    {
+     "he": "וילי ברגר",
+     "pos": "GK",
+     "nat": "IL",
+     "born": 1906,
+     "spells": [
+      [
+       1928,
+       1928
+      ],
+      [
+       1931,
+       1937
       ]
      ],
      "titles": 0,
