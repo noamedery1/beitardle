@@ -417,6 +417,7 @@ html{scrollbar-gutter:stable}
   color:var(--text);font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;padding:4px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:44px}
 #gBoard .gc.sel{border-color:var(--brand);box-shadow:0 0 0 2px var(--brand) inset}
+#gridView.gated>:not(.vtop):not(#gGate){display:none!important}
 #gBoard .gc.ok{background:var(--brand);color:var(--on-brand);border-color:var(--brand);cursor:default}
 #gBoard .gc .r{font-size:10.5px;font-weight:600;opacity:.75}
 #gBoard .gc.ans{font-size:11px;font-weight:500;color:var(--dim);cursor:default}
@@ -441,6 +442,33 @@ html{scrollbar-gutter:stable}
 #gEnd{text-align:center;margin-top:14px;display:flex;flex-direction:column;gap:8px}
 #gEnd[hidden]{display:none}
 #gScore{font-size:18px;font-weight:800}
+
+/* ===== איקס-עיגול 3×3 ===== */
+.tHead{display:flex;align-items:center;justify-content:space-between;gap:6px;direction:rtl}
+.tSide{font-size:13px;font-weight:700;padding:5px 10px;border-radius:16px;border:2px solid transparent}
+.tSide.tx{background:#FFC72C;color:#121214}.tSide.to{background:#3B6FD8;color:#fff}
+.tSide.on{border-color:var(--text);box-shadow:0 0 0 2px var(--ink)}
+.tTurn{font-size:13px;color:var(--dim);text-align:center}.tTurn b{color:var(--text)}
+.tTrack{height:5px;background:var(--line);border-radius:3px;margin:8px 0 4px;overflow:hidden}
+#tBar{height:5px;background:var(--brand);width:100%;transition:width .25s linear}
+.tBoard{display:grid;grid-template-columns:72px repeat(3,1fr);gap:6px;margin-top:8px}
+.tBoard .gh{display:flex;align-items:center;justify-content:center;text-align:center;font-size:12.5px;font-weight:800;line-height:1.2;padding:6px 2px;color:var(--text);min-height:44px}
+#versusView .tBoard .gc{aspect-ratio:1;border:1.5px solid var(--line);border-radius:12px;background:var(--ink-2);color:var(--text);font-family:inherit;font-size:12px;font-weight:700;cursor:pointer;padding:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:44px;width:auto;margin:0;background-image:none;box-shadow:none;opacity:1}
+#versusView .tBoard .gc.sel{border-color:var(--brand);box-shadow:0 0 0 2px var(--brand) inset}
+#versusView .tBoard .gc b{font-size:22px;line-height:1}
+#versusView .tBoard .gc.tx{background:#FFC72C;border-color:#FFC72C;color:#121214;cursor:default}
+#versusView .tBoard .gc.to{background:#3B6FD8;border-color:#3B6FD8;color:#fff;cursor:default}
+#versusView .tBoard .gc.tw{box-shadow:0 0 0 3px var(--text) inset}
+#versusView .tBoard .gc:disabled{opacity:1;cursor:default}#versusView .tBoard .gc:disabled:not(.tx):not(.to){opacity:.6}
+#scTtt .tPass{margin:0 0 8px}
+#versusView.ttt-mode [data-nottt]{display:none!important}
+#versusView .tBoard .gc.tx b,#versusView .tSide.tx b,#versusView .tSide.tx{color:#121214}
+#versusView .tBoard .gc.to b,#versusView .tSide.to b,#versusView .tSide.to{color:#fff}
+.tSide .n{font-style:normal;display:inline-block;min-width:20px;padding:0 6px;margin-inline-start:4px;border-radius:10px;background:rgba(0,0,0,.18);text-align:center}
+body:has(#gridView.gated:not(.hide)) #appban{display:none}
+#tMsg{text-align:center;min-height:22px;margin-top:8px;font-size:14px;font-weight:700}#tMsg.bad{color:var(--dim)}
+#tEnd{text-align:center;margin-top:12px;display:flex;flex-direction:column;gap:8px}#tEnd[hidden]{display:none}
+#tResult{font-size:22px;font-weight:900}#tWhy{font-size:13px;color:var(--dim);margin-top:-6px}
 .gnote{font-size:12.5px;color:var(--dim);margin-top:-4px}
 .vtop{text-align:center;margin-top:12px}
 .vtop button{width:auto;margin:0;padding:7px 16px;border-radius:18px;background:none;
@@ -1558,17 +1586,18 @@ button.wa,button.act.wa{background:#15803D}
       <div class="clubpick modepick" id="modePick">
         <button type="button" data-mode="players">מי השחקן?</button>
         <button type="button" data-mode="quiz">מספרים</button>
+        <button type="button" data-mode="ttt">איקס-עיגול <bdi>3×3</bdi></button>
       </div>
       <div class="pickhint" id="modeHint"></div>
 
-      <label>להוסיף עוד קבוצות לחדר?</label>
-      <div class="clubpick" id="clubPick"></div>
-      <div class="pickhint" id="clubHint"></div>
+      <label data-nottt>להוסיף עוד קבוצות לחדר?</label>
+      <div class="clubpick" id="clubPick" data-nottt></div>
+      <div class="pickhint" id="clubHint" data-nottt></div>
       <!-- הכיתוב והערכים מתחלפים לפי המשחק: ברמזים זה הזמן בין
            רמז לרמז, ובמספרים זה הזמן לשאלה. הבחירה **נשמרת**
            בשני המצבים — קודם היא נבלעה במספרים, שם הזמן היה קבוע. -->
-      <label for="preReveal" id="preRevealLabel">כמה זמן בין רמז לרמז</label>
-      <select id="preReveal"></select>
+      <label for="preReveal" id="preRevealLabel" data-nottt>כמה זמן בין רמז לרמז</label>
+      <select id="preReveal" data-nottt></select>
       <button id="btnCreate">פתיחת חדר חדש</button>
       </div>
       <div class="orsep" id="orSep"><span>או שיש לכם קוד</span></div>
@@ -1601,10 +1630,10 @@ button.wa,button.act.wa{background:#15803D}
     </div>
     <div class="card" id="hostBox">
       <h2>הגדרות</h2>
-      <label for="setRounds">כמה סיבובים</label>
-      <select id="setRounds"><option>5</option><option selected>10</option><option>15</option></select>
-      <label for="setReveal" id="setRevealLabel">כל כמה שניות נחשף רמז</label>
-      <select id="setReveal">
+      <label for="setRounds" data-nottt>כמה סיבובים</label>
+      <select id="setRounds" data-nottt><option>5</option><option selected>10</option><option>15</option></select>
+      <label for="setReveal" id="setRevealLabel" data-nottt>כל כמה שניות נחשף רמז</label>
+      <select id="setReveal" data-nottt>
         <option value="6">6 שניות · מהיר</option>
         <option value="8" selected>8 שניות · רגיל</option>
         <option value="12">12 שניות · נינוח</option>
@@ -1675,6 +1704,31 @@ button.wa,button.act.wa{background:#15803D}
     <div class="card">
       <div class="rev" id="revText"></div>
       <div class="board" id="revBoard"></div>
+    </div>
+  </section>
+
+  <!-- איקס-עיגול 3×3 (src/ttt.js) -->
+  <section id="scTtt" class="hide">
+    <div class="card">
+      <div class="tHead"><div class="tSide tx" id="tX"></div><div class="tTurn"><span id="tTurn"></span> · <b id="tClock"></b></div><div class="tSide to" id="tO"></div></div>
+      <div class="tTrack"><div id="tBar"></div></div>
+      <div id="tBoard" class="tBoard" role="grid" aria-label="איקס-עיגול 3 על 3"></div>
+      <div id="tPick" hidden>
+        <div class="gnow">מנחשים: <b id="tNow"></b> · <b id="tClock2"></b> שנ׳</div>
+        <button type="button" class="ghost tPass" id="tPass">אין לי — העבר תור</button>
+        <div class="searchbox">
+          <input id="tGuess" type="text" autocomplete="off" spellcheck="false" placeholder="שם השחקן…" aria-label="ניחוש לאיקס-עיגול">
+          <div id="tSugg" class="gsugg" role="listbox"></div>
+        </div>
+      </div>
+      <div id="tMsg" role="status"></div>
+      <div id="tEnd" hidden>
+        <div id="tResult"></div><div id="tWhy"></div>
+        <button type="button" id="tRematch">ריוואנש — לוח חדש</button>
+        <div id="tWait" class="pickhint">מנהל החדר יכול לפתוח ריוואנש</div>
+        <button type="button" class="ghost" id="tShare">שליחה בוואטסאפ</button>
+      </div>
+      <button type="button" class="ghost" id="tLeave">יציאה מהחדר</button>
     </div>
   </section>
 
@@ -4816,8 +4870,7 @@ function migrateFromBeitardle(){
 
 
   /* "נדירות" אופליין: כמה מוכר השחקן ביחס לשאר התשובות במשבצת.
-     ponytail: פרוקסי מקומי (עונות). הנדירות האמיתית — אחוז מי
-     שבחר אותו — דורשת ספירה ב-Firebase; לא מחובר עדיין. */
+     גיבוי בלבד — עד שיש מספיק בחירות אמיתיות במשבצת (liveRarity למטה). */
   function rarity(idx, a, b, x, home) {
     const ans = answers(idx, a, b, home).sort((p, q) => q.seasons - p.seasons);
     const i = ans.findIndex(p => p.id === x.id);
@@ -4845,12 +4898,47 @@ function migrateFromBeitardle(){
       const v = JSON.parse(localStorage.getItem(k));
       if (v && v.cells && v.sig === sig) {
         /* תווית שנעלמה בעדכון נתונים — המשבצת נשארת מלאה בשם שנשמר */
-        v.cells = v.cells.map(c => { if (!c) return null; const x = IDX.people.find(p => p.label === c.k); return { id: x ? x.id : null, k: c.k, rar: c.rar }; });
+        v.cells = v.cells.map(c => { if (!c) return null; const x = IDX.people.find(p => p.label === c.k); return { id: x ? x.id : null, k: c.k, rar: c.rar, pct: c.pct }; });
         return v;
       }
     } catch (e) {}
     return { sig, cells: Array(9).fill(null), left: 9, reveal: false };
   }
+  /* ---------- נדירות אמיתית ----------
+     כל ניחוש נכון מעלה מונה ב-Firebase דרך REST (בלי ה-SDK):
+       grid/v1/<מועדון|all>/<יום>/<משבצת>/<שחקן> += 1
+     הנדירות = 100 − אחוז מי שבחר את אותה תשובה. עד MIN_VOTES בחירות במשבצת
+     — הפרוקסי המקומי. ponytail: כל לקוח יכול לנפח מונה; משחק, לא דירוג. */
+  const FBDB = "https://beitardle-default-rtdb.europe-west1.firebasedatabase.app", MIN_VOTES = 10;
+  function fbUrl(path) {
+    let base = FBDB, q = "";
+    try { const e = localStorage.getItem("sportdel:fbEmu");   // בדיקות: tools/fb-emu
+          if (e && /^http/.test(FBDB)) { q = "?ns=" + new URL(FBDB).hostname.split(".")[0]; base = "http://" + e; } } catch (e) {}
+    return /^http/.test(base) ? base.replace(/\/$/, "") + "/" + path + ".json" + q : null;
+  }
+  const fbKey = s => String(s).replace(/[.#$\[\]\/]/g, "_").slice(0, 60);
+  const dayPath = () => "grid/v1/" + (G.slug || "all") + "/" + G.grid.n;
+  function vote(i, label) {
+    const u = fbUrl(dayPath() + "/" + i + "/" + fbKey(label));
+    if (!u) return Promise.resolve();
+    return fetch(u, { method: "PUT", body: JSON.stringify({ ".sv": { increment: 1 } }) }).catch(() => {});
+  }
+  async function liveRarity() {
+    const u = fbUrl(dayPath()); if (!u || !G.st.cells.some(Boolean)) return;
+    const g = G;
+    let d; try { const r = await fetch(u); if (!r.ok) return; d = await r.json(); } catch (e) { return; }
+    if (!d || G !== g) return;
+    let ch = false;
+    g.st.cells.forEach((v, i) => {
+      const c = v && d[i]; if (!c) return;
+      const tot = Object.values(c).reduce((s, n) => s + (+n || 0), 0);
+      if (tot < MIN_VOTES) return;
+      const pct = Math.round(100 * (+c[fbKey(v.k)] || 0) / tot);
+      if (v.pct !== pct) { v.pct = pct; v.rar = Math.max(1, 100 - pct); ch = true; }
+    });
+    if (ch) { save(); render(); }
+  }
+
   function save() { try { localStorage.setItem(G.key, JSON.stringify(G.st)); } catch (e) {} }
   const $ = s => document.querySelector(s);
   const cellConds = i => [G.grid.rows[Math.floor(i / 3)], G.grid.cols[i % 3]];
@@ -4869,9 +4957,11 @@ function migrateFromBeitardle(){
     if (document.getElementById("gGate")) return;
     const el = document.createElement("div");
     el.id = "gGate"; el.className = "appban";
-    el.innerHTML = '<b>לוח 3×3 של היום — רק באפליקציה</b><span class="wgTxt">כל יום לוח חדש לכל מועדון. מלאו אותו באפליקציה, בחינם.</span>' +
+    el.innerHTML = '<b>כדי לשחק 3×3 יש להוריד את האפליקציה</b><span class="wgTxt">כל יום לוח חדש לכל מועדון — בחינם, באפליקציה.</span>' +
       '<span class="stores">' + document.querySelector("#appban .stores").innerHTML + '</span>';
-    $("#gBoard").before(el);
+    /* באתר הלוח מוסתר לגמרי (נועם, 11/11): רק הבאנר ו"איך משחקים?" */
+    $("#gridView").classList.add("gated");
+    $("#gridView .vtop").after(el);
   }
   function boot() {
     const cur = document.documentElement.dataset.club || "";
@@ -4889,6 +4979,7 @@ function migrateFromBeitardle(){
       msg("");
       if (!wired) { wire(); wired = true; }
       if (GATE()) { G.gate = true; gateNote(); }
+      liveRarity();
     }
     render();
   }
@@ -4916,7 +5007,7 @@ function migrateFromBeitardle(){
           el.classList.add("ok"); el.disabled = true;
           el.innerHTML = "<span></span><span class=r></span>";
           el.firstChild.textContent = label;
-          el.lastChild.textContent = "נדירות " + v.rar + "%";
+          el.lastChild.textContent = v.pct != null ? "בחרו " + v.pct + "%" : "נדירות " + v.rar + "%";
           el.setAttribute("aria-label", A.he + " × " + B.he + ": " + label);
         } else if (st.reveal) {
           el.classList.add("ans"); el.disabled = true;
@@ -4982,6 +5073,7 @@ function migrateFromBeitardle(){
     if (ok) {
       G.st.cells[i] = { id: x.id, k: x.label, rar: rarity(G.idx, A, B, x, G.grid.home) };
       G.sel = -1; msg("✓ " + x.label);
+      vote(i, x.label).then(liveRarity);
     } else { msg("✗ " + x.label + " — " + whyNot(x, A, B), true); $("#gGuess").value = ""; }
     save(); render();
     if (!ok) {
@@ -5148,6 +5240,292 @@ function migrateFromBeitardle(){
   if (typeof module === "object" && module.exports) module.exports = api;
   else root.SportGrid = api;
 })(typeof window !== "undefined" ? window : globalThis);
+
+</script>
+
+<!-- איקס-עיגול בקרב חברים. משתמש ב-SportGrid; versus.js יוצר אותו. -->
+<script>
+/* ============================================================
+   ttt.js — איקס-עיגול 3×3 בתוך קרב חברים.
+
+   ---------- הרעיון ----------
+   שני שחקנים, לוח 3×3 של תנאים (אותו מחולל של 3×3, src/grid.js).
+   בתור שלך בוחרים משבצת ומקלידים שחקן: תשובה נכונה תופסת אותה
+   בצבע שלך, טעות או זמן שנגמר — התור עובר. שלוש בשורה מנצחות;
+   לוח מלא, או 6 תורות ברצף בלי תשובה נכונה (מבוי סתום) — מי שתפס
+   יותר. אותו שחקן לא נספר פעמיים בלוח.
+
+   ---------- איפה המצב ----------
+   rooms/v2/<code>/ttt — אובייקט אחד, וכל מהלך הוא runTransaction
+   עליו. כך שני לקוחות לא יכולים לשחק באותו תור: הטרנזקציה בודקת
+   שהתור שלי ושהמשבצת ריקה, ואחרת לא נוגעת. גם "הזמן נגמר" הוא
+   טרנזקציה שכל לקוח רשאי להריץ — אבל רק אם ה-deadline לא השתנה
+   מאז שראה אותו, ולכן היא לא מקדמת פעמיים.
+   השדה דורש שורה בחוקי הפיירבייס (config/firebase-rules.json).
+
+   ---------- הממשק ל-versus.js ----------
+   versus.js מחזיק את החדר, השחקנים והלובי. כאן רק הלוח. מקבלים
+   ctx עם פונקציות הפיירבייס והמצב, ומחזירים start / render / reset.
+   ============================================================ */
+(function () {
+  "use strict";
+  const TURN_MS = 20000;
+  const STALL = 6;                        // תורות ברצף בלי תשובה נכונה → מסיימים
+  const LINES = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+  const norm = t => t.toLowerCase().replace(/[-־–—]/g, " ").replace(/['"״׳’]/g, "").replace(/\s+/g, " ").trim();
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s).replace(/[<>&"]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" }[c]));
+
+  let IDX = null, CONDS = null;
+  const idx = () => (IDX ||= window.SportGrid.buildIndex(window.SD));
+  const conds = () => (CONDS ||= window.SportGrid.conditions(window.SD));
+  const hash = s => [...String(s)].reduce((h, c) => Math.imul(h ^ c.charCodeAt(0), 16777619), 2166136261) >>> 0;
+
+  function create(ctx) {
+    let sel = -1, timer = null, wired = false, lastKey = "", prev = null;
+
+    /* ---------- לוח חדש ----------
+       לא הלוח היומי של 3×3 — זה היה חושף תשובות של היום. זרע מקוד
+       החדר ומספר המשחק, ולכן ריוואנש מביא לוח אחר. */
+    function newBoard(code, game, slug) {
+      const seed = 900000 + (hash(code) % 50000) + game * 977;
+      const g = window.SportGrid.makeGrid(idx(), conds(), seed, slug);
+      return g && g.rows.map(c => c.id).join(",") + "|" + g.cols.map(c => c.id).join(",");
+    }
+
+    /* המארח מתחיל: X הוא מי שפתח את החדר, O הראשון שהצטרף אחריו.
+       שאר מי שבחדר צופים. בריוואנש (game אי-זוגי) O פותח. */
+    async function start(state) {
+      const live = Object.entries(state.players || {}).filter(([, p]) => !p.gone)
+        .sort((a, b) => (a[1].at || 0) - (b[1].at || 0)).map(([id]) => id);
+      const x = live.includes(state.host) ? state.host : live[0];
+      const o = live.find(id => id !== x);
+      if (!o) throw new Error("צריך שני שחקנים");
+      const slug = (state.clubs && state.clubs[0]) || ctx.slug();
+      const game = state.game || 0;
+      const grid = newBoard(ctx.code(), game, slug);
+      if (!grid) throw new Error("לא נמצא לוח");
+      await ctx.update(ctx.roomRef(), {
+        status: "playing",
+        ttt: { grid, slug, x, o, turn: game % 2 ? o : x, deadline: ctx.now() + TURN_MS, miss: 0 }
+      });
+    }
+
+    const gridOf = t => window.SportGrid.fromIds(conds(), t.grid, t.slug, 0);
+    const mark = (t, id) => id === t.x ? "x" : id === t.o ? "o" : null;
+    /* פיירבייס מחזיר cells כמערך עם חורים ([x, null, o]) כשהמפתחות מספריים */
+    const filled = t => Object.values(t.cells || {}).filter(Boolean);
+    const count = (t, m) => filled(t).filter(c => c.by === m).length;
+
+    /* סיום: שלוש בשורה, לוח מלא, או מבוי סתום */
+    function judge(t) {
+      const c = t.cells || {};
+      for (const L of LINES) {
+        const a = c[L[0]], b = c[L[1]], d = c[L[2]];
+        if (a && b && d && a.by === b.by && b.by === d.by) { t.win = a.by; t.line = L.join(","); return; }
+      }
+      const filled = Object.keys(c).length;
+      if (filled === 9 || t.miss >= STALL) {
+        const x = count(t, "x"), o = count(t, "o");
+        t.win = x > o ? "x" : o > x ? "o" : "draw";
+      }
+    }
+
+    /* מהלך. person === null → דילוג/טעות. הבדיקה של התשובה נעשית כאן,
+       בלקוח של מי שמנחש — זה משחק חברים, לא דירוג. */
+    async function move(i, person) {
+      const uid = ctx.uid();
+      let res = null;
+      await ctx.tx(ctx.tttRef(), t => {
+        if (!t || t.win || t.turn !== uid) return;              // לא התור שלי — לא נוגעים
+        if (person && t.cells && t.cells[i]) return;          // דילוג לא צריך משבצת פנויה
+        const me = mark(t, uid);
+        const g = gridOf(t);
+        const used = new Set(filled(t).map(c => c.k));
+        const [A, B] = [g.rows[Math.floor(i / 3)], g.cols[i % 3]];
+        const ok = person && !used.has(person.label) && window.SportGrid.valid(person, A, B, g.home);
+        if (ok) { t.cells = { ...(t.cells || {}), [i]: { by: me, k: person.label } }; t.miss = 0; }
+        else t.miss = (t.miss || 0) + 1;
+        res = ok ? "ok" : (person && used.has(person.label) ? "used" : "bad");
+        t.turn = me === "x" ? t.o : t.x;
+        t.deadline = ctx.now() + TURN_MS;
+        judge(t);
+        return t;
+      });
+      return res;
+    }
+
+    /* הזמן נגמר — כל לקוח רשאי לקדם, אבל רק את אותו deadline שראה */
+    async function expire(seen) {
+      await ctx.tx(ctx.tttRef(), t => {
+        if (!t || t.win || t.deadline !== seen || ctx.now() < seen + 800) return;
+        t.miss = (t.miss || 0) + 1;
+        t.turn = t.turn === t.x ? t.o : t.x;
+        t.deadline = ctx.now() + TURN_MS;
+        judge(t);
+        return t;
+      });
+    }
+
+    /* ---------- תצוגה ---------- */
+    function render(state) {
+      const t = state.ttt;
+      ctx.show("scTtt");
+      if (!t) return;
+      if (!wired) { wire(); wired = true; }
+      const g = gridOf(t);
+      const uid = ctx.uid(), me = mark(t, uid);
+      const nm = id => esc(ctx.name(id));
+      const key = t.grid + "|" + JSON.stringify(t.cells || {}) + t.turn + t.win;
+      const myTurn = !t.win && t.turn === uid;
+      if (!myTurn) sel = -1;
+
+      $("#tX").innerHTML = `<b>X</b> ${nm(t.x)} <i class="n">${count(t, "x")}</i>`;
+      $("#tO").innerHTML = `<b>O</b> ${nm(t.o)} <i class="n">${count(t, "o")}</i>`;
+      announce(t, me);
+      $("#tX").classList.toggle("on", !t.win && t.turn === t.x);
+      $("#tO").classList.toggle("on", !t.win && t.turn === t.o);
+      const ps = state.players || {}, foe = me === "x" ? t.o : me === "o" ? t.x : null;
+      $("#tTurn").textContent = t.win ? "" : foe && ps[foe] && ps[foe].gone ? `${ctx.name(foe)} התנתק · ממתינים…`
+        : myTurn ? "התור שלך" : `התור של ${ctx.name(t.turn)}`;
+
+      if (key !== lastKey) {
+        lastKey = key;
+        const b = $("#tBoard"); b.textContent = "";
+        const h = txt => { const d = document.createElement("div"); d.className = "gh"; d.textContent = txt; return d; };
+        b.appendChild(h(g.home ? g.home.he : ""));
+        g.cols.forEach(c => b.appendChild(h(c.he)));
+        const line = (t.line || "").split(",").filter(Boolean).map(Number);
+        for (let r = 0; r < 3; r++) {
+          b.appendChild(h(g.rows[r].he));
+          for (let c = 0; c < 3; c++) {
+            const i = r * 3 + c, v = (t.cells || {})[i];
+            const el = document.createElement("button");
+            el.type = "button"; el.className = "gc"; el.dataset.i = i;
+            if (v) {
+              el.classList.add(v.by === "x" ? "tx" : "to"); el.disabled = true;
+              el.innerHTML = "<b></b><span></span>";
+              el.firstChild.textContent = v.by.toUpperCase(); el.lastChild.textContent = v.k;
+              if (line.includes(i)) el.classList.add("tw");
+            } else {
+              el.disabled = !myTurn;
+              if (i === sel) el.classList.add("sel");
+            }
+            el.setAttribute("aria-label", g.rows[r].he + " × " + g.cols[c].he + (v ? ": " + v.k : ""));
+            b.appendChild(el);
+          }
+        }
+      }
+      $("#tPick").hidden = !myTurn || sel < 0;
+      $("#tEnd").hidden = !t.win;
+      if (t.win) {
+        const w = t.win === "draw" ? "תיקו!" : `${ctx.name(t.win === "x" ? t.x : t.o)} ניצח!`;
+        $("#tResult").textContent = w;
+        /* \u2066…\u2069: הספירה הלטינית מבודדת, אחרת היא מתהפכת בתוך שורה עברית */
+        const tally = `על הלוח: \u2066X ${count(t, "x")} · O ${count(t, "o")}\u2069`;
+        $("#tWhy").textContent = t.line ? "שלוש בשורה" : (t.miss || 0) >= STALL ? `${STALL} תורות ברצף בלי תשובה · ${tally}` : tally;
+        const hostGone = (ps[state.host] || {}).gone;
+        $("#tRematch").hidden = !ctx.isHost();
+        $("#tWait").hidden = ctx.isHost();
+        $("#tWait").textContent = hostGone ? "מנהל החדר יצא — פתחו חדר חדש" : "מנהל החדר יכול לפתוח ריוואנש";
+      }
+      if (!me && !t.win) $("#tTurn").textContent += " · צופים";
+      tickTimer(t);
+    }
+
+    /* מה קרה בתור של היריב — וניקוי ההודעה בלוח חדש */
+    function announce(t, me) {
+      const cells = t.cells || {};
+      if (!prev || prev.grid !== t.grid) { if (prev) msg(""); prev = { grid: t.grid, cells: {}, turn: t.turn, miss: t.miss || 0 }; }
+      const fresh = [...Array(9).keys()].find(i => cells[i] && !prev.cells[i]);
+      if (me && fresh != null && cells[fresh].by !== me) msg(`${ctx.name(cells[fresh].by === "x" ? t.x : t.o)} תפס: ${cells[fresh].k}`);
+      else if (me && !t.win && fresh == null && t.turn !== prev.turn && (t.miss || 0) > prev.miss && t.turn === ctx.uid()) msg(`${ctx.name(prev.turn)} פספס — התור שלך`, true);
+      prev = { grid: t.grid, cells: { ...cells }, turn: t.turn, miss: t.miss || 0 };
+    }
+    function msg(txt, bad) { const m = $("#tMsg"); m.textContent = txt; m.className = bad ? "bad" : ""; }
+
+    function tickTimer(t) {
+      clearInterval(timer);
+      const bar = $("#tBar");
+      document.querySelector("#scTtt .tTurn").style.visibility = t.win ? "hidden" : "";
+      if (t.win) { bar.style.width = "0"; return; }
+      const step = () => {
+        const left = Math.max(0, t.deadline - ctx.now());
+        bar.style.width = (100 * left / TURN_MS) + "%";
+        $("#tClock").textContent = $("#tClock2").textContent = Math.ceil(left / 1000);
+        if (left <= 0) { clearInterval(timer); setTimeout(() => expire(t.deadline), 900); }
+      };
+      step(); timer = setInterval(step, 250);
+    }
+
+    function pick(i) {
+      sel = i; lastKey = "";
+      const st = ctx.state(), g = gridOf(st.ttt);
+      $("#tNow").textContent = g.rows[Math.floor(i / 3)].he + " × " + g.cols[i % 3].he;
+      $("#tMsg").textContent = "";
+      render(st);
+      const inp = $("#tGuess"); inp.value = ""; suggest(""); inp.focus();
+      setTimeout(() => $("#tPick").scrollIntoView({ block: "start", behavior: "smooth" }), 300);
+    }
+
+    function suggest(q) {
+      const box = $("#tSugg"); box.textContent = "";
+      const nq = norm(q);
+      if (nq.length < 2) { box.classList.remove("on"); return; }
+      const t = ctx.state().ttt;
+      const used = new Set(filled(t).map(c => c.k));
+      const hits = idx().people.filter(x => norm(x.name).includes(nq) || x.aliases.some(a => norm(a).includes(nq))).slice(0, 8);
+      for (const x of hits) {
+        const b = document.createElement("button");
+        b.type = "button";
+        if (used.has(x.label)) { b.disabled = true; b.textContent = x.label + " — כבר בלוח"; }
+        else { b.textContent = x.label; b.addEventListener("click", () => guess(x)); }
+        box.appendChild(b);
+      }
+      box.classList.toggle("on", hits.length > 0);
+    }
+
+    async function guess(x) {
+      const i = sel; if (i < 0) return;
+      const box = $("#tSugg"); box.classList.remove("on"); box.textContent = "";
+      $("#tGuess").value = "";
+      sel = -1;
+      const g = gridOf(ctx.state().ttt), A = g.rows[Math.floor(i / 3)], B = g.cols[i % 3];
+      const r = await move(i, x);
+      /* איזה תנאי נכשל — כמו whyNot ב-3×3 */
+      const miss = [A, B].filter(c => !window.SportGrid.valid(x, c, c, g.home)).map(c => c.he).join(" / ");
+      msg(r === "ok" ? "✓ " + x.label : r === "used" ? x.label + " — כבר בלוח"
+        : r === "bad" ? "✗ " + x.label + (miss ? " — לא: " + miss : " — לא עונה על שני התנאים") : "", r !== "ok");
+    }
+
+    function wire() {
+      $("#tBoard").addEventListener("click", e => {
+        const el = e.target.closest(".gc"); if (el && !el.disabled) pick(+el.dataset.i);
+      });
+      const inp = $("#tGuess");
+      inp.addEventListener("input", () => suggest(inp.value));
+      inp.addEventListener("keydown", e => { if (e.key === "Enter") { const f = $("#tSugg.on button:not([disabled])"); if (f) f.click(); } });
+      $("#tPass").addEventListener("click", async () => { const i = sel; sel = -1; await move(i < 0 ? 0 : i, null); });
+      $("#tRematch").addEventListener("click", () => ctx.rematch());
+      $("#tLeave").addEventListener("click", () => ctx.leave());
+      $("#tShare").addEventListener("click", () => ctx.share(shareText()));
+    }
+
+    function shareText() {
+      const t = ctx.state().ttt, c = t.cells || {};
+      const sq = i => c[i] ? (c[i].by === "x" ? "❌" : "⭕") : "⬜";
+      /* \u200F בראש כל שורה: שורת אימוג'י בלבד היא LTR ומשבצת 0 (ימין בלוח) הייתה קופצת שמאלה */
+      const rows = [0, 3, 6].map(r => "\u200F" + sq(r) + sq(r + 1) + sq(r + 2)).join("\n");
+      const w = t.win === "draw" ? "תיקו" : `${ctx.name(t.win === "x" ? t.x : t.o)} ניצח`;
+      return `ספורטדל · איקס-עיגול 3×3 · ${w}\n${rows}\n${ctx.link()}`;
+    }
+
+    function stop() { clearInterval(timer); lastKey = ""; sel = -1; }
+    return { start, render, stop, newBoard };
+  }
+
+  window.SportTTT = { create, TURN_MS, LINES };
+})();
 
 </script>
 
@@ -5358,7 +5736,7 @@ async function bootVersus(){
 async function startVersus(){
   const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
   const { getDatabase, ref, set, get, update, onValue, onDisconnect,
-          runTransaction, serverTimestamp, off }
+          runTransaction, serverTimestamp, off, connectDatabaseEmulator }
     = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js");
 
   /* המודול נטען לפני שנבחר מועדון, אז SLUG מקבל ערך התחלתי בלבד.
@@ -5373,6 +5751,11 @@ async function startVersus(){
 
   const app = initializeApp(FIREBASE_CONFIG);
   const db  = getDatabase(app);
+  /* בדיקות בלבד: localStorage "sportdel:fbEmu" = "host:port" מחבר לאמולטור
+     מקומי של Firebase (tools/fb-emu) — חוקים חדשים נבדקים בלי לגעת בייצור.
+     בלי המפתח — אין שום שינוי. */
+  try { const emu = localStorage.getItem("sportdel:fbEmu");
+        if (emu) { const [h, p] = emu.split(":"); connectDatabaseEmulator(db, h, +p); } } catch (e) {}
 
   
   
@@ -5461,6 +5844,7 @@ async function startVersus(){
   let MODE = "players";
   let QUIZ = [];
   const isQuiz = () => MODE === "quiz";
+  const isTtt = () => MODE === "ttt";
 
   function refreshPools(){
     /* מסלול אחד לכל המצבים. במועדון בודד המיזוג הוא ללא-מעש —
@@ -5568,7 +5952,7 @@ async function startVersus(){
   /* ============================================================
      3. עזרים
      ============================================================ */
-  const show = id => { ["scHome","scLobby","scPlay","scReveal","scEnd"]
+  const show = id => { ["scHome","scLobby","scPlay","scReveal","scEnd","scTtt"]
     .forEach(s => $("#"+s).classList.toggle("hide", s !== id)); };
   
   const uid = (() => {
@@ -5611,6 +5995,7 @@ async function startVersus(){
   const DEFAULT_SEC = { players: 8, quiz: 25 };
 
   function paintTimeOpts(){
+    $("#versusView").classList.toggle("ttt-mode", isTtt());   // מסתיר הגדרות שלא חלות על איקס-עיגול
     const mode = isQuiz() ? "quiz" : "players";
     for (const id of ["preReveal", "setReveal"]) {
       const sel = $("#" + id);
@@ -5756,21 +6141,24 @@ async function startVersus(){
       b.setAttribute("aria-pressed", String(on));
     }
     if (modeHint)
-      modeHint.textContent = isQuiz()
+      modeHint.textContent = isTtt()
+        ? "שני שחקנים · תופסים משבצת בתשובה נכונה, שלוש בשורה מנצחות"
+        : isQuiz()
         ? `${QUIZ.length} שאלות · כל אחד עונה במספר, והכי קרוב זוכה`
         : `${POOL.length} שחקנים · הראשון שמזהה זוכה`;
   }
   if (modePick) modePick.addEventListener("click", e => {
     const b = e.target.closest("button");
     if (!b) return;
-    MODE = b.dataset.mode === "quiz" ? "quiz" : "players";
+    MODE = b.dataset.mode === "quiz" ? "quiz" : b.dataset.mode === "ttt" ? "ttt" : "players";
     paintModePick(); paintClubPick(); paintTimeOpts();
   });
 
   /* מי שמצטרף מאמץ את המצב של החדר. ברירת המחדל "players" היא
      גם מה שחדר ישן, בלי השדה, אמור לשחק. */
   function adoptMode(val){
-    const want = (val && val.mode) === "quiz" ? "quiz" : "players";
+    const m = val && val.mode;
+    const want = m === "quiz" || m === "ttt" ? m : "players";
     if (want === MODE) return;
     MODE = want;
     paintModePick(); paintTimeOpts();
@@ -5835,7 +6223,7 @@ async function startVersus(){
            כך המשחק הישן ממשיך לעבוד בדיוק כמו קודם בכל מצב, ורק
            המשחק החדש דורש את החוקים המעודכנים — ואומר את זה
            במפורש כשהוא נכשל. */
-        ...(isQuiz() ? { mode: "quiz" } : {}),
+        ...(isQuiz() ? { mode: "quiz" } : isTtt() ? { mode: "ttt" } : {}),
         game: 0,                       // מקדם בכל "סיבוב חדש", ומזריע את ההגרלה
         /* במשחק המספרים אין רמזים מתגלים, ולכן אין "זמן בין רמז
            לרמז": סיבוב הוא חלון אחד קבוע. revealMs נשאר שווה לו
@@ -5855,8 +6243,8 @@ async function startVersus(){
          עדיין מתירים רק rooms/<code> ולא rooms/<slug>/<code>. */
       isHost = false; room = null; roomRef = null;
       err.textContent = /PERMISSION_DENIED/i.test(e.message || "")
-        ? (isQuiz()
-            ? "משחק המספרים דורש עדכון של חוקי הפיירבייס (config/firebase-rules.json). משחק השחקנים עובד."
+        ? (isQuiz() || isTtt()
+            ? "המשחק הזה דורש עדכון של חוקי הפיירבייס (config/firebase-rules.json). משחק השחקנים עובד."
             : "אין הרשאה לפתוח חדר. צריך לעדכן את חוקי הפיירבייס (config/firebase-rules.json).")
         : "לא הצלחנו לפתוח חדר: " + (e.message || e);
       console.error("createRoom:", e);
@@ -5925,7 +6313,9 @@ async function startVersus(){
   const inviteText = () =>
 `⚫🟡 בואו לדו־קרב ב${(window.SPORTDEL && window.SPORTDEL.game) || "ספורטדל"}
 
-${isQuiz()
+${isTtt()
+  ? `איקס-עיגול של שחקני כדורגל: תופסים משבצת בתשובה נכונה.\nשלוש בשורה מנצחות.`
+  : isQuiz()
   ? `שאלה שאף אחד לא באמת יודע, וכל אחד עונה מספר.\nהכי קרוב לתשובה לוקח את הסיבוב.`
   : `מי מזהה את השחקן הכי מהר?\nהרמזים נחשפים לכולם יחד — והראשון שפוגע לוקח את הסיבוב.`}
 
@@ -5968,6 +6358,10 @@ ${roomLink()}
   $("#btnStart").addEventListener("click", async () => {
     const ps = Object.values(state?.players || {}).filter(p => !p.gone);
     if (ps.length < 2) return $("#startErr").textContent = "צריך לפחות שני שחקנים";
+    if (isTtt()) {
+      try { await TTT.start(state); } catch (e) { $("#startErr").textContent = e.message || String(e); }
+      return;
+    }
     /* ---------- ההגדרות תלויות במצב ----------
        הבלוק הזה דרס את ההגדרות בנוסחת משחק השחקנים בלי לבדוק
        במה משחקים, ולכן סיבוב מספרים קיבל 52 שניות במקום 25:
@@ -6008,7 +6402,7 @@ ${roomLink()}
       for (const [id, p] of Object.entries(state.players || {}))
         scores[id] = { ...p, score: 0 };
       await update(roomRef, {
-        status: "lobby", round: 0, results: null, answers: null, roundStartedAt: null,
+        status: "lobby", round: 0, results: null, answers: null, roundStartedAt: null, ttt: null,
         game: ((state && state.game) || 0) + 1,
         players: scores
       });
@@ -6172,6 +6566,8 @@ ${roomLink()}
   const livePlayers = () => allPlayers().filter(p => !p.gone);
   
   function render(){
+    if (state.mode === "ttt" && state.status !== "lobby"){ stopTick(); TTT.render(state); return; }
+    TTT.stop();
     if (state.status === "lobby"){
       show("scLobby");
       $("#lobbyCode").textContent = room;
@@ -6193,6 +6589,24 @@ ${roomLink()}
   }
   
   const esc = s => String(s).replace(/[<>&"]/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c]));
+
+  /* ---------- איקס-עיגול (src/ttt.js) ----------
+     הלוח והתורות שם; כאן רק החיבור לחדר. ריוואנש = אותו מנגנון של
+     "סיבוב חדש": game+1 → לובי → המארח לוחץ התחלה ולוח חדש נבנה. */
+  const TTT = window.SportTTT.create({
+    uid: () => uid, code: () => room, slug: () => SLUG, now, state: () => state,
+    isHost: () => isHost, roomRef: () => roomRef, tttRef: () => ref(db, roomPath(room) + "/ttt"),
+    update, tx: runTransaction, show,
+    name: id => dispName(id, (state.players || {})[id]?.name || "שחקן"),
+    link: () => roomLink(),
+    rematch: async () => {
+      if (!isHost) return;
+      await update(roomRef, { status: "lobby", ttt: null, game: ((state && state.game) || 0) + 1 });
+    },
+    leave: () => leaveRoom(),
+    /* navigator.share לא קיים ב-WebView וה-clipboard נדחה שם — וואטסאפ, כמו btnShareWa */
+    share: txt => openExternal("https://wa.me/?text=" + encodeURIComponent(txt))
+  });
   
   function drawBoard(sel){
     $(sel).innerHTML = allPlayers().map((p,i) =>
