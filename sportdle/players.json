@@ -1,5 +1,5 @@
 {
- "v": "s3-501f38ec8c",
+ "v": "s3-004ebb85ab",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -49927,7 +49927,8 @@
    "pos:FW,dec:2000,champ|club:maccabi-ta,nat,foreign",
    "foreign,nat,champ|dec:2010,club:maccabi-haifa,club:hapoel-bs",
    "nat,dec:1990,pos:FW|champ,club:hapoel-ta,club:maccabi-ta",
-   "foreign,nat,dec:2010|club:hapoel-bs,pos:FW,club:maccabi-haifa"
+   "foreign,nat,dec:2010|club:hapoel-bs,pos:FW,club:maccabi-haifa",
+   "pos:GK,foreign,champ|club:maccabi-haifa,club:maccabi-ta,dec:2000"
   ],
   "hapoel-bs": [
    "pos:FW,dec:2010,pos:GK|club:beitar,club:maccabi-ta,nat",
@@ -50052,7 +50053,8 @@
    "dec:2020,pos:GK,nat|club:maccabi-ta,champ,club:maccabi-haifa",
    "dec:2000,pos:GK,champ|club:maccabi-haifa,foreign,club:hapoel-ta",
    "nat,pos:FW,dec:2020|club:hapoel-ta,club:maccabi-haifa,champ",
-   "pos:FW,dec:2010,pos:GK|club:hapoel-ta,foreign,club:maccabi-haifa"
+   "pos:FW,dec:2010,pos:GK|club:hapoel-ta,foreign,club:maccabi-haifa",
+   "dec:2020,champ,pos:FW|club:maccabi-haifa,foreign,club:beitar"
   ],
   "maccabi-ta": [
    "pos:FW,pos:GK,dec:2010|nat,foreign,club:hapoel-bs",
@@ -50177,7 +50179,8 @@
    "foreign,champ,pos:GK|dec:2020,club:hapoel-bs,club:maccabi-haifa",
    "dec:2010,pos:FW,pos:GK|club:hapoel-ta,foreign,club:hapoel-bs",
    "dec:1980,foreign,champ|club:hapoel-bs,club:beitar,pos:GK",
-   "pos:FW,champ,dec:2000|nat,foreign,club:maccabi-haifa"
+   "pos:FW,champ,dec:2000|nat,foreign,club:maccabi-haifa",
+   "dec:2020,champ,pos:FW|foreign,club:beitar,club:hapoel-bs"
   ],
   "maccabi-haifa": [
    "nat,dec:2000,champ|club:hapoel-bs,pos:GK,pos:FW",
@@ -50302,7 +50305,8 @@
    "nat,dec:1990,foreign|club:hapoel-ta,pos:FW,club:beitar",
    "dec:2020,champ,pos:GK|club:maccabi-ta,club:hapoel-bs,foreign",
    "dec:2010,champ,pos:FW|foreign,club:beitar,club:hapoel-ta",
-   "champ,pos:FW,pos:GK|club:hapoel-bs,foreign,dec:2020"
+   "champ,pos:FW,pos:GK|club:hapoel-bs,foreign,dec:2020",
+   "foreign,dec:2000,champ|club:maccabi-ta,pos:GK,club:hapoel-bs"
   ],
   "hapoel-ta": [
    "dec:1990,champ,pos:FW|foreign,club:maccabi-ta,club:hapoel-bs",
@@ -50427,7 +50431,8 @@
    "pos:GK,dec:2020,champ|foreign,club:maccabi-ta,club:beitar",
    "pos:GK,champ,pos:FW|nat,club:maccabi-haifa,dec:2010",
    "dec:2000,foreign,pos:GK|club:maccabi-ta,champ,club:beitar",
-   "champ,dec:1990,foreign|club:beitar,club:maccabi-ta,pos:FW"
+   "champ,dec:1990,foreign|club:beitar,club:maccabi-ta,pos:FW",
+   "champ,nat,foreign|pos:GK,club:maccabi-haifa,club:beitar"
   ]
  }
 }
