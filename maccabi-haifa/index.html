@@ -285,6 +285,72 @@ footer .who a:hover{color:var(--dim)}
 #groupsBody .gday td:first-child{text-align:right;max-width:90px;overflow:hidden;text-overflow:ellipsis}
 #groupsBody .gday td.ok{font-weight:900}
 #groupsBody .gday td.no,#groupsBody .gday td.nx{color:var(--dim)}
+/* ===== קבוצות — כרטיסים (סקירת UX 18/11, P1) ===== */
+#groupsBody .gtop{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin:6px 0 10px}
+#groupsBody .gtop h2{margin:0;font-size:20px;font-weight:900;color:var(--text)}
+#groupsBody .gglobal{display:flex;gap:8px;margin-bottom:16px}
+#groupsBody .gglobal button{flex:1;height:44px;min-height:0;margin:0;width:auto;border-radius:22px;font:inherit;font-size:14px;font-weight:800;border:1.5px dashed var(--ui-ctl,var(--line));background:transparent;color:var(--text);cursor:pointer;padding:0 10px}
+#groupsBody .gglobal button.plus{border-style:solid;background:var(--text);color:var(--surface,#fff);border-color:var(--text)}
+#groupsBody .gempty{background:var(--surface,var(--ink-2));border:1px solid var(--ui-line,var(--line));border-radius:16px;padding:14px;font-size:14px;line-height:1.6;color:var(--dim);margin-bottom:14px}
+#groupsBody .gempty b{color:var(--text)}
+#groupsBody .gnote{font-size:12px;color:var(--dim);padding:6px 14px}
+#groupsBody .gcard{background:var(--surface,var(--ink-2));border:1px solid var(--ui-line,var(--line));border-radius:16px;margin-bottom:14px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+#groupsBody .gcard-h{display:flex;align-items:center;gap:6px;padding:10px 8px 10px 4px;border-inline-start:6px solid var(--gc,var(--brand))}
+#groupsBody .gtog{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:3px;background:none;border:0;margin:0;width:auto;min-height:0;padding:2px 8px;font:inherit;color:var(--text);text-align:right;cursor:pointer}
+#groupsBody .gtog .n{font-size:17px;font-weight:900;line-height:1.2}
+#groupsBody .gtog .s{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px;color:var(--dim)}
+#groupsBody .pill{font-size:11px;font-weight:800;padding:2px 8px;border-radius:9px}
+#groupsBody .code{color:var(--text);letter-spacing:.5px}
+#groupsBody .gmore{flex:0 0 44px;width:44px;height:44px;min-height:0;margin:0;border-radius:50%;border:0;background:none;font-size:22px;line-height:1;color:var(--dim);cursor:pointer;padding:0}
+#groupsBody .gweek{display:flex;justify-content:space-between;gap:8px;margin:0;padding:6px 14px;font-size:12px;color:var(--dim);background:var(--well,rgba(0,0,0,.04));border-block:1px solid var(--ui-line,var(--line))}
+#groupsBody .lb{width:100%;border-collapse:collapse;font-size:14px;color:var(--text)}
+#groupsBody .lb th{font-size:11px;font-weight:700;color:var(--dim);text-align:center;padding:6px 4px}
+#groupsBody .lb th:nth-child(2){text-align:right}
+#groupsBody .lb td{padding:0 4px;height:44px;border-top:1px solid var(--ui-line,var(--line));text-align:center;font-variant-numeric:tabular-nums}
+#groupsBody .lb td:first-child{width:34px;padding-inline-start:12px}
+#groupsBody .lb td:last-child{padding-inline-end:12px}
+#groupsBody .lb td.nm{text-align:right}
+#groupsBody .lb td.nm button{display:flex;align-items:center;gap:4px;height:44px;width:100%;min-height:0;margin:0;padding:0;background:none;border:0;font:inherit;font-weight:600;color:inherit;text-align:right;cursor:pointer}
+#groupsBody .lb .gnm{text-decoration:none}
+#groupsBody .lb td.nm button i{font-style:normal;font-weight:500;color:var(--dim);font-size:12px}
+#groupsBody .lb td.nm button::after{content:"‹";margin-inline-start:auto;color:var(--dim);font-size:18px}
+#groupsBody .lb td.wk{font-weight:900;font-size:15px}
+#groupsBody .lb td.dim{color:var(--dim);font-size:13px}
+#groupsBody .lb tr.me td{background:rgba(255,199,44,.16);font-weight:900}
+#groupsBody details.more-sec{border-top:1px solid var(--ui-line,var(--line))}
+#groupsBody details.more-sec summary{list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:44px;padding:0 14px;font-size:13px;font-weight:700;color:var(--dim);cursor:pointer}
+#groupsBody details.more-sec summary::-webkit-details-marker{display:none}
+#groupsBody details.more-sec summary::after{content:"▾";font-size:12px}
+#groupsBody details.more-sec[open] summary::after{content:"▴"}
+#groupsBody details.more-sec .ghist{padding:0 10px;-webkit-mask-image:linear-gradient(to left,transparent,#000 24px);mask-image:linear-gradient(to left,transparent,#000 24px)}
+#groupsBody .gcabl{margin:0;padding:0 32px 10px 14px;font-size:13px;color:var(--dim)}
+#groupsBody .gcabl li{margin:4px 0}
+#groupsBody .gcabl b{color:var(--text)}
+#groupsBody .gfoot{display:flex;gap:8px;padding:10px 12px 12px;border-top:1px solid var(--ui-line,var(--line))}
+#groupsBody .gfoot button{height:44px;min-height:0;margin:0;width:auto;border-radius:12px;font:inherit;cursor:pointer}
+#groupsBody .gfoot .pri{flex:1;border:0;background:var(--gc,var(--brand));color:var(--on-brand,#121214);font-weight:900;font-size:15px}
+#groupsBody .gfoot .sec{padding:0 12px;border:1.5px solid var(--ui-ctl,var(--line));background:transparent;font-size:13px;font-weight:700;color:var(--text);white-space:nowrap}
+#groupsBody .gsum{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;min-height:44px;margin:0;padding:8px 14px 10px;background:none;border:0;border-top:1px solid var(--ui-line,var(--line));font:inherit;font-size:13px;color:var(--dim);text-align:right;cursor:pointer}
+#groupsBody .gsum b{color:var(--text)}
+/* חלונית תחתונה */
+.gsheet{position:fixed;inset:0;z-index:9998;direction:rtl}
+.gsheet .gscrim{position:absolute;inset:0;background:rgba(10,10,14,.55)}
+.gsheet .gbs{position:absolute;inset-inline:0;bottom:0;max-width:520px;margin:0 auto;background:var(--surface,#fff);color:var(--text,#17181c);border-radius:18px 18px 0 0;border-top:6px solid var(--gc,var(--brand));padding:8px 16px calc(16px + env(safe-area-inset-bottom));animation:gsUp .22s ease-out;text-align:right}
+@keyframes gsUp{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+.gsheet .grab{width:40px;height:4px;border-radius:2px;background:var(--ui-line,#ccc);margin:4px auto 10px}
+.gsheet h3{margin:0 0 2px;font-size:18px}
+.gsheet .gsub2{font-size:13px;color:var(--dim,#555);margin-bottom:10px}
+.gsheet .gsub2.c{text-align:center}
+.gsheet .gscore{display:flex;justify-content:center;gap:18px;align-items:center;margin:6px 0 6px}
+.gsheet .gscore div{text-align:center;font-size:12px;color:var(--dim,#555)}
+.gsheet .gscore b{display:block;font-size:30px;color:var(--text,#17181c);font-weight:900}
+.gsheet .gscore .dash{font-size:20px}
+.gsheet .gvs{list-style:none;margin:0 0 6px;padding:0}
+.gsheet .gvs li{display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid var(--ui-line,#ddd);font-size:15px}
+.gsheet .glist button{display:flex;align-items:center;gap:10px;width:100%;height:48px;min-height:0;margin:0;padding:0 2px;border:0;border-top:1px solid var(--ui-line,#ddd);background:none;font:inherit;font-size:15px;text-align:right;color:var(--text,#17181c);cursor:pointer;border-radius:0}
+.gsheet .glist button.danger{color:#C62828;font-weight:700}
+@media (prefers-reduced-motion:reduce){.gsheet .gbs{animation:none}}
+
 #groupsBody .gweek{margin-top:10px;font-size:12.5px}
 #groupsBody .gnm{background:none;border:0;padding:0;margin:0;width:auto;min-height:0;font:inherit;color:inherit;font-weight:inherit;text-decoration:underline dotted;text-underline-offset:3px;cursor:pointer;text-align:right}
 #groupsBody .gcab{margin-top:12px;font-size:13px;color:var(--dim)}
@@ -1505,6 +1571,53 @@ button.wa,button.act.wa{background:#15803D}
 #webGate,#gGate{margin:0 auto 14px}
 #webGate.wall{padding:22px 16px;border:2px solid var(--brand)}
 #webGate.wall b{font-size:17px}
+
+/* ===== מעבר קומפקטי (סקירת UX 18/11, P2) =====
+   בטלפון קטן הראש תפס 55% מהמסך לפני התוכן. שכבה אחרונה — גוברת על
+   הקודמות בלי לגעת בהן: כותרת נמוכה (הצעיף נשאר), שורת חידה + מועדון
+   אחת, לשוניות בשורה אחת, שדה ומקרא צפופים יותר. */
+header{padding:48px 0 4px}
+h1{margin:0 26px;padding:10px 14px 12px;font-size:clamp(30px,9vw,40px);background:
+    linear-gradient(var(--second-band),var(--second-band)) top/100% 7px no-repeat,
+    linear-gradient(var(--second-band),var(--second-band)) bottom/100% 7px no-repeat,
+    linear-gradient(rgba(var(--brand-rgb),var(--knit-mute)),rgba(var(--brand-rgb),var(--knit-mute))),
+    var(--knit) center/auto 100% repeat-x,
+    var(--brand)}
+[data-club] h1{font-size:clamp(30px,9vw,40px)}
+[data-club="hapoel-bs"] h1{font-size:clamp(26px,8vw,38px)}
+h1::before,h1::after{width:24px}
+h1::after{right:-22px}
+h1::before{left:-22px}
+@media (min-width:640px){header{padding:56px 0 6px}h1{margin:0 40px;padding:14px 30px 16px;font-size:52px}[data-club] h1{font-size:52px}}
+header .meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;flex-wrap:wrap}
+header .meta .sub{margin:0;font-size:14px;text-align:right}
+header .meta #clubBtn{margin:0;min-height:36px;padding:0 12px;font-size:13px;border-radius:18px;position:relative}
+header .meta #clubBtn::after{content:"";position:absolute;inset:-4px 0}
+header .meta #clubBtn svg{width:15px;height:15px}
+.nav{margin:12px auto;max-width:none}
+.nav button,.nav button:not(.on){min-height:40px;padding:8px 6px;font-size:14px;white-space:nowrap}
+#guess{min-height:50px;padding:10px 14px;font-size:17px}
+.legend{margin:8px 0 2px;gap:10px;font-size:12px}
+#board{margin-top:10px}
+#yday,#hintRow,#friendRow{margin-top:10px}
+.row .rowfix{font-size:15px;padding:4px 8px;min-width:32px;min-height:32px;line-height:1}
+#board .row .who{padding:4px 12px}
+#board .row .tiles{padding:21px 8px 8px}
+
+/* ===== כרטיס התוצאה (סקירת UX 18/11, P3) ===== */
+#result .sharerow{display:flex;gap:8px;margin:14px 0 4px}
+#result .card .sharerow button.act{margin:0;width:auto;min-height:48px}
+#result .card .sharerow #wa{flex:1 1 0;min-width:0;padding:0 10px;font-size:16px;white-space:nowrap}
+#result .card .sharerow #story,#result .card .sharerow #share{flex:0 0 auto;padding:0 12px;font-size:14px;white-space:nowrap}
+#result #next{margin-top:10px}
+#result .rtabs{display:flex;margin:14px 0 0;border-bottom:1px solid var(--ui-line,var(--line))}
+#result .rtabs[hidden]{display:none}
+#result .rtabs button{flex:1;min-height:44px;margin:0;width:auto;background:none;border:0;border-bottom:2px solid transparent;border-radius:0;font:inherit;font-size:13px;font-weight:700;color:var(--dim);box-shadow:none;cursor:pointer}
+#result .rtabs button.on{color:var(--text);border-bottom-color:var(--text)}
+#result .card[data-rt="comm"] #stats .bars{display:none}
+#result .card[data-rt="stats"] #comm .ctab{display:none}
+#result .card[data-rt] #comm,#result .card[data-rt] .stats{margin-top:10px}
+#result #again{min-height:44px;font-size:14px}
 </style>
 </head>
 <body>
@@ -1515,17 +1628,19 @@ button.wa,button.act.wa{background:#15803D}
   <header>
     <div id="streak">רצף <b id="streakn">0</b></div>
     <button id="helpBtn" aria-label="איך משחקים" title="איך משחקים"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.6 8.8a3.5 3.5 0 1 1 4.8 3.3c-1.1.5-1.9 1.4-1.9 2.6v.5"/><circle cx="11.5" cy="19" r="1.35" fill="currentColor" stroke="none"/></svg></button>
-    <button id="archBtn" aria-label="ארכיון חידות" title="ארכיון"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4.5 7h15M4.5 12h15M4.5 17h15"/></svg></button>
+    <button id="archBtn" aria-label="ארכיון חידות" title="ארכיון"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><rect x="4" y="5.5" width="16" height="14.5" rx="2.5"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></svg></button>
     <!-- ערכת צבעים: לפי המכשיר → ההפך → השני → חזרה. הלחיצה והתווית ב-THEME_BOOT. -->
     <button id="themeBtn" type="button" aria-label="ערכת צבעים" title="ערכת צבעים"><svg class="ts" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor" stroke="none"/></svg><svg class="td" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 14.6A8 8 0 0 1 9.4 4.5a8 8 0 1 0 10.1 10.1z"/></svg><svg class="tl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.8"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
     <h1><a href="./" id="gameName" aria-label="ספורטדל">ספורטדל</a></h1>
+    <div class="meta">
     <p class="sub">חידה <b id="pnum">#1</b> · <b id="left">8</b> ניסיונות נותרו</p>
     <button id="clubBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h14l-3.5-3.5M20 16H6l3.5 3.5"/></svg>החלפת מועדון</button>
+    </div>
   </header>
 
   <nav class="nav">
-    <button type="button" class="on" data-tab="daily">חידה יומית</button>
-    <button type="button" data-tab="versus">קרב חברים</button>
+    <button type="button" class="on" data-tab="daily">יומית</button>
+    <button type="button" data-tab="versus">קרב</button>
     <button type="button" data-tab="grid">3×3</button>
     <button type="button" data-tab="groups">קבוצות</button>
   </nav>
@@ -1544,9 +1659,13 @@ button.wa,button.act.wa{background:#15803D}
     <span><i class="dot y"></i> מדויק</span>
     <span><i class="dot o"></i> קרוב</span>
     <span><i class="dot s"></i> רחוק</span>
-    <span><span class="ar"><svg class="arw" viewBox="0 0 12 14" aria-hidden="true"><path d="M6 1.5v11M1.8 5.7 6 1.5l4.2 4.2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> מאוחר/גבוה יותר · <span class="ar dn"><svg class="arw" viewBox="0 0 12 14" aria-hidden="true"><path d="M6 1.5v11M1.8 5.7 6 1.5l4.2 4.2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> מוקדם/נמוך יותר</span>
+    <span><span class="ar"><svg class="arw" viewBox="0 0 12 14" aria-hidden="true"><path d="M6 1.5v11M1.8 5.7 6 1.5l4.2 4.2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> גבוה/מאוחר · <span class="ar dn"><svg class="arw" viewBox="0 0 12 14" aria-hidden="true"><path d="M6 1.5v11M1.8 5.7 6 1.5l4.2 4.2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> נמוך/מוקדם</span>
   </div>
 
+  <!-- משחק אימון: שחקן אקראי, לא נספר בשום מקום (practiceGame ב-engine.js) -->
+  <div id="practiceBar" hidden><span><b>🧪 משחק אימון</b> · שחקן אקראי · לא נספר ברצף, בסטטיסטיקה ובקבוצות</span>
+    <button type="button" id="backDaily">חזרה לחידה היומית</button></div>
+  <div id="board"></div>
   <div id="yday">
     <span id="ydayTxt"></span>
     <button id="ydayShow">גילוי</button>
@@ -1563,10 +1682,6 @@ button.wa,button.act.wa{background:#15803D}
     <button id="friendBtn">צריכים עזרה? שאלו חבר בוואטסאפ</button>
   </div>
 
-  <!-- משחק אימון: שחקן אקראי, לא נספר בשום מקום (practiceGame ב-engine.js) -->
-  <div id="practiceBar" hidden><span><b>🧪 משחק אימון</b> · שחקן אקראי · לא נספר ברצף, בסטטיסטיקה ובקבוצות</span>
-    <button type="button" id="backDaily">חזרה לחידה היומית</button></div>
-  <div id="board"></div>
 
   <div id="result">
     <div class="card">
@@ -1574,16 +1689,21 @@ button.wa,button.act.wa{background:#15803D}
       <p id="rtext"></p>
       <div class="mini" id="mini"></div>
       <div class="legend mlegend" aria-hidden="true"><span><i class="dot y"></i> מדויק</span><span><i class="dot o"></i> קרוב</span><span><i class="dot s"></i> רחוק</span></div>
+      <!-- שיתוף בשורה אחת, מיד מתחת לתוצאה (סקירת UX P3): וואטסאפ ראשי -->
+      <div class="sharerow">
+        <button class="act wa" id="wa">שליחה בוואטסאפ</button>
+        <button class="act ghost" id="story">🖼️ סטורי</button>
+        <button class="act ghost" id="share">📋 העתקה</button>
+      </div>
       <div id="next">החידה הבאה בעוד <b id="cd">--:--:--</b> · שחקן חדש מחכה</div>
+      <!-- גרף אחד עם מתג: היום (כולם) / שלי — במקום שני גרפים זה מתחת לזה (syncRtabs) -->
+      <div class="rtabs" id="rtabs" hidden><button type="button" data-rt="comm">היום (כולם)</button><button type="button" data-rt="stats">שלי</button></div>
       <div id="comm"></div>
       <!-- קבוצות חברים — אפליקציה בלבד (src/groups.js) -->
       <div id="grp"></div>
       <!-- איפה אני במועדון: אחוזונים מ-fn=ranks, המיקום מחושב במכשיר (renderRank) -->
       <div id="rank"></div>
       <div class="stats" id="stats"></div>
-      <button class="act wa" id="wa">שליחה בוואטסאפ</button>
-      <button class="act ghost" id="story">תמונה לסטורי</button>
-      <button class="act ghost" id="share">העתקת התוצאה</button>
       <!-- דירוג בחנות: רק באפליקציה, אחרי 3 פיצוחים, עד לחיצה אחת (native.js) -->
       <button class="rate" id="rateApp" hidden><span class="stars" aria-hidden="true">★★★★★</span>
         <span>נהנים? דירוג קצר בחנות עוזר למשחק לגדול</span></button>
@@ -2506,17 +2626,46 @@ button.wa,button.act.wa{background:#15803D}
     if (x.k !== "daily" || n >= today || x.s !== slug()) return "";
     try { const a = typeof answerFor === "function" ? answerFor(n) : null; return a ? a.name : ""; } catch (e) { return ""; }
   }
+
+  /* צבע הקבוצה = צבע המועדון שלה (לא של הדף — קבוצת בית"ר בדף מכבי נשארת צהובה) */
+  function clubColors(s) {
+    const c = (window.SD && window.SD.clubs && window.SD.clubs[s] && window.SD.clubs[s].colors) || {};
+    const bg = c.brand || "var(--brand)", hex = /^#([0-9a-f]{6})$/i.exec(c.brand || "");
+    let fg = "#121214";
+    if (hex) { const n = parseInt(hex[1], 16), l = (0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) / 255; if (l < 0.55) fg = "#fff"; }
+    return { bg, fg };
+  }
+
+  /* ---------- חלונית תחתונה (bottom sheet) ----------
+     לתפריט ⋯ של קבוצה ולראש בראש. מחזירה את מזהה הפריט שנבחר, או null.
+     "חזור" באנדרואיד סוגר אותה (native.js מחפש .gsheet). */
+  function sheet(head, items, color) {
+    return new Promise(res => {
+      const w = document.createElement("div");
+      w.className = "gsheet";
+      w.innerHTML = `<div class="gscrim"></div><div class="gbs" role="dialog" aria-modal="true" style="--gc:${color || "var(--brand)"}">` +
+        `<div class="grab"></div>${head}<div class="glist">` +
+        items.map(i => `<button type="button" data-v="${i.id}" class="${i.danger ? "danger" : ""}">${i.label}</button>`).join("") +
+        `</div></div>`;
+      const done = v => { w.remove(); res(v); };
+      w.addEventListener("click", e => {
+        const b = e.target.closest("[data-v]");
+        if (b) return done(b.dataset.v);
+        if (e.target === w || e.target.classList.contains("gscrim")) done(null);
+      });
+      document.body.appendChild(w);
+      const f = w.querySelector(".glist button"); if (f) setTimeout(() => f.focus({ preventScroll: true }), 30);
+    });
+  }
+
   function table(x, g) {
     const me = uid(), R = g.r || {}, grid = x.k === "grid", S1 = season(x, g), { rows, today } = S1;
-    const mods = id => id === me ? "" :
-      `<span class="mods"><button type="button" data-gmod="report" data-id="${id}">דיווח</button>` +
-      `<button type="button" data-gmod="block" data-id="${id}">${S().blocked && S().blocked.has(id) ? "חסום" : "חסימה"}</button></span>`;
     const medal = i => ["🥇", "🥈", "🥉"][i] || String(i + 1);
-    const lead = `<div class="hd gweek">השבוע ${weekLabel(S1.thisWeek)} · מתאפס ביום ראשון · בסופו מוכתר אלוף השבוע 👑</div>` +
-      `<table class="gtab"><thead><tr><th>#</th><th>שם</th><th>השבוע</th><th>סה״כ</th><th>👑</th></tr></thead><tbody>` +
+    const lead = `<div class="gweek"><span>השבוע ${weekLabel(S1.thisWeek)}</span><span>👑 מוכתר ביום ראשון</span></div>` +
+      `<table class="lb"><thead><tr><th></th><th>שם</th><th>השבוע</th><th>סה״כ</th><th>👑</th></tr></thead><tbody>` +
       rows.map((r, i) => `<tr class="${r.id === me ? "me" : ""}"><td>${r.week ? medal(i) : i + 1}</td>` +
-        `<td><button type="button" class="gnm" data-g="h2h" data-id="${r.id}">${esc(r.name)}${r.crown ? " 👑" : ""}</button>${mods(r.id)}</td>` +
-        `<td><b>${r.week}</b></td><td>${r.p}</td><td>${r.titles || "—"}</td></tr>`).join("") + `</tbody></table>`;
+        `<td class="nm"><button type="button" data-g="h2h" data-id="${r.id}"><span class="gnm">${esc(r.name)}</span>${r.crown ? " 👑" : ""}${r.id === me ? " <i>(אני)</i>" : ""}</button></td>` +
+        `<td class="wk">${r.week}</td><td class="dim">${r.p}</td><td class="dim">${r.titles || "—"}</td></tr>`).join("") + `</tbody></table>`;
     const days = Array.from({ length: DAYS }, (_, i) => today - i).filter(n => n >= 1);
     const cell = v => v == null ? `<td class="nx">·</td>`
       : grid ? `<td class="ok">${Math.floor(v / 1000)}</td>`
@@ -2526,41 +2675,85 @@ button.wa,button.act.wa{background:#15803D}
         return `<th>${n === today ? "היום" : "#" + n}${nm ? `<i>${esc(nm)}</i>` : ""}</th>`; }).join("") +
       `</tr></thead><tbody>` +
       rows.map(r => `<tr class="${r.id === me ? "me" : ""}"><td>${esc(r.name)}</td>` +
-        days.map(n => cell((R[day(n)] || {})[r.id])).join("") + `</tr>`).join("") + `</tbody></table></div>`;
+        days.map(n => cell((R[day(n)] || {})[r.id])).join("") + `</tr>`).join("") + `</tbody></table></div>` +
+      `<div class="gnote">${grid ? "המספר = כמה משבצות מילא" : "המספר = באיזה ניחוש פיצח · ✗ לא פיצח"} · · לא שיחק</div>`;
     const cab = S1.champs.length
-      ? `<details class="gcab"><summary>🏆 ארון הגביעים · ${S1.champs.length} שבועות</summary><ul>` +
-        S1.champs.slice(0, 26).map(c => `<li><span>${weekLabel(c.w)}</span> <b>👑 ${c.ids.map(id => esc(S1.names[id] || "")).join(" + ")}</b> · ${c.p} נק׳</li>`).join("") +
-        `</ul></details>`
-      : `<div class="hd gsub">🏆 ארון הגביעים יתמלא בסוף השבוע הראשון.</div>`;
-    return lead + `<div class="hd gsub">לחצו על שם — מאזן ראש בראש מולו</div>` +
-      `<div class="hd gsub">${DAYS} הימים האחרונים · ${grid ? "המספר = כמה משבצות מילא" : "המספר = באיזה ניחוש פיצח"}</div>` + hist + cab;
+      ? `<ul class="gcabl">` + S1.champs.slice(0, 26).map(c => `<li><span>${weekLabel(c.w)}</span> <b>👑 ${c.ids.map(id => esc(S1.names[id] || "")).join(" + ")}</b> · ${c.p} נק׳</li>`).join("") + `</ul>`
+      : `<div class="gnote">יתמלא בסוף השבוע הראשון.</div>`;
+    return lead +
+      `<details class="more-sec"><summary>${DAYS} הימים האחרונים</summary>${hist}</details>` +
+      `<details class="more-sec"><summary>🏆 ארון הגביעים${S1.champs.length ? ` · ${S1.champs.length} שבועות` : ""}</summary>${cab}</details>`;
   }
 
-  /* ---------- ראש בראש ----------
+  /* שורת סיכום לקבוצה מקופלת: המקום שלי, הנקודות שלי, מי מוביל */
+  function summary(x, g) {
+    const S1 = season(x, g), me = uid(), i = S1.rows.findIndex(r => r.id === me), r = S1.rows[i], top = S1.rows[0];
+    if (!r) return "";
+    return `אתה <b>#${i + 1}</b> השבוע · <b>${r.week}</b> נק׳` + (top && top.id !== me && top.week ? ` · מוביל: ${esc(top.name)}` : "");
+  }
+
+  /* ---------- ראש בראש (חלונית תחתונה, עם דיווח וחסימה) ----------
      כל יום ששניכם שיחקתם: מי קיבל יותר נקודות. */
-  function h2h(x, g, other) {
-    const me = uid(), R = g.r || {}, S1 = season(x, g);
+  function record(x, g, a, b) {
+    let w = 0, l = 0, t = 0;
+    for (const byU of Object.values(g.r || {})) {
+      const va = byU[a], vb = byU[b]; if (va == null || vb == null) continue;
+      const pa = ptsOf(x, va), pb = ptsOf(x, vb); pa > pb ? w++ : pa < pb ? l++ : t++;
+    }
+    return { w, l, t };
+  }
+  async function h2h(x, g, other) {
+    const me = uid(), S1 = season(x, g), col = clubColors(x.s).bg;
     if (other === me) {
       const rs = S1.rows.filter(r => r.id !== me).map(r => {
-        let w = 0, l = 0, t = 0;
-        for (const byU of Object.values(R)) {
-          const a = byU[me], b = byU[r.id]; if (a == null || b == null) continue;
-          const pa = ptsOf(x, a), pb = ptsOf(x, b); pa > pb ? w++ : pa < pb ? l++ : t++;
-        }
-        return `<li><b>${esc(r.name)}</b> · ${w} נצחונות · ${l} הפסדים · ${t} תיקו</li>`;
+        const { w, l, t } = record(x, g, me, r.id);
+        return `<li><b>${esc(r.name)}</b><span>${w}–${l}${t ? ` · ${t} תיקו` : ""}</span></li>`;
       });
-      return S().vModal(`<b>ראש בראש — אתה מול כולם</b><br><ul class="gh2h">${rs.join("") || "<li>עוד אין חברים בקבוצה.</li>"}</ul>`,
-        [{ id: "ok", label: "סגירה", primary: true }]);
+      return sheet(`<h3>ראש בראש — אתה מול כולם</h3><div class="gsub2">ניצחונות–הפסדים, בכל יום ששניכם שיחקתם</div>` +
+        `<ul class="gvs">${rs.join("") || "<li>עוד אין חברים בקבוצה.</li>"}</ul>`, [{ id: "x", label: "סגירה" }], col);
     }
-    let w = 0, l = 0, t = 0;
-    for (const byU of Object.values(R)) {
-      const a = byU[me], b = byU[other]; if (a == null || b == null) continue;
-      const pa = ptsOf(x, a), pb = ptsOf(x, b); pa > pb ? w++ : pa < pb ? l++ : t++;
-    }
-    const nm = esc(S1.names[other] || ""), n = w + l + t;
-    const verdict = !n ? "עוד לא שיחקתם באותו יום." : w > l ? "אתה מוביל 💪" : w < l ? `${nm} מוביל 👀` : "שוויון מוחלט 🤝";
-    return S().vModal(`<b>אתה מול ${nm}</b><br>${n ? `<span class="gbig">${w} – ${l}</span>${t ? ` · ${t} תיקו` : ""}<br>` : ""}${verdict}` +
-      `<br><span class="gsmall">כל יום ששניכם שיחקתם: מי קיבל יותר נקודות.</span>`, [{ id: "ok", label: "סגירה", primary: true }]);
+    const nm = S1.names[other] || "", { w, l, t } = record(x, g, me, other), n = w + l + t;
+    const verdict = !n ? "עוד לא שיחקתם באותו יום." : w > l ? "אתה מוביל 💪" : w < l ? `${esc(nm)} מוביל 👀` : "שוויון מוחלט 🤝";
+    const s = S(), isBlocked = s.blocked && s.blocked.has(other);
+    const v = await sheet(`<h3>אתה מול ${esc(nm)}</h3><div class="gsub2">כל יום ששניכם שיחקתם — מי קיבל יותר נקודות</div>` +
+      (n ? `<div class="gscore"><div><b>${w}</b>אתה</div><div class="dash">–</div><div><b>${l}</b>${esc(nm)}</div></div>${t ? `<div class="gsub2 c">${t} תיקו</div>` : ""}` : "") +
+      `<div class="gsub2 c">${verdict}</div>`,
+      [{ id: "report", label: "🚩 דיווח על הכינוי" },
+       { id: "block", label: isBlocked ? "↩️ ביטול חסימה" : `⛔ חסימת ${esc(nm)}`, danger: !isBlocked }], col);
+    if (v === "report" || v === "block") return moderate(x, other, nm, v);
+  }
+
+  /* דיווח / חסימה — כמו בקרב החברים */
+  async function moderate(x, id, nm, kind) {
+    const s = S();
+    if (kind === "block" && s.blocked.has(id)) { s.blocked.delete(id); s.saveBlocked(); return render(); }
+    const rep = kind === "report";
+    const v = await s.vModal(rep
+      ? `<b>לדווח על "${esc(nm)}"?</b><br>הדיווח נשלח אלינו ונבדק תוך 24 שעות. השחקן גם ייחסם אצלך.`
+      : `<b>לחסום את "${esc(nm)}"?</b><br>הכינוי שלו יוסתר אצלך מיד. אפשר גם לצאת מהקבוצה בכל רגע. החסימה מדווחת גם לנו, ונבדקת תוך 24 שעות.`,
+      [{ id: "ok", label: rep ? "דיווח" : "חסימה", primary: true }, { id: "no", label: "ביטול" }]);
+    if (v !== "ok") return;
+    s.sendReport(id, nm, "קבוצה " + x.c, rep ? "דיווח" : "חסימה");
+    s.blocked.add(id); s.saveBlocked();
+    /* מנהל הקבוצה מוציא את מי שחסם — הקבוצה כתיבה לכל מי שיודע את הקוד */
+    try { const host = await call("GET", `${gp(x)}/host`); if (host === uid()) await call("DELETE", `${gp(x)}/m/${id}`); } catch (e) {}
+    render();
+  }
+
+  /* תפריט ⋯ של קבוצה */
+  async function menu(x) {
+    const v = await sheet(`<h3>${esc(x.name)}</h3><div class="gsub2">${KIND[x.k].he} · ${esc(clubName(x.s))} · קוד <b dir="ltr">${x.c}</b></div>`,
+      [{ id: "copy", label: "🔗 העתקת קוד הקבוצה" }, { id: "nick", label: "✏️ שינוי הכינוי שלי" },
+       { id: "how", label: "ℹ️ איך זה מחושב?" }, { id: "leave", label: "🚪 יציאה מהקבוצה", danger: true }], clubColors(x.s).bg);
+    if (v === "copy") {
+      try { await navigator.clipboard.writeText(x.c); say(`הקוד <b dir="ltr">${x.c}</b> הועתק.`); }
+      catch (e) { say(`קוד הקבוצה: <b dir="ltr">${x.c}</b>`); }
+    } else if (v === "nick") {
+      const nick = await askNick(); if (!nick) return;
+      try { await call("PUT", `${gp(x)}/m/${uid()}`, { n: nick }); } catch (e) { return say("לא הצלחנו לשנות. נסו שוב."); }
+      render();
+    } else if (v === "how") explain();
+    else if (v === "leave") leave(x);
   }
 
   /* ---------- "מי עוד לא שיחק היום" ---------- */
@@ -2632,25 +2825,32 @@ button.wa,button.act.wa{background:#15803D}
       .then(v => { if (v === "tour" && window.SportTour) setTimeout(() => window.SportTour.start("groups"), 120); });
   }
 
-  /* ---------- הלשונית ---------- */
+  /* ---------- הלשונית ----------
+     היררכיה (סקירת UX 18/11): למעלה הפעולות הכלליות (קבוצה חדשה /
+     הצטרפות) בסגנון אחר; כל קבוצה כרטיס משלה עם פס בצבע המועדון שלה,
+     ⋯ לתפריט, ופעולות הקבוצה בתחתית הכרטיס. קבוצה שאינה הראשונה —
+     מקופלת לשורת סיכום (הפתוחות נזכרות ב-localStorage). */
   const body = () => $("#groupsBody");
   const DATA = {};   // קוד → { m, r } מהטעינה האחרונה (לתמונה, לתזכורת ולראש בראש)
+  const OPEN = "sportdel:groupsOpen";
+  const openSet = list => { const o = get(OPEN); return new Set(Array.isArray(o) ? o : list.slice(0, 1).map(x => x.c)); };
   async function render() {
     const el = body(); if (!el) return;
     const how = `<button type="button" class="glink" data-g="how">איך זה מחושב?</button>`;
+    const top = `<div class="gtop"><h2>הקבוצות שלי</h2>${how}</div>`;
     if (!native()) {
-      el.innerHTML = `<div class="hd"><b>קבוצות חברים</b> · תחרות סגורה רק לכם על החידה היומית ועל ה-3×3. ${how}</div>` +
-        `<div class="hd gweb">הקבוצות פועלות באפליקציה — שם משחקים את החידה היומית ואת ה-3×3. הורידו אותה מהבאנר למטה.</div>`;
+      el.innerHTML = top + `<div class="gempty gweb">תחרות סגורה רק לכם על החידה היומית ועל ה-3×3.<br>` +
+        `<b>הקבוצות פועלות באפליקציה</b> — שם משחקים את החידה היומית ואת ה-3×3. הורידו אותה מהבאנר למטה.</div>`;
       return;
     }
-    const actions = `<div class="gact"><button type="button" class="ghost" data-g="create">פתיחת קבוצה</button>` +
-      `<button type="button" class="ghost" data-g="join">הצטרפות בקוד</button></div>`;
+    const global = `<div class="gglobal"><button type="button" class="plus" data-g="create">＋ קבוצה חדשה</button>` +
+      `<button type="button" data-g="join">הצטרפות בקוד</button></div>`;
     const list = mine();
     if (!list.length) {
-      el.innerHTML = `<div class="hd"><b>הקבוצות שלי</b> · תחרות סגורה רק לכם: חידה יומית או 3×3, לכל מועדון. ${how}</div>${actions}`;
+      el.innerHTML = top + `<div class="gempty">🏆 <b>תחרות סגורה רק לכם ולחברים</b><br>חידה יומית או 3×3 · טבלה שבועית עם אלוף 👑 · ראש בראש.<br>פתחו קבוצה ושלחו את הקישור בוואטסאפ.</div>` + global;
       return;
     }
-    el.innerHTML = `<div class="hd"><b>הקבוצות שלי</b> · טוען…</div>`;
+    el.innerHTML = top + global + `<div class="gnote">טוען…</div>`;
     await bans();
     const parts = await Promise.all(list.map(async x => {
       try {
@@ -2663,15 +2863,27 @@ button.wa,button.act.wa{background:#15803D}
     }));
     const gone = parts.filter(p => p.gone).map(p => p.x.c);
     if (gone.length) saveMine(mine().filter(x => !gone.includes(x.c)));
-    el.innerHTML = `<div class="hd"><b>הקבוצות שלי</b> · ${how}</div>` + actions +
-      parts.filter(p => !p.gone).map(p =>
-        `<div class="grp1" data-c="${p.x.c}"><div class="hd gtitle"><b>${esc(p.x.name)}</b>` +
-        `<span class="gchip">${KIND[p.x.k].he} · ${esc(clubName(p.x.s))}</span> · קוד <b dir="ltr">${p.x.c}</b></div>` +
-        (p.err ? `<div class="hd">אין חיבור כרגע.</div>` : table(p.x, p.g)) +
-        (p.err ? "" : `<div class="gact"><button type="button" class="ghost" data-g="card">📸 טבלת השבוע לוואטסאפ</button>` +
-          `<button type="button" class="ghost" data-g="nudge">👀 מי עוד לא שיחק היום</button></div>`) +
-        `<div class="gact"><button type="button" class="ghost" data-g="invite">הזמנת חברים</button>` +
-        `<button type="button" class="ghost" data-g="leave">יציאה</button></div></div>`).join("");
+    const open = openSet(list);
+    el.innerHTML = top + global + parts.filter(p => !p.gone).map(p => {
+      const { x, g } = p, c = clubColors(x.s), isOpen = open.has(x.c) || p.err;
+      const members = g ? Object.keys(g.m || {}).length : 0;
+      const head = `<header class="gcard-h"><button type="button" class="gtog" data-g="toggle" aria-expanded="${isOpen}">` +
+        `<span class="n">${esc(x.name)}</span><span class="s"><span class="pill" style="background:${c.bg};color:${c.fg}">${KIND[x.k].he} · ${esc(clubName(x.s))}</span>` +
+        `<span>${members ? members + " חברים · " : ""}קוד <b class="code" dir="ltr">${x.c}</b></span></span></button>` +
+        `<button type="button" class="gmore" data-g="menu" aria-label="עוד פעולות לקבוצה">⋯</button></header>`;
+      const inner = p.err ? `<div class="gnote">אין חיבור כרגע.</div>`
+        : isOpen ? table(x, g) +
+            `<div class="gfoot"><button type="button" class="pri" data-g="invite">הזמנת חברים</button>` +
+            `<button type="button" class="sec" data-g="card">📸 טבלה</button><button type="button" class="sec" data-g="nudge">👀 מי לא שיחק</button></div>`
+        : `<button type="button" class="gsum" data-g="toggle"><span>${summary(x, g)}</span><span aria-hidden="true">▾</span></button>`;
+      return `<section class="gcard${isOpen ? "" : " collapsed"}" data-c="${x.c}" style="--gc:${c.bg}">${head}${inner}</section>`;
+    }).join("");
+  }
+  function toggle(x) {
+    const o = openSet(mine());
+    o.has(x.c) ? o.delete(x.c) : o.add(x.c);
+    put(OPEN, [...o]);
+    render();
   }
   function openTab() {
     const b = document.querySelector('.nav [data-tab="groups"]');
@@ -2689,37 +2901,23 @@ button.wa,button.act.wa{background:#15803D}
   }
 
   document.addEventListener("click", async e => {
-    const b = e.target.closest("button[data-g], #groupsBody button[data-gmod]");
+    const b = e.target.closest("button[data-g]");
     if (!b) return;
-    const a = b.dataset.g, card = b.closest(".grp1");
+    const a = b.dataset.g, card = b.closest(".gcard");
     const x = card ? mine().find(y => y.c === card.dataset.c) : null;
     if (a === "tab") return openTab();
     if (a === "create") return create();
     if (a === "join") return join();
     if (a === "how") return explain();
-    if (a === "leave" && x) return leave(x);
-    if (a === "invite" && x) return invite(x);
-    if (x && DATA[x.c]) {
+    if (!x) return;
+    if (a === "toggle") return toggle(x);
+    if (a === "menu") return menu(x);
+    if (a === "invite") return invite(x);
+    if (DATA[x.c]) {
       if (a === "card") return shareCard(x, DATA[x.c], b);
       if (a === "nudge") return nudge(x, DATA[x.c]);
       if (a === "h2h") return h2h(x, DATA[x.c], b.dataset.id);
     }
-    if (!b.dataset.gmod || !x) return;
-    /* דיווח / חסימה — כמו בקרב החברים */
-    const id = b.dataset.id, s = S();
-    const nm = ((b.closest("td") && b.closest("td").querySelector(".gnm")) || {}).textContent || "";
-    if (b.dataset.gmod === "block" && s.blocked.has(id)) { s.blocked.delete(id); s.saveBlocked(); return render(); }
-    const rep = b.dataset.gmod === "report";
-    const v = await s.vModal(rep
-      ? `<b>לדווח על "${esc(nm)}"?</b><br>הדיווח נשלח אלינו ונבדק תוך 24 שעות. השחקן גם ייחסם אצלך.`
-      : `<b>לחסום את "${esc(nm)}"?</b><br>הכינוי שלו יוסתר אצלך מיד. אפשר גם לצאת מהקבוצה בכל רגע. החסימה מדווחת גם לנו, ונבדקת תוך 24 שעות.`,
-      [{ id: "ok", label: rep ? "דיווח" : "חסימה", primary: true }, { id: "no", label: "ביטול" }]);
-    if (v !== "ok") return;
-    s.sendReport(id, nm, "קבוצה " + x.c, rep ? "דיווח" : "חסימה");
-    s.blocked.add(id); s.saveBlocked();
-    /* מנהל הקבוצה מוציא את מי שחסם — הקבוצה כתיבה לכל מי שיודע את הקוד */
-    try { const host = await call("GET", `${gp(x)}/host`); if (host === uid()) await call("DELETE", `${gp(x)}/m/${id}`); } catch (e) {}
-    render();
   });
 
   window.SportGroups = {
@@ -2984,7 +3182,7 @@ function render(g, instant){
   row.className = "row";
   if (instant) row.style.cssText = "animation:none";
   row.innerHTML =
-    `<p class="who"><span class="nm">${g.name}</span><i>ניחוש ${guesses.length}</i><button type="button" class="rowfix" data-i="${guesses.length - 1}" aria-label="דיווח טעות בפרטי ${g.name}">דיווח טעות</button></p><div class="tiles">` +
+    `<p class="who"><span class="nm">${g.name}</span><i>ניחוש ${guesses.length}</i><button type="button" class="rowfix" data-i="${guesses.length - 1}" aria-label="דיווח טעות בפרטי ${g.name}" title="דיווח טעות">⚑</button></p><div class="tiles">` +
     cells.map((c,i)=>
       `<div class="tile ${c.s}" style="${instant?"animation:none;opacity:1;transform:none":`animation-delay:${i*90}ms`}">
          <span class="k">${c.k}</span>
@@ -3129,6 +3327,7 @@ function finish(won){
   $("#wa").style.display = practice ? "none" : "";
   $("#story").style.display = practice ? "none" : "";
   $("#result").classList.add("on");
+  syncRtabs();
   $("#result").scrollIntoView({behavior:"smooth", block:"nearest"});
 }
 
@@ -3193,8 +3392,8 @@ async function copyText(txt){
 $("#share").addEventListener("click", async ()=>{
   const btn = $("#share");
   const ok = await copyText(shareText());
-  btn.textContent = ok ? "הועתק ✓" : "לא הצלחנו להעתיק — סמנו ידנית";
-  setTimeout(()=> btn.textContent = "העתקת התוצאה", 2200);
+  btn.textContent = ok ? "הועתק ✓" : "לא הועתק";
+  setTimeout(()=> btn.textContent = "📋 העתקה", 2200);
 });
 
 $("#wa").addEventListener("click", ()=>{
@@ -3355,7 +3554,7 @@ $("#story").addEventListener("click", async () => {
     btn.textContent = how === "shared" ? "נשלח ✓" : "ירד למחשב ✓";
   } catch (e) {
     /* ביטול של בורר השיתוף מגיע כ-AbortError וזו לא שגיאה */
-    btn.textContent = e && e.name === "AbortError" ? was : "לא הצלחנו לייצר תמונה";
+    btn.textContent = e && e.name === "AbortError" ? was : "שגיאה";
     if (!(e && e.name === "AbortError")) console.error("story:", e);
   } finally {
     btn.disabled = false;
@@ -3374,7 +3573,8 @@ function practiceGame(){
   answer = POOL[Math.floor(Math.random()*POOL.length)];
   board.innerHTML = ""; $("#result").classList.remove("on");
   input.disabled = false; input.value = ""; $("#left").textContent = MAX;
-  $("#pnum").textContent = WEB_GATE ? `משחק ${webPlays() + 1} מתוך ${WEB_FREE}` : "אימון";
+  $("#pnum").textContent = WEB_GATE ? `משחק ${webPlays() + 1} מתוך ${WEB_FREE}` : "🧪 אימון";
+  if (!WEB_GATE) $(".sub").firstChild.textContent = "";   // היה "חידה אימון"
   /* מה שמבדיל אימון מהחידה של היום — שלא יתבלבלו ויחשבו שהרצף נשבר.
      באתר אין חידה יומית לחזור אליה, ולכן בלי הכפתור. */
   $("#practiceBar").hidden = false;
@@ -3529,6 +3729,7 @@ function answerFor(n){
 
 function loadPuzzle(n){
   $("#practiceBar").hidden = true;
+  if (!WEB_GATE) $(".sub").firstChild.textContent = "חידה ";
   practice = false; puzzleNo = n; answer = answerFor(n); $("#twin").hidden = true;
   guesses = []; over = false; hinted = false;
   board.innerHTML = "";
@@ -3943,6 +4144,7 @@ function renderComm(st, myGuesses, iWon, live, past){
 
   el.innerHTML = `<div class="hd">${line}</div>` + commTable(st, myGuesses, iWon, live);
   el.classList.add("on");
+  syncRtabs();
 }
 
 /* טבלת היום: כמה פיצחו בכל מספר ניחושים, העמודה שלי מודגשת, ומקום.
@@ -3979,6 +4181,24 @@ function addStat(won, n){
   store.set(K("stats"), JSON.stringify(st));
   return st;
 }
+/* מתג "היום (כולם) / שלי": מוצג רק כששני הגרפים קיימים. הכותרת של
+   היום והמספרים שלי נשארים גלויים תמיד — מתחלפים רק הגרפים. */
+let rtSel = null;
+function syncRtabs(){
+  const card = $("#result .card"), tabs = $("#rtabs"); if (!card || !tabs) return;
+  const hasC = $("#comm").classList.contains("on") && !!$("#comm .ctab");
+  const hasS = !!$("#stats .bars");
+  const both = hasC && hasS;
+  tabs.hidden = !both;
+  const sel = both ? (rtSel || "comm") : "";
+  if (sel) card.dataset.rt = sel; else delete card.dataset.rt;
+  tabs.querySelectorAll("button").forEach(b => b.classList.toggle("on", b.dataset.rt === sel));
+}
+$("#rtabs").addEventListener("click", e => {
+  const b = e.target.closest("[data-rt]"); if (!b) return;
+  rtSel = b.dataset.rt; syncRtabs();
+});
+
 function renderStats(highlight){
   const st = loadStats();
   const el = $("#stats");
@@ -3999,6 +4219,7 @@ function renderStats(highlight){
        <div><b>${st.max||0}</b>רצף שיא</div>
      </div>
      <div class="bars">${bars}</div>`;
+  syncRtabs();
 }
 
 /* המקרא בחלונית מתיישר עם סט האמוג'ים שנבחר */
@@ -4328,7 +4549,7 @@ function renderPicker(){
     return `<button type="button" data-slug="${slug}" style="--c:${c.colors.brand};--c2:${c.colors.second || c.colors.ink}"
               class="${club && club.slug===slug ? "cur" : ""}">
         <span class="swatch"></span>
-        <span class="t"><b>${c.game}</b><i>${c.he} · ${cov}</i></span>
+        <span class="t"><b>${c.game}</b><i>${c.he} · <bdi style="white-space:nowrap">${cov}</bdi></i></span>
       </button>`;
   }).join("");
   $("#clubList").querySelectorAll("button").forEach(b =>
@@ -4496,7 +4717,7 @@ function bootClub(slug){
 
   if (WEB_GATE){
     document.documentElement.dataset.web = "1";
-    document.querySelector('.nav [data-tab="daily"]').textContent = "משחק אקראי";
+    document.querySelector('.nav [data-tab="daily"]').textContent = "אקראי";
     startWebGame();
     track("view", {web: 1});
     return;
@@ -5056,6 +5277,9 @@ function migrateFromBeitardle(){
       if (window.SportTour && window.SportTour.active()) { window.SportTour.stop(); return; }
       const vm = document.querySelector(".vmodal");
       if (vm) { vm.click(); return; }
+      /* חלונית תחתונה של הקבוצות (src/groups.js) — לחיצה על הרקע סוגרת */
+      const gs = document.querySelector(".gsheet");
+      if (gs) { gs.click(); return; }
       /* סדר סגירה מהפנימי לחיצוני */
       const open = [
         document.querySelector("#sugg.on"),
@@ -5672,7 +5896,7 @@ function migrateFromBeitardle(){
         } else {
           el.disabled = done() || !!G.gate;
           el.setAttribute("aria-label", A.he + " × " + B.he);
-          if (i === G.sel) el.classList.add("sel");
+          if (i === G.sel && !done()) el.classList.add("sel");   // בסוף הלוח בלי מסגרת "נבחר" תקועה
         }
         b.appendChild(el);
       }
@@ -6261,7 +6485,10 @@ function migrateFromBeitardle(){
     groups: () => [
       { t: '#groupsBody [data-g="create"]', m: "פותחים קבוצה: על החידה היומית או על ה-3×3, של המועדון שבדף." },
       { t: '#groupsBody [data-g="join"]', m: "קיבלתם קוד מחבר? מצטרפים כאן. אפשר להיות בכמה קבוצות, גם של מועדונים שונים." },
-      { t: "#groupsBody .grp1", m: "לכל קבוצה טבלה משלה. מסיימים את המשחק של היום — והתוצאה נכנסת לבד." },
+      { t: "#groupsBody .gcard", m: "כל קבוצה בכרטיס משלה, בצבע המועדון שלה. הטבלה מדורגת לפי השבוע — ובסופו מוכתר אלוף 👑." },
+      { t: "#groupsBody .lb td.nm button", m: "לחיצה על שם — מאזן ראש בראש מולו. משם גם דיווח או חסימה." },
+      { t: "#groupsBody .gfoot", m: "הפעולות של הקבוצה: הזמנת חברים, תמונת הטבלה לוואטסאפ, ומי עוד לא שיחק היום." },
+      { t: "#groupsBody .gmore", m: "⋯ — קוד הקבוצה, שינוי כינוי ויציאה." },
       { t: '#groupsBody [data-g="how"]', m: "כאן כל החישוב: נקודות, דירוג ויומן שבעת הימים." },
       { t: "#groupsBody .gweb", m: "קבוצות החברים פועלות באפליקציה — שם משחקים את החידה היומית ואת ה-3×3." }
     ]
