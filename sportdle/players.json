@@ -1,5 +1,5 @@
 {
- "v": "s3-472c54d3fc",
+ "v": "s3-938f019387",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -5521,7 +5521,13 @@
       ]
      ],
      "titles": 0,
-     "target": false
+     "target": false,
+     "aliases": [
+      "ארון אולנרה",
+      "אהרון אולנארה",
+      "אהרון אולנרה",
+      "Aaron Olanare"
+     ]
     },
     {
      "he": "גדי קינדה",
