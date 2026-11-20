@@ -1,5 +1,5 @@
 {
- "v": "s3-093d174084",
+ "v": "s3-069c7d5f4d",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -961,17 +961,9 @@
       [
        1992,
        1992
-      ],
-      [
-       1995,
-       1996
-      ],
-      [
-       1998,
-       1998
       ]
      ],
-     "titles": 1,
+     "titles": 0,
      "target": true
     },
     {
@@ -27348,6 +27340,28 @@
      ]
     },
     {
+     "he": "יונתן לוי",
+     "pos": "DF",
+     "nat": "IL",
+     "born": 1998,
+     "spells": [
+      [
+       2017,
+       2018
+      ],
+      [
+       2020,
+       2020
+      ]
+     ],
+     "titles": 0,
+     "target": true,
+     "aliases": [
+      "יונתן לוי",
+      "Yonatan Levi"
+     ]
+    },
+    {
      "he": "מוחמד עואד",
      "pos": "FW",
      "nat": "IL",
@@ -27644,32 +27658,6 @@
      "target": true,
      "aliases": [
       "Yahav Gurfinkel"
-     ]
-    },
-    {
-     "he": "יונתן לוי",
-     "pos": "DF",
-     "nat": "IL",
-     "born": 1998,
-     "spells": [
-      [
-       2018,
-       2018
-      ],
-      [
-       2020,
-       2020
-      ],
-      [
-       2022,
-       2022
-      ]
-     ],
-     "titles": 1,
-     "target": true,
-     "aliases": [
-      "יונתן לוי",
-      "Yonatan Levi"
      ]
     },
     {
