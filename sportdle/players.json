@@ -1,5 +1,5 @@
 {
- "v": "s3-291e6a7c31",
+ "v": "s3-e24d09a06b",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -7561,7 +7561,8 @@
     "אביתר ברוכיאן",
     "צחי אליחן",
     "סתיו שושן",
-    "אורי מלמיליאן"
+    "אורי מלמיליאן",
+    "אישטוון האמר"
    ]
   },
   "hapoel-bs": {
@@ -14329,7 +14330,8 @@
     "קינגס קאנגווה",
     "אלטון אקולטסה",
     "תומר סויסה",
-    "גיא מזרחי"
+    "גיא מזרחי",
+    "גאטאן וארן"
    ]
   },
   "maccabi-ta": {
@@ -21868,7 +21870,8 @@
     "אנריק סאבוריט",
     "שביט אלימלך",
     "ראובן עובד",
-    "גבי לסרי"
+    "גבי לסרי",
+    "מאור בוזגלו"
    ]
   },
   "maccabi-haifa": {
@@ -29528,7 +29531,8 @@
     "חיים סילבס",
     "עופרי ארד",
     "עידן ורד",
-    "אמיר אדרי"
+    "אמיר אדרי",
+    "אייל גולסה"
    ]
   },
   "hapoel-ta": {
@@ -38396,7 +38400,8 @@
     "אפולה אדל",
     "טוטו תמוז",
     "ערן זהבי",
-    "ניר רחמין"
+    "ניר רחמין",
+    "קז'ימיש מוסקאל"
    ]
   }
  },
@@ -49694,7 +49699,8 @@
     "שלומי ארבייטמן",
     "בני טבק",
     "טוטו תמוז",
-    "מנשה שמעונוב"
+    "מנשה שמעונוב",
+    "יעקב אקהויז"
    ]
   }
  },
@@ -49714,7 +49720,8 @@
    "dec:2000,champ,foreign|club:maccabi-haifa,club:hapoel-bs,pos:FW",
    "pos:GK,nat,pos:FW|champ,club:maccabi-haifa,dec:1970",
    "nat,champ,foreign|pos:FW,club:hapoel-ta,dec:1990",
-   "nat,foreign,champ|dec:2000,club:hapoel-bs,pos:FW"
+   "nat,foreign,champ|dec:2000,club:hapoel-bs,pos:FW",
+   "champ,pos:FW,foreign|club:hapoel-bs,club:hapoel-ta,dec:2000"
   ],
   "hapoel-bs": [
    "pos:FW,dec:2010,pos:GK|club:beitar,club:maccabi-ta,nat",
@@ -49731,7 +49738,8 @@
    "dec:2010,champ,pos:FW|nat,club:hapoel-ta,club:maccabi-ta",
    "dec:1990,champ,nat|club:maccabi-haifa,pos:GK,club:hapoel-ta",
    "nat,pos:FW,champ|club:maccabi-ta,club:beitar,dec:2000",
-   "champ,nat,pos:FW|dec:2000,club:beitar,club:hapoel-ta"
+   "champ,nat,pos:FW|dec:2000,club:beitar,club:hapoel-ta",
+   "nat,pos:FW,pos:GK|club:hapoel-ta,dec:1980,club:maccabi-ta"
   ],
   "maccabi-ta": [
    "pos:FW,pos:GK,dec:2010|nat,foreign,club:hapoel-bs",
@@ -49748,7 +49756,8 @@
    "champ,nat,pos:FW|club:hapoel-ta,dec:1990,club:beitar",
    "pos:GK,nat,pos:FW|club:hapoel-ta,club:beitar,dec:2010",
    "champ,dec:1980,pos:FW|club:hapoel-ta,nat,club:beitar",
-   "dec:1980,champ,foreign|pos:GK,club:maccabi-haifa,club:hapoel-ta"
+   "dec:1980,champ,foreign|pos:GK,club:maccabi-haifa,club:hapoel-ta",
+   "foreign,pos:GK,dec:1980|club:beitar,champ,club:maccabi-haifa"
   ],
   "maccabi-haifa": [
    "nat,dec:2000,champ|club:hapoel-bs,pos:GK,pos:FW",
@@ -49765,7 +49774,8 @@
    "dec:2020,foreign,pos:GK|club:hapoel-bs,club:beitar,champ",
    "foreign,pos:FW,champ|club:beitar,dec:2020,club:hapoel-bs",
    "nat,pos:GK,foreign|champ,club:beitar,club:hapoel-bs",
-   "dec:1990,pos:GK,pos:FW|club:hapoel-ta,foreign,nat"
+   "dec:1990,pos:GK,pos:FW|club:hapoel-ta,foreign,nat",
+   "foreign,nat,dec:2010|club:hapoel-ta,club:beitar,pos:FW"
   ],
   "hapoel-ta": [
    "dec:1990,champ,pos:FW|foreign,club:maccabi-ta,club:hapoel-bs",
@@ -49782,7 +49792,8 @@
    "dec:2010,champ,pos:FW|foreign,club:beitar,club:maccabi-haifa",
    "nat,pos:GK,dec:1990|club:maccabi-haifa,club:maccabi-ta,champ",
    "champ,nat,pos:FW|club:maccabi-ta,dec:1980,club:beitar",
-   "champ,pos:FW,dec:1990|club:maccabi-ta,foreign,club:beitar"
+   "champ,pos:FW,dec:1990|club:maccabi-ta,foreign,club:beitar",
+   "pos:GK,champ,pos:FW|club:maccabi-ta,dec:2010,club:hapoel-bs"
   ]
  }
 }
