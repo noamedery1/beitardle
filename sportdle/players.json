@@ -1,5 +1,5 @@
 {
- "v": "s3-145d085f4b",
+ "v": "s3-3c51b65e05",
  "order": [
   "beitar",
   "hapoel-bs",
@@ -1533,6 +1533,20 @@
      "target": true
     },
     {
+     "he": "ניר סביליה",
+     "pos": "FW",
+     "nat": "IL",
+     "born": 1975,
+     "spells": [
+      [
+       1997,
+       2001
+      ]
+     ],
+     "titles": 2,
+     "target": true
+    },
+    {
      "he": "שלמה ממן",
      "pos": "GK",
      "nat": "IL",
@@ -1734,20 +1748,6 @@
      ],
      "titles": 0,
      "target": false
-    },
-    {
-     "he": "ניר סביליה",
-     "pos": "FW",
-     "nat": "IL",
-     "born": 1975,
-     "spells": [
-      [
-       1999,
-       2001
-      ]
-     ],
-     "titles": 0,
-     "target": true
     },
     {
      "he": "עופר שטרית",
